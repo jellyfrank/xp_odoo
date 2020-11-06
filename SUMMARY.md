@@ -7,7 +7,7 @@
   * [第五章 用户和用户组](chapter1/README5.md)
   * [第十章 导入与导出](chapter1/README6.md)
 * [第二部分 销售管理](SECTION2.md)
-  * [第一章 CRM](chapter1/README.md)
+  * [第一章 CRM](chapter2/README.md)
 * [第三部分 采购管理](SECTION3.md)
   * [第一章 合同管理](chapter31/README.md)
 * [第四部分 仓库管理](SECTION4.md)
