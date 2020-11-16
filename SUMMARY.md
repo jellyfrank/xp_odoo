@@ -3,7 +3,7 @@
   * [第一章 Odoo简介](chapter1/README.md)
   * [第二章 数据库管理](chapter1/README2.md)
   * [第三章 产品管理](chapter1/README3.md)
-  * [第四章 合作伙伴管理](chapter1/README4.md)
+  * [第四章 联系人与合作伙伴](chapter1/README4.md)
   * [第五章 用户和用户组](chapter1/README5.md)
   * [第十章 导入与导出](chapter1/README6.md)
 * [第二部分 销售管理](SECTION2.md)
