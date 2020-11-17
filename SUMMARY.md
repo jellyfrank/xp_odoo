@@ -29,5 +29,7 @@
   * [第四章 工作中心](chapter54/READM.md)
 * [第六部分 财务管理](SECTION6.md)
   * [第一章 销售发票](chapter6/README.md)
+* [第七部分 多公司](SECTION7.md)
+  * [第一章 多公司间的采购](chapter7/README.md)
 * [第七部分 网站](SECTION7.md)
 * [第八部分 人力资源](SECTION8.md)
