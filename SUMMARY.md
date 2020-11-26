@@ -16,7 +16,7 @@
   * [第一章 合同管理](chapter31/README.md)
 * [第四部分 仓库管理](SECTION4.md)
   * [第一章 仓库管理](chapter4/README.md)
-  * [第二章 库位管理](chapter4/README.md)
+  * [第二章 库位管理](chapter4/README2.md)
   * [第三章 出入库和内部调拨](chatper4/README.md)
   * [第四章 盘点](chapter4/README.md)
   * [第五章 扫码操作](chapter4/README.md)
