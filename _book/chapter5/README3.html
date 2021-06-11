@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第一章 多公司间的采购 · odoo实施经验汇编</title>
+        <title>第三章 管理工单 · odoo实施经验汇编</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../SECTION7.md" />
+    <link rel="next" href="README4.md" />
     
     
-    <link rel="prev" href="../SECTION7.md" />
+    <link rel="prev" href="README2.md" />
     
 
     </head>
@@ -439,7 +439,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="../chapter5/README.md">
+        <li class="chapter " data-level="1.6.1" data-path="README.md">
             
                 <span>
             
@@ -452,7 +452,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../chapter5/README2.md">
+        <li class="chapter " data-level="1.6.2" data-path="README2.md">
             
                 <span>
             
@@ -465,9 +465,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.3" data-path="../chapter5/README3.html">
+        <li class="chapter active" data-level="1.6.3" data-path="README3.html">
             
-                <a href="../chapter5/README3.html">
+                <a href="README3.html">
             
                     
                     第三章 管理工单
@@ -478,7 +478,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.4" data-path="../chapter5/README4.md">
+        <li class="chapter " data-level="1.6.4" data-path="README4.md">
             
                 <span>
             
@@ -491,9 +491,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.5" data-path="../chapter5/README5.html">
+        <li class="chapter " data-level="1.6.5" data-path="README5.html">
             
-                <a href="../chapter5/README5.html">
+                <a href="README5.html">
             
                     
                     第五章 工作中心
@@ -504,7 +504,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.6" data-path="../chapter5/README6.md">
+        <li class="chapter " data-level="1.6.6" data-path="README6.md">
             
                 <span>
             
@@ -581,9 +581,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.8.1" data-path="./">
+        <li class="chapter " data-level="1.8.1" data-path="../chapter7/">
             
-                <a href="./">
+                <a href="../chapter7/">
             
                     
                     第一章 多公司间的采购
@@ -700,7 +700,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第一章 多公司间的采购</a>
+        <a href=".." >第三章 管理工单</a>
     </h1>
 </div>
 
@@ -715,10 +715,13 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7B2C;&#x4E00;&#x7AE0;-&#x591A;&#x516C;&#x53F8;&#x95F4;&#x7684;&#x91C7;&#x8D2D;">&#x7B2C;&#x4E00;&#x7AE0; &#x591A;&#x516C;&#x53F8;&#x95F4;&#x7684;&#x91C7;&#x8D2D;</h1>
-<p>Odoo&#x652F;&#x6301;&#x591A;&#x516C;&#x53F8;&#x4E1A;&#x52A1;&#xFF0C;&#x672C;&#x7AE0;&#x5C31;&#x5C06;&#x5F00;&#x542F;&#x591A;&#x516C;&#x53F8;&#x95F4;&#x7684;&#x4E1A;&#x52A1;&#x4ECB;&#x7ECD;&#x3002;</p>
-<h2 id="&#x5F00;&#x542F;&#x591A;&#x516C;&#x53F8;">&#x5F00;&#x542F;&#x591A;&#x516C;&#x53F8;</h2>
-<p>&#x8981;&#x4F7F;&#x7528;&#x591A;&#x516C;&#x53F8;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5148;&#x5F00;&#x542F;&#x591A;&#x516C;&#x53F8;&#x8BBE;&#x7F6E;&#x3002;&#x5177;&#x4F53;&#x7684;&#x8BBE;&#x7F6E;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;&#x5728;&#x8BBE;&#x7F6E;-&#x5E38;&#x89C4;&#x8BBE;&#x7F6E;-&#x591A;&#x516C;&#x53F8;</p>
+                                <h1 id="&#x7B2C;&#x4E09;&#x7AE0;-&#x7BA1;&#x7406;&#x5DE5;&#x5355;">&#x7B2C;&#x4E09;&#x7AE0; &#x7BA1;&#x7406;&#x5DE5;&#x5355;</h1>
+<blockquote>
+<p>&#x5DE5;&#x5355;&#x6A21;&#x5757;&#x662F;&#x4F01;&#x4E1A;&#x7248;&#x5305;&#x542B;&#x7684;&#x6A21;&#x5757;&#xFF0C;&#x4F7F;&#x7528;&#x793E;&#x533A;&#x7248;&#x7684;&#x540C;&#x5B66;&#x53EF;&#x4EE5;&#x7565;&#x8FC7;&#x672C;&#x7AE0;&#x3002;</p>
+</blockquote>
+<h2 id="&#x7BA1;&#x7406;&#x6B20;&#x5355;">&#x7BA1;&#x7406;&#x6B20;&#x5355;</h2>
+<p>&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x751F;&#x4EA7;&#x53EF;&#x80FD;&#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x6B21;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x90E8;&#x5206;&#x4EA7;&#x54C1;&#x5148;&#x751F;&#x4EA7;&#x51FA;&#x6765;&#x4E86;&#xFF0C;&#x90A3;&#x4E48;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x4E0B;&#x4E00;&#x6B65;&#x7684;&#x6D41;&#x8F6C;&#x5462;&#xFF1F;&#x8FD9;&#x5C31;&#x8981;&#x63D0;&#x5230;odoo&#x4E2D;&#x7684;<strong>&#x6B20;&#x5355;</strong>&#x6982;&#x5FF5;&#xFF0C;&#x6B20;&#x5355;&#x6307;&#x7684;&#x662F;&#x4E0D;&#x80FD;&#x4E00;&#x6B21;&#x5B8C;&#x6210;&#x800C;&#x751F;&#x6210;&#x7684;&#x540E;&#x7EED;&#x7684;&#x5355;&#x636E;&#x3002;&#x6B20;&#x5355;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x4E0D;&#x6B62;&#x5B58;&#x5728;&#x4E8E;&#x751F;&#x4EA7;&#x6A21;&#x5757;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x5728;&#x5E93;&#x5B58;&#x8C03;&#x62E8;&#x7684;&#x7AE0;&#x8282;&#x4E5F;&#x89C1;&#x8FC7;&#x5B83;&#x7684;&#x5029;&#x5F71;&#xFF0C;&#x5047;&#x5982;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8D2D;&#x4E70;100&#x4E2A;&#x82F9;&#x679C;&#xFF0C;&#x4F46;&#x662F;&#x4F9B;&#x5E94;&#x5546;&#x9001;&#x8D27;&#x65F6;&#x5148;&#x9001;&#x4E86;50&#x4E2A;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5C31;&#x9700;&#x8981;&#x5728;&#x751F;&#x6210;&#x7684;&#x5165;&#x5E93;&#x5355;&#x4E2D;&#x5148;&#x628A;&#x8FD9;50&#x4E2A;&#x8FDB;&#x884C;&#x5165;&#x5E93;&#xFF0C;&#x6B64;&#x65F6;odoo&#x4F1A;&#x8BE2;&#x95EE;&#x4F60;&#xFF0C;&#x662F;&#x5426;&#x5C06;&#x540E;&#x7EED;&#x7684;&#x6570;&#x91CF;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x6B20;&#x5355;&#xFF0C;&#x4EE5;&#x4F9B;&#x4F9B;&#x5E94;&#x5546;&#x4E8C;&#x6B64;&#x9001;&#x8D27;&#x65F6;&#x4F7F;&#x7528;&#x3002;&#x751F;&#x4EA7;&#x7684;&#x5DE5;&#x5355;&#x4E2D;&#x4E5F;&#x662F;&#x5982;&#x6B64;&#xFF0C;&#x53EF;&#x80FD;&#x6211;&#x4EEC;&#x8FD9;&#x6B21;&#x9700;&#x8981;&#x751F;&#x6210;100&#x53F0;&#x7B14;&#x8BB0;&#x672C;&#x7535;&#x8111;&#xFF0C;&#x4F46;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x5DE5;&#x5E8F;&#x7EC4;&#x88C5;&#x65F6;&#x5148;&#x7EC4;&#x88C5;&#x4E86;20&#x53F0;&#x51FA;&#x6765;&#xFF0C;&#x90A3;&#x4E48;&#x540E;&#x7EED;&#x7684;80&#x53F0;&#x5C31;&#x4F1A;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x6B20;&#x5355;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x4E00;&#x70B9;&#x65F6;&#xFF0C;&#x62A5;&#x5DE5;&#x7684;&#x8FC7;&#x7A0B;&#x53EF;&#x4EE5;&#x5728;&#x751F;&#x4EA7;&#x5355;&#x7684;&#x5DE5;&#x5355;&#x660E;&#x7EC6;&#x9875;&#x9762;&#x4E2D;&#x5B8C;&#x6210;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x62A5;&#x5DE5;&#x754C;&#x9762;&#x5B8C;&#x6210;&#xFF0C;&#x4E24;&#x8005;&#x7684;&#x533A;&#x522B;&#x662F;&#x5DE5;&#x5355;&#x660E;&#x7EC6;&#x4E2D;&#x7684;&#x5F00;&#x59CB;&#x3001;&#x963B;&#x585E;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x540E;&#x7EED;&#x7684;&#x5DE5;&#x5355;&#x8FDB;&#x7A0B;&#xFF0C;&#x4F46;&#x662F;&#x62A5;&#x5DE5;&#x754C;&#x9762;&#x7684;&#x8BB0;&#x5F55;&#x751F;&#x4EA7;&#x6309;&#x94AE;&#x4F1A;&#x81EA;&#x52A8;&#x89E6;&#x53D1;&#x6B20;&#x5355;&#x7684;&#x5F00;&#x59CB;&#x3002;</p>
 
                                 
                                 </section>
@@ -746,12 +749,12 @@
 
             
                 
-                <a href="../SECTION7.md" class="navigation navigation-prev " aria-label="Previous page: 第七部分 多公司">
+                <a href="README2.md" class="navigation navigation-prev " aria-label="Previous page: 第二章 计划生产">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../SECTION7.md" class="navigation navigation-next " aria-label="Next page: 第七部分 网站">
+                <a href="README4.md" class="navigation navigation-next " aria-label="Next page: 第四章 外协加工">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -762,7 +765,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第一章 多公司间的采购","level":"1.8.1","depth":2,"next":{"title":"第七部分 网站","level":"1.9","depth":1,"path":"SECTION7.md","ref":"SECTION7.md","articles":[]},"previous":{"title":"第七部分 多公司","level":"1.8","depth":1,"path":"SECTION7.md","ref":"SECTION7.md","articles":[{"title":"第一章 多公司间的采购","level":"1.8.1","depth":2,"path":"chapter7/README.md","ref":"chapter7/README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kevin Kong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施经验汇编","language":"zh-hans","gitbook":"*","description":"odoo实施经验汇编，涵盖多个项目解决方案"},"file":{"path":"chapter7/README.md","mtime":"2020-11-11T03:51:24.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-11T02:20:41.649Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第三章 管理工单","level":"1.6.3","depth":2,"next":{"title":"第四章 外协加工","level":"1.6.4","depth":2,"path":"chapter5/README4.md","ref":"chapter5/README4.md","articles":[]},"previous":{"title":"第二章 计划生产","level":"1.6.2","depth":2,"path":"chapter5/README2.md","ref":"chapter5/README2.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kevin Kong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施经验汇编","language":"zh-hans","gitbook":"*","description":"odoo实施经验汇编，涵盖多个项目解决方案"},"file":{"path":"chapter5/README3.md","mtime":"2021-05-13T05:47:30.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-11T02:20:41.649Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
