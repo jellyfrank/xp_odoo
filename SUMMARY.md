@@ -1,3 +1,5 @@
+# 目录
+
 * [前言](README.md)
 * [第一部分 基础数据](SECTION1.md)
   * [第一章 Odoo简介](chapter1/README.md)
@@ -7,7 +9,7 @@
   * [第五章 用户和用户组](chapter1/README5.md)
   * [第六章 邮箱配置](chapter1/README6.md)
 * [第二部分 销售管理](SECTION2.md)
-  * [第一章 报价单与销售订单](chapter2/README.md)
+  * [第一章 报价与销售](chapter2/README.md)
   * [第二章 销售管理](chapter2/README2.md)
   * [第三章 报价单与订单](chapter2/README3.md)
   * [第四章 销售库存管理](chapter2/README4.md)
