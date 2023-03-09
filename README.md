@@ -1,6 +1,6 @@
 # Odoo Experience Book
 
-Odoo 实施经验参考手册
+Odoo庖丁解牛
 
 ## 前言
 

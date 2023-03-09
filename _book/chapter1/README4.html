@@ -252,12 +252,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.4" data-path="../chapter2/README4.md">
+        <li class="chapter " data-level="1.3.4" data-path="../chapter2/README4.html">
             
-                <span>
+                <a href="../chapter2/README4.html">
             
                     
-                    第四章 发货与退货
+                    第四章 销售库存管理
             
                 </a>
             
@@ -310,12 +310,25 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../chapter31/README.md">
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/README.md">
             
                 <span>
             
                     
                     第一章 合同管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/README2.html">
+            
+                <a href="../chapter3/README2.html">
+            
+                    
+                    第二章 成本计算
             
                 </a>
             
@@ -758,6 +771,18 @@
 <p><img src="images/17.png" alt=""></p>
 <p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x8BE5;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x662F;&#x4E2A;&#x4EBA;&#x8FD8;&#x662F;&#x4E00;&#x4E2A;&#x516C;&#x53F8;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x4E2A;&#x4EBA;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x4E0B;&#x9762;&#x9009;&#x62E9;&#x4ED6;&#x6240;&#x5C5E;&#x7684;&#x516C;&#x53F8;&#x3002;&#x4E00;&#x65E6;&#x6211;&#x4EEC;&#x7ED9;&#x4E2A;&#x4EBA;&#x9009;&#x62E9;&#x4E86;&#x516C;&#x53F8;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5728;&#x521B;&#x5EFA;&#x9500;&#x552E;&#x5355;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x9009;&#x62E9;&#x4E2A;&#x4EBA;&#x4F5C;&#x4E3A;&#x5BA2;&#x6237;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x4ED6;&#x96B6;&#x5C5E;&#x7684;&#x516C;&#x53F8;&#xFF1A;</p>
 <p><img src="images/18.png" alt=""></p>
+<p>&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x7C7B;&#x578B;&#x5206;&#x4E3A;<strong>&#x4E2A;&#x4EBA;</strong>&#x4E0E;<strong>&#x516C;&#x53F8;</strong>, &#x4ECE;&#x6280;&#x672F;&#x89D2;&#x5EA6;&#x4E0A;&#x8BB2;, &#x53D6;&#x51B3;&#x4E8E;&#x5B83;&#x7684;company_type&#x5B57;&#x6BB5;&#x53D6;&#x503C;. &#x800C;company_tyep&#x4E8B;&#x5B9E;&#x4E0A;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x8BA1;&#x7B97;&#x5B57;&#x6BB5;, &#x5176;&#x80CC;&#x540E;&#x7684;&#x5B57;&#x6BB5;&#x5E94;&#x8BE5;&#x662F;is_company</p>
+<pre><code class="lang-python">company_type = fields.Selection(string=<span class="hljs-string">&apos;Company Type&apos;</span>,
+        selection=[(<span class="hljs-string">&apos;person&apos;</span>, <span class="hljs-string">&apos;Individual&apos;</span>), (<span class="hljs-string">&apos;company&apos;</span>, <span class="hljs-string">&apos;Company&apos;</span>)],
+        compute=<span class="hljs-string">&apos;_compute_company_type&apos;</span>, inverse=<span class="hljs-string">&apos;_write_company_type&apos;</span>)
+
+
+<span class="hljs-meta">@api.depends(&apos;is_company&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_compute_company_type</span><span class="hljs-params">(self)</span>:</span>
+    <span class="hljs-keyword">for</span> partner <span class="hljs-keyword">in</span> self:
+        partner.company_type = <span class="hljs-string">&apos;company&apos;</span> <span class="hljs-keyword">if</span> partner.is_company <span class="hljs-keyword">else</span> <span class="hljs-string">&apos;person&apos;</span>
+</code></pre>
+<p>&#x56E0;&#x6B64;, &#x6211;&#x4EEC;&#x5728;&#x5BF9;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x8FDB;&#x884C;&#x529F;&#x80FD;&#x62D3;&#x5C55;&#x7684;&#x65F6;&#x5019;&#x8981;&#x6CE8;&#x610F;&#x4F7F;&#x7528;is_company&#x800C;&#x975E;company_type.</p>
 <h2 id="&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x7684;&#x7C7B;&#x578B;">&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x7684;&#x7C7B;&#x578B;</h2>
 <p>&#x524D;&#x9762;&#x8BB2;&#x8FC7;&#xFF0C;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x7684;&#x6982;&#x5FF5;&#x4E0D;&#x4EC5;&#x4EC5;&#x5C40;&#x9650;&#x4E8E;&#x5BA2;&#x6237;&#x3001;&#x4F9B;&#x5E94;&#x5546;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x6536;&#x8D27;&#x5730;&#x5740;&#x7B49;&#x66F4;&#x4E3A;&#x5E7F;&#x6CDB;&#x7684;&#x6982;&#x5FF5;&#x3002;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4E00;&#x4E0B;&#x51E0;&#x79CD;&#x7C7B;&#x578B;&#xFF1A;</p>
 <ul>
@@ -839,7 +864,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第四章 联系人与合作伙伴","level":"1.2.4","depth":2,"next":{"title":"第五章 用户和用户组","level":"1.2.5","depth":2,"path":"chapter1/README5.md","ref":"chapter1/README5.md","articles":[]},"previous":{"title":"第三章 产品管理","level":"1.2.3","depth":2,"path":"chapter1/README3.md","ref":"chapter1/README3.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kevin Kong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施经验汇编","language":"zh-hans","gitbook":"*","description":"odoo实施经验汇编，涵盖多个项目解决方案"},"file":{"path":"chapter1/README4.md","mtime":"2021-11-04T01:33:29.130Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-04T07:21:23.712Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第四章 联系人与合作伙伴","level":"1.2.4","depth":2,"next":{"title":"第五章 用户和用户组","level":"1.2.5","depth":2,"path":"chapter1/README5.md","ref":"chapter1/README5.md","articles":[]},"previous":{"title":"第三章 产品管理","level":"1.2.3","depth":2,"path":"chapter1/README3.md","ref":"chapter1/README3.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kevin Kong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施经验汇编","language":"zh-hans","gitbook":"*","description":"odoo实施经验汇编，涵盖多个项目解决方案"},"file":{"path":"chapter1/README4.md","mtime":"2022-10-13T01:04:37.127Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-09T02:35:23.116Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
