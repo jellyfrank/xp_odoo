@@ -8,13 +8,13 @@
 
 对于13.0之前的版本，odoo专门设计了两个字段用来标识客户和供应商。
 
-![](images/9.png)
+![9](images/9.png)
 
 但是从13.0开始，官方重新设计了这个特性，取消了这两个字段，取而代之的是客户比重、供应商比重。
 
 > 客户比重、供应商比重的字段定义位于会计模块中，因此，需要安装会计模块后才可以使用这两个字段。
 
-![](images/10.png)
+![10](images/10.png)
 
 如此设计的含义是暗示此合作伙伴的客户属性和供应商属性的比重，因为存在一种可能，此合作伙伴即是客户又是供应商。当客户比重大于1时，此合作伙伴即是客户。当供应商比重大于1时，即为供应商。对于内部用户的关联业务伙伴、地址等其他类型的合作伙伴，其客户比重和供应商比重均为0。
 
@@ -38,11 +38,11 @@
 
 有些时候，我们的客户可能是一个公司，同时又有该公司下的联系人，odoo原生支持这种上下级的关系。
 
-![](images/17.png)
+![17](images/17.png)
 
 可以看到，我们在创建一个合作伙伴的时候可以选择该合作伙伴是个人还是一个公司，如果是个人，那么我们可以在下面选择他所属的公司。一旦我们给个人选择了公司，那么我们在创建销售单的时候，如果选择个人作为客户，那么我们看到他隶属的公司：
 
-![](images/18.png)
+![18](images/18.png)
 
 合作伙伴可以按照类型分为**个人**与**公司**, 从技术角度上讲, 取决于它的company_type字段取值. 而company_tyep事实上只是一个计算字段, 其背后的字段应该是is_company
 
@@ -70,7 +70,7 @@ def _compute_company_type(self):
 * 其他地址： 客户的备用地址
 * 私有地址： 只有被授权才可以访问的私有地址
 
-![](images/19.png)
+![19](images/19.png)
 
 ## 用户、合作伙伴和员工
 
@@ -78,7 +78,7 @@ def _compute_company_type(self):
 
 那员工又是什么呢？如果用户安装了人力资源模块，系统中会有一个员工对象hr.employee，它代表的是公司的雇员信息。
 
-![](images/16.png)
+![16](images/16.png)
 
 员工与用户是有关联关系的，在HR设置Tab页中，有一个字段关联的用户，用于关联用户和员工。
 
@@ -168,3 +168,20 @@ street/stree2/zip/city/state_id/country_id
 比较遗憾的是，由于某些原因，国内访问的时候不是很稳定，时常出现加载不出来的问题，显得不是那么很接地气。因此，笔者开发了一个百度地图的模块，用来替代这个模块。有需要的同学可以到我的[淘宝](opensoft.taobao.com)进行选购，这里仅提供一张截图，详细的功能可以参考我的[博客](mixoo.cn)的百度地图一文来了解更多。
 
 ![15](images/15.png)
+
+## 联系人的显示名称
+
+通常display_name作为计算字段是不存储的，但是在联系人模型(res.partner)中，odoo对它进行了存储。
+
+它的计算方法如下：
+
+```python
+@api.depends('is_company', 'name', 'parent_id.display_name', 'type', 'company_name', 'commercial_company_name')
+def _compute_display_name(self):
+# retrieve name_get() without any fancy feature
+names = dict(self.with_context({}).name_get())
+for partner in self:
+        partner.display_name = names.get(partner.id)
+```
+
+这就导致，如果我们想要使用name_get方法对res.partner的显示名称进行修改，如果不在依赖中声明我们所需要的字段，那么我们希望的事情就不会发生。
