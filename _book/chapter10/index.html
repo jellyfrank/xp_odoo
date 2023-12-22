@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第二章 库位管理 · odoo实施经验汇编</title>
+        <title>百度地图 · odoo实施经验汇编</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,6 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="README3.html" />
-    
-    
-    <link rel="prev" href="README.md" />
     
 
     </head>
@@ -355,7 +351,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="README.md">
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/README.md">
             
                 <span>
             
@@ -368,9 +364,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.2" data-path="README2.html">
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/README2.html">
             
-                <a href="README2.html">
+                <a href="../chapter4/README2.html">
             
                     
                     第二章 库位管理
@@ -381,9 +377,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="README3.html">
+        <li class="chapter " data-level="1.5.3" data-path="../chapter4/README3.html">
             
-                <a href="README3.html">
+                <a href="../chapter4/README3.html">
             
                     
                     第三章 出入库和内部调拨
@@ -394,7 +390,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="README.md">
+        <li class="chapter " data-level="1.5.4" data-path="../chapter4/README.md">
             
                 <span>
             
@@ -407,7 +403,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="README.md">
+        <li class="chapter " data-level="1.5.5" data-path="../chapter4/README.md">
             
                 <span>
             
@@ -420,7 +416,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="README.md">
+        <li class="chapter " data-level="1.5.6" data-path="../chapter4/README.md">
             
                 <span>
             
@@ -433,7 +429,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.7" data-path="README.md">
+        <li class="chapter " data-level="1.5.7" data-path="../chapter4/README.md">
             
                 <span>
             
@@ -446,9 +442,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.8" data-path="README8.html">
+        <li class="chapter " data-level="1.5.8" data-path="../chapter4/README8.html">
             
-                <a href="README8.html">
+                <a href="../chapter4/README8.html">
             
                     
                     第八章 成本核算
@@ -723,9 +719,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.12.1" data-path="../chapter10/">
+        <li class="chapter active" data-level="1.12.1" data-path="./">
             
-                <a href="../chapter10/">
+                <a href="./">
             
                     
                     百度地图
@@ -771,7 +767,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第二章 库位管理</a>
+        <a href=".." >百度地图</a>
     </h1>
 </div>
 
@@ -786,51 +782,19 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7B2C;&#x4E8C;&#x7AE0;-&#x5E93;&#x4F4D;&#x7BA1;&#x7406;">&#x7B2C;&#x4E8C;&#x7AE0; &#x5E93;&#x4F4D;&#x7BA1;&#x7406;</h1>
-<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7CFB;&#x7EDF;&#x5E76;&#x6CA1;&#x6709;&#x5F00;&#x542F;&#x591A;&#x5E93;&#x4F4D;&#x7BA1;&#x7406;&#xFF0C;&#x5F00;&#x542F;&#x7684;&#x65B9;&#x6CD5;&#x5728;&#x83DC;&#x5355;&#x8BBE;&#x7F6E;-&#x5E93;&#x5B58;-&#x4ED3;&#x5E93;-&#x5B58;&#x50A8;&#x4F4D;&#x7F6E;&#xFF0C;&#x5F00;&#x542F;&#x591A;&#x5E93;&#x4F4D;&#x7BA1;&#x7406;&#xFF1A;</p>
-<p><img src="images/15.jpg" alt=""></p>
-<p>&#x5F00;&#x542F;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x4ED3;&#x5E93;-&#x8BBE;&#x7F6E;-&#x5E93;&#x4F4D;&#x4E2D;&#x770B;&#x5230;&#x5E93;&#x4F4D;&#x7BA1;&#x7406;&#x529F;&#x80FD;&#x4E86;&#x3002;</p>
-<h2 id="&#x5E93;&#x4F4D;&#x7C7B;&#x578B;">&#x5E93;&#x4F4D;&#x7C7B;&#x578B;</h2>
-<p>odoo&#x4E2D;&#x7684;&#x5E93;&#x4F4D;&#x7C7B;&#x578B;&#x6709;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;</p>
-<ul>
-<li>&#x4F9B;&#x5E94;&#x5546;&#xFF1A;&#x4F9B;&#x5E94;&#x5546;&#x5E93;&#x4F4D;&#xFF0C;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x5E93;&#x4F4D;&#xFF0C;&#x4EE3;&#x8868;&#x4F9B;&#x5E94;&#x5546;&#x5E93;&#x4F4D;&#x3002;</li>
-<li>&#x5BA2;&#x6237;&#xFF1A;&#x5BA2;&#x6237;&#x5E93;&#x4F4D;&#xFF0C;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x5E93;&#x4F4D;&#xFF0C;&#x4EE3;&#x8868;&#x5BA2;&#x6237;&#x7684;&#x5B58;&#x50A8;&#x5E93;&#x4F4D;&#x3002;</li>
-<li>&#x76D8;&#x70B9;&#x5E93;&#x4F4D;&#xFF1A;&#x76D8;&#x70B9;&#x5E93;&#x4F4D;&#xFF0C;&#x865A;&#x62DF;&#x5E93;&#x4F4D;&#xFF0C;&#x4EE3;&#x8868;&#x76D8;&#x70B9;&#x4E1A;&#x52A1;&#x7684;&#x6E90;&#x6216;&#x8005;&#x76EE;&#x7684;&#x5E93;&#x4F4D;&#x3002;</li>
-<li>&#x751F;&#x4EA7;&#xFF1A;&#x751F;&#x4EA7;&#x5E93;&#x4F4D;&#xFF0C;&#x865A;&#x62DF;&#x5E93;&#x4F4D;&#xFF0C;&#x6D88;&#x8017;&#x539F;&#x6750;&#x6599;&#xFF0C;&#x4EA7;&#x751F;&#x6210;&#x54C1;&#x7684;&#x5E93;&#x4F4D;&#x3002;</li>
-<li>&#x89C6;&#x56FE;&#xFF1A;&#x903B;&#x8F91;&#x5E93;&#x4F4D;&#xFF0C;&#x672C;&#x8EAB;&#x4E0D;&#x80FD;&#x5B58;&#x50A8;&#x5E93;&#x5B58;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x903B;&#x8F91;&#x4E0A;&#x7684;&#x5E93;&#x4F4D;&#x5C42;&#x7EA7;&#x5173;&#x7CFB;&#x3002;</li>
-<li>&#x4E2D;&#x8F6C;&#x5E93;&#x4F4D;&#xFF1A;&#x591A;&#x516C;&#x53F8;&#x4E0B;&#x591A;&#x5E93;&#x4F4D;&#x8C03;&#x62E8;&#x7684;&#x4E2D;&#x8F6C;&#x5E93;&#x4F4D;&#x3002;</li>
-</ul>
-<p>&#x53E6;&#x5916;&#x4E24;&#x4E2A;&#x9009;&#x9879;&#xFF0C;&#x53EF;&#x4EE5;&#x6807;&#x8BB0;&#x6B64;&#x5E93;&#x4F4D;&#x4E3A;&#x4E00;&#x4E2A;&#x62A5;&#x5E9F;&#x5E93;&#x4F4D;&#x8FD8;&#x662F;&#x4E00;&#x4E2A;&#x9000;&#x5E93;&#x5E93;&#x4F4D;&#x3002;&#x53EA;&#x6709;&#x88AB;&#x6807;&#x8BB0;&#x4E3A;&#x9000;&#x5E93;&#x4E4B;&#x540E;&#xFF0C;&#x624D;&#x53EF;&#x4EE5;&#x5728;&#x9000;&#x56DE;&#x5411;&#x5BFC;&#x4E2D;&#x9009;&#x62E9;&#x3002;</p>
-<h2 id="&#x4E0B;&#x67B6;&#x7B56;&#x7565;">&#x4E0B;&#x67B6;&#x7B56;&#x7565;</h2>
-<p>odoo&#x4E2D;&#x53EF;&#x4EE5;&#x5728;&#x5E93;&#x4F4D;&#x4E0A;&#x8BBE;&#x7F6E;&#x4E0B;&#x67B6;&#x7B56;&#x7565;&#xFF0C;&#x4F46;&#x662F;&#x6B64;&#x529F;&#x80FD;&#x9ED8;&#x8BA4;&#x662F;&#x6CA1;&#x6709;&#x5F00;&#x542F;&#x7684;&#x3002;&#x9700;&#x8981;&#x7ED9;&#x5F53;&#x524D;&#x7528;&#x6237;&#x7BA1;&#x7406;&#x63A8;&#x62C9;&#x7269;&#x6D41;&#x8DEF;&#x7EBF;&#x6743;&#x9650;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF1A;</p>
-<p><img src="images/16.jpg" alt=""></p>
-<p>&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x8BF4;&#x8FC7;&#xFF0C;&#x5728;&#x4EA7;&#x54C1;&#x5206;&#x7C7B;&#x4E2D;&#x4E5F;&#x6709;&#x4E00;&#x4E2A;&#x4E0B;&#x67B6;&#x7B56;&#x7565;&#xFF0C;&#x4EA7;&#x54C1;&#x5206;&#x7C7B;&#x4E2D;&#x7684;&#x4E0B;&#x67B6;&#x7B56;&#x7565;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x662F;&#x8981;&#x9AD8;&#x4E8E;&#x6B64;&#x5904;&#x7684;&#x4E0B;&#x67B6;&#x7B56;&#x7565;&#x7684;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x91C7;&#x8D2D;&#x4E00;&#x6279;Play Car&#x73A9;&#x5177;&#xFF0C;&#x6279;&#x6B21;&#x53F7;&#x4E3A;A00001&#xFF0C;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5728;&#x6B64;&#x4EA7;&#x54C1;&#x5206;&#x7C7B;&#x4E0A;&#x8BBE;&#x7F6E;LIFO&#xFF0C;&#x5728;stock&#x5E93;&#x4F4D;&#x4E0A;&#x8BBE;&#x7F6E;FIFO&#x3002;&#x7136;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x518D;&#x91C7;&#x8D2D;&#x4E00;&#x6279;&#x540C;&#x6837;&#x7684;&#x73A9;&#x5177;&#xFF0C;&#x6279;&#x6B21;&#x53F7;&#x4E3A;A00002&#xFF0C;&#x6B64;&#x65F6;&#x6211;&#x4EEC;&#x7684;&#x5E93;&#x5B58;&#xFF1A;</p>
-<p><img src="images/17.jpg" alt=""></p>
-<p>&#x6B64;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x505A;&#x4E00;&#x4E2A;&#x9500;&#x552E;&#x5355;&#xFF0C;&#x6309;&#x7167;&#x6211;&#x4EEC;&#x7684;&#x903B;&#x8F91;&#xFF0C;&#x7531;&#x4E8E;&#x4EA7;&#x54C1;&#x5206;&#x7C7B;&#x8BBE;&#x7F6E;&#x4E86;LIFO&#xFF0C;&#x90A3;&#x4E48;&#x4F18;&#x5148;&#x51FA;&#x5E93;&#x7684;&#x5E94;&#x8BE5;&#x662F;A00002&#x6279;&#x6B21;&#x7684;&#x4EA7;&#x54C1;&#x3002;</p>
-<p><img src="images/18.jpg" alt=""></p>
-<p>&#x7531;&#x4E0A;&#x56FE;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x4F18;&#x5148;&#x67E5;&#x627E;&#x7684;&#x5E93;&#x4F4D;&#x786E;&#x5B9E;&#x662F;A00002&#x6279;&#x6B21;&#x7684;&#x5E93;&#x5B58;&#x3002;</p>
-<p>&#x5173;&#x4E8E;&#x4E0B;&#x67B6;&#x7B56;&#x7565;&#xFF0C;&#x5B98;&#x65B9;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x4E0B;&#x67B6;&#x65B9;&#x5F0F;&#xFF0C;&#x6839;&#x636E;&#x4EA7;&#x54C1;&#x7684;&#x4FDD;&#x8D28;&#x671F;&#x8FDB;&#x884C;&#x9009;&#x62E9;&#x3002;&#x5F00;&#x542F;&#x7684;&#x65B9;&#x5F0F;&#x4E3A;&#x5148;&#x542F;&#x7528;&#x5E93;&#x5B58;-&#x8FFD;&#x6EAF;&#x6027;-&#x5E8F;&#x5217;&#x53F7;&#xFF0C;&#x7136;&#x540E;&#x9009;&#x62E9;&#x8BBE;&#x7F6E;&#x8FC7;&#x671F;&#x65E5;&#x671F;&#xFF1A;</p>
-<p><img src="images/19.jpg" alt=""></p>
-<p>&#x542F;&#x7528;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4E0B;&#x67B6;&#x7B56;&#x7565;&#x5904;&#x591A;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;FEFO&#xFF0C;&#x5373;&#x5148;&#x5230;&#x671F;&#x5148;&#x51FA;&#x5E93;&#x3002;</p>
-<p><img src="images/20.jpg" alt=""></p>
-<h2 id="&#x4E0A;&#x67B6;&#x7B56;&#x7565;">&#x4E0A;&#x67B6;&#x7B56;&#x7565;</h2>
-<p>&#x4E0E;&#x4E0B;&#x67B6;&#x7B56;&#x7565;&#x76F8;&#x5BF9;&#x5E94;&#x7684;&#x529F;&#x80FD;&#x662F;&#x4E0A;&#x67B6;&#x7B56;&#x7565;&#xFF0C;&#x5BF9;&#x4E8E;&#x6307;&#x5B9A;&#x5230;&#x8FBE;&#x7684;&#x4EA7;&#x54C1;&#xFF0C;&#x8BBE;&#x7F6E;&#x9ED8;&#x8BA4;&#x7684;&#x5165;&#x5E93;&#x5E93;&#x4F4D;&#x3002;&#x5728;&#x4ED3;&#x5E93;-&#x8BBE;&#x7F6E;-&#x4ED3;&#x5E93;&#x7BA1;&#x7406;-&#x4E0A;&#x67B6;&#x7B56;&#x7565;&#x4E2D;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#xFF1A;</p>
-<p><img src="images/putaway.png" alt=""></p>
-<p>&#x4E0A;&#x67B6;&#x7B56;&#x7565;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x4EE5;&#x4E0B;&#x51E0;&#x9879;&#xFF1A;</p>
-<ul>
-<li>&#x4EA7;&#x54C1;&#xFF1A;&#x4E0A;&#x67B6;&#x7B56;&#x7565;&#x5E94;&#x7528;&#x4E8E;&#x54EA;&#x4E2A;&#x4EA7;&#x54C1;</li>
-<li>&#x4EA7;&#x54C1;&#x5230;&#x8FBE;&#xFF1A;&#x4EA7;&#x54C1;&#x62B5;&#x8FBE;&#x7684;&#x6307;&#x5B9A;&#x5E93;&#x4F4D;&#xFF0C;&#x53EA;&#x80FD;&#x662F;&#x7236;&#x7EA7;&#x5E93;&#x4F4D;</li>
-<li>&#x5B58;&#x50A8;&#x5230;&#xFF1A;&#x9700;&#x8981;&#x5B58;&#x50A8;&#x7684;&#x76EE;&#x7684;&#x5E93;&#x4F4D;</li>
-<li>&#x516C;&#x53F8;&#xFF1A;&#x591A;&#x516C;&#x53F8;&#x6761;&#x4EF6;&#x4E0B;&#x6307;&#x5B9A;&#x7684;&#x516C;&#x53F8;</li>
-</ul>
-<p>&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5047;&#x5982;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x4EA7;&#x54C1;A&#xFF0C;&#x548C;&#x4E24;&#x4E2A;&#x5E93;&#x4F4D; WH/S1&#x548C;WH/S2&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x5728;&#x91C7;&#x8D2D;&#x5355;&#x786E;&#x8BA4;&#x7684;&#x65F6;&#x5019;&#x628A;&#x5165;&#x5E93;&#x5355;&#x4E0A;&#x67B6;&#x5230;S2&#x5E93;&#x4F4D;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x5C31;&#x8FD9;&#x6837;&#x8BBE;&#x7F6E;&#xFF1A;</p>
-<p>&#x4EA7;&#x54C1;&#xFF1A;A, &#x4EA7;&#x54C1;&#x5230;&#x8FBE;&#xFF1A;WH, &#x5B58;&#x50A8;&#x5230;: WH/S2&#x3002;</p>
-<h3 id="&#x4E0A;&#x67B6;&#x7B56;&#x7565;&#x4E0E;&#x8C03;&#x62E8;&#x5355;&#x7684;&#x4F18;&#x5148;&#x7EA7;">&#x4E0A;&#x67B6;&#x7B56;&#x7565;&#x4E0E;&#x8C03;&#x62E8;&#x5355;&#x7684;&#x4F18;&#x5148;&#x7EA7;</h3>
-<p>&#x8BFB;&#x8005;&#x5728;&#x4F7F;&#x7528;odoo&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x53EF;&#x80FD;&#x4F1A;&#x78B0;&#x5230;&#x6BD4;&#x8F83;&#x8FF7;&#x60D1;&#x7684;&#x4E00;&#x79CD;&#x64CD;&#x4F5C;&#xFF0C;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x5F20;&#x8C03;&#x62E8;&#x5355;WH/INT/0002&#xFF0C;&#x6211;&#x4EEC;&#x8BBE;&#x7F6E;&#x7684;&#x5176;&#x6E90;&#x5E93;&#x4F4D;&#x662F;BMW Location&#xFF0C;&#x76EE;&#x7684;&#x5E93;&#x4F4D;&#x662F;Audi Location&#xFF0C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x7684;&#x64CD;&#x4F5C;&#x662F;&#x5C06;&#x4E00;&#x8F86;&#x9519;&#x8BEF;&#x653E;&#x5230;BMW&#x5E93;&#x4F4D;&#x7684;A4L&#x8C03;&#x62E8;&#x56DE;Audi&#x5E93;&#x4F4D;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x64CD;&#x4F5C;&#x8FC7;&#x7A0B;&#x4E2D;&#x5374;&#x51FA;&#x73B0;&#x4E86;&#x4E0B;&#x9762;&#x8BE1;&#x5F02;&#x7684;&#x884C;&#x4E3A;&#xFF1A;</p>
-<p><img src="images/putway.png" alt=""></p>
-<p>&#x8FD9;&#x663E;&#x7136;&#x4E0E;&#x6211;&#x4EEC;&#x76F4;&#x89C2;&#x7684;&#x903B;&#x8F91;&#x4E0D;&#x7B26;&#xFF0C;&#x6211;&#x4EEC;&#x660E;&#x660E;&#x6307;&#x660E;&#x4E86;&#x76EE;&#x7684;&#x5E93;&#x4F4D;&#x662F;Audi Location&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x68C0;&#x67E5;&#x5E93;&#x5B58;&#x7684;&#x65F6;&#x5019;&#x751F;&#x6210;&#x7684;&#x76EE;&#x7684;&#x5E93;&#x4F4D;&#x5C45;&#x7136;&#x4F9D;&#x65E7;&#x662F;BMW Location&#x3002;&#x90A3;&#x4E48;&#x8FD9;&#x7A76;&#x7ADF;&#x662F;Odoo&#x80CC;&#x540E;&#x7684;&#x903B;&#x8F91;&#x9519;&#x8BEF;&#xFF0C;&#x8FD8;&#x662F;&#x6211;&#x4EEC;&#x8BEF;&#x64CD;&#x4F5C;&#x4E86;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;</p>
-<p>&#x7ECF;&#x8FC7;&#x6211;&#x4EEC;&#x5BF9;&#x6E90;&#x4EE3;&#x7801;&#x7684;&#x7814;&#x7A76;&#xFF0C;&#x53D1;&#x73B0;&#x4E86;&#x5176;&#x903B;&#x8F91;&#x8BBE;&#x8BA1;&#x7684;&#x601D;&#x8DEF;&#xFF0C;&#x5176;&#x80CC;&#x540E;&#x7684;&#x5728;&#x4F5C;&#x795F;&#x7684;&#x5C31;&#x662F;&#x4E0A;&#x67B6;&#x7B56;&#x7565;&#x3002;odoo&#x7684;&#x4E0A;&#x67B6;&#x7B56;&#x7565;&#x4F18;&#x5148;&#x7EA7;&#x8981;&#x9AD8;&#x4E8E;&#x8C03;&#x62E8;&#x5355;&#x7684;&#x76EE;&#x7684;&#x5E93;&#x4F4D;&#x8BBE;&#x7F6E;&#xFF0C;&#x56E0;&#x4E3A;&#x6211;&#x4EEC;&#x8BBE;&#x7F6E;&#x4E86;A4L&#x7684;&#x5728;WH&#x4ED3;&#x5E93;&#x7684;&#x4E0A;&#x67B6;&#x7B56;&#x7565;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x8FD9;&#x91CC;&#x4EFD;&#x7B80;&#x5355;&#x4E0A;&#x8BBE;&#x7F6E;&#x7684;&#x76EE;&#x7684;&#x5E93;&#x4F4D;&#x5C31;&#x65E0;&#x6548;&#x4E86;&#x3002;</p>
-<p><img src="images/putway2.png" alt=""></p>
+                                <h1 id="&#x767E;&#x5EA6;&#x5730;&#x56FE;">&#x767E;&#x5EA6;&#x5730;&#x56FE;</h1>
+<p>&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x89C6;&#x56FE;&#x3002;&#x6A21;&#x5757;&#x7684;&#x8D77;&#x56E0;&#x662F;&#xFF0C;&#x6709;&#x5BA2;&#x6237;&#x5E0C;&#x671B;&#x80FD;&#x5728;&#x5730;&#x56FE;&#x4E0A;&#x5C55;&#x793A;&#x51FA;&#x6240;&#x6709;&#x7684;&#x5BA2;&#x6237;&#x7684;&#x5750;&#x6807;&#xFF0C;&#x80FD;&#x591F;&#x4E00;&#x773C;&#x770B;&#x6E05;&#x67D0;&#x4E2A;&#x5BA2;&#x6237;&#x9644;&#x8FD1;&#x7684;&#x5BA2;&#x6237;&#x3002;&#x4F01;&#x4E1A;&#x7248;&#x81EA;&#x5E26;&#x4E86;&#x4E00;&#x4E2A;&#x5730;&#x56FE;&#x6A21;&#x5757;&#xFF0C;&#x4E0D;&#x8FC7;&#x8001;&#x5916;&#x561B;&#xFF0C;&#x81EA;&#x7136;&#x662F;&#x4F7F;&#x7528;Google Map&#x4E86;&#xFF0C;&#x7531;&#x4E8E;&#x590D;&#x6742;&#x7684;&#x7F51;&#x7EDC;&#x539F;&#x56E0;&#xFF0C;&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#xFF0C;&#x4F53;&#x9A8C;&#x5E76;&#x4E0D;&#x597D;&#xFF0C;&#x56E0;&#x6B64;&#x624D;&#x6709;&#x4E86;&#x4ECA;&#x5929;&#x7684;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x3002;</p>
+<h2 id="&#x6A21;&#x5757;&#x4ECB;&#x7ECD;">&#x6A21;&#x5757;&#x4ECB;&#x7ECD;</h2>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x4F7F;&#x7528;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x53BB;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x7684;&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x53BB;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x8D26;&#x53F7;&#xFF0C;&#x83B7;&#x53D6;AK&#xFF0C;&#x586B;&#x5165;&#x5230;&#x6211;&#x4EEC;&#x7684;&#x6A21;&#x5757;&#x53C2;&#x6570;&#x4E2D;&#xFF1A;</p>
+<p><img src="images/setting.png" alt="baidu"></p>
+<p>&#x586B;&#x5B8C;AK&#xFF0C;&#x5176;&#x4F59;&#x7684;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x4FDD;&#x6301;&#x4E0D;&#x52A8;&#x3002;
+&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#xFF0C;&#x5E76;&#x586B;&#x5165;&#x5BA2;&#x6237;&#x7684;&#x8BE6;&#x7EC6;&#x5730;&#x5740;&#xFF1A;</p>
+<p><img src="images/partner.png" alt="partner"></p>
+<p>&#x8BE5;&#x6A21;&#x5757;&#x4F1A;&#x5728;&#x6211;&#x4EEC;&#x4FDD;&#x5B58;&#x5BA2;&#x6237;&#x5730;&#x5740;&#x65F6;&#xFF0C;&#x81EA;&#x52A8;&#x5C06;&#x5BA2;&#x6237;&#x5730;&#x5740;&#x9006;&#x89E3;&#x6790;&#x4E3A;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x7684;&#x5750;&#x6807;&#xFF0C;&#x5E76;&#x5B58;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x5728;&#x5730;&#x5740;&#x680F;&#x7684;&#x4E0B;&#x65B9;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7684;&#x7F29;&#x5C0F;&#x7248;&#x7684;&#x5730;&#x56FE;&#xFF0C;&#x53EF;&#x4EE5;&#x62D6;&#x62FD;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7F29;&#x653E;&#x3002;</p>
+<p>&#x6700;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x8054;&#x7CFB;&#x4EBA;&#x6A21;&#x5757;&#x4E2D;&#xFF0C;&#x770B;&#x5230;&#x5728;&#x539F;&#x6709;&#x7684;&#x89C6;&#x56FE;&#x7C7B;&#x578B;&#x4E2D;&#x591A;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x7C7B;&#x578B;&#x7684;&#x89C6;&#x56FE;&#xFF0C;&#x6211;&#x4EEC;&#x70B9;&#x51FB;&#x5B83;&#x5C06;&#x80FD;&#x591F;&#x5728;&#x4E00;&#x5F20;&#x5730;&#x56FE;&#x4E0A;&#x770B;&#x5230;&#x6240;&#x6709;&#x7684;&#x5BA2;&#x6237;&#x3002;</p>
+<p><img src="images/contacts.jpg" alt="list"></p>
+<p>&#x70B9;&#x51FB;&#x5730;&#x56FE;&#x4E0A;&#x7684;&#x67D0;&#x4E2A;&#x6807;&#x8BB0;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4E0E;&#x4E4B;&#x5BF9;&#x5E94;&#x7684;&#x5BA2;&#x6237;&#x4FE1;&#x606F;&#x3002;</p>
+<p><img src="images/map.png" alt="detail"></p>
 
                                 
                                 </section>
@@ -858,14 +822,6 @@
 
             
                 
-                <a href="README.md" class="navigation navigation-prev " aria-label="Previous page: 第一章 仓库管理">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="README3.html" class="navigation navigation-next " aria-label="Next page: 第三章 出入库和内部调拨">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -874,7 +830,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第二章 库位管理","level":"1.5.2","depth":2,"next":{"title":"第三章 出入库和内部调拨","level":"1.5.3","depth":2,"path":"chapter4/README3.md","ref":"chapter4/README3.md","articles":[]},"previous":{"title":"第一章 仓库管理","level":"1.5.1","depth":2,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kevin Kong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施经验汇编","language":"zh-hans","gitbook":"*","description":"odoo实施经验汇编，涵盖多个项目解决方案"},"file":{"path":"chapter4/README2.md","mtime":"2021-03-16T06:22:49.682Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-12-22T02:35:26.606Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"百度地图","level":"1.12.1","depth":2,"previous":{"title":"[附录]","level":"1.12","depth":1,"ref":"","articles":[{"title":"百度地图","level":"1.12.1","depth":2,"path":"chapter10/README.md","ref":"chapter10/README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kevin Kong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施经验汇编","language":"zh-hans","gitbook":"*","description":"odoo实施经验汇编，涵盖多个项目解决方案"},"file":{"path":"chapter10/README.md","mtime":"2023-12-22T02:34:29.302Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-12-22T02:35:26.606Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

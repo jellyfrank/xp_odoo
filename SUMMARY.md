@@ -44,3 +44,5 @@
 * [第九部分 设置](SECTION9.md)
   * [第一章 通用设置](chapter9/README.md)
   * [第九章 技术设置](chapter9/README9.md)
+* [附录]
+  * [百度地图](chapter10/README.md)
