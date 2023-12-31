@@ -44,3 +44,5 @@
 * [第九部分 设置](SECTION9.md)
   * [第一章 通用设置](chapter9/README.md)
   * [第九章 技术设置](chapter9/README9.md)
+* [第十部分 通用解决方案](SECTION10.md)
+  * [第一章 企业微信](chapter10/README.md)
