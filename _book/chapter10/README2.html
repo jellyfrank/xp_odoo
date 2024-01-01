@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第二章 币种设置 · odoo实施经验汇编</title>
+        <title>第一章 企业微信 · odoo实施经验汇编</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../SECTION7.md" />
     
-    
-    <link rel="prev" href="./" />
+    <link rel="prev" href="../SECTION10.md" />
     
 
     </head>
@@ -575,9 +573,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="./">
+        <li class="chapter " data-level="1.7.1" data-path="../chapter6/">
             
-                <a href="./">
+                <a href="../chapter6/">
             
                     
                     第一章 销售发票
@@ -588,9 +586,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7.2" data-path="README2.html">
+        <li class="chapter " data-level="1.7.2" data-path="../chapter6/README2.html">
             
-                <a href="README2.html">
+                <a href="../chapter6/README2.html">
             
                     
                     第二章 币种设置
@@ -723,9 +721,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.12.1" data-path="../chapter10/README2.html">
+        <li class="chapter active" data-level="1.12.1" data-path="README2.html">
             
-                <a href="../chapter10/README2.html">
+                <a href="README2.html">
             
                     
                     第一章 企业微信
@@ -755,9 +753,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.13.1" data-path="../chapter10/">
+        <li class="chapter " data-level="1.13.1" data-path="./">
             
-                <a href="../chapter10/">
+                <a href="./">
             
                     
                     百度地图
@@ -803,7 +801,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第二章 币种设置</a>
+        <a href=".." >第一章 企业微信</a>
     </h1>
 </div>
 
@@ -818,17 +816,44 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x5E01;&#x79CD;&#x8BBE;&#x7F6E;">&#x5E01;&#x79CD;&#x8BBE;&#x7F6E;</h1>
-<p>odoo&#x652F;&#x6301;&#x591A;&#x5E01;&#x79CD;&#xFF0C;&#x7528;&#x6237;&#x9700;&#x8981;&#x52FE;&#x9009;&#x591A;&#x5E01;&#x79CD;&#x7528;&#x6237;&#x7EC4;&#x624D;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x5E01;&#x79CD;&#x3002;&#x5E01;&#x79CD;&#x8BBE;&#x7F6E;&#x83DC;&#x5355;&#xFF1A;&#x4F1A;&#x8BA1;-&#x914D;&#x7F6E;-&#x4F1A;&#x8BA1;-&#x8D27;&#x5E01;&#xFF1A;</p>
-<p><img src="images/13.png" alt="13"></p>
-<h2 id="&#x7CBE;&#x5EA6;&#x8BBE;&#x7F6E;">&#x7CBE;&#x5EA6;&#x8BBE;&#x7F6E;</h2>
-<p>&#x6211;&#x4EEC;&#x5728;&#x9500;&#x552E;&#x5355;&#x3001;&#x91C7;&#x8D2D;&#x5355;&#x4E2D;&#x901A;&#x5E38;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5C0F;&#x8BA1;&#x7684;&#x7CBE;&#x5EA6;&#x662F;2&#x4F4D;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x901A;&#x5E38;&#x9ED8;&#x8BA4;&#x7684;&#x8D27;&#x5E01;&#x5355;&#x4F4D;&#x7684;&#x7CBE;&#x5EA6;&#x662F;2&#x4F4D;&#x3002;&#x5982;&#x679C;&#x60F3;&#x8981;&#x66F4;&#x7CBE;&#x786E;&#x7684;&#x5C0F;&#x6570;&#x4F4D;&#x6570;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x66F4;&#x6539;&#x8D27;&#x5E01;&#x5355;&#x4F4D;&#x4E2D;&#x7684;&#x7CBE;&#x5EA6;&#x8BBE;&#x7F6E;&#xFF1A;</p>
-<p><img src="images/14.png" alt="14"></p>
-<p>&#x8FD9;&#x91CC;&#x6709;&#x4E2A;&#x95EE;&#x9898;&#x9700;&#x8981;&#x8BF4;&#x660E;&#x4E00;&#x4E0B;&#xFF0C;&#x770B;&#x8D77;&#x6765;&#x597D;&#x50CF;&#x7CBE;&#x5EA6;&#x53EF;&#x4EE5;&#x65E0;&#x9650;&#x8BBE;&#x7F6E;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x4E0A;&#x5F53;&#x4F60;&#x7684;&#x5C0F;&#x6570;&#x7CBE;&#x5EA6;&#x8BBE;&#x7F6E;&#x5230;7&#x4F4D;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#x7CFB;&#x7EDF;&#x63D0;&#x793A;&#x4F60;&#xFF0C;&#x8BBE;&#x7F6E;&#x7684;&#x7CBE;&#x5EA6;&#x5FC5;&#x987B;&#x5927;&#x4E8E;0&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x8D27;&#x5E01;&#x7CBE;&#x5EA6;&#x7684;&#x53EF;&#x8BBE;&#x7F6E;&#x7684;&#x8303;&#x56F4;&#x4E3A;0-6&#x4F4D;&#x5C0F;&#x6570;&#x3002;</p>
-<p><img src="images/15.png" alt="15"></p>
-<p>&#x5C0F;&#x6570;&#x7CBE;&#x5EA6;&#x5728;&#x751F;&#x6210;&#x4E86;&#x51ED;&#x8BC1;&#x4EE5;&#x540E;&#x5C06;&#x4E0D;&#x5141;&#x8BB8;&#x6539;&#x5C0F;&#xFF0C;&#x5426;&#x5219;&#x7CFB;&#x7EDF;&#x4F1A;&#x63D0;&#x793A;&#x9519;&#x8BEF;&#xFF1A;</p>
-<p><img src="images/16.png" alt="16"></p>
-<p>&#x56E0;&#x6B64;&#xFF0C;<strong>&#x6211;&#x4EEC;&#x5728;&#x7CFB;&#x7EDF;&#x671F;&#x521D;&#x8BBE;&#x7F6E;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x8981;&#x8003;&#x8651;&#x597D;&#x7CFB;&#x7EDF;&#x7684;&#x8D27;&#x5E01;&#x7CBE;&#x5EA6;&#x8BBE;&#x7F6E;</strong>&#x3002;</p>
+                                <h1 id="&#x7B2C;&#x5341;&#x7AE0;-&#x4F01;&#x4E1A;&#x5FAE;&#x4FE1;">&#x7B2C;&#x5341;&#x7AE0; &#x4F01;&#x4E1A;&#x5FAE;&#x4FE1;</h1>
+<p>&#x672C;&#x7AE0;&#x4ECB;&#x7ECD;&#x4E86;&#x4F01;&#x4E1A;&#x5FAE;&#x4FE1;&#x6A21;&#x5757;(mommy_wework)&#x7684;&#x7528;&#x6CD5;&#x4E0E;&#x529F;&#x80FD;&#xFF0C;&#x9700;&#x8981;&#x7684;&#x540C;&#x5B66;&#x8BF7;&#x8054;&#x7CFB;&#x4F5C;&#x8005;&#x83B7;&#x53D6;&#x3002;</p>
+<h2 id="&#x6A21;&#x5757;&#x5B89;&#x88C5;&#x4E0E;&#x5E94;&#x7528;&#x914D;&#x7F6E;">&#x6A21;&#x5757;&#x5B89;&#x88C5;&#x4E0E;&#x5E94;&#x7528;&#x914D;&#x7F6E;</h2>
+<p>&#x672C;&#x6A21;&#x5757;&#x4F9D;&#x8D56;&#x4E8E;python&#x7B2C;&#x4E09;&#x65B9;&#x5E93;wechatpy&#x548C;autils, &#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x7684;&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x5B89;&#x88C5;:</p>
+<pre><code class="lang-sh">pip install wechatpy
+pip install autils
+</code></pre>
+<h3 id="&#x8BBE;&#x7F6E;&#x6743;&#x9650;">&#x8BBE;&#x7F6E;&#x6743;&#x9650;</h3>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7528;&#x6237;&#x4E0D;&#x5177;&#x5907;&#x4F01;&#x4E1A;&#x5FAE;&#x4FE1;&#x7684;&#x4EFB;&#x4F55;&#x6743;&#x9650;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x7528;&#x6237;&#x8BBE;&#x7F6E;-&#x4F01;&#x4E1A;&#x5FAE;&#x4FE1;&#x6743;&#x9650;&#x5904;&#x9009;&#x62E9;&#x5408;&#x9002;&#x7684;&#x6743;&#x9650;&#x3002;</p>
+<p><img src="." alt=""></p>
+<h3 id="&#x5E94;&#x7528;&#x8BBE;&#x7F6E;">&#x5E94;&#x7528;&#x8BBE;&#x7F6E;</h3>
+<p>&#x60F3;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x4F01;&#x4E1A;&#x5FAE;&#x4FE1;&#x5E94;&#x7528;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5728;&#x4F01;&#x4E1A;&#x5FAE;&#x4FE1;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;app&#xFF0C; &#x7136;&#x540E;&#x83B7;&#x53D6;&#x5230;&#x5982;&#x4E0B;&#x53C2;&#x6570;:</p>
+<ul>
+<li>&#x516C;&#x53F8;ID: &#x4F01;&#x4E1A;&#x5FAE;&#x4FE1;&#x7684;&#x516C;&#x53F8;ID(&#x552F;&#x4E00;)</li>
+<li>AgentID: &#x5E94;&#x7528;&#x7684;ID</li>
+<li>Secret: &#x5E94;&#x7528;&#x7684;&#x5BC6;&#x94A5;</li>
+</ul>
+<p>&#x7136;&#x540E;&#x5C06;&#x8FD9;&#x4E09;&#x4E2A;&#x53C2;&#x6570;&#x586B;&#x5165;&#x521B;&#x5EFA;&#x7684;&#x5E94;&#x7528;&#x8BBE;&#x7F6E;&#x4E2D;&#xFF1A;</p>
+<p><img src="." alt=""></p>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5728;&#x516C;&#x53F8;&#x8BBE;&#x7F6E;&#x4E2D;&#xFF0C;&#x9009;&#x62E9;&#x6211;&#x4EEC;&#x521A;&#x624D;&#x521B;&#x5EFA;&#x7684;&#x5E94;&#x7528;&#x3002;</p>
+<p><img src="." alt=""></p>
+<h2 id="&#x529F;&#x80FD;&#x4ECB;&#x7ECD;">&#x529F;&#x80FD;&#x4ECB;&#x7ECD;</h2>
+<p>&#x4F01;&#x4E1A;&#x5FAE;&#x4FE1;&#x62E5;&#x6709;&#x5F88;&#x591A;&#x7684;&#x9002;&#x7528;&#x573A;&#x666F;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5C31;&#x770B;&#x4E00;&#x4E0B;&#x672C;&#x6A21;&#x5757;&#x80FD;&#x591F;&#x505A;&#x5230;&#x7684;&#x529F;&#x80FD;&#xFF1A;</p>
+<h3 id="&#x540C;&#x6B65;&#x90E8;&#x95E8;">&#x540C;&#x6B65;&#x90E8;&#x95E8;</h3>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x4F01;&#x4E1A;&#x5FAE;&#x4FE1;&#x7684;&#x90E8;&#x95E8;&#x540C;&#x6B65;&#x5230;odoo&#x7684;&#x90E8;&#x95E8;&#x4E2D;&#x3002;</p>
+<h3 id="&#x540C;&#x6B65;&#x5458;&#x5DE5;">&#x540C;&#x6B65;&#x5458;&#x5DE5;</h3>
+<h3 id="oauth&#x626B;&#x7801;&#x767B;&#x5F55;">Oauth&#x626B;&#x7801;&#x767B;&#x5F55;</h3>
+<p>&#x5728;&#x8BBE;&#x7F6E;-&#x7528;&#x6237;-Oauth&#x63D0;&#x4F9B;&#x5546;&#x4E2D;&#x6253;&#x5F00;&#x4F01;&#x4E1A;&#x5FAE;&#x4FE1;:</p>
+<p><img src="." alt=""></p>
+<p>&#x7136;&#x540E;&#x586B;&#x5165;&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x53C2;&#x6570;:</p>
+<ul>
+<li>CorpID: &#x516C;&#x53F8;ID</li>
+<li>Client ID: AgentID</li>
+</ul>
+<p>&#x7136;&#x540E;&#x52FE;&#x9009;&#x5141;&#x8BB8;&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x8FD4;&#x56DE;&#x767B;&#x5F55;&#x754C;&#x9762;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x62E5;&#x6709;&#x4F01;&#x4E1A;&#x5FAE;&#x4FE1;&#x767B;&#x5F55;&#x7684;&#x9009;&#x9879;&#x4E86;&#x3002;</p>
+<p><img src="." alt=""></p>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x626B;&#x7801;&#x7684;&#x4F01;&#x4E1A;&#x5FAE;&#x4FE1;&#x7528;&#x6237;&#x5173;&#x8054;&#x7684;odoo&#x7528;&#x6237;&#xFF0C;&#x90A3;&#x4E48;&#x7CFB;&#x7EDF;&#x5C06;&#x4F1A;&#x81EA;&#x52A8;&#x8DF3;&#x8F6C;&#x767B;&#x5F55;&#x5230;odoo&#x7CFB;&#x7EDF;&#x3002;</p>
 
                                 
                                 </section>
@@ -856,14 +881,10 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 第一章 销售发票">
+                <a href="../SECTION10.md" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 第十部分 通用解决方案">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../SECTION7.md" class="navigation navigation-next " aria-label="Next page: 第七部分 多公司">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -872,7 +893,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第二章 币种设置","level":"1.7.2","depth":2,"next":{"title":"第七部分 多公司","level":"1.8","depth":1,"path":"SECTION7.md","ref":"SECTION7.md","articles":[{"title":"第一章 多公司间的采购","level":"1.8.1","depth":2,"path":"chapter7/README.md","ref":"chapter7/README.md","articles":[]}]},"previous":{"title":"第一章 销售发票","level":"1.7.1","depth":2,"path":"chapter6/README.md","ref":"chapter6/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kevin Kong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施经验汇编","language":"zh-hans","gitbook":"*","description":"odoo实施经验汇编，涵盖多个项目解决方案"},"file":{"path":"chapter6/README2.md","mtime":"2023-12-31T15:55:07.902Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-01-01T04:13:35.861Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第一章 企业微信","level":"1.12.1","depth":2,"next":{"title":"[附录]","level":"1.13","depth":1,"ref":"","articles":[{"title":"百度地图","level":"1.13.1","depth":2,"path":"chapter10/README.md","ref":"chapter10/README.md","articles":[]}]},"previous":{"title":"第十部分 通用解决方案","level":"1.12","depth":1,"path":"SECTION10.md","ref":"SECTION10.md","articles":[{"title":"第一章 企业微信","level":"1.12.1","depth":2,"path":"chapter10/README2.md","ref":"chapter10/README2.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kevin Kong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施经验汇编","language":"zh-hans","gitbook":"*","description":"odoo实施经验汇编，涵盖多个项目解决方案"},"file":{"path":"chapter10/README2.md","mtime":"2023-12-31T15:57:48.470Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-01-01T04:13:35.861Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
