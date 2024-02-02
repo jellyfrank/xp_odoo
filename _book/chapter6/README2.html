@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第二章 成本计算 · odoo实施经验汇编</title>
+        <title>第二章 币种设置 · odoo实施经验汇编</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../SECTION4.md" />
+    <link rel="next" href="../SECTION7.md" />
     
     
-    <link rel="prev" href="README.md" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -310,7 +310,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="README.md">
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/README.md">
             
                 <span>
             
@@ -323,9 +323,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.2" data-path="README2.html">
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/README2.html">
             
-                <a href="README2.html">
+                <a href="../chapter3/README2.html">
             
                     
                     第二章 成本计算
@@ -575,9 +575,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../chapter6/">
+        <li class="chapter " data-level="1.7.1" data-path="./">
             
-                <a href="../chapter6/">
+                <a href="./">
             
                     
                     第一章 销售发票
@@ -588,9 +588,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../chapter6/README2.html">
+        <li class="chapter active" data-level="1.7.2" data-path="README2.html">
             
-                <a href="../chapter6/README2.html">
+                <a href="README2.html">
             
                     
                     第二章 币种设置
@@ -739,7 +739,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第二章 成本计算</a>
+        <a href=".." >第二章 币种设置</a>
     </h1>
 </div>
 
@@ -754,12 +754,14 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7B2C;&#x4E8C;&#x7AE0;-&#x6210;&#x672C;&#x8BA1;&#x7B97;&#x903B;&#x8F91;">&#x7B2C;&#x4E8C;&#x7AE0; &#x6210;&#x672C;&#x8BA1;&#x7B97;&#x903B;&#x8F91;</h1>
-<h2 id="&#x6536;&#x8D27;&#x5165;&#x5E93;">&#x6536;&#x8D27;&#x5165;&#x5E93;</h2>
-<p>&#x5982;&#x679C;&#x4EA7;&#x54C1;&#x8BBE;&#x7F6E;&#x7684;&#x6210;&#x672C;&#x8BA1;&#x7B97;&#x65B9;&#x6CD5;&#x4E3A;&#x5E73;&#x5747;&#x4EF7;&#x683C;, &#x90A3;&#x4E48;&#x5F53;&#x4EA7;&#x54C1;&#x91C7;&#x8D2D;&#x5165;&#x5E93;&#x4EE5;&#x540E;,&#x7CFB;&#x7EDF;&#x4F1A;&#x6839;&#x636E;&#x672C;&#x6B21;&#x91C7;&#x8D2D;&#x7684;&#x4EF7;&#x503C;&#x52A0;&#x4E0A;&#x7CFB;&#x7EDF;&#x4E2D;&#x539F;&#x6709;&#x7684;&#x5E93;&#x5B58;&#x4EF7;&#x503C;, &#x9664;&#x4EE5;&#x5165;&#x5E93;&#x540E;&#x7684;&#x603B;&#x6570;&#x91CF;&#x6765;&#x8BA1;&#x7B97;&#x5E73;&#x5747;&#x4EF7;&#x683C;. &#x5373;:</p>
-<p>&#x5E73;&#x5747;&#x4EF7;&#x683C; = (&#x91C7;&#x8D2D;&#x4EF7;&#x683C; <em> &#x91C7;&#x8D2D;&#x6570;&#x91CF; + &#x539F;&#x5E73;&#x5747;&#x4EF7;&#x683C; </em> &#x5E93;&#x5B58;) / &#x5165;&#x5E93;&#x540E;&#x7684;&#x5E93;&#x5B58;&#x6570;&#x91CF;</p>
-<h3 id="&#x5E93;&#x5B58;&#x6838;&#x7B97;&#x5C42;">&#x5E93;&#x5B58;&#x6838;&#x7B97;&#x5C42;</h3>
-<p>&#x867D;&#x7136;&#x903B;&#x8F91;&#x4E0A;&#x53EF;&#x4EE5;&#x7528;&#x4E0A;&#x9762;&#x7684;&#x516C;&#x5F0F;&#x6765;&#x8FDB;&#x884C;&#x8BA1;&#x7B97;, &#x4F46;&#x5B9E;&#x9645;&#x8FC7;&#x7A0B;&#x4E2D;</p>
+                                <h1 id="&#x5E01;&#x79CD;&#x8BBE;&#x7F6E;">&#x5E01;&#x79CD;&#x8BBE;&#x7F6E;</h1>
+<p>odoo&#x652F;&#x6301;&#x591A;&#x5E01;&#x79CD;&#xFF0C;&#x7528;&#x6237;&#x9700;&#x8981;&#x52FE;&#x9009;&#x591A;&#x5E01;&#x79CD;&#x7528;&#x6237;&#x7EC4;&#x624D;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x5E01;&#x79CD;&#x3002;&#x5E01;&#x79CD;&#x8BBE;&#x7F6E;&#x83DC;&#x5355;&#xFF1A;&#x4F1A;&#x8BA1;-&#x914D;&#x7F6E;-&#x4F1A;&#x8BA1;-&#x8D27;&#x5E01;&#xFF1A;</p>
+<p><img src="images/13.png" alt=""></p>
+<h2 id="&#x7CBE;&#x5EA6;&#x8BBE;&#x7F6E;">&#x7CBE;&#x5EA6;&#x8BBE;&#x7F6E;</h2>
+<p>&#x6211;&#x4EEC;&#x5728;&#x9500;&#x552E;&#x5355;&#x3001;&#x91C7;&#x8D2D;&#x5355;&#x4E2D;&#x901A;&#x5E38;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5C0F;&#x8BA1;&#x7684;&#x7CBE;&#x5EA6;&#x662F;2&#x4F4D;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x901A;&#x5E38;&#x9ED8;&#x8BA4;&#x7684;&#x8D27;&#x5E01;&#x5355;&#x4F4D;&#x7684;&#x7CBE;&#x5EA6;&#x662F;2&#x4F4D;&#x3002;&#x5982;&#x679C;&#x60F3;&#x8981;&#x66F4;&#x7CBE;&#x786E;&#x7684;&#x5C0F;&#x6570;&#x4F4D;&#x6570;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x66F4;&#x6539;&#x8D27;&#x5E01;&#x5355;&#x4F4D;&#x4E2D;&#x7684;&#x7CBE;&#x5EA6;&#x8BBE;&#x7F6E;&#xFF1A;</p>
+<p><img src="images/14.png" alt=""></p>
+<p>&#x8FD9;&#x91CC;&#x6709;&#x4E2A;&#x95EE;&#x9898;&#x9700;&#x8981;&#x8BF4;&#x660E;&#x4E00;&#x4E0B;&#xFF0C;&#x770B;&#x8D77;&#x6765;&#x597D;&#x50CF;&#x7CBE;&#x5EA6;&#x53EF;&#x4EE5;&#x65E0;&#x9650;&#x8BBE;&#x7F6E;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x4E0A;&#x5F53;&#x4F60;&#x7684;&#x5C0F;&#x6570;&#x7CBE;&#x5EA6;&#x8BBE;&#x7F6E;&#x5230;7&#x4F4D;&#x65F6;&#xFF0C;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#x7CFB;&#x7EDF;&#x63D0;&#x793A;&#x4F60;&#xFF0C;&#x8BBE;&#x7F6E;&#x7684;&#x7CBE;&#x5EA6;&#x5FC5;&#x987B;&#x5927;&#x4E8E;0&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x8D27;&#x5E01;&#x7CBE;&#x5EA6;&#x7684;&#x53EF;&#x8BBE;&#x7F6E;&#x7684;&#x8303;&#x56F4;&#x4E3A;0-6&#x4F4D;&#x5C0F;&#x6570;&#x3002;</p>
+<p><img src="images/15.png" alt=""></p>
 
                                 
                                 </section>
@@ -787,12 +789,12 @@
 
             
                 
-                <a href="README.md" class="navigation navigation-prev " aria-label="Previous page: 第一章 合同管理">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 第一章 销售发票">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../SECTION4.md" class="navigation navigation-next " aria-label="Next page: 第四部分 仓库管理">
+                <a href="../SECTION7.md" class="navigation navigation-next " aria-label="Next page: 第七部分 多公司">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -803,7 +805,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第二章 成本计算","level":"1.4.2","depth":2,"next":{"title":"第四部分 仓库管理","level":"1.5","depth":1,"path":"SECTION4.md","ref":"SECTION4.md","articles":[{"title":"第一章 仓库管理","level":"1.5.1","depth":2,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[]},{"title":"第二章 库位管理","level":"1.5.2","depth":2,"path":"chapter4/README2.md","ref":"chapter4/README2.md","articles":[]},{"title":"第三章 出入库和内部调拨","level":"1.5.3","depth":2,"path":"chapter4/README3.md","ref":"chapter4/README3.md","articles":[]},{"title":"第四章 盘点","level":"1.5.4","depth":2,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[]},{"title":"第五章 扫码操作","level":"1.5.5","depth":2,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[]},{"title":"第六章 包装","level":"1.5.6","depth":2,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[]},{"title":"第七章 集成物流公司","level":"1.5.7","depth":2,"path":"chapter4/README.md","ref":"chapter4/README.md","articles":[]},{"title":"第八章 成本核算","level":"1.5.8","depth":2,"path":"chapter4/README8.md","ref":"chapter4/README8.md","articles":[]}]},"previous":{"title":"第一章 合同管理","level":"1.4.1","depth":2,"path":"chapter3/README.md","ref":"chapter3/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kevin Kong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施经验汇编","language":"zh-hans","gitbook":"*","description":"odoo实施经验汇编，涵盖多个项目解决方案"},"file":{"path":"chapter3/README2.md","mtime":"2023-07-04T08:04:03.439Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-04T08:21:07.842Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第二章 币种设置","level":"1.7.2","depth":2,"next":{"title":"第七部分 多公司","level":"1.8","depth":1,"path":"SECTION7.md","ref":"SECTION7.md","articles":[{"title":"第一章 多公司间的采购","level":"1.8.1","depth":2,"path":"chapter7/README.md","ref":"chapter7/README.md","articles":[]}]},"previous":{"title":"第一章 销售发票","level":"1.7.1","depth":2,"path":"chapter6/README.md","ref":"chapter6/README.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kevin Kong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施经验汇编","language":"zh-hans","gitbook":"*","description":"odoo实施经验汇编，涵盖多个项目解决方案"},"file":{"path":"chapter6/README2.md","mtime":"2022-10-12T01:13:14.430Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-04T08:21:07.842Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
