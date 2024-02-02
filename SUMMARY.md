@@ -16,7 +16,7 @@
   * [第五章 折扣与价格表](chapter2/README5.md)
   * [第六章 租赁](chapter2/README6.md)
 * [第三部分 采购管理](SECTION3.md)
-  * [第一章 合同管理](chapter3/README.md)
+  * [第一章 采购管理](chapter3/README.md)
   * [第二章 成本计算](chapter3/README2.md)
 * [第四部分 仓库管理](SECTION4.md)
   * [第一章 仓库管理](chapter4/README.md)
@@ -44,3 +44,7 @@
 * [第九部分 设置](SECTION9.md)
   * [第一章 通用设置](chapter9/README.md)
   * [第九章 技术设置](chapter9/README9.md)
+* [第十部分 通用解决方案](SECTION10.md)
+  * [第一章 企业微信](chapter10/README2.md)
+* [附录]
+  * [百度地图](chapter10/README.md)
