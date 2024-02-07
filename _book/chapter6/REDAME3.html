@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>百度地图 · odoo实施经验汇编</title>
+        <title>第三章 支付 · odoo实施经验汇编</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,6 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="../SECTION7.md" />
+    
+    
+    <link rel="prev" href="README2.html" />
     
 
     </head>
@@ -571,9 +575,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../chapter6/">
+        <li class="chapter " data-level="1.7.1" data-path="./">
             
-                <a href="../chapter6/">
+                <a href="./">
             
                     
                     第一章 基础概念
@@ -584,9 +588,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../chapter6/README2.html">
+        <li class="chapter " data-level="1.7.2" data-path="README2.html">
             
-                <a href="../chapter6/README2.html">
+                <a href="README2.html">
             
                     
                     第二章 开票
@@ -597,9 +601,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="../chapter6/REDAME3.html">
+        <li class="chapter active" data-level="1.7.3" data-path="REDAME3.html">
             
-                <a href="../chapter6/REDAME3.html">
+                <a href="REDAME3.html">
             
                     
                     第三章 支付
@@ -732,9 +736,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.12.1" data-path="README2.html">
+        <li class="chapter " data-level="1.12.1" data-path="../chapter10/README2.html">
             
-                <a href="README2.html">
+                <a href="../chapter10/README2.html">
             
                     
                     第一章 企业微信
@@ -764,9 +768,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.13.1" data-path="./">
+        <li class="chapter " data-level="1.13.1" data-path="../chapter10/">
             
-                <a href="./">
+                <a href="../chapter10/">
             
                     
                     百度地图
@@ -812,7 +816,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >百度地图</a>
+        <a href=".." >第三章 支付</a>
     </h1>
 </div>
 
@@ -827,19 +831,40 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x767E;&#x5EA6;&#x5730;&#x56FE;">&#x767E;&#x5EA6;&#x5730;&#x56FE;</h1>
-<p>&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x89C6;&#x56FE;&#x3002;&#x6A21;&#x5757;&#x7684;&#x8D77;&#x56E0;&#x662F;&#xFF0C;&#x6709;&#x5BA2;&#x6237;&#x5E0C;&#x671B;&#x80FD;&#x5728;&#x5730;&#x56FE;&#x4E0A;&#x5C55;&#x793A;&#x51FA;&#x6240;&#x6709;&#x7684;&#x5BA2;&#x6237;&#x7684;&#x5750;&#x6807;&#xFF0C;&#x80FD;&#x591F;&#x4E00;&#x773C;&#x770B;&#x6E05;&#x67D0;&#x4E2A;&#x5BA2;&#x6237;&#x9644;&#x8FD1;&#x7684;&#x5BA2;&#x6237;&#x3002;&#x4F01;&#x4E1A;&#x7248;&#x81EA;&#x5E26;&#x4E86;&#x4E00;&#x4E2A;&#x5730;&#x56FE;&#x6A21;&#x5757;&#xFF0C;&#x4E0D;&#x8FC7;&#x8001;&#x5916;&#x561B;&#xFF0C;&#x81EA;&#x7136;&#x662F;&#x4F7F;&#x7528;Google Map&#x4E86;&#xFF0C;&#x7531;&#x4E8E;&#x590D;&#x6742;&#x7684;&#x7F51;&#x7EDC;&#x539F;&#x56E0;&#xFF0C;&#x6211;&#x4EEC;&#x5E76;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#xFF0C;&#x4F53;&#x9A8C;&#x5E76;&#x4E0D;&#x597D;&#xFF0C;&#x56E0;&#x6B64;&#x624D;&#x6709;&#x4E86;&#x4ECA;&#x5929;&#x7684;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x3002;</p>
-<h2 id="&#x6A21;&#x5757;&#x4ECB;&#x7ECD;">&#x6A21;&#x5757;&#x4ECB;&#x7ECD;</h2>
-<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x4F7F;&#x7528;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x53BB;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x7684;&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x53BB;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x8D26;&#x53F7;&#xFF0C;&#x83B7;&#x53D6;AK&#xFF0C;&#x586B;&#x5165;&#x5230;&#x6211;&#x4EEC;&#x7684;&#x6A21;&#x5757;&#x53C2;&#x6570;&#x4E2D;&#xFF1A;</p>
-<p><img src="images/setting.png" alt="baidu"></p>
-<p>&#x586B;&#x5B8C;AK&#xFF0C;&#x5176;&#x4F59;&#x7684;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x4FDD;&#x6301;&#x4E0D;&#x52A8;&#x3002;
-&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#xFF0C;&#x5E76;&#x586B;&#x5165;&#x5BA2;&#x6237;&#x7684;&#x8BE6;&#x7EC6;&#x5730;&#x5740;&#xFF1A;</p>
-<p><img src="images/partner.png" alt="partner"></p>
-<p>&#x8BE5;&#x6A21;&#x5757;&#x4F1A;&#x5728;&#x6211;&#x4EEC;&#x4FDD;&#x5B58;&#x5BA2;&#x6237;&#x5730;&#x5740;&#x65F6;&#xFF0C;&#x81EA;&#x52A8;&#x5C06;&#x5BA2;&#x6237;&#x5730;&#x5740;&#x9006;&#x89E3;&#x6790;&#x4E3A;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x7684;&#x5750;&#x6807;&#xFF0C;&#x5E76;&#x5B58;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x5728;&#x5730;&#x5740;&#x680F;&#x7684;&#x4E0B;&#x65B9;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7684;&#x7F29;&#x5C0F;&#x7248;&#x7684;&#x5730;&#x56FE;&#xFF0C;&#x53EF;&#x4EE5;&#x62D6;&#x62FD;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x7F29;&#x653E;&#x3002;</p>
-<p>&#x6700;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x8054;&#x7CFB;&#x4EBA;&#x6A21;&#x5757;&#x4E2D;&#xFF0C;&#x770B;&#x5230;&#x5728;&#x539F;&#x6709;&#x7684;&#x89C6;&#x56FE;&#x7C7B;&#x578B;&#x4E2D;&#x591A;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x7C7B;&#x578B;&#x7684;&#x89C6;&#x56FE;&#xFF0C;&#x6211;&#x4EEC;&#x70B9;&#x51FB;&#x5B83;&#x5C06;&#x80FD;&#x591F;&#x5728;&#x4E00;&#x5F20;&#x5730;&#x56FE;&#x4E0A;&#x770B;&#x5230;&#x6240;&#x6709;&#x7684;&#x5BA2;&#x6237;&#x3002;</p>
-<p><img src="images/contacts.jpg" alt="list"></p>
-<p>&#x70B9;&#x51FB;&#x5730;&#x56FE;&#x4E0A;&#x7684;&#x67D0;&#x4E2A;&#x6807;&#x8BB0;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4E0E;&#x4E4B;&#x5BF9;&#x5E94;&#x7684;&#x5BA2;&#x6237;&#x4FE1;&#x606F;&#x3002;</p>
-<p><img src="images/map.png" alt="detail"></p>
+                                <h1 id="&#x7B2C;&#x4E09;&#x7AE0;-&#x652F;&#x4ED8;">&#x7B2C;&#x4E09;&#x7AE0; &#x652F;&#x4ED8;</h1>
+<p>&#x4E86;&#x89E3;&#x4E86;&#x5BA2;&#x6237;&#x548C;&#x4F9B;&#x5E94;&#x5546;&#x5F00;&#x7968;&#x7684;&#x76F8;&#x5173;&#x5185;&#x5BB9;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;&#x5982;&#x4F55;&#x8FDB;&#x884C;&#x5BA2;&#x6237;&#x548C;&#x4F9B;&#x5E94;&#x5546;&#x7684;&#x652F;&#x4ED8;&#x3002;</p>
+<h2 id="&#x5BA2;&#x6237;&#x548C;&#x4F9B;&#x5E94;&#x5546;&#x652F;&#x4ED8;">&#x5BA2;&#x6237;&#x548C;&#x4F9B;&#x5E94;&#x5546;&#x652F;&#x4ED8;</h2>
+<p>&#x6211;&#x4EEC;&#x5728;&#x5F00;&#x5177;&#x4E86;&#x5BA2;&#x6237;/&#x4F9B;&#x5E94;&#x5546;&#x53D1;&#x7968;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x4F1A;&#x8BA1;-&#x4EEA;&#x8868;&#x76D8;&#x4E2D;&#x770B;&#x5230;&#x7B49;&#x5F85;&#x652F;&#x4ED8;&#x7684;&#x53D1;&#x7968;&#xFF1A;</p>
+<p><img src="images/AC34.png" alt="34"></p>
+<p>&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x52FE;&#x9009;&#x6211;&#x4EEC;&#x8981;&#x6536;/&#x652F;&#x4ED8;&#x7684;&#x8D26;&#x5355;&#x7136;&#x540E;&#x70B9;&#x51FB;<strong>&#x767B;&#x8BB0;&#x4ED8;&#x6B3E;(Register Payment)</strong>&#x5373;&#x53EF;&#x3002;</p>
+<h3 id="&#x591A;&#x6B21;&#x652F;&#x4ED8;">&#x591A;&#x6B21;&#x652F;&#x4ED8;</h3>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x767B;&#x8BB0;&#x652F;&#x4ED8;&#x7684;&#x91D1;&#x989D;&#x4E3A;&#x6574;&#x4E2A;&#x8D26;&#x5355;&#x7684;&#x91D1;&#x989D;&#x3002;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x5206;&#x591A;&#x6B21;&#x8FDB;&#x884C;&#x652F;&#x4ED8;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x66F4;&#x6539;&#x652F;&#x4ED8;&#x7684;&#x91D1;&#x989D;&#x5373;&#x53EF;&#x3002;</p>
+<p><img src="images/AC35.png" alt="35"></p>
+<p>odoo&#x4F1A;&#x63D0;&#x4F9B;&#x7ED9;&#x6211;&#x4EEC;&#x4E24;&#x4E2A;&#x9009;&#x9879;</p>
+<ul>
+<li>&#x4FDD;&#x6301;&#x6253;&#x5F00;&#x72B6;&#x6001;&#xFF1A; &#x8868;&#x793A;&#x8D26;&#x5355;&#x4ECD;&#x672A;&#x5B8C;&#x5168;&#x652F;&#x4ED8;</li>
+<li>&#x6807;&#x8BB0;&#x4E3A;&#x5B8C;&#x5168;&#x652F;&#x4ED8;&#xFF1A; &#x5373;&#x5C3E;&#x6B3E;&#x51FA;&#x4E8E;&#x67D0;&#x79CD;&#x539F;&#x56E0;&#x4E0D;&#x518D;&#x7EE7;&#x7EED;&#x652F;&#x4ED8;&#xFF0C;&#x6807;&#x8BB0;&#x8D26;&#x5355;&#x5DF2;&#x5B8C;&#x5168;&#x652F;&#x4ED8;&#x3002;</li>
+</ul>
+<h3 id="&#x5C06;&#x8D26;&#x5355;&#x5173;&#x8054;&#x5230;&#x5DF2;&#x6709;&#x652F;&#x4ED8;">&#x5C06;&#x8D26;&#x5355;&#x5173;&#x8054;&#x5230;&#x5DF2;&#x6709;&#x652F;&#x4ED8;</h3>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4F7F;&#x7528;&#x8D26;&#x5355;&#x7684;&#x767B;&#x8BB0;&#x4ED8;&#x6B3E;&#x529F;&#x80FD;&#x4F1A;&#x81EA;&#x52A8;&#x5C06;&#x652F;&#x4ED8;&#x548C;&#x8D26;&#x5355;&#x5173;&#x8054;&#x8D77;&#x6765;&#x3002;&#x4F46;&#x662F;&#x4E5F;&#x6709;&#x573A;&#x666F;&#x662F;&#x8D26;&#x5355;&#x548C;&#x652F;&#x4ED8;&#x5206;&#x5F00;&#x7684;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x5BA2;&#x6237;&#x4E0A;&#x7B14;&#x8BA2;&#x5355;&#x7684;&#x9000;&#x6B3E;&#x6216;&#x4E4B;&#x524D;&#x652F;&#x4ED8;&#x7684;&#x4F59;&#x989D;&#x3002;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x5C06;&#x989D;&#x5916;&#x7684;&#x652F;&#x4ED8;&#x4E0E;&#x8D26;&#x5355;&#x8FDB;&#x884C;&#x624B;&#x52A8;&#x5173;&#x8054;&#x3002;</p>
+<p><img src="images/AC36.png" alt="36"></p>
+<p>odoo&#x4F1A;&#x5728;&#x8D26;&#x5355;&#x4E0A;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x6D45;&#x84DD;&#x8272;&#x7684;&#x63D0;&#x793A;&#x6846;&#x7528;&#x6765;&#x8868;&#x793A;&#xFF0C;&#x6B64;&#x8D26;&#x5355;&#x6709;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x5173;&#x8054;&#x7684;&#x652F;&#x4ED8;&#x3002;&#x6211;&#x4EEC;&#x5728;&#x53F3;&#x4E0B;&#x89D2;&#x7684;&#x5217;&#x8868;&#x4E2D;&#x9009;&#x62E9;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x5173;&#x8054;&#x7684;&#x652F;&#x4ED8;&#xFF0C;&#x70B9;&#x51FB;&#x6DFB;&#x52A0;&#x6309;&#x94AE;&#x5373;&#x53EF;&#x5B8C;&#x6210;&#x5173;&#x8054;&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;&#x73B0;&#x91D1;&#x8D26;&#x6237;&#x652F;&#x4ED8;">&#x4F7F;&#x7528;&#x73B0;&#x91D1;&#x8D26;&#x6237;&#x652F;&#x4ED8;</h3>
+<p>&#x6211;&#x4EEC;&#x77E5;&#x9053;&#xFF0C;&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;,&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x94F6;&#x884C;&#x8D26;&#x6237;&#x7ED9;&#x4F9B;&#x5E94;&#x5546;&#x4ED8;&#x6B3E;&#x540E;&#xFF0C;&#x4F9B;&#x5E94;&#x5546;&#x8D26;&#x5355;&#x4F1A;&#x53D8;&#x4E3A;<strong>&#x652F;&#x4ED8;&#x4E2D;(In Payment)</strong>&#x72B6;&#x6001;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x73B0;&#x91D1;&#x8D26;&#x6237;&#x7ED9;&#x4F9B;&#x5E94;&#x5546;&#x4ED8;&#x6B3E;&#xFF0C;&#x80FD;&#x5426;&#x8DF3;&#x8FC7;&#x8FD9;&#x4E00;&#x72B6;&#x6001;&#x4ECE;&#x800C;&#x4F7F;&#x652F;&#x4ED8;&#x72B6;&#x6001;&#x76F4;&#x63A5;&#x53D8;&#x4E3A;<strong>&#x5DF2;&#x652F;&#x4ED8;(PAID)</strong>&#x5462;?</p>
+<p>&#x7B54;&#x6848;&#x662F;&#x80AF;&#x5B9A;&#x7684;&#xFF0C;&#x6211;&#x4EEC;&#x4E0B;&#x9762;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x5982;&#x4F55;&#x505A;&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x6253;&#x5F00;&#x4F1A;&#x8BA1;-&#x8BBE;&#x7F6E;-&#x65E5;&#x8BB0;&#x5E10;&#xFF0C;&#x627E;&#x5230;&#x73B0;&#x91D1;&#x65E5;&#x8BB0;&#x8D26;&#xFF0C;&#x5728;&#x73B0;&#x91D1;&#x65E5;&#x8BB0;&#x8D26;&#x7684;&#x652F;&#x51FA;&#x4E2D;&#x8BBE;&#x7F6E;&#x4E2D;&#xFF0C;&#x663E;&#x793A;&#x51FA;<strong>&#x5F85;&#x5BF9;&#x8D26;&#x652F;&#x4ED8;&#x79D1;&#x76EE;(Outstanding Payments Account)</strong>:</p>
+<p><img src="images/AC27.png" alt="27"></p>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5C06;&#x5176;&#x8BBE;&#x7F6E;&#x4E3A;&#x73B0;&#x91D1;&#x79D1;&#x76EE;&#x3002;&#x8FD9;&#x6837;&#x5F53;&#x6211;&#x4EEC;&#x5728;&#x652F;&#x4ED8;&#x4F9B;&#x5E94;&#x5546;&#x8D26;&#x5355;&#x65F6;&#xFF0C;&#x9009;&#x62E9;&#x73B0;&#x91D1;&#x65E5;&#x8BB0;&#x8D26;&#xFF0C;&#x652F;&#x4ED8;&#x7ED3;&#x679C;&#x5C31;&#x4F1A;&#x76F4;&#x63A5;&#x53D8;&#x4E3A;&#x5DF2;&#x652F;&#x4ED8;&#x3002;</p>
+<h2 id="&#x5728;&#x7EBF;&#x652F;&#x4ED8;">&#x5728;&#x7EBF;&#x652F;&#x4ED8;</h2>
+<p>&#x6211;&#x4EEC;&#x9664;&#x4E86;&#x4F7F;&#x7528;&#x4F20;&#x7EDF;&#x7684;&#x73B0;&#x91D1;&#x548C;&#x94F6;&#x884C;&#x6765;&#x652F;&#x4ED8;&#x73B0;&#x6709;&#x7684;&#x8D26;&#x5355;&#x5916;&#xFF0C;odoo&#x4E5F;&#x652F;&#x6301;&#x4F7F;&#x7528;&#x5728;&#x7EBF;&#x652F;&#x4ED8;&#x6765;&#x5B8C;&#x6210;&#x652F;&#x4ED8;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x8981;&#x5728;&#x8BBE;&#x7F6E;&#x4E2D;&#x6253;&#x5F00;&#x5728;&#x7EBF;&#x652F;&#x4ED8;&#x8BBE;&#x7F6E;&#xFF0C;&#x4F4D;&#x7F6E;&#x5728;&#x8BBE;&#x7F6E;-&#x9500;&#x552E;-&#x62A5;&#x4EF7;&#x5355;&#x548C;&#x8BA2;&#x5355;&#xFF0C;&#x52FE;&#x9009;&#x5728;&#x7EBF;&#x652F;&#x4ED8;&#xFF1A;</p>
+<p><img src="images/AC37.png" alt="37"></p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;odoo&#x9ED8;&#x8BA4;&#x652F;&#x6301;&#x7684;&#x5728;&#x7EBF;&#x652F;&#x4ED8;&#x5217;&#x8868;&#xFF1A;</p>
+<p><img src="images/AC38.png" alt="38"></p>
+<p>&#x6211;&#x4EEC;&#x6FC0;&#x6D3B;&#x9700;&#x8981;&#x7684;&#x5728;&#x7EBF;&#x652F;&#x4ED8;&#x63D0;&#x4F9B;&#x5546;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;</p>
+<h3 id="&#x652F;&#x4ED8;&#x5B9D;&#x548C;&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;">&#x652F;&#x4ED8;&#x5B9D;&#x548C;&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;</h3>
+<p>&#x5BF9;&#x4E8E;&#x4E2D;&#x56FD;&#x5927;&#x9646;&#x7528;&#x6237;&#x6765;&#x8BF4;&#xFF0C;&#x652F;&#x4ED8;&#x5B9D;&#x548C;&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;&#x53EF;&#x4EE5;&#x8BF4;&#x662F;&#x633A;&#x666E;&#x904D;&#x7684;&#x9700;&#x6C42;&#x3002;&#x6211;&#x4EEC;&#x5728;&#x901A;&#x7528;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x4E2D;&#x52A0;&#x5165;&#x4E86;&#x5BF9;&#x652F;&#x4ED8;&#x5B9D;&#x548C;&#x5FAE;&#x4FE1;&#x652F;&#x4ED8;&#x7684;&#x652F;&#x6301;&#x3002;</p>
+<p>&#x6709;&#x9700;&#x6C42;&#x7684;&#x8BFB;&#x8005;&#x53EF;&#x4EE5;&#x5230;&#x6211;&#x4EEC;&#x7684;&#x516C;&#x4F17;&#x53F7;(OdooHub)&#x4E2D;&#x4E86;&#x89E3;&#x76F8;&#x5173;&#x5185;&#x5BB9;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x6211;&#x4EEC;&#x7684;<a href="https://dev.odoohub.com.cn" target="_blank">&#x5F00;&#x53D1;&#x6559;&#x7A0B;</a>&#x7684;&#x9644;&#x5F55;&#x4E2D;&#x627E;&#x5230;&#x4ECB;&#x7ECD;&#x3002;</p>
 
                                 
                                 </section>
@@ -867,6 +892,14 @@
 
             
                 
+                <a href="README2.html" class="navigation navigation-prev " aria-label="Previous page: 第二章 开票">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../SECTION7.md" class="navigation navigation-next " aria-label="Next page: 第七部分 多公司">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -875,7 +908,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"百度地图","level":"1.13.1","depth":2,"previous":{"title":"[附录]","level":"1.13","depth":1,"ref":"","articles":[{"title":"百度地图","level":"1.13.1","depth":2,"path":"chapter10/README.md","ref":"chapter10/README.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kevin Kong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施经验汇编","language":"zh-hans","gitbook":"*","description":"odoo实施经验汇编，涵盖多个项目解决方案"},"file":{"path":"chapter10/README.md","mtime":"2023-12-22T02:34:29.302Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-02-07T09:02:02.897Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第三章 支付","level":"1.7.3","depth":2,"next":{"title":"第七部分 多公司","level":"1.8","depth":1,"path":"SECTION7.md","ref":"SECTION7.md","articles":[{"title":"第一章 多公司间的采购","level":"1.8.1","depth":2,"path":"chapter7/README.md","ref":"chapter7/README.md","articles":[]}]},"previous":{"title":"第二章 开票","level":"1.7.2","depth":2,"path":"chapter6/README2.md","ref":"chapter6/README2.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kevin Kong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施经验汇编","language":"zh-hans","gitbook":"*","description":"odoo实施经验汇编，涵盖多个项目解决方案"},"file":{"path":"chapter6/REDAME3.md","mtime":"2024-02-07T08:58:13.712Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-02-07T09:02:02.897Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
