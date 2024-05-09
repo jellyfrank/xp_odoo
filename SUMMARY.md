@@ -41,11 +41,13 @@
 * [第七部分 多公司](SECTION7.md)
   * [第一章 多公司间的采购](chapter7/README.md)
 * [第七部分 网站](SECTION7.md)
+  * [第一章 门户](chapter8/README.md)
 * [第八部分 人力资源](SECTION8.md)
 * [第九部分 设置](SECTION9.md)
   * [第一章 通用设置](chapter9/README.md)
   * [第九章 技术设置](chapter9/README9.md)
 * [第十部分 通用解决方案](SECTION10.md)
   * [第一章 企业微信](chapter10/README2.md)
+  * [第二]
 * [附录]
   * [百度地图](chapter10/README.md)
