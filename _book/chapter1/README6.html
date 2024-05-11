@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第六章 邮箱配置 · odoo实施经验汇编</title>
+        <title>第五章 邮箱配置 · odoo实施经验汇编</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -60,7 +60,7 @@
     <link rel="next" href="../SECTION2.html" />
     
     
-    <link rel="prev" href="README3.html" />
+    <link rel="prev" href="README4.html" />
     
 
     </head>
@@ -168,25 +168,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="README3.html">
-            
-                <a href="README3.html">
-            
-                    
-                    第五章 产品管理
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.2.6" data-path="README6.html">
+        <li class="chapter active" data-level="1.2.5" data-path="README6.html">
             
                 <a href="README6.html">
             
                     
-                    第六章 邮箱配置
+                    第五章 邮箱配置
             
                 </a>
             
@@ -231,7 +218,7 @@
                 <a href="../chapter2/README2.html">
             
                     
-                    第二章 销售流程
+                    第二章 产品管理
             
                 </a>
             
@@ -244,7 +231,7 @@
                 <a href="../chapter2/README3.html">
             
                     
-                    第三章 多单位与多币种
+                    第三章 销售流程
             
                 </a>
             
@@ -257,7 +244,7 @@
                 <a href="../chapter2/README4.html">
             
                     
-                    第四章 销售库存管理
+                    第四章 多单位与多币种
             
                 </a>
             
@@ -270,7 +257,7 @@
                 <a href="../chapter2/README5.html">
             
                     
-                    第五章 折扣与价格表
+                    第五章 销售库存管理
             
                 </a>
             
@@ -283,7 +270,20 @@
                 <a href="../chapter2/README6.html">
             
                     
-                    第六章 租赁
+                    第六章 折扣与价格表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../chapter2/README7.html">
+            
+                <a href="../chapter2/README7.html">
+            
+                    
+                    第七章 租赁
             
                 </a>
             
@@ -829,7 +829,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第六章 邮箱配置</a>
+        <a href=".." >第五章 邮箱配置</a>
     </h1>
 </div>
 
@@ -844,7 +844,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7B2C;&#x516D;&#x7AE0;-&#x90AE;&#x7BB1;&#x914D;&#x7F6E;">&#x7B2C;&#x516D;&#x7AE0; &#x90AE;&#x7BB1;&#x914D;&#x7F6E;</h1>
+                                <h1 id="&#x7B2C;&#x4E94;&#x7AE0;-&#x90AE;&#x7BB1;&#x914D;&#x7F6E;">&#x7B2C;&#x4E94;&#x7AE0; &#x90AE;&#x7BB1;&#x914D;&#x7F6E;</h1>
 <p>odoo&#x7684;&#x90AE;&#x7BB1;&#x914D;&#x7F6E;&#x4ECE;&#x5F88;&#x65E9;&#x7684;&#x7248;&#x672C;&#x65F6;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x80FD;&#x5728;&#x56FD;&#x5916;&#x7528;&#x7684;&#x5F88;&#x4E1D;&#x6ED1;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5728;&#x56FD;&#x5185;&#x5C31;&#x6C34;&#x571F;&#x4E0D;&#x670D;&#x3002;&#x672C;&#x6587;&#x5C31;&#x8BD5;&#x56FE;&#x5C06;&#x90AE;&#x7BB1;&#x914D;&#x7F6E;&#x7684;&#x95EE;&#x9898;&#x4E00;&#x6B21;&#x8BF4;&#x4E2A;&#x6E05;&#x695A;&#x3002;</p>
 <h2 id="&#x539F;&#x751F;&#x7CFB;&#x7EDF;&#x7684;&#x90AE;&#x7BB1;&#x4F7F;&#x7528;">&#x539F;&#x751F;&#x7CFB;&#x7EDF;&#x7684;&#x90AE;&#x7BB1;&#x4F7F;&#x7528;</h2>
 <p>&#x672C;&#x7740;&#x77E5;&#x5176;&#x7136;&#x53C8;&#x77E5;&#x5176;&#x6240;&#x4EE5;&#x7136;&#x7684;&#x6807;&#x51C6;&#xFF0C;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x5148;&#x7406;&#x4E00;&#x4E0B;&#x539F;&#x751F;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x77E5;&#x9053;&#x5B83;&#x539F;&#x672C;&#x7684;&#x6837;&#x5B50;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x624D;&#x80FD;&#x77E5;&#x9053;&#x95EE;&#x9898;&#x5728;&#x54EA;&#xFF0C;&#x518D;&#x60F3;&#x529E;&#x6CD5;&#x53BB;&#x89E3;&#x51B3;&#x8FD9;&#x4E9B;&#x95EE;&#x9898;&#x3002;</p>
@@ -1043,7 +1043,7 @@ bounce+20-res.users-6@xxx.com&quot;</span>
 
             
                 
-                <a href="README3.html" class="navigation navigation-prev " aria-label="Previous page: 第五章 产品管理">
+                <a href="README4.html" class="navigation navigation-prev " aria-label="Previous page: 第四章 联系人与合作伙伴">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -1059,7 +1059,7 @@ bounce+20-res.users-6@xxx.com&quot;</span>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第六章 邮箱配置","level":"1.2.6","depth":2,"next":{"title":"第二部分 销售管理","level":"1.3","depth":1,"path":"SECTION2.md","ref":"SECTION2.md","articles":[{"title":"第一章 基础概念","level":"1.3.1","depth":2,"path":"chapter2/README.md","ref":"chapter2/README.md","articles":[]},{"title":"第二章 销售流程","level":"1.3.2","depth":2,"path":"chapter2/README2.md","ref":"chapter2/README2.md","articles":[]},{"title":"第三章 多单位与多币种","level":"1.3.3","depth":2,"path":"chapter2/README3.md","ref":"chapter2/README3.md","articles":[]},{"title":"第四章 销售库存管理","level":"1.3.4","depth":2,"path":"chapter2/README4.md","ref":"chapter2/README4.md","articles":[]},{"title":"第五章 折扣与价格表","level":"1.3.5","depth":2,"path":"chapter2/README5.md","ref":"chapter2/README5.md","articles":[]},{"title":"第六章 租赁","level":"1.3.6","depth":2,"path":"chapter2/README6.md","ref":"chapter2/README6.md","articles":[]}]},"previous":{"title":"第五章 产品管理","level":"1.2.5","depth":2,"path":"chapter1/README3.md","ref":"chapter1/README3.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kevin Kong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施经验汇编","language":"zh-hans","gitbook":"*","description":"odoo实施经验汇编，涵盖多个项目解决方案"},"file":{"path":"chapter1/README6.md","mtime":"2023-07-14T15:30:51.440Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-11T15:08:31.843Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第五章 邮箱配置","level":"1.2.5","depth":2,"next":{"title":"第二部分 销售管理","level":"1.3","depth":1,"path":"SECTION2.md","ref":"SECTION2.md","articles":[{"title":"第一章 基础概念","level":"1.3.1","depth":2,"path":"chapter2/README.md","ref":"chapter2/README.md","articles":[]},{"title":"第二章 产品管理","level":"1.3.2","depth":2,"path":"chapter2/README2.md","ref":"chapter2/README2.md","articles":[]},{"title":"第三章 销售流程","level":"1.3.3","depth":2,"path":"chapter2/README3.md","ref":"chapter2/README3.md","articles":[]},{"title":"第四章 多单位与多币种","level":"1.3.4","depth":2,"path":"chapter2/README4.md","ref":"chapter2/README4.md","articles":[]},{"title":"第五章 销售库存管理","level":"1.3.5","depth":2,"path":"chapter2/README5.md","ref":"chapter2/README5.md","articles":[]},{"title":"第六章 折扣与价格表","level":"1.3.6","depth":2,"path":"chapter2/README6.md","ref":"chapter2/README6.md","articles":[]},{"title":"第七章 租赁","level":"1.3.7","depth":2,"path":"chapter2/README7.md","ref":"chapter2/README7.md","articles":[]}]},"previous":{"title":"第四章 联系人与合作伙伴","level":"1.2.4","depth":2,"path":"chapter1/README4.md","ref":"chapter1/README4.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kevin Kong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施经验汇编","language":"zh-hans","gitbook":"*","description":"odoo实施经验汇编，涵盖多个项目解决方案"},"file":{"path":"chapter1/README6.md","mtime":"2024-05-11T15:33:21.311Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-11T16:12:18.385Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -1067,10 +1067,6 @@ bounce+20-res.users-6@xxx.com&quot;</span>
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>

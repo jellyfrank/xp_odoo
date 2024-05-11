@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第六章 租赁 · odoo实施经验汇编</title>
+        <title>第六章 折扣与价格表 · odoo实施经验汇编</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,7 +57,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../SECTION3.md" />
+    <link rel="next" href="README7.html" />
     
     
     <link rel="prev" href="README5.html" />
@@ -168,25 +168,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="../chapter1/README3.html">
-            
-                <a href="../chapter1/README3.html">
-            
-                    
-                    第五章 产品管理
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.6" data-path="../chapter1/README6.html">
+        <li class="chapter " data-level="1.2.5" data-path="../chapter1/README6.html">
             
                 <a href="../chapter1/README6.html">
             
                     
-                    第六章 邮箱配置
+                    第五章 邮箱配置
             
                 </a>
             
@@ -231,7 +218,7 @@
                 <a href="README2.html">
             
                     
-                    第二章 销售流程
+                    第二章 产品管理
             
                 </a>
             
@@ -244,7 +231,7 @@
                 <a href="README3.html">
             
                     
-                    第三章 多单位与多币种
+                    第三章 销售流程
             
                 </a>
             
@@ -257,7 +244,7 @@
                 <a href="README4.html">
             
                     
-                    第四章 销售库存管理
+                    第四章 多单位与多币种
             
                 </a>
             
@@ -270,7 +257,7 @@
                 <a href="README5.html">
             
                     
-                    第五章 折扣与价格表
+                    第五章 销售库存管理
             
                 </a>
             
@@ -283,7 +270,20 @@
                 <a href="README6.html">
             
                     
-                    第六章 租赁
+                    第六章 折扣与价格表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="README7.html">
+            
+                <a href="README7.html">
+            
+                    
+                    第七章 租赁
             
                 </a>
             
@@ -829,7 +829,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第六章 租赁</a>
+        <a href=".." >第六章 折扣与价格表</a>
     </h1>
 </div>
 
@@ -844,43 +844,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7B2C;&#x516D;&#x7AE0;-&#x79DF;&#x8D41;&#x4E1A;&#x52A1;">&#x7B2C;&#x516D;&#x7AE0; &#x79DF;&#x8D41;&#x4E1A;&#x52A1;</h1>
-<p>odoo&#x4E2D;&#x7684;&#x79DF;&#x8D41;&#x4E1A;&#x52A1;&#x662F;&#x901A;&#x8FC7;&#x9500;&#x552E;&#x8BA2;&#x5355;&#x6765;&#x5B8C;&#x6210;&#x7684;&#xFF0C;&#x79DF;&#x8D41;&#x5355;&#x7684;&#x672C;&#x8D28;&#x5C31;&#x662F;&#x4E00;&#x5F20;&#x9500;&#x552E;&#x8BA2;&#x5355;&#x3002;&#x79DF;&#x8D41;&#x5355;&#x4E0E;&#x9500;&#x552E;&#x8BA2;&#x5355;&#x7684;&#x533A;&#x522B;&#x5728;&#x4E8E;&#x9500;&#x552E;&#x8BA2;&#x5355;&#x5BF9;&#x8C61;(sale.order)&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;is_rental_order&#x6765;&#x6807;&#x8BC6;&#xFF0C;&#x8BE5;&#x8BA2;&#x5355;&#x662F;&#x5426;&#x4E3A;&#x79DF;&#x8D41;&#x8BA2;&#x5355;&#x3002;</p>
-<h2 id="&#x79DF;&#x8D41;&#x4E1A;&#x52A1;">&#x79DF;&#x8D41;&#x4E1A;&#x52A1;</h2>
-<h3 id="1-&#x5B9A;&#x4E49;&#x79DF;&#x8D41;&#x4EA7;&#x54C1;">1. &#x5B9A;&#x4E49;&#x79DF;&#x8D41;&#x4EA7;&#x54C1;</h3>
-<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x79DF;&#x8D41;&#x4EA7;&#x54C1;&#xFF0C;&#x5E76;&#x8BBE;&#x7F6E;&#x5B83;&#x7684;&#x79DF;&#x8D41;&#x4EF7;&#x683C;&#xFF0C;&#x8FD9;&#x91CC;&#x4EE5;A4L&#x4E3A;&#x4F8B;&#xFF0C;&#x9996;&#x5148;&#x6211;&#x4EEC;&#x5728;&#x4EA7;&#x54C1;&#x4FE1;&#x606F;&#x4E2D;&#x5C06;&#x53EF;&#x88AB;&#x79DF;&#x8D41;&#x7684;&#x52FE;&#x6253;&#x4E0A;&#xFF0C;&#x610F;&#x5473;&#x7740;&#x8BE5;&#x4EA7;&#x54C1;&#x53EF;&#x4EE5;&#x88AB;&#x79DF;&#x8D41;&#x3002;</p>
-<p><img src="images/38.png" alt=""></p>
-<p>&#x7136;&#x540E;&#x518D;&#x79DF;&#x8D41;&#x9009;&#x9879;&#x5361;&#x4E2D;&#x8BBE;&#x7F6E;&#x5B83;&#x7684;&#x79DF;&#x8D41;&#x4EF7;&#x683C;&#xFF1A;</p>
-<p><img src="images/39.png" alt=""></p>
-<h3 id="1-&#x521B;&#x5EFA;&#x79DF;&#x8D41;&#x5355;">1. &#x521B;&#x5EFA;&#x79DF;&#x8D41;&#x5355;</h3>
-<p>&#x5728;App&#x4E2D;&#x5B89;&#x88C5;&#x79DF;&#x8D41;&#x6A21;&#x5757;(Rental)&#x540E;&#xFF0C;&#x5728;&#x5F00;&#x59CB;&#x83DC;&#x5355;&#x4E2D;&#x4F1A;&#x51FA;&#x73B0;&#x4E00;&#x4E2A;&#x79DF;&#x8D41;&#x83DC;&#x5355;&#xFF0C;&#x70B9;&#x51FB;&#x8FDB;&#x5165;&#x79DF;&#x8D41;&#x6A21;&#x5757;&#xFF1A;</p>
-<p><img src="images/36.png" alt=""></p>
-<p>&#x7136;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x79DF;&#x8D41;&#x8BA2;&#x5355;&#x3002;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x8981;&#x5C06;A4L&#x79DF;&#x7ED9;&#x5317;&#x4EAC;&#x4E09;&#x5757;&#x7F51;&#x7EDC;&#x79D1;&#x6280;&#x6709;&#x9650;&#x516C;&#x53F8;&#x4E00;&#x5929;&#xFF0C;&#x79DF;&#x91D1;5000&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x7684;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x521B;&#x5EFA;&#xFF1A;</p>
-<p><img src="images/37.png" alt=""></p>
-<p>&#x5F53;&#x6211;&#x4EEC;&#x9009;&#x62E9;&#x4E86;&#x8981;&#x88AB;&#x79DF;&#x501F;&#x7684;&#x4EA7;&#x54C1;&#x4E4B;&#x540E;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x5F39;&#x7A97;&#x63D0;&#x793A;&#x6211;&#x4EEC;&#x79DF;&#x8D41;&#x7684;&#x671F;&#x9650;&#xFF1A;</p>
-<p><img src="images/40.png" alt=""></p>
-<p>&#x8FD9;&#x91CC;&#x7684;&#x8BA2;&#x5355;&#x5355;&#x4EF7;&#x4E3A;&#x6211;&#x4EEC;&#x79DF;&#x8D41;&#x7684;&#x5355;&#x4EF7;&#x3002;</p>
-<h3 id="2-&#x51FA;&#x79DF;&#x4EA7;&#x54C1;">2. &#x51FA;&#x79DF;&#x4EA7;&#x54C1;</h3>
-<p>&#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x786E;&#x8BA4;&#x8BE5;&#x8BA2;&#x5355;&#xFF1A;</p>
-<p><img src="images/41.png" alt=""></p>
-<p>&#x6B64;&#x65F6;&#x4F1A;&#x663E;&#x793A;&#x8BE5;&#x8BA2;&#x5355;&#x5DF2;&#x88AB;&#x786E;&#x8BA4;&#xFF0C;&#x7136;&#x540E;&#x6211;&#x4EEC;&#x70B9;&#x51FB;&#x79DF;&#x501F;&#xFF0C;&#x5C06;&#x4EA7;&#x54C1;&#x6B63;&#x5F0F;&#x51FA;&#x501F;&#x7ED9;&#x5BA2;&#x6237;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C06;&#x521B;&#x5EFA;&#x51FA;&#x5E93;&#x5355;&#x5E76;&#x81EA;&#x52A8;&#x5B8C;&#x6210;&#x3002;</p>
-<p><img src="images/42.png" alt=""></p>
-<p>&#x5982;&#x679C;&#x8FD9;&#x65F6;&#x6211;&#x4EEC;&#x67E5;&#x770B;&#x4EA7;&#x54C1;&#x7684;&#x51FA;&#x5165;&#x5E93;&#x8BB0;&#x5F55;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;A4L&#x5DF2;&#x7ECF;&#x88AB;&#x79DF;&#x501F;&#x81F3;&#x79DF;&#x8D41;&#x5E93;&#x4F4D;(Rental)&#x3002;</p>
-<p><img src="images/43.png" alt=""></p>
-<blockquote>
-<p>Rental&#x5E93;&#x4F4D;&#x7684;&#x7C7B;&#x578B;&#x662F;&#x5185;&#x90E8;&#x5E93;&#x4F4D;&#x800C;&#x4E0D;&#x662F;&#x5BA2;&#x6237;&#x5E93;&#x4F4D;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x8BF4;&#xFF0C;&#x8BE5;&#x4EA7;&#x54C1;&#x7684;&#x6240;&#x5C5E;&#x6743;&#x8FD8;&#x662F;&#x5728;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#xFF0C;&#x4E0E;&#x79DF;&#x8D41;&#x7684;&#x6982;&#x5FF5;&#x76F8;&#x5BF9;&#x5E94;&#x3002;</p>
-</blockquote>
-<h3 id="3&#x5F52;&#x8FD8;&#x4EA7;&#x54C1;">3.&#x5F52;&#x8FD8;&#x4EA7;&#x54C1;</h3>
-<p>&#x5F53;&#x5BA2;&#x6237;&#x5F52;&#x8FD8;&#x4EA7;&#x54C1;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x6B64;&#x8BA2;&#x5355;&#x4E2D;&#x64CD;&#x4F5C;&#x5F52;&#x8FD8;&#x6309;&#x94AE;&#xFF0C;&#x5C06;&#x4EA7;&#x54C1;&#x5F52;&#x8FD8;&#x5230;&#x4ED3;&#x5E93;&#x4E2D;&#x3002;&#x70B9;&#x51FB;&#x5F52;&#x8FD8;&#x6309;&#x94AE;&#xFF0C;&#x5F39;&#x51FA;&#x5F52;&#x8FD8;&#x5411;&#x5BFC;&#x9875;&#x9762;&#xFF1A;</p>
-<p><img src="images/44.png" alt=""></p>
-<p>&#x786E;&#x8BA4;&#x5F52;&#x8FD8;&#x4EE5;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8BA2;&#x5355;&#x7684;&#x72B6;&#x6001;&#x5DF2;&#x7ECF;&#x53D8;&#x4E3A;&#x5DF2;&#x5F52;&#x8FD8;&#xFF1A;</p>
-<p><img src="images/45.png" alt=""></p>
-<h3 id="3-&#x5F00;&#x7968;">3. &#x5F00;&#x7968;</h3>
-<p>&#x8BA2;&#x5355;&#x5B8C;&#x6210;&#x4EE5;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7ED9;&#x5BA2;&#x6237;&#x5F00;&#x5177;&#x6536;&#x636E;&#xFF0C;&#x6D41;&#x7A0B;&#x4E0E;&#x9500;&#x552E;&#x5355;&#x5F00;&#x7968;&#x6D41;&#x7A0B;&#x4E00;&#x81F4;&#xFF0C;&#x4E0D;&#x518D;&#x8D58;&#x8FF0;&#x3002;</p>
-<p><img src="images/46.png" alt=""></p>
-<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
-<p>odoo&#x4E2D;&#x7684;&#x79DF;&#x501F;&#x6D41;&#x7A0B;&#x76F8;&#x5BF9;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x9002;&#x5408;&#x6D41;&#x7A0B;&#x4E0D;&#x662F;&#x7279;&#x522B;&#x590D;&#x6742;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x5982;&#x679C;&#x6D89;&#x53CA;&#x5230;&#x66F4;&#x4E3A;&#x590D;&#x6742;&#x7684;&#x4E1A;&#x52A1;&#x6D41;&#x7A0B;&#xFF0C;&#x90A3;&#x4E48;&#x4E8C;&#x5F00;&#x5C31;&#x662F;&#x4E0D;&#x53EF;&#x907F;&#x514D;&#x7684;&#x4E86;&#x3002;</p>
-<p>&#x672C;&#x7AE0;&#x5185;&#x5BB9;&#xFF0C;&#x8BFB;&#x8005;&#x4E5F;&#x53EF;&#x4EE5;&#x5230;&#x6211;&#x7684;<a href="https://www.bilibili.com/video/BV1Bb4y1b7wf" target="_blank">B&#x7AD9;</a>&#x89C6;&#x9891;&#x5B66;&#x4E60;&#x3002;</p>
+                                <h1 id="&#x7B2C;&#x4E94;&#x7AE0;-&#x6298;&#x6263;&#x4E0E;&#x4EF7;&#x683C;&#x8868;">&#x7B2C;&#x4E94;&#x7AE0; &#x6298;&#x6263;&#x4E0E;&#x4EF7;&#x683C;&#x8868;</h1>
+<h2 id="&#x9500;&#x552E;&#x8BA2;&#x5355;&#x4E0A;&#x7684;&#x4EF7;&#x683C;&#x8868;">&#x9500;&#x552E;&#x8BA2;&#x5355;&#x4E0A;&#x7684;&#x4EF7;&#x683C;&#x8868;</h2>
+<p>&#x5F00;&#x542F;&#x4EF7;&#x683C;&#x8868;&#x4E4B;&#x540E;&#xFF0C;&#x5728;&#x9500;&#x552E;&#x8BA2;&#x5355;&#x4E0A;&#x9762;&#xFF0C;&#x7528;&#x6237;&#x5C06;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x7279;&#x5B9A;&#x7684;&#x4EF7;&#x683C;&#x8868;&#x53C2;&#x4E0E;&#x8FD0;&#x7B97;&#x3002;</p>
+<p><img src="images/48.png" alt=""></p>
+<h3 id="&#x5207;&#x6362;&#x4EF7;&#x683C;&#x8868;">&#x5207;&#x6362;&#x4EF7;&#x683C;&#x8868;</h3>
+<p>&#x5207;&#x6362;&#x4EF7;&#x683C;&#x8868;&#x4E4B;&#x540E;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x5728;&#x4EF7;&#x683C;&#x8868;&#x65C1;&#x8FB9;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x66F4;&#x65B0;&#x4EF7;&#x683C;&#x8868;&#x6309;&#x94AE;&#x3002;&#x70B9;&#x51FB;&#x66F4;&#x65B0;&#x4EF7;&#x683C;&#x8868;&#x4E4B;&#x540E;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C06;&#x4F7F;&#x7528;&#x66F4;&#x6362;&#x540E;&#x7684;&#x4EF7;&#x683C;&#x8868;&#x4EF7;&#x683C;&#x66FF;&#x6362;&#x6389;&#x539F;&#x6765;&#x7684;&#x4EF7;&#x683C;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4E3E;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#xFF0C;&#x5047;&#x8BBE;&#x4E00;&#x53F0;&#x5965;&#x8FEA;A4L&#x7684;&#x552E;&#x4EF7;&#x662F;250000&#x4EBA;&#x6C11;&#x5E01;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x516C;&#x5F00;&#x4EF7;&#x683C;&#x8868;&#x4E0A;&#x8BBE;&#x7F6E;A4L&#x7684;&#x4EF7;&#x683C;&#xFF1A;</p>
+<p><img src="images/49.png" alt=""></p>
+<p>&#x7136;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53C8;&#x65B0;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x4EF7;&#x683C;&#x8868;&#x4E13;&#x95E8;&#x7ED9;VIP&#x5BA2;&#x6237;&#x4F7F;&#x7528;&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A;&#x6240;&#x6709;&#x4EA7;&#x54C1;&#x6253;8&#x6298;&#xFF1A;</p>
+<p><img src="images/50.png" alt=""></p>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x56DE;&#x5230;&#x62A5;&#x4EF7;&#x4E0A;&#x5355;&#x4E0A;&#x9762;&#xFF0C;&#x5207;&#x6362;&#x4EF7;&#x683C;&#x8868;&#x5230;VIP&#x4EF7;&#x683C;&#x8868;&#x4EE5;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4EF7;&#x683C;&#x8868;&#x65C1;&#x8FB9;&#x51FA;&#x73B0;&#x4E86;&#x4E00;&#x4E2A;&#x66F4;&#x65B0;&#x4EF7;&#x683C;&#x8868;&#x7684;&#x6309;&#x94AE;&#xFF1A;</p>
+<p><img src="images/51.png" alt=""></p>
+<p>&#x70B9;&#x51FB;&#x6B64;&#x6309;&#x94AE;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C06;&#x63D0;&#x793A;&#x6211;&#x4EEC;&#x662F;&#x5426;&#x5C06;&#x660E;&#x7EC6;&#x4E2D;&#x7684;&#x4EA7;&#x54C1;&#x660E;&#x7EC6;&#x90FD;&#x66F4;&#x65B0;&#x4E3A;&#x8BE5;&#x4EF7;&#x683C;&#x8868;&#x7684;&#x4EF7;&#x683C;&#x4F53;&#x7CFB;&#x3002;&#x6211;&#x4EEC;&#x9009;&#x62E9;&#x786E;&#x5B9A;&#xFF0C;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="images/52.png" alt=""></p>
+<p><img src="images/53.png" alt=""></p>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;A4L&#x7684;&#x4EF7;&#x683C;&#x7531;&#x516C;&#x5F00;&#x4EF7;&#x683C;&#x7684;250000&#x53D8;&#x6210;&#x4E86;200000&#x3002;</p>
 
                                 
                                 </section>
@@ -908,12 +887,12 @@
 
             
                 
-                <a href="README5.html" class="navigation navigation-prev " aria-label="Previous page: 第五章 折扣与价格表">
+                <a href="README5.html" class="navigation navigation-prev " aria-label="Previous page: 第五章 销售库存管理">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../SECTION3.md" class="navigation navigation-next " aria-label="Next page: 第三部分 采购管理">
+                <a href="README7.html" class="navigation navigation-next " aria-label="Next page: 第七章 租赁">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -924,7 +903,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第六章 租赁","level":"1.3.6","depth":2,"next":{"title":"第三部分 采购管理","level":"1.4","depth":1,"path":"SECTION3.md","ref":"SECTION3.md","articles":[{"title":"第一章 采购管理","level":"1.4.1","depth":2,"path":"chapter3/README.md","ref":"chapter3/README.md","articles":[]},{"title":"第二章 成本计算","level":"1.4.2","depth":2,"path":"chapter3/README2.md","ref":"chapter3/README2.md","articles":[]}]},"previous":{"title":"第五章 折扣与价格表","level":"1.3.5","depth":2,"path":"chapter2/README5.md","ref":"chapter2/README5.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kevin Kong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施经验汇编","language":"zh-hans","gitbook":"*","description":"odoo实施经验汇编，涵盖多个项目解决方案"},"file":{"path":"chapter2/README6.md","mtime":"2022-04-30T15:58:14.883Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-11T15:08:31.843Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第六章 折扣与价格表","level":"1.3.6","depth":2,"next":{"title":"第七章 租赁","level":"1.3.7","depth":2,"path":"chapter2/README7.md","ref":"chapter2/README7.md","articles":[]},"previous":{"title":"第五章 销售库存管理","level":"1.3.5","depth":2,"path":"chapter2/README5.md","ref":"chapter2/README5.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kevin Kong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施经验汇编","language":"zh-hans","gitbook":"*","description":"odoo实施经验汇编，涵盖多个项目解决方案"},"file":{"path":"chapter2/README6.md","mtime":"2022-10-14T15:12:07.024Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-11T16:12:18.385Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -932,10 +911,6 @@
         
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
-    
-        
-        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
-        
     
         
         <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
