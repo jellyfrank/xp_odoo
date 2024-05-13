@@ -11,7 +11,7 @@
 * [第二部分 销售管理](SECTION2.md)
   * [第一章 报价与销售](chapter2/README.md)
   * [第二章 销售管理](chapter2/README2.md)
-  * [第三章 报价单与订单](chapter2/README3.md)
+  * [第三章 税率](chapter2/README3.md)
   * [第四章 销售库存管理](chapter2/README4.md)
   * [第五章 折扣与价格表](chapter2/README5.md)
   * [第六章 租赁](chapter2/README6.md)
