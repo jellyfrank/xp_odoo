@@ -1,0 +1,1044 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第四章 联系人与合作伙伴 · odoo实施经验汇编</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Kevin Kong">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="README6.html" />
+    
+    
+    <link rel="prev" href="README5.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../SECTION1.html">
+            
+                <a href="../SECTION1.html">
+            
+                    
+                    第一部分 基础数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第一章 Odoo简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="README2.html">
+            
+                <a href="README2.html">
+            
+                    
+                    第二章 数据库管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="README5.html">
+            
+                <a href="README5.html">
+            
+                    
+                    第三章 公司和用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="README4.html">
+            
+                <a href="README4.html">
+            
+                    
+                    第四章 联系人与合作伙伴
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="README6.html">
+            
+                <a href="README6.html">
+            
+                    
+                    第五章 邮箱配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../SECTION2.html">
+            
+                <a href="../SECTION2.html">
+            
+                    
+                    第二部分 销售管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../chapter2/">
+            
+                <a href="../chapter2/">
+            
+                    
+                    第一章 基础概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../chapter2/README2.html">
+            
+                <a href="../chapter2/README2.html">
+            
+                    
+                    第二章 产品管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../chapter2/README3.html">
+            
+                <a href="../chapter2/README3.html">
+            
+                    
+                    第三章 销售流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../chapter2/README4.html">
+            
+                <a href="../chapter2/README4.html">
+            
+                    
+                    第四章 税率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../chapter2/README5.html">
+            
+                <a href="../chapter2/README5.html">
+            
+                    
+                    第五章 销售库存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../chapter2/README6.html">
+            
+                <a href="../chapter2/README6.html">
+            
+                    
+                    第六章 折扣与价格表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../chapter2/README7.html">
+            
+                <a href="../chapter2/README7.html">
+            
+                    
+                    第七章 租赁
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../SECTION3.md">
+            
+                <span>
+            
+                    
+                    第三部分 采购管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/">
+            
+                <a href="../chapter3/">
+            
+                    
+                    第一章 采购管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/README2.html">
+            
+                <a href="../chapter3/README2.html">
+            
+                    
+                    第二章 成本计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../SECTION4.md">
+            
+                <span>
+            
+                    
+                    第四部分 仓库管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../chapter4/README.md">
+            
+                <span>
+            
+                    
+                    第一章 仓库管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../chapter4/README2.html">
+            
+                <a href="../chapter4/README2.html">
+            
+                    
+                    第二章 库位管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../chapter4/README3.html">
+            
+                <a href="../chapter4/README3.html">
+            
+                    
+                    第三章 出入库和内部调拨
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../chapter4/README.md">
+            
+                <span>
+            
+                    
+                    第四章 盘点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../chapter4/README.md">
+            
+                <span>
+            
+                    
+                    第五章 扫码操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../chapter4/README.md">
+            
+                <span>
+            
+                    
+                    第六章 包装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../chapter4/README.md">
+            
+                <span>
+            
+                    
+                    第七章 集成物流公司
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../chapter4/README8.html">
+            
+                <a href="../chapter4/README8.html">
+            
+                    
+                    第八章 成本核算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../chapter10/README10.html">
+            
+                <a href="../chapter10/README10.html">
+            
+                    
+                    第九章 顺丰速递
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../SECTION5.md">
+            
+                <span>
+            
+                    
+                    第五部分 生产管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/README.md">
+            
+                <span>
+            
+                    
+                    第一章 BOM管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/README2.md">
+            
+                <span>
+            
+                    
+                    第二章 计划生产
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/README3.html">
+            
+                <a href="../chapter5/README3.html">
+            
+                    
+                    第三章 管理工单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../chapter5/README4.md">
+            
+                <span>
+            
+                    
+                    第四章 外协加工
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../chapter5/README5.html">
+            
+                <a href="../chapter5/README5.html">
+            
+                    
+                    第五章 工作中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../chapter5/README6.md">
+            
+                <span>
+            
+                    
+                    第六章 质量检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../SECTION6.md">
+            
+                <span>
+            
+                    
+                    第六部分 财务管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter6/">
+            
+                <a href="../chapter6/">
+            
+                    
+                    第一章 基础概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter6/README2.html">
+            
+                <a href="../chapter6/README2.html">
+            
+                    
+                    第二章 开票
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../chapter6/REDAME3.html">
+            
+                <a href="../chapter6/REDAME3.html">
+            
+                    
+                    第三章 支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../SECTION7.md">
+            
+                <span>
+            
+                    
+                    第七部分 多公司
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chapter7/">
+            
+                <a href="../chapter7/">
+            
+                    
+                    第一章 多公司间的采购
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../SECTION7.md">
+            
+                <span>
+            
+                    
+                    第七部分 网站
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter8/">
+            
+                <a href="../chapter8/">
+            
+                    
+                    第一章 门户
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../SECTION8.md">
+            
+                <span>
+            
+                    
+                    第八部分 人力资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../SECTION9.md">
+            
+                <span>
+            
+                    
+                    第九部分 设置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../chapter9/">
+            
+                <a href="../chapter9/">
+            
+                    
+                    第一章 通用设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../chapter9/README9.html">
+            
+                <a href="../chapter9/README9.html">
+            
+                    
+                    第九章 技术设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../SECTION10.md">
+            
+                <span>
+            
+                    
+                    第十部分 通用解决方案
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../chapter10/README2.html">
+            
+                <a href="../chapter10/README2.html">
+            
+                    
+                    第一章 企业微信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../chapter10/">
+            
+                <a href="../chapter10/">
+            
+                    
+                    第二章 百度地图
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第四章 联系人与合作伙伴</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;&#x56DB;&#x7AE0;-&#x8054;&#x7CFB;&#x4EBA;&#x4E0E;&#x5408;&#x4F5C;&#x4F19;&#x4F34;">&#x7B2C;&#x56DB;&#x7AE0; &#x8054;&#x7CFB;&#x4EBA;&#x4E0E;&#x5408;&#x4F5C;&#x4F19;&#x4F34;</h1>
+<p>&#x5728;odoo&#x4E2D;&#xFF0C;&#x5408;&#x4F5C;&#x4F19;&#x4F34;(res.partner)&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x5E7F;&#x6CDB;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x6307;&#x5BA2;&#x6237;&#x3001;&#x4F9B;&#x5E94;&#x5546;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x67D0;&#x4E2A;&#x5177;&#x4F53;&#x7684;&#x4EBA;&#x3001;&#x516C;&#x53F8;&#xFF0C;&#x751A;&#x81F3;&#x6536;&#x8D27;&#x5730;&#x5740;&#x3001;&#x53D1;&#x7968;&#x5730;&#x5740;&#x4E5F;&#x5C5E;&#x4E8E;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x7684;&#x8303;&#x7574;&#x3002;&#x8FD9;&#x91CC;&#x4E0D;&#x8BA8;&#x8BBA;&#x7CFB;&#x7EDF;&#x4E3A;&#x4F55;&#x8981;&#x8FD9;&#x6837;&#x8BBE;&#x8BA1;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E5F;&#x8BBE;&#x8BA1;&#x7684;&#x7684;&#x786E;&#x4F1A;&#x628A;&#x4E0A;&#x9762;&#x8FD9;&#x4E9B;&#x6982;&#x5FF5;&#x7684;&#x754C;&#x9650;&#x53D8;&#x5F97;&#x6A21;&#x7CCA;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x5355;&#x72EC;&#x5217;&#x51FA;&#x4E86;&#x4E00;&#x7AE0;&#xFF0C;&#x8BE6;&#x7EC6;&#x8BB2;&#x89E3;&#x5982;&#x4F55;&#x533A;&#x5206;&#x4E0A;&#x9762;&#x7684;&#x8FD9;&#x4E9B;&#x6982;&#x5FF5;&#x3002;</p>
+<h2 id="&#x5BA2;&#x6237;&#x548C;&#x4F9B;&#x5E94;&#x5546;">&#x5BA2;&#x6237;&#x548C;&#x4F9B;&#x5E94;&#x5546;</h2>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x5148;&#x6765;&#x770B;&#x6700;&#x91CD;&#x8981;&#x7684;&#x4E24;&#x4E2A;&#x6982;&#x5FF5;&#xFF0C;&#x5BA2;&#x6237;&#x548C;&#x4F9B;&#x5E94;&#x5546;&#x3002;&#x524D;&#x9762;&#x6211;&#x4EEC;&#x8BF4;&#x8FC7;&#xFF0C;&#x4ECE;&#x6280;&#x672F;&#x89D2;&#x5EA6;&#x4E0A;&#x8BB2;&#xFF0C;&#x5BA2;&#x6237;&#x548C;&#x4F9B;&#x5E94;&#x5546;&#x90FD;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;: res.partner&#xFF0C;&#x5728;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x90FD;&#x662F;&#x540C;&#x4E00;&#x5F20;&#x8868;&#x3002;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x5982;&#x4F55;&#x533A;&#x5206;&#x5B83;&#x4EEC;&#x5462;&#xFF1F;</p>
+<p>&#x5BF9;&#x4E8E;13.0&#x4E4B;&#x524D;&#x7684;&#x7248;&#x672C;&#xFF0C;odoo&#x4E13;&#x95E8;&#x8BBE;&#x8BA1;&#x4E86;&#x4E24;&#x4E2A;&#x5B57;&#x6BB5;&#x7528;&#x6765;&#x6807;&#x8BC6;&#x5BA2;&#x6237;&#x548C;&#x4F9B;&#x5E94;&#x5546;&#x3002;</p>
+<p><img src="images/9.png" alt="9"></p>
+<p>&#x4F46;&#x662F;&#x4ECE;13.0&#x5F00;&#x59CB;&#xFF0C;&#x5B98;&#x65B9;&#x91CD;&#x65B0;&#x8BBE;&#x8BA1;&#x4E86;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#xFF0C;&#x53D6;&#x6D88;&#x4E86;&#x8FD9;&#x4E24;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x53D6;&#x800C;&#x4EE3;&#x4E4B;&#x7684;&#x662F;&#x5BA2;&#x6237;&#x6BD4;&#x91CD;&#x3001;&#x4F9B;&#x5E94;&#x5546;&#x6BD4;&#x91CD;&#x3002;</p>
+<blockquote>
+<p>&#x5BA2;&#x6237;&#x6BD4;&#x91CD;&#x3001;&#x4F9B;&#x5E94;&#x5546;&#x6BD4;&#x91CD;&#x7684;&#x5B57;&#x6BB5;&#x5B9A;&#x4E49;&#x4F4D;&#x4E8E;&#x4F1A;&#x8BA1;&#x6A21;&#x5757;&#x4E2D;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x4F1A;&#x8BA1;&#x6A21;&#x5757;&#x540E;&#x624D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E24;&#x4E2A;&#x5B57;&#x6BB5;&#x3002;</p>
+</blockquote>
+<p><img src="images/10.png" alt="10"></p>
+<p>&#x5982;&#x6B64;&#x8BBE;&#x8BA1;&#x7684;&#x542B;&#x4E49;&#x662F;&#x6697;&#x793A;<strong>&#x6B64;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x7684;&#x5BA2;&#x6237;&#x5C5E;&#x6027;&#x548C;&#x4F9B;&#x5E94;&#x5546;&#x5C5E;&#x6027;&#x7684;&#x6BD4;&#x91CD;</strong>&#xFF0C;&#x56E0;&#x4E3A;&#x5B58;&#x5728;&#x4E00;&#x79CD;&#x53EF;&#x80FD;&#xFF0C;&#x6B64;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x5373;&#x662F;&#x5BA2;&#x6237;&#x53C8;&#x662F;&#x4F9B;&#x5E94;&#x5546;&#x3002;<strong>&#x5F53;&#x5BA2;&#x6237;&#x6BD4;&#x91CD;&#x5927;&#x4E8E;1&#x65F6;&#xFF0C;&#x6B64;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x5373;&#x662F;&#x5BA2;&#x6237;</strong>&#x3002;<strong>&#x5F53;&#x4F9B;&#x5E94;&#x5546;&#x6BD4;&#x91CD;&#x5927;&#x4E8E;1&#x65F6;&#xFF0C;&#x5373;&#x4E3A;&#x4F9B;&#x5E94;&#x5546;</strong>&#x3002;&#x5BF9;&#x4E8E;&#x5185;&#x90E8;&#x7528;&#x6237;&#x7684;&#x5173;&#x8054;&#x4E1A;&#x52A1;&#x4F19;&#x4F34;&#x3001;&#x5730;&#x5740;&#x7B49;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#xFF0C;&#x5176;&#x5BA2;&#x6237;&#x6BD4;&#x91CD;&#x548C;&#x4F9B;&#x5E94;&#x5546;&#x6BD4;&#x91CD;&#x5747;&#x4E3A;0&#x3002;</p>
+<h2 id="&#x4F9B;&#x5E94;&#x5546;&#x548C;&#x5BA2;&#x6237;&#x83DC;&#x5355;">&#x4F9B;&#x5E94;&#x5546;&#x548C;&#x5BA2;&#x6237;&#x83DC;&#x5355;</h2>
+<p>&#x4E3A;&#x4E86;&#x4F7F;&#x7528;&#x65B9;&#x4FBF;&#xFF0C;&#x6211;&#x4EEC;&#x5728;<strong>&#x6B27;&#x59C6;&#x7F51;&#x7EDC;&#x89E3;&#x51B3;&#x65B9;&#x6848;</strong>&#x4E2D;&#x65B0;&#x589E;&#x4E86;&#x8054;&#x7CFB;&#x4EBA;&#x83DC;&#x5355;&#x4E2D;&#x65B0;&#x589E;&#x4E86;&#x5BA2;&#x6237;&#x548C;&#x8054;&#x7CFB;&#x4EBA;&#x7684;&#x83DC;&#x5355;&#x5206;&#x7C7B;&#xFF0C;&#x4EE5;&#x65B9;&#x4FBF;&#x7528;&#x6237;&#x5728;&#x8054;&#x7CFB;&#x4EBA;&#x6A21;&#x5757;&#x5FEB;&#x901F;&#x533A;&#x5206;&#x5BA2;&#x6237;&#x548C;&#x4F9B;&#x5E94;&#x5546;&#x3002;</p>
+<p><img src="images/8.png" alt="&#x83DC;&#x5355;"></p>
+<h2 id="&#x5BA2;&#x6237;&#x7F16;&#x53F7;&#x4E0E;&#x522B;&#x540D;">&#x5BA2;&#x6237;&#x7F16;&#x53F7;&#x4E0E;&#x522B;&#x540D;</h2>
+<p>&#x6709;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x901A;&#x8FC7;&#x7F16;&#x7801;&#x6765;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#x5BA2;&#x6237;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x53EF;&#x662F;&#x7528;ref&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x3002;&#x5E76;&#x7ED9;&#x4ED6;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;&#x5E8F;&#x5217;&#x53F7;&#xFF1A;</p>
+<p><img src="images/30.png" alt="&#x7F16;&#x7801;"></p>
+<p>&#x6B64;&#x5E8F;&#x5217;&#x53F7;&#x5728;&#x4E0D;&#x540C;&#x516C;&#x53F8;&#x4E0B;&#x4FDD;&#x6301;&#x552F;&#x4E00;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x7ED9;&#x516C;&#x53F8;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x522B;&#x79F0;&#xFF08;&#x7B80;&#x79F0;&#xFF09;&#x7528;&#x4E8E;&#x5FEB;&#x901F;&#x8BC6;&#x522B;&#x3002;&#x7F16;&#x7801;&#x548C;&#x522B;&#x540D;&#x90FD;&#x4F1A;&#x5728;&#x5BA2;&#x6237;&#x9700;&#x8981;&#x7684;&#x5730;&#x65B9;&#x5C55;&#x793A;&#x51FA;&#x6765;&#xFF1A;</p>
+<p><img src="images/31.png" alt="&#x522B;&#x540D;"></p>
+<h2 id="&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x7684;&#x96B6;&#x5C5E;&#x5173;&#x7CFB;">&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x7684;&#x96B6;&#x5C5E;&#x5173;&#x7CFB;</h2>
+<p>&#x6709;&#x4E9B;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x5BA2;&#x6237;&#x53EF;&#x80FD;&#x662F;&#x4E00;&#x4E2A;&#x516C;&#x53F8;&#xFF0C;&#x540C;&#x65F6;&#x53C8;&#x6709;&#x8BE5;&#x516C;&#x53F8;&#x4E0B;&#x7684;&#x8054;&#x7CFB;&#x4EBA;&#xFF0C;odoo&#x539F;&#x751F;&#x652F;&#x6301;&#x8FD9;&#x79CD;&#x4E0A;&#x4E0B;&#x7EA7;&#x7684;&#x5173;&#x7CFB;&#x3002;</p>
+<p><img src="images/17.png" alt="17"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x7684;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x8BE5;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x662F;&#x4E2A;&#x4EBA;&#x8FD8;&#x662F;&#x4E00;&#x4E2A;&#x516C;&#x53F8;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x4E2A;&#x4EBA;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x4E0B;&#x9762;&#x9009;&#x62E9;&#x4ED6;&#x6240;&#x5C5E;&#x7684;&#x516C;&#x53F8;&#x3002;&#x4E00;&#x65E6;&#x6211;&#x4EEC;&#x7ED9;&#x4E2A;&#x4EBA;&#x9009;&#x62E9;&#x4E86;&#x516C;&#x53F8;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5728;&#x521B;&#x5EFA;&#x9500;&#x552E;&#x5355;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5982;&#x679C;&#x9009;&#x62E9;&#x4E2A;&#x4EBA;&#x4F5C;&#x4E3A;&#x5BA2;&#x6237;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x770B;&#x5230;&#x4ED6;&#x96B6;&#x5C5E;&#x7684;&#x516C;&#x53F8;&#xFF1A;</p>
+<p><img src="images/18.png" alt="18"></p>
+<p>&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x7C7B;&#x578B;&#x5206;&#x4E3A;<strong>&#x4E2A;&#x4EBA;</strong>&#x4E0E;<strong>&#x516C;&#x53F8;</strong>, &#x4ECE;&#x6280;&#x672F;&#x89D2;&#x5EA6;&#x4E0A;&#x8BB2;, &#x53D6;&#x51B3;&#x4E8E;&#x5B83;&#x7684;company_type&#x5B57;&#x6BB5;&#x53D6;&#x503C;. &#x800C;company_tyep&#x4E8B;&#x5B9E;&#x4E0A;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x8BA1;&#x7B97;&#x5B57;&#x6BB5;, &#x5176;&#x80CC;&#x540E;&#x7684;&#x5B57;&#x6BB5;&#x5E94;&#x8BE5;&#x662F;is_company</p>
+<pre><code class="lang-python">company_type = fields.Selection(string=<span class="hljs-string">&apos;Company Type&apos;</span>,
+        selection=[(<span class="hljs-string">&apos;person&apos;</span>, <span class="hljs-string">&apos;Individual&apos;</span>), (<span class="hljs-string">&apos;company&apos;</span>, <span class="hljs-string">&apos;Company&apos;</span>)],
+        compute=<span class="hljs-string">&apos;_compute_company_type&apos;</span>, inverse=<span class="hljs-string">&apos;_write_company_type&apos;</span>)
+
+
+<span class="hljs-meta">@api.depends(&apos;is_company&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_compute_company_type</span><span class="hljs-params">(self)</span>:</span>
+    <span class="hljs-keyword">for</span> partner <span class="hljs-keyword">in</span> self:
+        partner.company_type = <span class="hljs-string">&apos;company&apos;</span> <span class="hljs-keyword">if</span> partner.is_company <span class="hljs-keyword">else</span> <span class="hljs-string">&apos;person&apos;</span>
+</code></pre>
+<p>&#x56E0;&#x6B64;, &#x6211;&#x4EEC;&#x5728;&#x5BF9;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x8FDB;&#x884C;&#x529F;&#x80FD;&#x62D3;&#x5C55;&#x7684;&#x65F6;&#x5019;&#x8981;&#x6CE8;&#x610F;&#x4F7F;&#x7528;is_company&#x800C;&#x975E;company_type.</p>
+<h2 id="&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x7684;&#x7C7B;&#x578B;">&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x7684;&#x7C7B;&#x578B;</h2>
+<p>&#x524D;&#x9762;&#x8BB2;&#x8FC7;&#xFF0C;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x7684;&#x6982;&#x5FF5;&#x4E0D;&#x4EC5;&#x4EC5;&#x5C40;&#x9650;&#x4E8E;&#x5BA2;&#x6237;&#x3001;&#x4F9B;&#x5E94;&#x5546;&#xFF0C;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x6536;&#x8D27;&#x5730;&#x5740;&#x7B49;&#x66F4;&#x4E3A;&#x5E7F;&#x6CDB;&#x7684;&#x6982;&#x5FF5;&#x3002;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x4E00;&#x4E0B;&#x51E0;&#x79CD;&#x7C7B;&#x578B;&#xFF1A;</p>
+<ul>
+<li>&#x8054;&#x7CFB;&#x4EBA;&#xFF1A;&#x5BA2;&#x6237;&#x3001;&#x4F9B;&#x5E94;&#x5546;&#x7B49;&#x8054;&#x7CFB;&#x4EBA;&#x4FE1;&#x606F;</li>
+<li>&#x53D1;&#x7968;&#x5730;&#x5740;&#xFF1A; &#x6536;&#x53D6;&#x53D1;&#x7968;&#x7684;&#x5730;&#x5740;</li>
+<li>&#x9001;&#x8D27;&#x5730;&#x5740;&#xFF1A; &#x53D1;&#x9001;&#x8D27;&#x7269;&#x7684;&#x6536;&#x8D27;&#x5730;&#x5740;</li>
+<li>&#x5176;&#x4ED6;&#x5730;&#x5740;&#xFF1A; &#x5BA2;&#x6237;&#x7684;&#x5907;&#x7528;&#x5730;&#x5740;</li>
+<li>&#x79C1;&#x6709;&#x5730;&#x5740;&#xFF1A; &#x53EA;&#x6709;&#x88AB;&#x6388;&#x6743;&#x624D;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x7684;&#x79C1;&#x6709;&#x5730;&#x5740;</li>
+</ul>
+<p><img src="images/19.png" alt="19"></p>
+<h2 id="&#x7528;&#x6237;&#x3001;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x548C;&#x5458;&#x5DE5;">&#x7528;&#x6237;&#x3001;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x548C;&#x5458;&#x5DE5;</h2>
+<p>&#x521D;&#x6B21;&#x63A5;&#x89E6;odoo&#x7684;&#x540C;&#x5B66;&#x53EF;&#x80FD;&#x4F1A;&#x88AB;&#x8FD9;&#x4E09;&#x4E2A;&#x6982;&#x5FF5;&#x641E;&#x7CCA;&#x6D82;&#xFF0C;&#x901A;&#x5E38;&#x4E00;&#x4E2A;odoo&#x7684;&#x7CFB;&#x7EDF;&#x7528;&#x6237;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#xFF0C;&#x4ECE;&#x6280;&#x672F;&#x7684;&#x89D2;&#x5EA6;&#x4E0A;&#x8BB2;&#xFF0C;&#x7528;&#x6237;&#x6307;&#x7684;&#x662F;res.users&#x5BF9;&#x8C61;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8D26;&#x53F7;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#x7684;&#x8D26;&#x53F7;&#xFF0C;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x662F;res.partner&#x5BF9;&#x8C61;&#xFF0C;&#x662F;&#x4E00;&#x79CD;&#x8BB0;&#x5F55;&#x4FE1;&#x606F;&#x7684;&#x8F7D;&#x4F53;&#xFF0C;&#x5E76;&#x4E0D;&#x80FD;&#x7528;&#x6765;&#x767B;&#x5F55;&#x3002;</p>
+<p>&#x90A3;&#x5458;&#x5DE5;&#x53C8;&#x662F;&#x4EC0;&#x4E48;&#x5462;&#xFF1F;&#x5982;&#x679C;&#x7528;&#x6237;&#x5B89;&#x88C5;&#x4E86;&#x4EBA;&#x529B;&#x8D44;&#x6E90;&#x6A21;&#x5757;&#xFF0C;&#x7CFB;&#x7EDF;&#x4E2D;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x5458;&#x5DE5;&#x5BF9;&#x8C61;hr.employee&#xFF0C;&#x5B83;&#x4EE3;&#x8868;&#x7684;&#x662F;&#x516C;&#x53F8;&#x7684;&#x96C7;&#x5458;&#x4FE1;&#x606F;&#x3002;</p>
+<p><img src="images/16.png" alt="16"></p>
+<p>&#x5458;&#x5DE5;&#x4E0E;&#x7528;&#x6237;&#x662F;&#x6709;&#x5173;&#x8054;&#x5173;&#x7CFB;&#x7684;&#xFF0C;&#x5728;HR&#x8BBE;&#x7F6E;Tab&#x9875;&#x4E2D;&#xFF0C;&#x6709;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#x5173;&#x8054;&#x7684;&#x7528;&#x6237;&#xFF0C;&#x7528;&#x4E8E;&#x5173;&#x8054;&#x7528;&#x6237;&#x548C;&#x5458;&#x5DE5;&#x3002;</p>
+<p>&#x6709;&#x5F88;&#x591A;&#x4EBA;&#x89C9;&#x5F97;odoo&#x4E0D;&#x65B9;&#x4FBF;&#x7684;&#x4E00;&#x4E2A;&#x5730;&#x65B9;&#x5C31;&#x662F;&#x628A;&#x5458;&#x5DE5;&#x4FE1;&#x606F;&#x548C;&#x7528;&#x6237;&#x5173;&#x7CFB;&#x5272;&#x88C2;&#x5F00;&#x4E86;&#xFF0C;&#x4E0D;&#x80FD;&#x50CF;&#x4ED6;&#x4EEC;&#x4E4B;&#x524D;&#x4F7F;&#x7528;&#x7684;&#x8F6F;&#x4EF6;&#x4E00;&#x6837;&#x6839;&#x636E;&#x90E8;&#x95E8;&#x8FDB;&#x884C;&#x6743;&#x9650;&#x7684;&#x5212;&#x5206;&#x3002;&#x8FD9;&#x786E;&#x5B9E;&#x662F;odoo&#x672C;&#x5730;&#x5316;&#x7684;&#x96BE;&#x70B9;&#x4E4B;&#x4E00;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x4E5F;&#x4E0D;&#x80FD;&#x7528;&#x4F20;&#x7EDF;&#x4F01;&#x4E1A;&#x4FE1;&#x606F;&#x5316;&#x7684;&#x601D;&#x7EF4;&#x6765;&#x8981;&#x6C42;odoo&#xFF0C;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x5C31;&#x662F;&#x5229;&#x7528;&#x597D;odoo&#x63D0;&#x4F9B;&#x7684;&#x7528;&#x6237;&#x7EC4;&#x548C;&#x89C4;&#x5219;&#x7B49;&#x6743;&#x9650;&#x5DE5;&#x5177;&#xFF0C;&#x5B9E;&#x73B0;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+<h2 id="&#x56FD;&#x5BB6;&#x548C;&#x57CE;&#x5E02;">&#x56FD;&#x5BB6;&#x548C;&#x57CE;&#x5E02;</h2>
+<p>&#x8054;&#x7CFB;&#x5730;&#x5740;&#x4E5F;&#x662F;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x7684;&#x4E00;&#x79CD;&#xFF0C;&#x5BF9;&#x4E8E;&#x5BA2;&#x6237;&#x548C;&#x4F9B;&#x5E94;&#x5546;&#xFF0C;&#x901A;&#x5E38;&#x6211;&#x4EEC;&#x4F1A;&#x8BB0;&#x5F55;&#x5B83;&#x4EEC;&#x7684;&#x8054;&#x7CFB;&#x7535;&#x8BDD;&#x548C;&#x5730;&#x5740;&#x3002;&#x4E00;&#x4E2A;&#x5E38;&#x89C4;&#x7684;&#x8054;&#x7CFB;&#x4EBA;&#x754C;&#x9762;&#x5982;&#x4E0B;&#x56FE;:</p>
+<p><img src="images/11.png" alt="11"></p>
+<h3 id="&#x8054;&#x7CFB;&#x4EBA;&#x5730;&#x5740;&#x683C;&#x5F0F;">&#x8054;&#x7CFB;&#x4EBA;&#x5730;&#x5740;&#x683C;&#x5F0F;</h3>
+<p>&#x4E0D;&#x540C;&#x56FD;&#x5BB6;&#x7684;&#x5730;&#x5740;&#x683C;&#x5F0F;&#x4E0D;&#x540C;&#xFF0C;odoo&#x539F;&#x751F;&#x652F;&#x6301;&#x5730;&#x5740;&#x683C;&#x5F0F;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x3002;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x4E0D;&#x540C;&#x56FD;&#x5BB6;&#x5982;&#x4F55;&#x91C7;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x5730;&#x5740;&#x683C;&#x5F0F;&#x3002;</p>
+<p>&#x5728;&#x56FD;&#x5BB6;&#x8BBE;&#x7F6E;&#x4E2D;&#x6709;&#x4E24;&#x4E2A;&#x5B57;&#x6BB5;:</p>
+<p><img src="images/32.png" alt="32"></p>
+<ul>
+<li>&#x8F93;&#x5165;&#x7684;&#x89C6;&#x56FE;&#xFF1A; &#x81EA;&#x5B9A;&#x4E49;&#x5730;&#x5740;&#x683C;&#x5F0F;&#x7684;&#x89C6;&#x56FE;</li>
+<li>&#x5730;&#x5740;&#x683C;&#x5F0F;&#x5E03;&#x5C40;&#xFF1A; &#x5730;&#x5740;&#x683C;&#x5F0F;&#x7684;&#x5E03;&#x5C40;&#x65B9;&#x5F0F;&#x3002;</li>
+</ul>
+<blockquote>
+<p>&#x867D;&#x7136;&#x8FD9;&#x91CC;&#x7684;&#x63CF;&#x8FF0;&#x4E2D;&#x8BF4;&#x7528;&#x4E8E;PDF&#x62A5;&#x544A;&#x6587;&#x4EF6;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x4E0A;&#x5728;&#x5730;&#x5740;&#x663E;&#x793A;&#x4E2D;&#x4E5F;&#x662F;&#x7528;&#x5230;&#x4E86;&#x8BE5;&#x5B57;&#x6BB5;&#x3002;</p>
+</blockquote>
+<p>&#x6211;&#x4EEC;&#x77E5;&#x9053;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5730;&#x5740;&#x7684;&#x683C;&#x5F0F;&#x987A;&#x5E8F;&#x662F;:</p>
+<pre><code class="lang-sh">street/stree2/zip/city/state_id/country_id
+</code></pre>
+<p>&#x5982;&#x679C;&#x60F3;&#x8981;&#x6539;&#x53D8;&#x9ED8;&#x8BA4;&#x7684;&#x6392;&#x5E8F;&#x65B9;&#x5F0F;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x5730;&#x5740;&#x5E03;&#x5C40;&#x5B57;&#x6BB5;&#x4E2D;&#x91CD;&#x65B0;&#x6392;&#x5E8F;&#xFF1A;</p>
+<pre><code class="lang-sh">%(country_name)s, %(zip)s
+%(state_name)s %(city)s %(street)s %(street2)s
+</code></pre>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x662F;&#x4E2D;&#x56FD;&#x5E38;&#x7528;&#x7684;&#x5730;&#x5740;&#x683C;&#x5F0F;&#x987A;&#x5E8F;&#x3002;</p>
+<p>&#x53EF;&#x7528;&#x7684;&#x53D8;&#x91CF;&#xFF1A;</p>
+<ul>
+<li>country_name: &#x56FD;&#x5BB6;</li>
+<li>zip: &#x90AE;&#x7F16;</li>
+<li>state_name/state_code&#xFF1A; &#x7701;/&#x5DDE;</li>
+<li>city: &#x57CE;&#x5E02;</li>
+<li>street: &#x5730;&#x5740;&#x7B2C;&#x4E00;&#x680F;</li>
+<li>street2: &#x5730;&#x5740;&#x7B2C;&#x4E8C;&#x680F;</li>
+</ul>
+<blockquote>
+<p>&#x867D;&#x7136;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x5730;&#x5740;&#x683C;&#x5F0F;&#x987A;&#x5E8F;&#x7684;&#x65B9;&#x5F0F;&#x5BF9;&#x5730;&#x5740;&#x91CD;&#x65B0;&#x6392;&#x5E8F;&#xFF0C;&#x4F46;&#x6709;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#x7CFB;&#x7EDF;&#x7684;&#x884C;&#x4E3A;&#x5E76;&#x975E;&#x6211;&#x4EEC;&#x9884;&#x671F;&#x7684;&#x90A3;&#x6837;&#xFF0C;&#x4F8B;&#x5982;&#x4F7F;&#x7528;&#x897F;&#x73ED;&#x7259;&#x56FD;&#x5BB6;&#x65F6;&#xFF0C; &#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#x5B83;&#x7684;&#x884C;&#x4E3A;&#x903B;&#x8F91;&#x4E0D;&#x662F;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x987A;&#x5E8F;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#xFF0C;&#x5728;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x5730;&#x5740;&#x89C6;&#x56FE;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x5BF9;&#x542B;&#x6709;&#x57CE;&#x5E02;&#x4E00;&#x680F;&#x7684;&#x5730;&#x5740;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x91CD;&#x65B0;&#x6392;&#x5E8F;&#x3002;</p>
+</blockquote>
+<h3 id="&#x5F00;&#x542F;&#x57CE;&#x5E02;&#x9009;&#x62E9;">&#x5F00;&#x542F;&#x57CE;&#x5E02;&#x9009;&#x62E9;</h3>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x6B64;&#x8868;&#x5355;&#x4E0A;&#x9009;&#x62E9;&#x56FD;&#x5BB6;&#x3001;&#x7701;&#x4EFD;&#xFF0C;&#x7136;&#x540E;&#x586B;&#x5199;&#x57CE;&#x5E02;&#x548C;&#x8BE6;&#x7EC6;&#x5730;&#x5740;&#x3002;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x786E;&#x5B9A;&#x4E86;&#x56FD;&#x5BB6;&#x65F6;&#xFF0C;&#x7701;&#x4EFD;&#x4FE1;&#x606F;&#x4F1A;&#x81EA;&#x52A8;&#x52A0;&#x8F7D;&#xFF0C;&#x6709;&#x4E00;&#x79CD;&#x8054;&#x52A8;&#x7684;&#x6548;&#x679C;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x57CE;&#x5E02;&#x662F;&#x4E00;&#x4E2A;&#x6587;&#x672C;&#x6846;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;&#x586B;&#x5199;&#x57CE;&#x5E02;&#x540D;&#x79F0;&#x3002;&#x4ECE;12.0&#x5F00;&#x59CB;&#xFF0C;&#x57CE;&#x5E02;&#x4E5F;&#x652F;&#x6301;&#x4E86;&#x8054;&#x52A8;&#x6548;&#x679C;&#xFF0C;&#x4F46;&#x662F;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x662F;&#x5173;&#x95ED;&#x72B6;&#x6001;&#x3002;</p>
+<p>&#x8981;&#x5F00;&#x542F;&#x57CE;&#x5E02;&#x9009;&#x62E9;&#x6548;&#x679C;&#xFF0C;&#x9996;&#x5148;&#x9700;&#x8981;&#x5B89;&#x88C5;base_address_city&#x6A21;&#x5757;&#xFF0C;&#x7136;&#x540E;&#x5230;&#x83DC;&#x5355;&#x8054;&#x7CFB;&#x4EBA;-&#x8BBE;&#x7F6E;-&#x672C;&#x5730;&#x5316;-&#x56FD;&#x5BB6;&#xFF0C;&#x627E;&#x5230;&#x4F60;&#x8981;&#x66F4;&#x6539;&#x8BBE;&#x7F6E;&#x7684;&#x56FD;&#x5BB6;&#xFF0C;&#x7136;&#x540E;&#x6FC0;&#x6D3B;&#x57CE;&#x5E02;&#xFF1A;</p>
+<p><img src="images/12.png" alt="12"></p>
+<p>&#x6FC0;&#x6D3B;&#x4EE5;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x57CE;&#x5E02;&#x5C06;&#x53D8;&#x4E3A;&#x4E0B;&#x9762;&#x7684;&#x72B6;&#x6001;:</p>
+<p><img src="images/13.png" alt="13"></p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x5C06;&#x5730;&#x5740;&#x8BE6;&#x7EC6;&#x5230;&#x95E8;&#x724C;&#x53F7;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;base_address_extend&#x6A21;&#x5757;&#xFF0C;&#x5B89;&#x88C5;&#x6B64;&#x6A21;&#x5757;&#x4EE5;&#x540E;&#xFF0C;&#x5730;&#x5740;&#x5217;&#x8868;&#x4E2D;&#x5C06;&#x51FA;&#x73B0;&#x697C;&#x53F7;&#x548C;&#x95E8;&#x724C;&#x53F7;&#x5B57;&#x6BB5;&#xFF1A;</p>
+<p><img src="images/20.png" alt="20"></p>
+<h4 id="&#x4E2D;&#x56FD;&#x4E09;&#x7EA7;&#x7701;&#x5E02;&#x533A;&#x8054;&#x52A8;">&#x4E2D;&#x56FD;&#x4E09;&#x7EA7;&#x7701;&#x5E02;&#x533A;&#x8054;&#x52A8;</h4>
+<p>&#x867D;&#x7136;&#x5B98;&#x65B9;&#x52A0;&#x5165;&#x4E86;&#x57CE;&#x5E02;&#x7684;&#x591A;&#x9009;&#x6548;&#x679C;&#xFF0C;&#x4F46;&#x662F;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E2D;&#x56FD;&#x5927;&#x9646;&#x7528;&#x6237;&#x800C;&#x8A00;&#xFF0C;&#x5B98;&#x65B9;&#x9009;&#x62E9;&#x7684;&#x5408;&#x4F5C;&#x4F19;&#x4F34;&#x63D0;&#x4EA4;&#x7684;&#x5730;&#x5740;&#x6A21;&#x5757;&#x5E76;&#x4E0D;&#x662F;&#x90A3;&#x4E48;&#x597D;&#x7528;&#x3002;&#x5B9E;&#x9645;&#x7684;&#x4F7F;&#x7528;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x8F93;&#x5165;&#x53BF;&#x533A;&#x8FD9;&#x4E00;&#x7EA7;&#x7684;&#x884C;&#x653F;&#x533A;&#x57DF;&#xFF0C;&#x800C;&#x5B98;&#x65B9;&#x5E76;&#x6CA1;&#x6709;&#x5355;&#x72EC;&#x5C06;&#x53BF;&#x533A;&#x5316;&#x4F5C;&#x5355;&#x72EC;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x800C;&#x662F;&#x5408;&#x5E76;&#x5230;&#x4E86;&#x57CE;&#x5E02;&#x5F53;&#x4E2D;&#xFF0C;&#x8FD9;&#x5F53;&#x7136;&#x5BF9;&#x6211;&#x4EEC;&#x7684;&#x4F7F;&#x7528;&#x9020;&#x6210;&#x4E86;&#x4E0D;&#x4FBF;&#xFF1A;</p>
+<p><img src="images/21.png" alt="21"></p>
+<p>&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x81EA;&#x5DF1;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x4E2D;&#x4E13;&#x95E8;&#x4E3A;&#x6B64;&#x5F00;&#x53D1;&#x4E86;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6A21;&#x5757;&#x2014;&#x2014;<a href="https://odoohub.com.cn/shop/30#attr=" target="_blank">&#x4E2D;&#x56FD;&#x5730;&#x7406;&#x4F4D;&#x7F6E;&#x533A;&#x5212;</a>&#x89E3;&#x51B3;&#x6B64;&#x95EE;&#x9898;&#xFF0C;&#x6839;&#x636E;2020&#x5E74;&#x4E2D;&#x56FD;&#x6700;&#x65B0;&#x7684;&#x884C;&#x653F;&#x533A;&#x57DF;&#x89C4;&#x5212;&#x8FDB;&#x884C;&#x4E86;&#x8BBE;&#x8BA1;(&#x5DF2;&#x652F;&#x6301;4&#x7EA7;&#x4E61;&#x9547;&#x8054;&#x52A8;)&#x3002;&#x4F7F;&#x7528;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="images/22.png" alt="22"></p>
+<p>&#x9700;&#x8981;&#x7684;&#x540C;&#x5B66;&#x53EF;&#x4EE5;&#x6211;&#x4EEC;&#x7684;<a href="https://odoohub.com.cn/shop" target="_blank">&#x5B98;&#x65B9;&#x6A21;&#x5757;&#x5546;&#x57CE;</a>&#x8FDB;&#x884C;&#x9009;&#x8D2D;&#x3002;</p>
+<h2 id="&#x5730;&#x56FE;&#x6A21;&#x5F0F;">&#x5730;&#x56FE;&#x6A21;&#x5F0F;</h2>
+<p>&#x4E0E;&#x793E;&#x533A;&#x7248;&#x4E0D;&#x540C;&#x7684;&#x4E00;&#x70B9;&#x662F;&#xFF0C;&#x4F01;&#x4E1A;&#x7248;&#x5185;&#x7F6E;&#x4E86;&#x4E00;&#x79CD;&#x5730;&#x56FE;&#x89C6;&#x56FE;&#xFF0C;&#x53EF;&#x4EE5;&#x5F88;&#x65B9;&#x4FBF;&#x5730;&#x5728;&#x5730;&#x56FE;&#x4E0A;&#x67E5;&#x770B;&#x5BA2;&#x6237;&#x7684;&#x4F4D;&#x7F6E;&#x4FE1;&#x606F;&#x3002;</p>
+<p><img src="images/14.png" alt="14"></p>
+<p>&#x6BD4;&#x8F83;&#x9057;&#x61BE;&#x7684;&#x662F;&#xFF0C;&#x7531;&#x4E8E;&#x67D0;&#x4E9B;&#x539F;&#x56E0;&#xFF0C;&#x56FD;&#x5185;&#x8BBF;&#x95EE;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x662F;&#x5F88;&#x7A33;&#x5B9A;&#xFF0C;&#x65F6;&#x5E38;&#x51FA;&#x73B0;&#x52A0;&#x8F7D;&#x4E0D;&#x51FA;&#x6765;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x663E;&#x5F97;&#x4E0D;&#x662F;&#x90A3;&#x4E48;&#x5F88;&#x63A5;&#x5730;&#x6C14;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x4E3A;&#x6B64;&#x5F00;&#x53D1;&#x4E86;&#x4E00;&#x4E2A;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x7684;&#x6A21;&#x5757;&#xFF0C;&#x7528;&#x6765;&#x66FF;&#x4EE3;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x3002;</p>
+<p>&#x5173;&#x4E8E;&#x767E;&#x5EA6;&#x5730;&#x56FE;&#x6A21;&#x5757;&#x7684;&#x8BE6;&#x7EC6;&#x5185;&#x5BB9;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="../chapter10/">&#x9644;&#x5F55;</a>&#x3002;</p>
+<p><img src="images/15.png" alt="15"></p>
+<h2 id="&#x8054;&#x7CFB;&#x4EBA;&#x7684;&#x663E;&#x793A;&#x540D;&#x79F0;">&#x8054;&#x7CFB;&#x4EBA;&#x7684;&#x663E;&#x793A;&#x540D;&#x79F0;</h2>
+<p>&#x901A;&#x5E38;display_name&#x4F5C;&#x4E3A;&#x8BA1;&#x7B97;&#x5B57;&#x6BB5;&#x662F;&#x4E0D;&#x5B58;&#x50A8;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x8054;&#x7CFB;&#x4EBA;&#x6A21;&#x578B;(res.partner)&#x4E2D;&#xFF0C;odoo&#x5BF9;&#x5B83;&#x8FDB;&#x884C;&#x4E86;&#x5B58;&#x50A8;&#x3002;</p>
+<p>&#x5B83;&#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-python"><span class="hljs-meta">@api.depends(&apos;is_company&apos;, &apos;name&apos;, &apos;parent_id.display_name&apos;, &apos;type&apos;, &apos;company_name&apos;, &apos;commercial_company_name&apos;)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">_compute_display_name</span><span class="hljs-params">(self)</span>:</span>
+<span class="hljs-comment"># retrieve name_get() without any fancy feature</span>
+names = dict(self.with_context({}).name_get())
+<span class="hljs-keyword">for</span> partner <span class="hljs-keyword">in</span> self:
+        partner.display_name = names.get(partner.id)
+</code></pre>
+<p>&#x8FD9;&#x5C31;&#x5BFC;&#x81F4;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x4F7F;&#x7528;name_get&#x65B9;&#x6CD5;&#x5BF9;res.partner&#x7684;&#x663E;&#x793A;&#x540D;&#x79F0;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5728;&#x4F9D;&#x8D56;&#x4E2D;&#x58F0;&#x660E;&#x6211;&#x4EEC;&#x6240;&#x9700;&#x8981;&#x7684;&#x5B57;&#x6BB5;&#xFF0C;&#x90A3;&#x4E48;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x7684;&#x4E8B;&#x60C5;&#x5C31;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="README5.html" class="navigation navigation-prev " aria-label="Previous page: 第三章 公司和用户管理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="README6.html" class="navigation navigation-next " aria-label="Next page: 第五章 邮箱配置">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第四章 联系人与合作伙伴","level":"1.2.4","depth":2,"next":{"title":"第五章 邮箱配置","level":"1.2.5","depth":2,"path":"chapter1/README6.md","ref":"chapter1/README6.md","articles":[]},"previous":{"title":"第三章 公司和用户管理","level":"1.2.3","depth":2,"path":"chapter1/README5.md","ref":"chapter1/README5.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Kevin Kong","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施经验汇编","language":"zh-hans","gitbook":"*","description":"odoo实施经验汇编，涵盖多个项目解决方案"},"file":{"path":"chapter1/README4.md","mtime":"2023-12-22T02:34:59.340Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-05-22T00:48:26.968Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
