@@ -1,5 +1,12 @@
 # 第五章 邮箱配置
 
+* [原生原生系统的邮箱使用](#原生系统的邮箱使用)
+* [国内免费邮箱的使用](#国内免费邮箱的使用)
+* [多公司下的邮箱配置](#多公司下的邮箱配置(适用于外贸行业))
+* [其他](#其他)
+   * [OFFICE365](#office365配置步骤)
+   * [腾讯企业邮](#腾讯企业邮)
+
 odoo的邮箱配置从很早的版本时就是一个问题，可能在国外用的很丝滑的功能，在国内就水土不服。本文就试图将邮箱配置的问题一次说个清楚。
 
 ## 原生系统的邮箱使用
@@ -14,7 +21,7 @@ odoo的邮箱配置从很早的版本时就是一个问题，可能在国外用�
 
 一个典型的发件箱配置如下图：
 
->  这里我们使用的是Exchange的共享邮箱。
+> 这里我们使用的是Exchange的共享邮箱。
 
 ![发件服务器](images/email3.png)
 
@@ -49,7 +56,7 @@ odoo的邮箱配置从很早的版本时就是一个问题，可能在国外用�
 
 一个最简单的想法就是给每个用户配置一个发件箱。这么做的缺点很明显，每添加一个用户我们都要配置一遍发件箱，用户少还好，如果用户数量多了，那么企业的IT就会很头疼。
 
-而Bounce账号就是用来解决这个问题的。Bounce账号通常是用户邮件系统中的一个共享邮箱，大家都可以使用这个邮箱发送自己的邮件。而由Bounce账号发出来的邮件，就会像我们上面的图示一样，写着由xxx代发字样。例如，我们系统中有一个用户叫Kevin，他的邮箱是kevin@133m5k.onmicrosoft.com，而我们在系统中发送的邮件使用Bounce账号代发，用户收到我们的邮件，就会显示：
+而Bounce账号就是用来解决这个问题的。Bounce账号通常是用户邮件系统中的一个共享邮箱，大家都可以使用这个邮箱发送自己的邮件。而由Bounce账号发出来的邮件，就会像我们上面的图示一样，写着由xxx代发字样。例如，我们系统中有一个用户叫Kevin，他的邮箱是<kevin@133m5k.onmicrosoft.com>，而我们在系统中发送的邮件使用Bounce账号代发，用户收到我们的邮件，就会显示：
 
 ```sh
 Kevin@133m5k.onmicrosoft.com<kevin@133m5k.onmicrosoft.com>(由 Bounce <bounce@133m5k.onmicrosoft.com> 代发)
@@ -59,12 +66,11 @@ Kevin@133m5k.onmicrosoft.com<kevin@133m5k.onmicrosoft.com>(由 Bounce <bounce@13
 
 很显然，用户不应该也不能直接回复代发邮箱，没有人会从代发邮箱中收到邮件。（如何处理这个问题？这是我们后面讲到收件时要讲到的）
 
-Odoo中没有默认的Bounce邮箱是bounce+邮箱别域名组成的，比如我们例子中的bounce@133m5k.onmicrosoft.com。如果用户在设置中没有设置邮箱别域名，那么默认的名称将是postmaster-odoo。
+Odoo中没有默认的Bounce邮箱是bounce+邮箱别域名组成的，比如我们例子中的<bounce@133m5k.onmicrosoft.com>。如果用户在设置中没有设置邮箱别域名，那么默认的名称将是postmaster-odoo。
 
 Bounce的别名没有直接设置的地方，但是可以在开发者模式下的设置-技术-系统参数中的mail.bounce.alias进行修改。
 
 ![bounce](images/mail6.png)
-
 
 ### 收件
 
@@ -129,7 +135,7 @@ bounce+20-res.users-6@xxx.com"
 
 由于免费版的腾讯企业邮箱并没有catch-all功能，因此我们这里使用一个普通的邮箱账号作为整个公司发送邮箱的替代方案。
 
-这里我们新建一个用户韩菱纱(lingsha.han@odoomommy.com)作为发件人，给客户发送销售邮件。
+这里我们新建一个用户韩菱纱(<lingsha.han@odoomommy.com>)作为发件人，给客户发送销售邮件。
 
 ![image9](images/email9.png)
 
@@ -165,7 +171,7 @@ SMTPSenderRefused: 501 mail from address must be same as authorization user boun
 
 ![](images/sale7.png)
 
-注意看，我们这里的发件人实际是kevin@odoomommy.com，虽然声明的发件人是韩菱纱(lingsha.han@odoomommy.com)。
+注意看，我们这里的发件人实际是<kevin@odoomommy.com>，虽然声明的发件人是韩菱纱(<lingsha.han@odoomommy.com>)。
 
 > 与原生odoo逻辑不同的地方在于我们的邮件不是通过代发出去的。
 
@@ -177,7 +183,6 @@ SMTPSenderRefused: 501 mail from address must be same as authorization user boun
  接下来我们就来看看这个问题的解决方案。
 
 首先，明确的一点是，**原生系统并不支持多个公司的邮箱配置**。这点从多个公司使用的是同一个邮箱别名就可以看出来了。现在我们要讲的这个方案，同样基于我们上面提到的第三方模块。
-
 
 安装了该模块以后，用户可以根据公司匹配对应的发件箱进行邮件发送。客户收到邮件后的默认回复地址，也可以根据公司进行匹配。下面我们就详细介绍一下该方案。
 
@@ -220,13 +225,11 @@ SMTPSenderRefused: 501 mail from address must be same as authorization user boun
 
 ![email15](images/email15.png)
 
-
-
 ## 其他
 
 ### Office365配置步骤
 
-> 仅支持HTTPS或http://localhost， 因此，你的odoo要先配置好证书。
+> 仅支持HTTPS或<http://localhost，> 因此，你的odoo要先配置好证书。
 
 #### 注册应用
 
@@ -297,3 +300,30 @@ Client Secret需要生成，点击左侧菜单中的 Certificates & Secrets生�
 ![](images/office14.png)
 
 最后，服务器邮箱会显示一个令牌有效的标识，这个时候，我们再点击测试和确认就会发现成功了。
+
+### 腾讯企业邮
+
+首先我们要创建要一个腾讯企业邮的公共邮箱： example@example.com
+
+然后按照[配置指引](https://open.work.weixin.qq.com/help2/pc/19886?person_id=1)完成配置。
+
+
+```sh
+POP3/SMTP协议
+接收邮件服务器：pop.exmail.qq.com ，使用SSL，端口号995
+发送邮件服务器：smtp.exmail.qq.com ，使用SSL，端口号465
+
+IMAP协议
+接收邮件服务器：imap.exmail.qq.com ，使用SSL，端口号993
+发送邮件服务器：smtp.exmail.qq.com ，使用SSL，端口号465
+```
+
+![tx1](./images/tx1.png)
+
+####  FAQ
+
+```sh
+Unknown error: Mail Delivery Failed Mail delivery failed via SMTP server 'None'. SMTPSenderRefused: 501 mail from address must be same as authorization user admin@example.com
+```
+
+安装前文提到的[欧姆邮箱解决方案](https://odoohub.com.cn)，打开**严格发件人匹配**选项。
