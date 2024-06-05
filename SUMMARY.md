@@ -43,6 +43,7 @@
   * [第一章 多公司间的采购](chapter7/README.md)
 * [第七部分 网站](SECTION7.md)
   * [第一章 门户](chapter8/README.md)
+  * [第二章 商城](chapter8/README2.md)
 * [第八部分 人力资源](SECTION8.md)
 * [第九部分 设置](SECTION9.md)
   * [第一章 通用设置](chapter9/README.md)
