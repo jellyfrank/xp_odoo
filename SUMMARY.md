@@ -52,3 +52,4 @@
 * [第十部分 通用解决方案](SECTION10.md)
   * [第一章 企业微信](chapter10/README7.md)
   * [第二章 百度地图](chapter10/README.md)
+  * [第三章 Pos LinePay](chapter10/README18.md)
