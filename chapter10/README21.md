@@ -56,4 +56,6 @@
 
 ## 技术支持
 
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=579125651&bvid=BV1a64y1L7Zn&cid=1351600414&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
 想要了解更多关于快递鸟模块的信息，欢迎关注公众号OdooHub获取更多内容。
