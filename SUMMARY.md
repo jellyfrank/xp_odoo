@@ -45,7 +45,7 @@
   * [第一章 门户](chapter8/README.md)
   * [第二章 商城](chapter8/README2.md)
 * [第八部分 销售点(POS)](SECTION11.md)
-  * [第一章](chapter11/README.md)
+  * [第一章 EPOS打印](chapter11/README10.md)
 * [第九部分 设置](SECTION9.md)
   * [第一章 通用设置](chapter9/README.md)
   * [第九章 技术设置](chapter9/README9.md)
@@ -53,4 +53,8 @@
   * [第一章 企业微信](chapter10/README7.md)
   * [第二章 百度地图](chapter10/README.md)
   * [第三章 Pos LinePay](chapter10/README18.md)
-  * [第四章 云途物流](chapter10/README19.md)
+<<<<<<< HEAD
+  * [第五章 云途物流](chapter10/README19.md)
+=======
+  * [第四章 快递鸟模块](chapter10/README21.md)
+>>>>>>> 192e0c446c42be878fa3ffe9a42eb075fd342ab3
