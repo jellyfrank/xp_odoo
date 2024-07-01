@@ -53,8 +53,6 @@
   * [第一章 企业微信](chapter10/README7.md)
   * [第二章 百度地图](chapter10/README.md)
   * [第三章 Pos LinePay](chapter10/README18.md)
-<<<<<<< HEAD
-  * [第五章 云途物流](chapter10/README19.md)
-=======
   * [第四章 快递鸟模块](chapter10/README21.md)
->>>>>>> 192e0c446c42be878fa3ffe9a42eb075fd342ab3
+  * [第五章 云途物流](chapter10/README19.md)
+
