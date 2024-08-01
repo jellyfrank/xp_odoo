@@ -24,7 +24,7 @@
   * [第三章 调拨类型](chapter4/README3.md)
   * [第四章 批次管理](chatper4/README.md)
   * [第五章 库存盘点](chapter4/README.md)
-  * [第六章 包装](chapter4/README.md)
+  * [第六章 订货规则](chapter4/README6.md)
   * [第七章 路线规则](chapter4/README.md)
   * [第八章 物流方式](chapter4/README.md)
   * [第九章 成本核算](chapter4/README8.md)
