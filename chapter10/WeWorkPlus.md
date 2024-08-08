@@ -78,6 +78,10 @@
 
 ![16](images/16.png)
 
+视频介绍如下:
+
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=112926333602404&bvid=BV1YGYxeiEAf&cid=500001642673310&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" width="100%" height="600">视频介绍</iframe>
+
 ## 审批
 
 由于Odoo原生并未实现复杂的审批流程设置，常见的解决方案是使用OCA的tier系列模块，但由于过于复杂的设置和并不十分友好的展示方式，导致企业在实际使用落地过程中的体验并不是很理想。鉴于国内企业主流的使用工具是钉钉，企业微信等IM工具，因此我们在解决方案中添加了对此类软件的支持，借助这些软件提供的审批流功能，从而补齐了Odoo在审批方面的弱项。
