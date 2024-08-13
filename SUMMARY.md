@@ -47,6 +47,7 @@
 * [第七部分 网站](SECTIONS/SECTION8.md)
   * [第一章 门户](chapter8/README.md)
   * [第二章 商城](chapter8/README2.md)
+  * [第三章 访问令牌](chapter8/TOKEN.md)
 * [第八部分 销售点(POS)](SECTION11.md)
   * [第一章 EPOS打印](chapter11/README10.md)
   * [第二章 POS销售](chapter11/POS_SALE.md)
