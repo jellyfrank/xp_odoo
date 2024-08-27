@@ -28,7 +28,7 @@
   * [第六章 订货规则](chapter4/README6.md)
   * [第七章 路线规则](chapter4/README.md)
   * [第八章 条码规则](chapter4/Barcode.md)
-  * [第九章 物流方式](chapter4/README.md)
+  * [第九章 物流方式](chapter4/DELIVERY_METHOD.md)
   * [第十章 成本核算](chapter4/README8.md)
   * [第十一章 顺丰速递](chapter10/README10.md)
 * [第五部分 生产管理](SECTIONS/SECTION5.md)
