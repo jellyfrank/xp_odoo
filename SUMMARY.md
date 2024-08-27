@@ -28,17 +28,11 @@
   * [第六章 订货规则](chapter4/README6.md)
   * [第七章 路线规则](chapter4/README.md)
   * [第八章 条码规则](chapter4/Barcode.md)
-<<<<<<< HEAD
-  * [第九章 物流方式](chapter4/DELIVERY_METHOD.md)
-  * [第十章 成本核算](chapter4/README8.md)
-  * [第十一章 顺丰速递](chapter10/README10.md)
-=======
   * [第九章 上架规则](chapter4/README.md)
   * [第十章 存储类别](chapter4/STORAEGE.md)
-  * [第十一章 物流方式](chapter4/README.md)
+  * [第十一章 物流方式](chapter4/DELIVERY_METHOD.md)
   * [第十二章 成本核算](chapter4/README8.md)
   * [第十三章 顺丰速递](chapter10/README10.md)
->>>>>>> 1dc2fa1d7068daaab6ce80734ffa5678d830247c
 * [第五部分 生产管理](SECTIONS/SECTION5.md)
   * [第一章 BOM管理](chapter5/README.md)
   * [第二章 计划生产](chapter5/README2.md)
