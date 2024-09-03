@@ -55,6 +55,7 @@
   * [第二章 POS销售](chapter11/POS_SALE.md)
 * [第九部分 设置](SECTIONS/SECTION9.md)
   * [第一章 通用设置](chapter9/README.md)
+  * [第二章 语言设置](chapter9/LANG.md)
   * [第九章 技术设置](chapter9/README9.md)
 * [第十部分 通用解决方案](SECTIONS/SECTION10.md)
   * [第一章 企业微信基础](chapter10/WeWork.md)
