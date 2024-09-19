@@ -66,3 +66,4 @@
   * [第五章 云途物流](chapter10/README19.md)
   * [第六章 基于企微的备用金和费用](chapter10/README22.md)
   * [第七章 17Track](chapter10/README14.md)
+  * [第八章 电商平台对接-小红书](chapter10/XHS.md)
