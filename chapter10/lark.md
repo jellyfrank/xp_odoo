@@ -4,30 +4,32 @@
 
 ## 模块安装
 
-在应用列表中，找到Lark应用，然后点击安装。安装成功后，把自己的在用户组中设置成Lark管理员。
+1. 在应用列表中，找到Lark应用，然后点击安装。
 
-![lark0](./images/lark0.png)
+2. 安装成功后，把自己的在用户组中设置成Lark管理员。
+
+    ![lark0](./images/lark0.png)
 
 ## 基础配置
 
-首先到lark的[开放平台](https://open.larksuite.com/)创建一个lark应用：
+1. 首先到lark的[开放平台](https://open.larksuite.com/)创建一个lark应用：
 
-![lark1](./images/lark1.png)
+    ![lark1](./images/lark1.png)
 
-然后拿到以下连个个应用参数:
+    然后拿到以下连个个应用参数:
 
-* AppID: Lark应用ID
-* AppSecret: Lark应用密钥
+    * AppID: Lark应用ID
+    * AppSecret: Lark应用密钥
 
-拿到这个两个应用以后就可以在odoo中创建应用了：
+2. 拿到这个两个应用以后就可以在odoo中创建应用了：
 
-![lark2](./images/lark2.png)
+    ![lark2](./images/lark2.png)
 
 ### 绑定公司
 
-创建好应用之后，我们要在使用的公司设置中绑定应用。
+1. 创建好应用之后，我们要在使用的公司设置中绑定应用。
 
-![lark3](./images/lark3.png)
+    ![lark3](./images/lark3.png)
 
 这样我们的基础配置工作就完成了，下一步进行基础数据的同步。
 
@@ -59,7 +61,9 @@ Odoo也支持Lark扫码登陆，下面我们看一下如何实现。
 
     ![lark8](./images/lark8.png)
 
-这样用户就可以在odoo登陆界面使用lark扫码登陆。
+这样用户就可以在odoo登陆界面使用lark扫码登陆。实际效果：
+
+![lark9](./images/lark9.png)
 
 ## 机器人消息
 
