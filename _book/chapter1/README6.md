@@ -2,10 +2,11 @@
 
 * [原生原生系统的邮箱使用](#原生系统的邮箱使用)
 * [国内免费邮箱的使用](#国内免费邮箱的使用)
-* [多公司下的邮箱配置](#多公司下的邮箱配置(适用于外贸行业))
+* [多公司下的邮箱配置](#多公司下的邮箱配置适用于外贸行业)
 * [其他](#其他)
-   * [OFFICE365](#office365配置步骤)
-   * [腾讯企业邮](#腾讯企业邮)
+  * [OFFICE365](#office365配置步骤)
+  * [腾讯企业邮](#腾讯企业邮)
+
 
 odoo的邮箱配置从很早的版本时就是一个问题，可能在国外用的很丝滑的功能，在国内就水土不服。本文就试图将邮箱配置的问题一次说个清楚。
 
@@ -259,15 +260,15 @@ SMTPSenderRefused: 501 mail from address must be same as authorization user boun
 
 然后返回应用概览页面，选择Essentials下面的Managed Application in Local Directory
 
-![](images/office6.png)
+![6](images/office6.png)
 
 然后选择用户和用户组菜单：
 
-![](images/office7.png)
+![7](images/office7.png)
 
 然后选择想要使用这个应用的用户和组。
 
-![](images/office8.png)
+![8](images/office8.png)
 
 最后点击分配按钮完成分配。
 
@@ -277,11 +278,11 @@ SMTPSenderRefused: 501 mail from address must be same as authorization user boun
 
 Client ID可以在应用的首页获取到:
 
-![](images/office9.png)
+![9](images/office9.png)
 
 Client Secret需要生成，点击左侧菜单中的 Certificates & Secrets生成一个。
 
-![](images/office10.png)
+![10](images/office10.png)
 
 这里可以设置密钥的名称和有效时间。
 
@@ -289,15 +290,15 @@ Client Secret需要生成，点击左侧菜单中的 Certificates & Secrets生�
 
 获取到Client ID和Client Secret之后，我们就可以设置odoo的凭据了。
 
-![](images/office11.png)
+![11](images/office11.png)
 
 设置好凭据以后，我们就可以继续设置邮箱服务器了。
 
-![](images/office13.png)
+![13](images/office13.png)
 
 我们在服务器类型中选择Outlook OAuth认证，然后点击连接Outlook账号，按钮会打开一个页面，我们输入我们的账号和密码以后，完成认证。
 
-![](images/office14.png)
+![14](images/office14.png)
 
 最后，服务器邮箱会显示一个令牌有效的标识，这个时候，我们再点击测试和确认就会发现成功了。
 
@@ -306,7 +307,6 @@ Client Secret需要生成，点击左侧菜单中的 Certificates & Secrets生�
 首先我们要创建要一个腾讯企业邮的公共邮箱： example@example.com
 
 然后按照[配置指引](https://open.work.weixin.qq.com/help2/pc/19886?person_id=1)完成配置。
-
 
 ```sh
 POP3/SMTP协议
@@ -320,7 +320,7 @@ IMAP协议
 
 ![tx1](./images/tx1.png)
 
-####  FAQ
+#### FAQ
 
 ```sh
 Unknown error: Mail Delivery Failed Mail delivery failed via SMTP server 'None'. SMTPSenderRefused: 501 mail from address must be same as authorization user admin@example.com
