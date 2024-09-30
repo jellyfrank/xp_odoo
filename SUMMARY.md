@@ -8,6 +8,7 @@
   * [第四章 联系人与合作伙伴](chapter1/README4.md)
   * [第五章 邮箱配置](chapter1/README6.md)
   * [第六章 消息与讨论](chapter1/MAIL.md)
+  * [第七章 报表](chapter1/REPORT.md)
 * [第二部分 销售管理](SECTIONS/SECTION2.md)
   * [第一章 基础概念](chapter2/README.md)
   * [第二章 产品管理](chapter2/README2.md)
