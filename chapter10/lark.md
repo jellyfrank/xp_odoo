@@ -20,6 +20,7 @@
 
     * AppID: Lark应用ID
     * AppSecret: Lark应用密钥
+    
 
 2. 拿到这个两个应用以后就可以在odoo中创建应用了：
 
