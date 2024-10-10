@@ -75,6 +75,11 @@
 
 如果我们要更新科目设置，通常使用导入更新的方式，具体步骤如下：
 
+> 不要轻易改动科目的类型，容易发生错误。例如，把应收(Receivable)类型的科目擅自改为应付(Payable), 将会导致销售订单在开票时报错：
+    ```
+    应收账款上的任何日记账项目都必须有到期日，反之亦然。
+    (Any journal item on a receivable account must have a due date and vice versa.)
+    ```
 
 ## 日记账
 
