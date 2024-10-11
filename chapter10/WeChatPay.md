@@ -28,20 +28,16 @@
 
 配置完微信支付的基础配置，我们就可以使用微信支付了。下面我们来看一个动图例子：
 
-![在线商城](./images/wechatpay.gif)
+![在线商城](./images/wechatpay1.gif)
 
 ## 销售订单在线支付
 
-配置好之后，我们也可以直接给客户发送付款链接。如下图所示：
+同样的，我们也可以在订单确认之后直接给客户发送支付链接，客户点开链接之后可以直接使用微信扫码付款：
 
-![销售在线](./images/wechatpay2.gif)
+![销售在线](./images/wechatpay22.gif)
 
-## 在线支付Invoice
+## invoice在线支付
 
-我们也可以在线给客户发送Invoice，让客户在线支付。
+用户点击我们发送的邮件中invoice的链接或是门户预览，都可以找到支付按钮完成支付：
 
-![在线invoice](./images/wechatpay3.gif)
-
-客户在线支付完成后,我们的invoice也会自动变为已付状态。
-
-![完成](./images/wechatpay6.png)
+![在线invoice](./images/wechatpay33.gif)
