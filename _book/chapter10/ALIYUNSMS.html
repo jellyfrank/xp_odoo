@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第十二章 顺丰国际 · odoo实施参考手册-青岛欧姆网络科技</title>
+        <title>第二十章 阿里云短信 · odoo实施参考手册-青岛欧姆网络科技</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="YTO.html" />
     
-    
-    <link rel="prev" href="SF.html" />
+    <link rel="prev" href="lark.html" />
     
 
     </head>
@@ -1060,7 +1058,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.12.12" data-path="SFI.html">
+        <li class="chapter " data-level="1.12.12" data-path="SFI.html">
             
                 <a href="SFI.html">
             
@@ -1164,7 +1162,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.20" data-path="ALIYUNSMS.html">
+        <li class="chapter active" data-level="1.12.20" data-path="ALIYUNSMS.html">
             
                 <a href="ALIYUNSMS.html">
             
@@ -1212,7 +1210,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第十二章 顺丰国际</a>
+        <a href=".." >第二十章 阿里云短信</a>
     </h1>
 </div>
 
@@ -1227,40 +1225,37 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x987A;&#x4E30;&#x56FD;&#x9645;">&#x987A;&#x4E30;&#x56FD;&#x9645;</h1>
-<p>&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x7684;&#x987A;&#x4E30;&#x6A21;&#x5757;&#x53EA;&#x652F;&#x6301;&#x56FD;&#x5185;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x5BF9;&#x56FD;&#x9645;&#x6CA1;&#x6709;&#x5F88;&#x597D;&#x7684;&#x652F;&#x6301;&#x3002;&#x4F46;&#x662F;&#x6709;&#x5BA2;&#x6237;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x987A;&#x4E30;&#x8FDB;&#x884C;&#x56FD;&#x9645;&#x7269;&#x6D41;&#x8FD0;&#x8F93;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x6709;&#x5F00;&#x53D1;&#x4E86;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x7269;&#x6D41;&#x7684;&#x6A21;&#x5757;&#x3002;&#x4E0B;&#x9762;&#x5C31;&#x7B80;&#x8981;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x6A21;&#x5757;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x3002;</p>
-<h2 id="&#x6CE8;&#x518C;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x8D26;&#x53F7;">&#x6CE8;&#x518C;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x8D26;&#x53F7;</h2>
-<p>&#x4E0E;&#x4E30;&#x6865;&#x4E0D;&#x540C;&#xFF0C;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x5B9E;&#x9645;&#x8FD0;&#x8425;&#x5728;&#x9999;&#x6E2F;&#xFF0C;&#x4E0E;&#x4E30;&#x6865;&#x4E0D;&#x662F;&#x4E00;&#x5957;&#x4F53;&#x7CFB;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x8D26;&#x53F7;&#x3002;&#x5177;&#x4F53;&#x6CE8;&#x518C;&#x65B9;&#x6CD5;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x8D58;&#x8FF0;&#x4E86;&#x3002;</p>
-<h2 id="&#x521B;&#x5EFA;app">&#x521B;&#x5EFA;APP</h2>
-<p>&#x6CE8;&#x518C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x5230;&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x7684;&#x63A7;&#x5236;&#x53F0;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;APP&#x5E94;&#x7528;&#x3002;</p>
-<p><img src="images/sfi1.png" alt="sfi1"></p>
-<p>&#x521B;&#x5EFA;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x62FF;&#x5230;&#x5E94;&#x7528;&#x7684;&#x51E0;&#x4E2A;&#x5173;&#x952E;&#x53C2;&#x6570;</p>
-<ul>
-<li>APPKEY</li>
-<li>APPSCERT</li>
-<li>AESKEY</li>
-<li>CUSTOM_CODE</li>
-</ul>
-<p><img src="images/sfi2.png" alt="sf2"></p>
-<p>&#x6700;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x628A;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7684;API&#x63A5;&#x53E3;&#x5173;&#x8054;&#x5230;&#x6211;&#x4EEC;&#x7684;APP&#x4E0A;</p>
-<p><img src="images/sfi3.png" alt="sf3"></p>
-<h2 id="odoo&#x914D;&#x7F6E;">Odoo&#x914D;&#x7F6E;</h2>
-<p>&#x914D;&#x7F6E;&#x5B8C;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x5F00;&#x653E;&#x5E73;&#x53F0;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x6765;&#x5728;odoo&#x4E2D;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x6A21;&#x5757;&#xFF1A;</p>
-<p><img src="images/sfi4.png" alt="sf4"></p>
-<p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x4ED3;&#x5E93;-&#x914D;&#x7F6E;-&#x53D1;&#x8D27;&#x65B9;&#x5F0F;&#x4E2D;&#x9009;&#x62E9;&#x987A;&#x4E30;&#x56FD;&#x9645;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6211;&#x4EEC;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x53C2;&#x6570;&#x914D;&#x7F6E;&#xFF1A;</p>
-<p><img src="images/sfi5.png" alt="sf5"></p>
-<p>&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x8FDB;&#x884C;&#x53D1;&#x8D27;&#x4E86;&#x3002;</p>
-<h2 id="&#x8FD0;&#x8D39;&#x9884;&#x4F30;">&#x8FD0;&#x8D39;&#x9884;&#x4F30;</h2>
-<p>&#x6211;&#x4EEC;&#x5728;&#x521B;&#x5EFA;&#x5B8C;&#x9500;&#x552E;&#x8BA2;&#x5355;&#x540E;&#xFF0C;&#x70B9;&#x51FB;&#x6DFB;&#x52A0;&#x9001;&#x8D27;&#x65B9;&#x5F0F;&#xFF0C;&#x5728;&#x5F39;&#x7A97;&#x4E2D;&#x9009;&#x62E9;&#x987A;&#x4E30;&#x56FD;&#x9645;&#xFF0C;&#x7136;&#x540E;&#x8F93;&#x5165;&#x8BA2;&#x5355;&#x8D27;&#x7269;&#x603B;&#x91CD;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB;&#x83B7;&#x53D6;&#x8D39;&#x7387;&#xFF1A;</p>
-<p><img src="images/sfi6.png" alt="sfi6"></p>
-<p>&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x672C;&#x6B21;&#x53D1;&#x8D27;&#x5927;&#x6982;&#x9700;&#x8981;&#x7684;&#x8FD0;&#x8D39;&#x3002;</p>
-<h2 id="&#x7535;&#x5B50;&#x9762;&#x5355;">&#x7535;&#x5B50;&#x9762;&#x5355;</h2>
-<p>&#x8DDF;&#x56FD;&#x5185;&#x987A;&#x4E30;&#x6A21;&#x5757;&#x4F7F;&#x7528;&#x7C7B;&#x4F3C;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x53D1;&#x5355;&#x4E2D;&#x70B9;&#x51FB;&#x9A8C;&#x8BC1;&#x5B8C;&#x6210;&#x53D1;&#x8D27;&#x4E4B;&#x540E;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x81EA;&#x52A8;&#x586B;&#x5145;&#x4ECE;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x8FD0;&#x5355;&#x53F7;&#xFF0C;&#x5E76;&#x81EA;&#x52A8;&#x5C06;&#x7535;&#x5B50;&#x9762;&#x5355;&#x8F93;&#x51FA;&#x5230;&#x8BA8;&#x8BBA;&#x533A;&#xFF1A;</p>
-<p><img src="images/sfi7.png" alt="sfi7"></p>
-<h2 id="&#x7269;&#x6D41;&#x8DDF;&#x8E2A;">&#x7269;&#x6D41;&#x8DDF;&#x8E2A;</h2>
-<p>&#x70B9;&#x51FB;&#x7269;&#x6D41;&#x8DDF;&#x8E2A;&#x6309;&#x94AE;&#x5C31;&#x53EF;&#x4EE5;&#x6253;&#x5F00;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x7684;&#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#x5BF9;&#x6B64;&#x5355;&#x53F7;&#x8FDB;&#x884C;&#x7269;&#x6D41;&#x8F68;&#x8FF9;&#x67E5;&#x8BE2;&#x3002;</p>
-<p><img src="images/sfi8.png" alt="sfi8"></p>
-<p>&#x81F3;&#x6B64;&#xFF0C;&#x6E2F;&#x6FB3;&#x53F0;&#x7684;&#x5C0F;&#x4F19;&#x4F34;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x6109;&#x5FEB;&#x7684;&#x73A9;&#x800D;&#x5566;&#x3002;&#x1F389;</p>
+                                <h1 id="&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;">&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;</h1>
+<p>&#x7531;&#x4E8E;&#x56FD;&#x5185;&#x77ED;&#x4FE1;&#x53D1;&#x9001;&#x7684;&#x9650;&#x5236;&#xFF0C;&#x6211;&#x4EEC;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;odoo&#x539F;&#x751F;&#x7684;&#x77ED;&#x4FE1;&#x670D;&#x52A1;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x51B3;&#x5B9A;&#x4F7F;&#x7528;&#x56FD;&#x5185;&#x77ED;&#x4FE1;&#x670D;&#x52A1;&#x5546;&#x6765;&#x5E73;&#x66FF;Odoo&#x539F;&#x751F;&#x77ED;&#x4FE1;&#x670D;&#x52A1;&#x3002;&#x672C;&#x6587;&#x4ECB;&#x7ECD;&#x5982;&#x4F55;&#x5728;Odoo&#x4E2D;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;&#x6765;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x3002;</p>
+<h2 id="&#x963F;&#x91CC;&#x4E91;&#x7AEF;&#x914D;&#x7F6E;">&#x963F;&#x91CC;&#x4E91;&#x7AEF;&#x914D;&#x7F6E;</h2>
+<p>&#x6211;&#x4EEC;&#x8981;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;&#x670D;&#x52A1;&#xFF0C;&#x5C31;&#x5FC5;&#x987B;&#x5148;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x963F;&#x91CC;&#x4E91;&#x8D26;&#x53F7;&#xFF0C;&#x7136;&#x540E;&#x62FF;&#x5230;API KEY&#x548C;API SECRET&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#x3002;</p>
+<p><img src="images/aliyun_sms.png" alt="aliyun_SMS"></p>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x77ED;&#x4FE1;&#x6D88;&#x606F;&#x6A21;&#x677F;&#xFF1A;</p>
+<p><img src="images/aliyun_sms2.png" alt="aliyun_SMS2"></p>
+<p>&#x521B;&#x5EFA;&#x5B8C;&#x77ED;&#x4FE1;&#x6D88;&#x606F;&#x6A21;&#x677F;&#xFF0C;&#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x62FF;&#x5230;&#x77ED;&#x4FE1;&#x6D88;&#x606F;&#x6A21;&#x677F;&#x7684;&#x7B7E;&#x540D;&#x5907;&#x7528;&#x3002;</p>
+<h2 id="&#x5728;odoo&#x4E2D;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;">&#x5728;odoo&#x4E2D;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;</h2>
+<h3 id="1-&#x5F00;&#x542F;&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;&#x529F;&#x80FD;">1. &#x5F00;&#x542F;&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;&#x529F;&#x80FD;</h3>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5F00;&#x542F;&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;&#x529F;&#x80FD;&#x3002;&#x5728;&#x8BBE;&#x7F6E;-&#x6B27;&#x59C6;-&#x90AE;&#x4EF6;&#x548C;&#x77ED;&#x4FE1;&#x8BBE;&#x7F6E;&#x4E2D;&#xFF0C;&#x52FE;&#x9009;&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;&#xFF1A;</p>
+<p><img src="images/aliyun_sms3.png" alt="aliyun_SMS3"></p>
+<p>&#x7136;&#x540E;&#x70B9;&#x51FB;&#x4FDD;&#x5B58;&#xFF0C;&#x5B8C;&#x6210;&#x963F;&#x91CC;&#x4E91;&#x6A21;&#x5757;&#x7684;&#x5B89;&#x88C5;&#x3002;</p>
+<h3 id="2-&#x914D;&#x7F6E;&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;">2. &#x914D;&#x7F6E;&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;</h3>
+<p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5230;&#x8BBE;&#x7F6E;-&#x6280;&#x672F;-&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;&#x83DC;&#x5355;&#x4E2D;&#xFF0C;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;&#x914D;&#x7F6E;&#xFF1A;</p>
+<p><img src="images/aliyun_sms4.png" alt="aliyun_SMS4"></p>
+<p><img src="images/aliyun_sms5.png" alt="aliyun_SMS5"></p>
+<h3 id="3-&#x5728;&#x516C;&#x53F8;&#x8BBE;&#x7F6E;&#x4E2D;&#x914D;&#x7F6E;&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;">3. &#x5728;&#x516C;&#x53F8;&#x8BBE;&#x7F6E;&#x4E2D;&#x914D;&#x7F6E;&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;</h3>
+<p>&#x6211;&#x4EEC;&#x5728;&#x516C;&#x53F8;&#x8BBE;&#x7F6E;&#x4E2D;&#xFF0C;&#x7ED1;&#x5B9A;&#x6211;&#x4EEC;&#x521A;&#x624D;&#x8BBE;&#x7F6E;&#x7684;&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;&#x914D;&#x7F6E;&#xFF1A;</p>
+<p><img src="images/aliyun_sms6.png" alt="aliyun_sms6"></p>
+<h3 id="4-&#x521B;&#x5EFA;&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x606F;&#x6A21;&#x677F;">4. &#x521B;&#x5EFA;&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x606F;&#x6A21;&#x677F;</h3>
+<p>&#x5728;&#x8BBE;&#x7F6E;-&#x6280;&#x672F;-&#x963F;&#x91CC;&#x4E91;&#x77ED;&#x4FE1;-&#x77ED;&#x4FE1;&#x6A21;&#x677F;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x77ED;&#x4FE1;&#x6A21;&#x677F;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x4EE5;&#x963F;&#x91CC;&#x4E91;&#x6D4B;&#x8BD5;&#x77ED;&#x4FE1;&#x6A21;&#x677F;&#x4E3A;&#x4F8B;&#xFF1A;</p>
+<p><img src="images/aliyun_sms7.png" alt="aliyun_sms7"></p>
+<p>&#x8FD9;&#x6837;&#x6211;&#x4EEC;&#x5C31;&#x5B8C;&#x6210;&#x4E86;&#x53D1;&#x9001;&#x77ED;&#x4FE1;&#x7684;&#x51C6;&#x5907;&#x5DE5;&#x4F5C;&#xFF0C;&#x4E0B;&#x9762;&#x6211;&#x4EEC;&#x53D1;&#x9001;&#x4E00;&#x6761;&#x6D4B;&#x8BD5;&#x77ED;&#x4FE1;&#x3002;</p>
+<h3 id="4-&#x53D1;&#x9001;&#x77ED;&#x4FE1;&#x6D4B;&#x8BD5;">4. &#x53D1;&#x9001;&#x77ED;&#x4FE1;&#x6D4B;&#x8BD5;</h3>
+<p>&#x6253;&#x5F00;&#x8BBE;&#x7F6E;-&#x6280;&#x672F;-&#x7535;&#x8BDD;&#x548C;&#x77ED;&#x4FE1;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x77ED;&#x4FE1;&#x606F;&#xFF1A;</p>
+<p><img src="images/aliyun_sms8.png" alt="aliyun_sms8"></p>
+<p>&#x70B9;&#x51FB;&#x53D1;&#x9001;&#x6309;&#x94AE;&#xFF0C;&#x5B8C;&#x6210;&#x53D1;&#x9001;&#x3002;</p>
+<p>&#x6210;&#x529F;&#x540E;&#x72B6;&#x6001;&#x4F1A;&#x66F4;&#x65B0;&#x4E3A;&#x5DF2;&#x53D1;&#x9001;&#xFF1A;</p>
+<p><img src="images/aliyun_sms9.png" alt="aliyun_sms9"></p>
+<p>&#x5931;&#x8D25;&#x540E;&#xFF0C;&#x4F1A;&#x63D0;&#x793A;&#x5931;&#x8D25;&#x539F;&#x56E0;&#x3002;</p>
 
                                 
                                 </section>
@@ -1288,14 +1283,10 @@
 
             
                 
-                <a href="SF.html" class="navigation navigation-prev " aria-label="Previous page: 第十一章 顺丰速递">
+                <a href="lark.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 第十九章 Lark">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="YTO.html" class="navigation navigation-next " aria-label="Next page: 第十三章 圆通速递">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1304,7 +1295,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第十二章 顺丰国际","level":"1.12.12","depth":2,"next":{"title":"第十三章 圆通速递","level":"1.12.13","depth":2,"path":"chapter10/YTO.md","ref":"chapter10/YTO.md","articles":[]},"previous":{"title":"第十一章 顺丰速递","level":"1.12.11","depth":2,"path":"chapter10/SF.md","ref":"chapter10/SF.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"青岛欧姆网络科技 Kevin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施参考手册-青岛欧姆网络科技","language":"zh-hans","gitbook":"*","description":"青岛欧姆网络科技，您身边可靠的Odoo专家"},"file":{"path":"chapter10/SFI.md","mtime":"2024-10-06T16:11:51.023Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-10-17T08:07:07.415Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第二十章 阿里云短信","level":"1.12.20","depth":2,"previous":{"title":"第十九章 Lark","level":"1.12.19","depth":2,"path":"chapter10/lark.md","ref":"chapter10/lark.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"青岛欧姆网络科技 Kevin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施参考手册-青岛欧姆网络科技","language":"zh-hans","gitbook":"*","description":"青岛欧姆网络科技，您身边可靠的Odoo专家"},"file":{"path":"chapter10/ALIYUNSMS.md","mtime":"2024-10-17T08:06:53.786Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-10-17T08:07:07.415Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
