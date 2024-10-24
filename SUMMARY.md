@@ -18,7 +18,7 @@
   * [第六章 折扣与价格表](chapter2/README6.md)
   * [第七章 租赁](chapter2/README7.md)
 * [第三部分 采购管理](SECTIONS/SECTION3.md)
-  * [第一章 采购管理](chapter3/README.md)
+  * [第一章 采购管理](chapter3/PO.md.md)
   * [第二章 成本计算](chapter3/README2.md)
 * [第四部分 仓库管理](SECTIONS/SECTION4.md)
   * [第一章 基本概念](chapter4/BASIC.md)
