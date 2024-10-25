@@ -327,3 +327,69 @@ Unknown error: Mail Delivery Failed Mail delivery failed via SMTP server 'None'.
 ```
 
 安装前文提到的[欧姆邮箱解决方案](https://odoohub.com.cn)，打开**严格发件人匹配**选项。
+
+### Gmail
+
+下面我们来看一下如何使用Gmail来配置Odoo邮箱服务。
+
+![gmail](./images/gmail.png)
+
+首先我们在设置中开启Gmail选项，可以看到系统要求我们输入**ID**和**密钥**。
+
+#### ID和密钥的获取
+
+我们打开[Google控制台](https://console.cloud.google.com/)，然后新建一个项目Odoo:
+
+![gmail2](./images/gmail2.png)
+
+然后点击**API和服务**，在左侧的菜单那中点击OAuth权限请求页面：
+
+![gmail3](./images/gmail3.png)
+
+> 测试时，将我们的用户添加到测试用户列表中。
+
+然后点击菜单凭据，创建一个新的凭据:
+
+![gmail4](./images/gmai4.png)
+
+* 应用类型选Web应用
+* 名称写Odooo或自定义
+* 已获授权的重定向 URI填写：
+
+  ```sh
+  https://demo.odoohub.com.cn/google_gmail/confirm
+  ```
+
+  将demo.odoohub.com.cn替换为你的URL
+
+![gmail5](./images/gmail5.png)
+
+将生成的ID和密钥填写到前面Odoo的设置中。
+
+#### 创建Gmail发件箱
+
+接下来我们创建Gmail的发件服务，在设置-技术-邮箱-发件箱中新建一个发件箱：
+
+![gmail6](./images/gmail6.png)
+
+* 验证方式选择Gmail OAuth验证
+* 加密方式选择TLS
+* 用户名填写邮箱登陆名
+
+点击连接您的Gmail账户链接进行OAuth认证。
+
+![gmail7](./images/gmail7.png)
+
+认证成功之后，邮箱下面会有绿色标志显示：
+
+![gmail8](./images/gmail8.png)
+
+#### 问题
+
+1.Redirect Uri Dismatch
+
+  跳转URL跟后台设置的不一致， 检查跳转URL和Google后台是否一致，检查odoo后台参数中的base Url跟跳转URL是否一致。
+
+2.认证后500错误
+
+  由于不可公开的原因导致的账户访问受阻，请替换网络。
