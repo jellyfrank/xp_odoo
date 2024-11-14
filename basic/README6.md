@@ -239,7 +239,7 @@ SMTPSenderRefused: 501 mail from address must be same as authorization user boun
 
 ![office365](images/office1.png)
 
-名称新建一个，这里我们叫做odoo，支持的类型选 Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)。跳转链接类型选Web，地址写你的https://<odoo base url>/microsoft_outlook/confirm。
+名称新建一个，这里我们叫做odoo，支持的类型选 Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)。跳转链接类型选Web，地址写你的https://\<odoo base url>/microsoft_outlook/confirm。
 
 ![office2](images/office2.png)
 
@@ -302,6 +302,24 @@ Client Secret需要生成，点击左侧菜单中的 Certificates & Secrets生�
 ![14](images/office14.png)
 
 最后，服务器邮箱会显示一个令牌有效的标识，这个时候，我们再点击测试和确认就会发现成功了。
+
+#### FAQ
+
+1.**SmtpClientAuthentication is disabled for the tenant**
+
+  用户的STMPAuthen认证没有开启，需要到Office 365[账户中心](https://admin.microsoft.com/Adminportal/Home)开启:
+
+  ![12](./images/office12.png)
+
+  切换到看板视图
+
+  ![15](./images/office15.png)
+
+  点击编辑用户，找到目标用户，然后点击Mail选项卡，点击编辑Emai App
+
+  ![16](./images/office16.png)
+
+  在Email App中勾选 Authenticated SMTP选项。
 
 ### 腾讯企业邮
 
