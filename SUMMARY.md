@@ -79,3 +79,4 @@
   * [第十八章 小红书](chapter10/XHS.md)
   * [第十九章 Lark](chapter10/lark.md)
   * [第二十章 阿里云短信](chapter10/ALIYUNSMS.md)
+  * [第二十一章 NMI支付](chapter10/NMI.md)
