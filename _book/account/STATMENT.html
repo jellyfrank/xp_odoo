@@ -1,0 +1,1347 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第四章 对账 · odoo实施参考手册-青岛欧姆网络科技</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="青岛欧姆网络科技 Kevin">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../SECTIONS/SECTION7.html" />
+    
+    
+    <link rel="prev" href="REDAME3.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../SECTIONS/SECTION1.html">
+            
+                <a href="../SECTIONS/SECTION1.html">
+            
+                    
+                    第一部分 基础数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../basic/">
+            
+                <a href="../basic/">
+            
+                    
+                    第一章 Odoo简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../basic/README2.html">
+            
+                <a href="../basic/README2.html">
+            
+                    
+                    第二章 数据库管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../basic/README5.html">
+            
+                <a href="../basic/README5.html">
+            
+                    
+                    第三章 公司和用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../basic/README4.html">
+            
+                <a href="../basic/README4.html">
+            
+                    
+                    第四章 联系人与合作伙伴
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../basic/README6.html">
+            
+                <a href="../basic/README6.html">
+            
+                    
+                    第五章 邮箱配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../basic/MAIL.html">
+            
+                <a href="../basic/MAIL.html">
+            
+                    
+                    第六章 消息与讨论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../basic/REPORT.html">
+            
+                <a href="../basic/REPORT.html">
+            
+                    
+                    第七章 报表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../SECTIONS/SECTION2.html">
+            
+                <a href="../SECTIONS/SECTION2.html">
+            
+                    
+                    第二部分 销售管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../sale/">
+            
+                <a href="../sale/">
+            
+                    
+                    第一章 基础概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../sale/README2.html">
+            
+                <a href="../sale/README2.html">
+            
+                    
+                    第二章 产品管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../sale/README3.html">
+            
+                <a href="../sale/README3.html">
+            
+                    
+                    第三章 销售流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../sale/README4.html">
+            
+                <a href="../sale/README4.html">
+            
+                    
+                    第四章 税率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../sale/README5.html">
+            
+                <a href="../sale/README5.html">
+            
+                    
+                    第五章 销售库存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../sale/README6.html">
+            
+                <a href="../sale/README6.html">
+            
+                    
+                    第六章 折扣与价格表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../sale/README7.html">
+            
+                <a href="../sale/README7.html">
+            
+                    
+                    第七章 租赁
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../SECTIONS/SECTION3.html">
+            
+                <a href="../SECTIONS/SECTION3.html">
+            
+                    
+                    第三部分 采购管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../chapter3/PO.md.md">
+            
+                <span>
+            
+                    
+                    第一章 采购管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../chapter3/README2.html">
+            
+                <a href="../chapter3/README2.html">
+            
+                    
+                    第二章 成本计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../SECTIONS/SECTION4.html">
+            
+                <a href="../SECTIONS/SECTION4.html">
+            
+                    
+                    第四部分 仓库管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../stock/BASIC.html">
+            
+                <a href="../stock/BASIC.html">
+            
+                    
+                    第一章 基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../stock/LOCATION.html">
+            
+                <a href="../stock/LOCATION.html">
+            
+                    
+                    第二章 库位管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../stock/README3.html">
+            
+                <a href="../stock/README3.html">
+            
+                    
+                    第三章 调拨类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../stock/README.md">
+            
+                <span>
+            
+                    
+                    第四章 批次管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../stock/README.md">
+            
+                <span>
+            
+                    
+                    第五章 库存盘点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../stock/README6.html">
+            
+                <a href="../stock/README6.html">
+            
+                    
+                    第六章 订货规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../stock/README.md">
+            
+                <span>
+            
+                    
+                    第七章 路线规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../stock/Barcode.html">
+            
+                <a href="../stock/Barcode.html">
+            
+                    
+                    第八章 条码规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../stock/PUTAWAY.html">
+            
+                <a href="../stock/PUTAWAY.html">
+            
+                    
+                    第九章 上架规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../stock/STORAEGE.html">
+            
+                <a href="../stock/STORAEGE.html">
+            
+                    
+                    第十章 存储类别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../stock/DELIVERY_METHOD.html">
+            
+                <a href="../stock/DELIVERY_METHOD.html">
+            
+                    
+                    第十一章 物流方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../stock/README8.html">
+            
+                <a href="../stock/README8.html">
+            
+                    
+                    第十二章 成本核算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../stock/README10.md">
+            
+                <span>
+            
+                    
+                    第十三章 顺丰速递
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../SECTIONS/SECTION5.html">
+            
+                <a href="../SECTIONS/SECTION5.html">
+            
+                    
+                    第五部分 生产管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../chapter5/README.md">
+            
+                <span>
+            
+                    
+                    第一章 BOM管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../chapter5/README2.md">
+            
+                <span>
+            
+                    
+                    第二章 计划生产
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../chapter5/README3.html">
+            
+                <a href="../chapter5/README3.html">
+            
+                    
+                    第三章 管理工单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../chapter5/README4.md">
+            
+                <span>
+            
+                    
+                    第四章 外协加工
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../chapter5/README5.html">
+            
+                <a href="../chapter5/README5.html">
+            
+                    
+                    第五章 工作中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../chapter5/README6.md">
+            
+                <span>
+            
+                    
+                    第六章 质量检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../SECTIONS/SECTION6.html">
+            
+                <a href="../SECTIONS/SECTION6.html">
+            
+                    
+                    第六部分 财务管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    第一章 基础概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="README2.html">
+            
+                <a href="README2.html">
+            
+                    
+                    第二章 开票
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="REDAME3.html">
+            
+                <a href="REDAME3.html">
+            
+                    
+                    第三章 支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.4" data-path="STATMENT.html">
+            
+                <a href="STATMENT.html">
+            
+                    
+                    第四章 对账
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../SECTIONS/SECTION7.html">
+            
+                <a href="../SECTIONS/SECTION7.html">
+            
+                    
+                    第七部分 多公司
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../chapter7/">
+            
+                <a href="../chapter7/">
+            
+                    
+                    第一章 多公司间的采购
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../SECTIONS/SECTION8.html">
+            
+                <a href="../SECTIONS/SECTION8.html">
+            
+                    
+                    第七部分 网站
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../web/portal.html">
+            
+                <a href="../web/portal.html">
+            
+                    
+                    第一章 门户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../web/README2.html">
+            
+                <a href="../web/README2.html">
+            
+                    
+                    第二章 商城
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../web/TOKEN.html">
+            
+                <a href="../web/TOKEN.html">
+            
+                    
+                    第三章 访问令牌
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../SECTION11.md">
+            
+                <span>
+            
+                    
+                    第八部分 销售点(POS)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../chapter11/README10.html">
+            
+                <a href="../chapter11/README10.html">
+            
+                    
+                    第一章 EPOS打印
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../chapter11/POS_SALE.html">
+            
+                <a href="../chapter11/POS_SALE.html">
+            
+                    
+                    第二章 POS销售
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../SECTIONS/SECTION9.html">
+            
+                <a href="../SECTIONS/SECTION9.html">
+            
+                    
+                    第九部分 设置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../chapter9/">
+            
+                <a href="../chapter9/">
+            
+                    
+                    第一章 通用设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../chapter9/LANG.html">
+            
+                <a href="../chapter9/LANG.html">
+            
+                    
+                    第二章 语言设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../chapter9/README9.html">
+            
+                <a href="../chapter9/README9.html">
+            
+                    
+                    第九章 技术设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../SECTIONS/SECTION10.html">
+            
+                <a href="../SECTIONS/SECTION10.html">
+            
+                    
+                    第十部分 通用解决方案
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../chapter10/WeChatOpen.html">
+            
+                <a href="../chapter10/WeChatOpen.html">
+            
+                    
+                    第一章 微信扫码登陆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../chapter10/WeChat.html">
+            
+                <a href="../chapter10/WeChat.html">
+            
+                    
+                    第二章 微信公众号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../chapter10/WeChatPay.html">
+            
+                <a href="../chapter10/WeChatPay.html">
+            
+                    
+                    第三章 微信支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../chapter10/WXPOS.html">
+            
+                <a href="../chapter10/WXPOS.html">
+            
+                    
+                    第四章 微信POS支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../chapter10/ALIPAY.html">
+            
+                <a href="../chapter10/ALIPAY.html">
+            
+                    
+                    第五章 支付宝支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../chapter10/ALIPOS.html">
+            
+                <a href="../chapter10/ALIPOS.html">
+            
+                    
+                    第六章 支付宝POS支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../chapter10/LINE.html">
+            
+                <a href="../chapter10/LINE.html">
+            
+                    
+                    第七章 Pos LinePay
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../chapter10/WeWork.html">
+            
+                <a href="../chapter10/WeWork.html">
+            
+                    
+                    第八章 企业微信基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.9" data-path="../chapter10/WeWorkPlus.html">
+            
+                <a href="../chapter10/WeWorkPlus.html">
+            
+                    
+                    第九章 企业微信高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.10" data-path="../chapter10/WeWorkApproval.html">
+            
+                <a href="../chapter10/WeWorkApproval.html">
+            
+                    
+                    第十章 企业微信审批
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.11" data-path="../chapter10/SF.html">
+            
+                <a href="../chapter10/SF.html">
+            
+                    
+                    第十一章 顺丰速递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.12" data-path="../chapter10/SFI.html">
+            
+                <a href="../chapter10/SFI.html">
+            
+                    
+                    第十二章 顺丰国际
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.13" data-path="../chapter10/YTO.html">
+            
+                <a href="../chapter10/YTO.html">
+            
+                    
+                    第十三章 圆通速递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.14" data-path="../chapter10/DHL.html">
+            
+                <a href="../chapter10/DHL.html">
+            
+                    
+                    第十四章 DHL中国
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.15" data-path="../chapter10/KDN.html">
+            
+                <a href="../chapter10/KDN.html">
+            
+                    
+                    第十五章 快递鸟模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.16" data-path="../chapter10/YUN.html">
+            
+                <a href="../chapter10/YUN.html">
+            
+                    
+                    第十六章 云途物流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.17" data-path="../chapter10/17Track.html">
+            
+                <a href="../chapter10/17Track.html">
+            
+                    
+                    第十七章 17Track
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.18" data-path="../chapter10/XHS.html">
+            
+                <a href="../chapter10/XHS.html">
+            
+                    
+                    第十八章 小红书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.19" data-path="../chapter10/lark.html">
+            
+                <a href="../chapter10/lark.html">
+            
+                    
+                    第十九章 Lark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.20" data-path="../chapter10/ALIYUNSMS.html">
+            
+                <a href="../chapter10/ALIYUNSMS.html">
+            
+                    
+                    第二十章 阿里云短信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.21" data-path="../chapter10/NMI.html">
+            
+                <a href="../chapter10/NMI.html">
+            
+                    
+                    第二十一章 NMI支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第四章 对账</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5BF9;&#x8D26;&#x5355;">&#x5BF9;&#x8D26;&#x5355;</h1>
+<h2 id="&#x5BA2;&#x6237;&#x5BF9;&#x8D26;&#x5355;">&#x5BA2;&#x6237;&#x5BF9;&#x8D26;&#x5355;</h2>
+<p>&#x5BF9;&#x4E8E;&#x6FB3;&#x5927;&#x5229;&#x4E9A;&#x3001;&#x5370;&#x5EA6;&#x548C;&#x65B0;&#x897F;&#x5170;&#x7684;&#x5BA2;&#x6237;&#xFF0C;&#x901A;&#x5E38;&#x4F1A;&#x6709;&#x7ED9;&#x5BA2;&#x6237;&#x53D1;&#x5BF9;&#x8D26;&#x5355;&#x7684;&#x9700;&#x6C42;&#xFF0C;odoo&#x4F1A;&#x9488;&#x5BF9;&#x8FD9;&#x51E0;&#x4E2A;&#x533A;&#x57DF;&#x7684;&#x5BA2;&#x6237;&#x5B89;&#x88C5;<strong>&#x5BA2;&#x6237;&#x5BF9;&#x8D26;&#x5355;&#x6A21;&#x5757;</strong>(l10n_account_customer_statements)&#x3002;</p>
+<p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x5730;&#x5728;&#x5BA2;&#x6237;&#x8D44;&#x6599;&#x4E2D;&#x6253;&#x5370;&#x5BA2;&#x6237;&#x7684;&#x5BF9;&#x8D26;&#x5355;&#x3002;</p>
+<p><img src="images/AC51.png" alt="statement"></p>
+<h3 id="&#x5BF9;&#x8D26;&#x5355;&#x6761;&#x6B3E;">&#x5BF9;&#x8D26;&#x5355;&#x6761;&#x6B3E;</h3>
+<p>&#x5982;&#x679C;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x5728;&#x5BA2;&#x6237;&#x5BF9;&#x8D26;&#x5355;&#x4E2D;&#x6DFB;&#x52A0;&#x4E00;&#x4E9B;&#x5907;&#x6CE8;&#x6216;&#x6761;&#x6B3E;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6211;&#x4EEC;&#x7684;<a href="https://odoohub.com.cn" target="_blank">&#x8D22;&#x52A1;&#x89E3;&#x51B3;&#x65B9;&#x6848;</a>&#x4E2D;&#x8FDB;&#x884C;&#x8BBE;&#x7F6E;&#x3002;</p>
+<p>&#x5728;&#x4F1A;&#x8BA1;-&#x8BBE;&#x7F6E;-&#x5BA2;&#x6237;&#x5BF9;&#x8D26;&#x5355;&#xFF1A;</p>
+<p><img src="images/AC52.png" alt="52"></p>
+<p>&#x5728;&#x8FD9;&#x91CC;&#x8F93;&#x5165;&#x6211;&#x4EEC;&#x60F3;&#x8981;&#x586B;&#x5199;&#x7684;&#x6761;&#x6B3E;&#x548C;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5728;&#x6253;&#x5370;&#x51FA;&#x6765;&#x7684;&#x5BF9;&#x8D26;&#x5355;&#x6587;&#x4EF6;&#x4E2D;&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF1A;</p>
+<p><img src="images/AC53.png" alt="53"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="REDAME3.html" class="navigation navigation-prev " aria-label="Previous page: 第三章 支付">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../SECTIONS/SECTION7.html" class="navigation navigation-next " aria-label="Next page: 第七部分 多公司">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第四章 对账","level":"1.7.4","depth":2,"next":{"title":"第七部分 多公司","level":"1.8","depth":1,"path":"SECTIONS/SECTION7.md","ref":"SECTIONS/SECTION7.md","articles":[{"title":"第一章 多公司间的采购","level":"1.8.1","depth":2,"path":"chapter7/README.md","ref":"chapter7/README.md","articles":[]}]},"previous":{"title":"第三章 支付","level":"1.7.3","depth":2,"path":"ACCOUNT/REDAME3.md","ref":"ACCOUNT/REDAME3.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"青岛欧姆网络科技 Kevin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施参考手册-青岛欧姆网络科技","language":"zh-hans","gitbook":"*","description":"青岛欧姆网络科技，您身边可靠的Odoo专家"},"file":{"path":"ACCOUNT/STATMENT.md","mtime":"2024-11-24T15:21:41.174Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-11-24T15:21:54.491Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
