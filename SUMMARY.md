@@ -58,6 +58,7 @@
 * [第九部分 设置](SECTIONS/SECTION9.md)
   * [第一章 通用设置](chapter9/README.md)
   * [第二章 语言设置](chapter9/LANG.md)
+  * [第三章 附件共享](chapter9/SHARE.md)
   * [第九章 技术设置](chapter9/README9.md)
 * [第十部分 通用解决方案](SECTIONS/SECTION10.md)
   * [第一章 微信扫码登陆](chapter10/WeChatOpen.md)
@@ -83,3 +84,4 @@
   * [第二十一章 NMI支付](chapter10/NMI.md)
 * [第十一部分 案例分享](example/SECTION.md)
   * [外贸定制化服装](example/CLOTHES.md)
+* [FAQ](FAQ.md)
