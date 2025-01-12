@@ -78,6 +78,8 @@ odoo会在第一次加载时显示一个自动生成的随机密码作为数据�
 
 总体来说我们不推荐在非必要情况下进行跨版本升级，如果实在是想要升级，我们提供**企业版用户的升级服务**，详讯客服。
 
+<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=665798439&bvid=BV1Fa4y1B79b&cid=1395612050&p=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+
 ## 总结
 
 本章介绍了数据库的基本操作和定时备份的模块，经过本章的学习，详细读者已经可以掌握数据库的管理操作了。

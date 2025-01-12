@@ -3,7 +3,7 @@
 * [前言](README.md)
 * [第一部分 基础数据](SECTIONS/SECTION1.md)
   * [第一章 Odoo简介](basic/README.md)
-  * [第二章 数据库管理](basic/README2.md)
+  * [第二章 数据库管理](basic/DATABASE.md)
   * [第三章 公司和用户管理](basic/README5.md)
   * [第四章 联系人与合作伙伴](basic/README4.md)
   * [第五章 邮箱配置](basic/README6.md)
