@@ -55,6 +55,7 @@
 * [第八部分 销售点(POS)](SECTION11.md)
   * [第一章 EPOS打印](pos/README10.md)
   * [第二章 POS销售](pos/POS_SALE.md)
+  * [第三章 POS批次自动出库](pos/POS_AUTO.md)
 * [第九部分 设置](SECTIONS/SECTION9.md)
   * [第一章 通用设置](chapter9/README.md)
   * [第二章 语言设置](chapter9/LANG.md)
