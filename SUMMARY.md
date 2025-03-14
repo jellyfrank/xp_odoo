@@ -41,6 +41,7 @@
   * [第四章 外协加工](chapter5/README4.md)
   * [第五章 工作中心](chapter5/README5.md)
   * [第六章 质量检测](chapter5/README6.md)
+  * [第七章 套件生产](chapter5/KIT.md)
 * [第六部分 财务管理](SECTIONS/SECTION6.md)
   * [第一章 基础概念](account/BASIC.md)
   * [第二章 开票](account/INV.md)
