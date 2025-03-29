@@ -54,7 +54,7 @@
   * [第二章 商城](web/README2.md)
   * [第三章 访问令牌](web/TOKEN.md)
   * [第四章 邮件营销](web/MAILLIST.md)
-  * [第五章 支付方式](web/PAYMENT.md)
+  * [第五章 销售门户](web/PORTAL_SALE.md)
 * [第八部分 销售点(POS)](SECTION11.md)
   * [第一章 EPOS打印](pos/README10.md)
   * [第二章 POS销售](pos/POS_SALE.md)
