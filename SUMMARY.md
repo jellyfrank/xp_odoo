@@ -88,12 +88,9 @@
   * [第二十章 阿里云短信](chapter10/ALIYUNSMS.md)
   * [第二十一章 NMI支付](chapter10/NMI.md)
   * [第二十二章 WindCave](chapter10/WINDCAVE.md)
-  * [第二十三章 韵达速递](chapter10/YUNDA.md)
-<<<<<<< HEAD
-  * [第二十四章 Shopline对接](chapter10/SHOPLINE.md)
-=======
+  * [第二十三章 韵达速递](chapter10/YUNDA.md)  
   * [第二十四章 指定支付方式](chapter10/PAYMENTS.md)
->>>>>>> bf54aae73e1648aad0c8dc25a14bfc162f9c01ea
+  * [第二十五章 Shopline对接](chapter10/SHOPLINE.md)
 * [第十一部分 案例分享](example/SECTION.md)
   * [外贸定制化服装](example/CLOTHES.md)
 * [FAQ](FAQ.md)

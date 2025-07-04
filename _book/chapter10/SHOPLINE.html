@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第十二章 顺丰国际 · odoo实施参考手册-青岛欧姆网络科技</title>
+        <title>第二十五章 Shopline对接 · odoo实施参考手册-青岛欧姆网络科技</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="YTO.html" />
+    <link rel="next" href="../example/SECTION.md" />
     
     
-    <link rel="prev" href="SF.html" />
+    <link rel="prev" href="PAYMENTS.html" />
     
 
     </head>
@@ -1151,7 +1151,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.12.12" data-path="SFI.html">
+        <li class="chapter " data-level="1.12.12" data-path="SFI.html">
             
                 <a href="SFI.html">
             
@@ -1320,7 +1320,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.12.25" data-path="SHOPLINE.html">
+        <li class="chapter active" data-level="1.12.25" data-path="SHOPLINE.html">
             
                 <a href="SHOPLINE.html">
             
@@ -1413,7 +1413,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第十二章 顺丰国际</a>
+        <a href=".." >第二十五章 Shopline对接</a>
     </h1>
 </div>
 
@@ -1428,40 +1428,55 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x987A;&#x4E30;&#x56FD;&#x9645;">&#x987A;&#x4E30;&#x56FD;&#x9645;</h1>
-<p>&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x7684;&#x987A;&#x4E30;&#x6A21;&#x5757;&#x53EA;&#x652F;&#x6301;&#x56FD;&#x5185;&#x7684;&#x4F7F;&#x7528;&#xFF0C;&#x5BF9;&#x56FD;&#x9645;&#x6CA1;&#x6709;&#x5F88;&#x597D;&#x7684;&#x652F;&#x6301;&#x3002;&#x4F46;&#x662F;&#x6709;&#x5BA2;&#x6237;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x987A;&#x4E30;&#x8FDB;&#x884C;&#x56FD;&#x9645;&#x7269;&#x6D41;&#x8FD0;&#x8F93;&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x6709;&#x5F00;&#x53D1;&#x4E86;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x7269;&#x6D41;&#x7684;&#x6A21;&#x5757;&#x3002;&#x4E0B;&#x9762;&#x5C31;&#x7B80;&#x8981;&#x4ECB;&#x7ECD;&#x4E00;&#x4E0B;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x6A21;&#x5757;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x3002;</p>
-<h2 id="&#x6CE8;&#x518C;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x8D26;&#x53F7;">&#x6CE8;&#x518C;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x8D26;&#x53F7;</h2>
-<p>&#x4E0E;&#x4E30;&#x6865;&#x4E0D;&#x540C;&#xFF0C;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x5B9E;&#x9645;&#x8FD0;&#x8425;&#x5728;&#x9999;&#x6E2F;&#xFF0C;&#x4E0E;&#x4E30;&#x6865;&#x4E0D;&#x662F;&#x4E00;&#x5957;&#x4F53;&#x7CFB;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x91CD;&#x65B0;&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x8D26;&#x53F7;&#x3002;&#x5177;&#x4F53;&#x6CE8;&#x518C;&#x65B9;&#x6CD5;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x8D58;&#x8FF0;&#x4E86;&#x3002;</p>
-<h2 id="&#x521B;&#x5EFA;app">&#x521B;&#x5EFA;APP</h2>
-<p>&#x6CE8;&#x518C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x5230;&#x5F00;&#x653E;&#x5E73;&#x53F0;&#x7684;&#x63A7;&#x5236;&#x53F0;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;APP&#x5E94;&#x7528;&#x3002;</p>
-<p><img src="images/sfi1.png" alt="sfi1"></p>
-<p>&#x521B;&#x5EFA;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x62FF;&#x5230;&#x5E94;&#x7528;&#x7684;&#x51E0;&#x4E2A;&#x5173;&#x952E;&#x53C2;&#x6570;</p>
-<ul>
-<li>APPKEY</li>
-<li>APPSCERT</li>
-<li>AESKEY</li>
-<li>CUSTOM_CODE</li>
-</ul>
-<p><img src="images/sfi2.png" alt="sf2"></p>
-<p>&#x6700;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x628A;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7684;API&#x63A5;&#x53E3;&#x5173;&#x8054;&#x5230;&#x6211;&#x4EEC;&#x7684;APP&#x4E0A;</p>
-<p><img src="images/sfi3.png" alt="sf3"></p>
-<h2 id="odoo&#x914D;&#x7F6E;">Odoo&#x914D;&#x7F6E;</h2>
-<p>&#x914D;&#x7F6E;&#x5B8C;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x5F00;&#x653E;&#x5E73;&#x53F0;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x6765;&#x5728;odoo&#x4E2D;&#x8FDB;&#x884C;&#x914D;&#x7F6E;&#x3002;&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x6A21;&#x5757;&#xFF1A;</p>
-<p><img src="images/sfi4.png" alt="sf4"></p>
-<p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x4ED3;&#x5E93;-&#x914D;&#x7F6E;-&#x53D1;&#x8D27;&#x65B9;&#x5F0F;&#x4E2D;&#x9009;&#x62E9;&#x987A;&#x4E30;&#x56FD;&#x9645;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6211;&#x4EEC;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x53C2;&#x6570;&#x914D;&#x7F6E;&#xFF1A;</p>
-<p><img src="images/sfi5.png" alt="sf5"></p>
-<p>&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x8FDB;&#x884C;&#x53D1;&#x8D27;&#x4E86;&#x3002;</p>
-<h2 id="&#x8FD0;&#x8D39;&#x9884;&#x4F30;">&#x8FD0;&#x8D39;&#x9884;&#x4F30;</h2>
-<p>&#x6211;&#x4EEC;&#x5728;&#x521B;&#x5EFA;&#x5B8C;&#x9500;&#x552E;&#x8BA2;&#x5355;&#x540E;&#xFF0C;&#x70B9;&#x51FB;&#x6DFB;&#x52A0;&#x9001;&#x8D27;&#x65B9;&#x5F0F;&#xFF0C;&#x5728;&#x5F39;&#x7A97;&#x4E2D;&#x9009;&#x62E9;&#x987A;&#x4E30;&#x56FD;&#x9645;&#xFF0C;&#x7136;&#x540E;&#x8F93;&#x5165;&#x8BA2;&#x5355;&#x8D27;&#x7269;&#x603B;&#x91CD;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB;&#x83B7;&#x53D6;&#x8D39;&#x7387;&#xFF1A;</p>
-<p><img src="images/sfi6.png" alt="sfi6"></p>
-<p>&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x672C;&#x6B21;&#x53D1;&#x8D27;&#x5927;&#x6982;&#x9700;&#x8981;&#x7684;&#x8FD0;&#x8D39;&#x3002;</p>
-<h2 id="&#x7535;&#x5B50;&#x9762;&#x5355;">&#x7535;&#x5B50;&#x9762;&#x5355;</h2>
-<p>&#x8DDF;&#x56FD;&#x5185;&#x987A;&#x4E30;&#x6A21;&#x5757;&#x4F7F;&#x7528;&#x7C7B;&#x4F3C;&#xFF0C;&#x6211;&#x4EEC;&#x5728;&#x53D1;&#x5355;&#x4E2D;&#x70B9;&#x51FB;&#x9A8C;&#x8BC1;&#x5B8C;&#x6210;&#x53D1;&#x8D27;&#x4E4B;&#x540E;&#xFF0C;&#x7CFB;&#x7EDF;&#x4F1A;&#x81EA;&#x52A8;&#x586B;&#x5145;&#x4ECE;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x83B7;&#x53D6;&#x5230;&#x7684;&#x8FD0;&#x5355;&#x53F7;&#xFF0C;&#x5E76;&#x81EA;&#x52A8;&#x5C06;&#x7535;&#x5B50;&#x9762;&#x5355;&#x8F93;&#x51FA;&#x5230;&#x8BA8;&#x8BBA;&#x533A;&#xFF1A;</p>
-<p><img src="images/sfi7.png" alt="sfi7"></p>
-<h2 id="&#x7269;&#x6D41;&#x8DDF;&#x8E2A;">&#x7269;&#x6D41;&#x8DDF;&#x8E2A;</h2>
-<p>&#x70B9;&#x51FB;&#x7269;&#x6D41;&#x8DDF;&#x8E2A;&#x6309;&#x94AE;&#x5C31;&#x53EF;&#x4EE5;&#x6253;&#x5F00;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x7684;&#x5B98;&#x65B9;&#x7F51;&#x7AD9;&#x5BF9;&#x6B64;&#x5355;&#x53F7;&#x8FDB;&#x884C;&#x7269;&#x6D41;&#x8F68;&#x8FF9;&#x67E5;&#x8BE2;&#x3002;</p>
-<p><img src="images/sfi8.png" alt="sfi8"></p>
-<p>&#x81F3;&#x6B64;&#xFF0C;&#x6E2F;&#x6FB3;&#x53F0;&#x7684;&#x5C0F;&#x4F19;&#x4F34;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x987A;&#x4E30;&#x56FD;&#x9645;&#x6109;&#x5FEB;&#x7684;&#x73A9;&#x800D;&#x5566;&#x3002;&#x1F389;</p>
+                                <h1 id="shopline-&#x5BF9;&#x63A5;">Shopline &#x5BF9;&#x63A5;</h1>
+<p>Shopline &#x6210;&#x7ACB;&#x4E8E; 2013 &#x5E74;&#xFF0C;&#x603B;&#x90E8;&#x6700;&#x521D;&#x8BBE;&#x5728;&#x9999;&#x6E2F;&#xFF0C;&#x662F;&#x4E9A;&#x6D32;&#x9886;&#x5148;&#x7684;&#x667A;&#x80FD;&#x7535;&#x5546; SaaS &#x5E73;&#x53F0;&#xFF0C;&#x81F4;&#x529B;&#x4E8E;&#x5E2E;&#x52A9;&#x5546;&#x5BB6;&#x201C;sell from anywhere, to anywhere&#x201D; &#x8986;&#x76D6;&#x7535;&#x5546;&#x3001;&#x793E;&#x4EA4;&#x7535;&#x5546;&#x3001;&#x7EBF;&#x4E0B; POS &#x548C;&#x8DE8;&#x5883;&#x8425;&#x8FD0;&#x7B49;&#x4E00;&#x4F53;&#x5316;&#x65B9;&#x6848;&#xFF0C;&#x6784;&#x5EFA;&#x7EDF;&#x4E00;&#x7684;&#x5546;&#x4E1A;&#x751F;&#x6001;&#x7CFB;&#x7EDF;&#x3002;</p>
+<p>&#x4ECA;&#x5929;&#x6211;&#x4EEC;&#x770B;&#x4E00;&#x4E0B;&#x5982;&#x4F55;&#x5229;&#x7528;Odoo&#x8DDF;Shopline&#x5BF9;&#x63A5;&#xFF0C;&#x5E2E;&#x52A9;Shopline&#x4E0A;&#x7684;&#x5BA2;&#x6237;&#x7528;Odoo&#x6765;&#x7BA1;&#x7406;&#x81EA;&#x5DF1;&#x7684;ERP&#x4E1A;&#x52A1;&#x3002;</p>
+<blockquote>
+<p>&#x672C;&#x6587;&#x9002;&#x7528;&#x4E8E;Shopline HK&#x3001;JP&#x548C;TW</p>
+</blockquote>
+<h2 id="shopline&#x7AEF;&#x8BBE;&#x7F6E;">Shopline&#x7AEF;&#x8BBE;&#x7F6E;</h2>
+<h3 id="&#x6CE8;&#x518C;&#x5F00;&#x53D1;&#x8005;&#x8D26;&#x53F7;">&#x6CE8;&#x518C;&#x5F00;&#x53D1;&#x8005;&#x8D26;&#x53F7;</h3>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x8981;&#x5230;Shopline&#x7684;<a href="https://developers.shoplineapp.com/" target="_blank">&#x5F00;&#x53D1;&#x8005;&#x4E2D;&#x5FC3;</a>&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x5F00;&#x53D1;&#x8005;&#x8D26;&#x53F7;&#x3002;&#x7136;&#x540E;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5E94;&#x7528;:</p>
+<p><img src="images/shopline1.png" alt="shopline1"></p>
+<h3 id="&#x8BBE;&#x7F6E;&#x56DE;&#x8C03;&#x5730;&#x5740;">&#x8BBE;&#x7F6E;&#x56DE;&#x8C03;&#x5730;&#x5740;</h3>
+<p>Shopline&#x7684;&#x56DE;&#x8C03;&#x5730;&#x5740;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x767D;&#x540D;&#x5355;&#x8BA4;&#x8BC1;&#xFF0C;&#x53EA;&#x6709;&#x7ECF;&#x8FC7;&#x767D;&#x540D;&#x5355;&#x8BA4;&#x8BC1;&#x7684;&#x56DE;&#x8C03;&#x5730;&#x5740;&#x624D;&#x4F1A;&#x6210;&#x529F;&#x3002;</p>
+<p><img src="images/shopline2.png" alt="shopline2"></p>
+<h3 id="&#x8BBE;&#x7F6E;&#x8BBF;&#x95EE;&#x6743;&#x9650;">&#x8BBE;&#x7F6E;&#x8BBF;&#x95EE;&#x6743;&#x9650;</h3>
+<p>Shopline&#x5BF9;&#x4E8E;&#x8D44;&#x6E90;&#x8BBF;&#x95EE;&#x8BBE;&#x7F6E;&#x4E86;&#x8BE6;&#x7EC6;&#x7684;&#x6743;&#x9650;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#x5982;&#x679C;&#x60F3;&#x8981;&#x8BBF;&#x95EE;&#x5BF9;&#x5E94;&#x7684;&#x6743;&#x9650;&#x9700;&#x8981;&#x5728;&#x6388;&#x6743;&#x4E2D;&#x9009;&#x62E9;&#x76F8;&#x5E94;&#x7684;&#x6743;&#x9650;&#x8303;&#x56F4;&#xFF1A;</p>
+<p><img src="images/shopline3.png" alt="shopline3"></p>
+<h3 id="&#x90E8;&#x7F72;&#x5E94;&#x7528;&#x4E0A;&#x67B6;">&#x90E8;&#x7F72;&#x5E94;&#x7528;&#x4E0A;&#x67B6;</h3>
+<p>&#x8BBE;&#x7F6E;&#x5B8C;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x5C06;&#x6211;&#x4EEC;&#x7684;&#x5E94;&#x7528;&#x63D0;&#x4EA4;&#x5BA1;&#x6838;&#x540E;&#x624D;&#x53EF;&#x4EE5;&#x88AB;&#x5B89;&#x88C5;&#x548C;&#x6B63;&#x5F0F;&#x4F7F;&#x7528;&#x3002;</p>
+<h3 id="&#x5B89;&#x88C5;&#x5E94;&#x7528;">&#x5B89;&#x88C5;&#x5E94;&#x7528;</h3>
+<p>&#x5E94;&#x7528;&#x4E0A;&#x67B6;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5728;&#x6211;&#x4EEC;&#x7684;Shopline<a href="https://admin.shoplineapp.com/" target="_blank">&#x5546;&#x5BB6;&#x540E;&#x53F0;</a>&#x5B89;&#x88C5;&#x6B64;&#x5E94;&#x7528;&#xFF1A;</p>
+<p><img src="images/shopline4.png" alt="shopline4"></p>
+<h2 id="odoo&#x7AEF;&#x8BBE;&#x7F6E;">Odoo&#x7AEF;&#x8BBE;&#x7F6E;</h2>
+<p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x5728;&#x5E94;&#x7528;&#x4E2D;&#x5FC3;&#x4E2D;&#x5B89;&#x88C5;mommy_shopline&#x6A21;&#x5757;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x4E3B;&#x9875;&#x9762;&#x4E2D;&#x8FDB;&#x5165;Shopline&#x5E94;&#x7528;&#x3002;</p>
+<p><img src="images/shopline5.png" alt="shopline5"></p>
+<h3 id="&#x521B;&#x5EFA;shopline&#x5E94;&#x7528;">&#x521B;&#x5EFA;shopline&#x5E94;&#x7528;</h3>
+<p>&#x6211;&#x4EEC;&#x5728;&#x8BBE;&#x7F6E;-App&#x4E2D;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;Shopline&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x6211;&#x4EEC;&#x5728;&#x524D;&#x9762;&#x83B7;&#x53D6;&#x5230;&#x7684;Client ID&#x3001;&#x5BC6;&#x94A5;&#x548C;&#x5546;&#x5BB6;ID&#x586B;&#x5165;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x4F4D;&#x7F6E;:</p>
+<p><img src="images/shopline6.png" alt="shopline6"></p>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5BA2;&#x6237;&#x4EE5;&#x70B9;&#x6D4B;&#x8BD5;&#x94FE;&#x63A5;&#x6309;&#x94AE;&#xFF0C;&#x67E5;&#x770B;&#x6211;&#x4EEC;&#x7684;&#x8BBE;&#x7F6E;&#x662F;&#x5426;&#x6709;&#x8BEF;&#x3002;</p>
+<h3 id="&#x8BBF;&#x95EE;&#x6388;&#x6743;">&#x8BBF;&#x95EE;&#x6388;&#x6743;</h3>
+<p>&#x8BBE;&#x7F6E;&#x65E0;&#x8BEF;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x70B9;&#x51FB;&#x6388;&#x6743;&#x6309;&#x94AE;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C06;&#x4F1A;&#x8BA9;&#x6211;&#x4EEC;&#x53BB;Shopline&#x5B98;&#x7F51;&#x8FDB;&#x884C;&#x6388;&#x6743;&#xFF0C;&#x6388;&#x6743;&#x4E4B;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x4F1A;&#x8FD4;&#x56DE;Odoo&#x4E3B;&#x754C;&#x9762;&#x3002;&#x5468;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x4F7F;&#x7528;Shopline&#x7684;&#x5E94;&#x7528;&#x529F;&#x80FD;&#x4E86;&#x3002;</p>
+<h3 id="&#x540C;&#x6B65;&#x5BA2;&#x6237;">&#x540C;&#x6B65;&#x5BA2;&#x6237;</h3>
+<p>&#x6211;&#x4EEC;&#x5230;&#x8BBE;&#x7F6E;&#x4E2D;&#xFF0C;&#x70B9;&#x51FB;&#x540C;&#x6B65;&#x5BA2;&#x6237;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;Shopline&#x4E0A;&#x7684;&#x5BA2;&#x6237;&#x540C;&#x6B65;&#x5230;Odoo&#x4E2D;&#x3002;</p>
+<p><img src="images/shopline7.png" alt="shopline7"></p>
+<h3 id="&#x540C;&#x6B65;&#x4EA7;&#x54C1;">&#x540C;&#x6B65;&#x4EA7;&#x54C1;</h3>
+<p>&#x540C;&#x6B65;&#x5B8C;&#x5BA2;&#x6237;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x540C;&#x6B65;&#x4EA7;&#x54C1;&#x4E86;&#x3002;&#x540C;&#x6837;&#x5730;&#xFF0C;&#x5728;&#x8BBE;&#x7F6E;&#x4E2D;&#xFF0C;&#x70B9;&#x51FB;&#x540C;&#x6B65;&#x4EA7;&#x54C1;&#x83DC;&#x5355;&#xFF0C;&#x5B8C;&#x6210;&#x4EA7;&#x54C1;&#x7684;&#x540C;&#x6B65;&#xFF1A;</p>
+<p><img src="images/shopline8.png" alt="shopline8"></p>
+<h3 id="&#x540C;&#x6B65;&#x8BA2;&#x5355;">&#x540C;&#x6B65;&#x8BA2;&#x5355;</h3>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x540C;&#x6B65;Shopline&#x7684;&#x8BA2;&#x5355;&#xFF0C;&#x70B9;&#x51FB;&#x540C;&#x6B65;&#x8BA2;&#x5355;&#x6309;&#x94AE;&#xFF1A;</p>
+<p><img src="images/shopline9.png" alt="shopline9"></p>
+<p><img src="images/shopline10.png" alt="shopline10"></p>
+<p>&#x6211;&#x4EEC;&#x5F88;&#x9AD8;&#x5174;&#x5730;&#x770B;&#x5230;&#x6765;&#x81EA;Shopline&#x7684;&#x8BA2;&#x5355;&#x3002;</p>
+<h3 id="&#x56DE;&#x4F20;&#x53D1;&#x8D27;&#x72B6;&#x6001;&#x548C;&#x7269;&#x6D41;&#x5355;&#x53F7;">&#x56DE;&#x4F20;&#x53D1;&#x8D27;&#x72B6;&#x6001;&#x548C;&#x7269;&#x6D41;&#x5355;&#x53F7;</h3>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x5728;Odoo&#x4E2D;&#x5B8C;&#x6210;&#x4E86;&#x53D1;&#x8D27;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;&#x6211;&#x4EEC;&#x7684;&#x53D1;&#x8D27;&#x72B6;&#x6001;&#x548C;&#x7269;&#x6D41;&#x5355;&#x53F7;&#x56DE;&#x4F20;&#x7ED9;Shopline&#xFF0C;&#x65B9;&#x6CD5;&#x5341;&#x5206;&#x7B80;&#x5355;&#xFF0C;&#x5728;&#x53D1;&#x8D27;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x5728;&#x8BA2;&#x5355;&#x4E2D;&#x70B9;&#x51FB;&#x4E0A;&#x4F20;Shopline&#x6309;&#x94AE;&#x5373;&#x53EF;&#x3002;</p>
+<p><img src="images/shopline11.png" alt="shopline11"></p>
+<p><img src="images/shopline12.png" alt="shopline12"></p>
+<p>&#x6211;&#x4EEC;&#x5728;SHopline&#x7684;&#x5546;&#x5BB6;&#x540E;&#x53F0;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6211;&#x4EEC;&#x7684;&#x8BA2;&#x5355;&#x5DF2;&#x7ECF;&#x53D8;&#x4E3A;&#x5DF2;&#x53D1;&#x8D27;&#xFF0C;&#x4E5F;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;&#x8DDF;&#x8E2A;&#x5355;&#x53F7;&#xFF1A;</p>
+<p><img src="images/shopline13.png" alt="shopline13"></p>
+<h2 id="&#x7ED3;&#x8BED;">&#x7ED3;&#x8BED;</h2>
+<p>&#x73B0;&#x9636;&#x6BB5;&#x6211;&#x4EEC;&#x53EA;&#x662F;&#x5B8C;&#x6210;&#x4E86;Shopline&#x7684;&#x57FA;&#x7840;&#x529F;&#x80FD;&#x5BF9;&#x63A5;&#xFF0C;&#x540E;&#x7EED;&#x6211;&#x4EEC;&#x4F1A;&#x63A8;&#x51FA;&#x66F4;&#x591A;&#x5B9E;&#x7528;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x656C;&#x8BF7;&#x671F;&#x5F85;&#x3002;</p>
 
                                 
                                 </section>
@@ -1489,12 +1504,12 @@
 
             
                 
-                <a href="SF.html" class="navigation navigation-prev " aria-label="Previous page: 第十一章 顺丰速递">
+                <a href="PAYMENTS.html" class="navigation navigation-prev " aria-label="Previous page: 第二十四章 指定支付方式">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="YTO.html" class="navigation navigation-next " aria-label="Next page: 第十三章 圆通速递">
+                <a href="../example/SECTION.md" class="navigation navigation-next " aria-label="Next page: 第十一部分 案例分享">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1505,7 +1520,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第十二章 顺丰国际","level":"1.12.12","depth":2,"next":{"title":"第十三章 圆通速递","level":"1.12.13","depth":2,"path":"chapter10/YTO.md","ref":"chapter10/YTO.md","articles":[]},"previous":{"title":"第十一章 顺丰速递","level":"1.12.11","depth":2,"path":"chapter10/SF.md","ref":"chapter10/SF.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","author":"青岛欧姆网络科技 Kevin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施参考手册-青岛欧姆网络科技","language":"zh-hans","gitbook":"*","description":"青岛欧姆网络科技，您身边可靠的Odoo专家"},"file":{"path":"chapter10/SFI.md","mtime":"2024-07-09T08:15:53.950Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-07-04T10:56:13.940Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第二十五章 Shopline对接","level":"1.12.25","depth":2,"next":{"title":"第十一部分 案例分享","level":"1.13","depth":1,"path":"example/SECTION.md","ref":"example/SECTION.md","articles":[{"title":"外贸定制化服装","level":"1.13.1","depth":2,"path":"example/CLOTHES.md","ref":"example/CLOTHES.md","articles":[]}]},"previous":{"title":"第二十四章 指定支付方式","level":"1.12.24","depth":2,"path":"chapter10/PAYMENTS.md","ref":"chapter10/PAYMENTS.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","author":"青岛欧姆网络科技 Kevin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施参考手册-青岛欧姆网络科技","language":"zh-hans","gitbook":"*","description":"青岛欧姆网络科技，您身边可靠的Odoo专家"},"file":{"path":"chapter10/SHOPLINE.md","mtime":"2025-07-04T10:47:59.222Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-07-04T10:56:13.940Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
