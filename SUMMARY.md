@@ -2,7 +2,7 @@
 
 * [前言](README.md)
 * [第一部分 基础数据](SECTIONS/SECTION1.md)
-  * [第一章 Odoo简介](basic/README.md)
+  * [第一章 Odoo简介](basic/Odoo.md)
   * [第二章 数据库管理](basic/DATABASE.md)
   * [第三章 公司和用户管理](basic/README5.md)
   * [第四章 联系人与合作伙伴](basic/README4.md)
@@ -18,8 +18,8 @@
   * [第六章 折扣与价格表](sale/README6.md)
   * [第七章 租赁](sale/README7.md)
 * [第三部分 采购管理](SECTIONS/SECTION3.md)
-  * [第一章 采购管理](chapter3/PO.md.md)
-  * [第二章 成本计算](chapter3/README2.md)
+  * [第一章 采购管理](purchase/PO.md)
+  * [第二章 成本计算](purchase/README2.md)
 * [第四部分 仓库管理](SECTIONS/SECTION4.md)
   * [第一章 基本概念](stock/BASIC.md)
   * [第二章 库位管理](stock/LOCATION.md)
@@ -54,6 +54,7 @@
   * [第二章 商城](web/README2.md)
   * [第三章 访问令牌](web/TOKEN.md)
   * [第四章 邮件营销](web/MAILLIST.md)
+  * [第五章 销售门户](web/PORTAL_SALE.md)
 * [第八部分 销售点(POS)](SECTION11.md)
   * [第一章 EPOS打印](pos/README10.md)
   * [第二章 POS销售](pos/POS_SALE.md)
@@ -88,7 +89,11 @@
   * [第二十一章 NMI支付](chapter10/NMI.md)
   * [第二十二章 WindCave](chapter10/WINDCAVE.md)
   * [第二十三章 韵达速递](chapter10/YUNDA.md)
+<<<<<<< HEAD
   * [第二十四章 Shopline对接](chapter10/SHOPLINE.md)
+=======
+  * [第二十四章 指定支付方式](chapter10/PAYMENTS.md)
+>>>>>>> bf54aae73e1648aad0c8dc25a14bfc162f9c01ea
 * [第十一部分 案例分享](example/SECTION.md)
   * [外贸定制化服装](example/CLOTHES.md)
 * [FAQ](FAQ.md)
