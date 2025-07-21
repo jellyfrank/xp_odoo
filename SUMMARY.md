@@ -91,6 +91,7 @@
   * [第二十三章 韵达速递](chapter10/YUNDA.md)  
   * [第二十四章 指定支付方式](chapter10/PAYMENTS.md)
   * [第二十五章 Shopline对接](chapter10/SHOPLINE.md)
+  * [第二十六章 Xero](chapter10/XERO.md)
 * [第十一部分 案例分享](example/SECTION.md)
   * [外贸定制化服装](example/CLOTHES.md)
 * [FAQ](FAQ.md)
