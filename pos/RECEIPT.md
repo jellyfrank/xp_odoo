@@ -1,6 +1,6 @@
 # POS小票
 
-> 本文基于odoo18.0且安装了欧姆网络的pos解决方案模块[mommy_pos]()
+> 本文基于odoo18.0且安装了欧姆网络的pos解决方案模块[mommy_pos](https://apps.odoo.com/apps/modules/18.0/mommy_pos)
 
 * [小票预览](#小票预览)
 * [小票语言设置](#小票语言设置)
