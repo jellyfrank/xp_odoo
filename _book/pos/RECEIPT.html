@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>第四章 小票 · odoo实施参考手册-青岛欧姆网络科技</title>
+        <title>第三章 小票和发票 · odoo实施参考手册-青岛欧姆网络科技</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../SECTIONS/SECTION9.html" />
+    <link rel="next" href="PAYMENT_METHOD.html" />
     
     
-    <link rel="prev" href="POS_AUTO.html" />
+    <link rel="prev" href="Kiosk.html" />
     
 
     </head>
@@ -892,7 +892,33 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.3" data-path="README10.html">
+        <li class="chapter active" data-level="1.10.3" data-path="RECEIPT.html">
+            
+                <a href="RECEIPT.html">
+            
+                    
+                    第三章 小票和发票
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="PAYMENT_METHOD.html">
+            
+                <a href="PAYMENT_METHOD.html">
+            
+                    
+                    第四章 支付方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="README10.html">
             
                 <a href="README10.html">
             
@@ -905,12 +931,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.4" data-path="POS_SALE.html">
+        <li class="chapter " data-level="1.10.6" data-path="POS_SALE.html">
             
                 <a href="POS_SALE.html">
             
                     
-                    第二章 POS销售
+                    第四章 POS销售
             
                 </a>
             
@@ -918,25 +944,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.10.5" data-path="POS_AUTO.html">
+        <li class="chapter " data-level="1.10.7" data-path="POS_AUTO.html">
             
                 <a href="POS_AUTO.html">
             
                     
-                    第三章 POS批次自动出库
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter active" data-level="1.10.6" data-path="RECEIPT.html">
-            
-                <a href="RECEIPT.html">
-            
-                    
-                    第四章 小票
+                    第五章 POS批次自动出库
             
                 </a>
             
@@ -1491,7 +1504,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >第四章 小票</a>
+        <a href=".." >第三章 小票和发票</a>
     </h1>
 </div>
 
@@ -1511,21 +1524,65 @@
 <p>&#x672C;&#x6587;&#x57FA;&#x4E8E;odoo18.0&#x4E14;&#x5B89;&#x88C5;&#x4E86;&#x6B27;&#x59C6;&#x7F51;&#x7EDC;&#x7684;pos&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x6A21;&#x5757;<a href="https://apps.odoo.com/apps/modules/18.0/mommy_pos" target="_blank">mommy_pos</a></p>
 </blockquote>
 <ul>
+<li><a href="#&#x5C0F;&#x7968;">&#x5C0F;&#x7968;</a><ul>
+<li><a href="#&#x5B9A;&#x5236;&#x5316;&#x5C0F;&#x7968;&#x9875;&#x7709;&#x548C;&#x9875;&#x811A;">&#x9875;&#x7709;&#x548C;&#x9875;&#x811A;</a></li>
+<li><a href="#&#x81EA;&#x52A8;&#x6253;&#x5370;">&#x81EA;&#x52A8;&#x6253;&#x5370;</a></li>
+<li><a href="#&#x8865;&#x6253;&#x5C0F;&#x7968;">&#x8865;&#x6253;&#x5C0F;&#x7968;</a></li>
 <li><a href="#&#x5C0F;&#x7968;&#x9884;&#x89C8;">&#x5C0F;&#x7968;&#x9884;&#x89C8;</a></li>
 <li><a href="#&#x5C0F;&#x7968;&#x8BED;&#x8A00;&#x8BBE;&#x7F6E;">&#x5C0F;&#x7968;&#x8BED;&#x8A00;&#x8BBE;&#x7F6E;</a></li>
 </ul>
-<h2 id="&#x5C0F;&#x7968;&#x9884;&#x89C8;">&#x5C0F;&#x7968;&#x9884;&#x89C8;</h2>
+</li>
+<li><a href="#&#x53D1;&#x7968;">&#x53D1;&#x7968;</a><ul>
+<li><a href="#&#x914D;&#x7F6E;">&#x8BBE;&#x7F6E;</a></li>
+<li><a href="#&#x7ED9;&#x5BA2;&#x6237;&#x5F00;&#x7968;">&#x7ED9;&#x5BA2;&#x6237;&#x5F00;&#x7968;</a></li>
+<li><a href="#&#x540E;&#x53F0;&#x5F00;&#x7968;">&#x540E;&#x53F0;&#x5F00;&#x7968;</a></li>
+<li><a href="#&#x4E8C;&#x7EF4;&#x7801;&#x5F00;&#x7968;">&#x4E8C;&#x7EF4;&#x7801;&#x5F00;&#x7968;</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x5C0F;&#x7968;">&#x5C0F;&#x7968;</h2>
+<p>&#x5C0F;&#x7968;&#x662F;POS&#x6253;&#x5370;&#x51FA;&#x6765;&#x7ED9;&#x5BA2;&#x6237;&#x7684;&#x8D2D;&#x7269;&#x51ED;&#x8BC1;&#x3002;&#x5728;Odoo&#x4E2D;&#x8BBE;&#x7F6E;&#x5C0F;&#x7968;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<p>&#x9500;&#x552E;&#x70B9;(Point of Sale) -&gt; &#x8BBE;&#x7F6E; -&gt; &#x9500;&#x552E;&#x70B9;</p>
+<p>&#x7136;&#x540E;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x9500;&#x552E;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x4E0B;&#x6ED1;&#x5230;<strong>&#x53D1;&#x7968;&#x548C;&#x5C0F;&#x7968;</strong>&#x8282;&#x70B9;:</p>
+<p><img src="images/pos_reciept1.pdf" alt="receipt1"></p>
+<h3 id="&#x5B9A;&#x5236;&#x5316;&#x5C0F;&#x7968;&#x9875;&#x7709;&#x548C;&#x9875;&#x811A;">&#x5B9A;&#x5236;&#x5316;&#x5C0F;&#x7968;&#x9875;&#x7709;&#x548C;&#x9875;&#x811A;</h3>
+<p>&#x5982;&#x679C;&#x60F3;&#x8981;&#x81EA;&#x5B9A;&#x4E49;&#x5C0F;&#x7968;&#x7684;&#x9875;&#x7709;&#x548C;&#x9875;&#x811A;&#xFF0C;&#x52FE;&#x9009;&#x5B9A;&#x5236;&#x5316;&#x9875;&#x7709;&#x548C;&#x9875;&#x811A;&#x52FE;&#x9009;&#x9879;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x4E0B;&#x9762;&#x7684;&#x8F93;&#x5165;&#x6846;&#x5185;&#x8F93;&#x5165;&#x60F3;&#x8981;&#x663E;&#x793A;&#x7684;&#x6587;&#x5B57;&#x3002;</p>
+<p><img src="images/pos_receipt2.png" alt="receipt2"></p>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x70B9;&#x51FB;&#x4FDD;&#x5B58;&#xFF0C;&#x56DE;&#x5230;POS&#x524D;&#x7AEF;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x6253;&#x5370;&#x5C0F;&#x7968;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x4F1A;&#x663E;&#x793A;&#x51FA;&#x6211;&#x4EEC;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x9875;&#x7709;&#x548C;&#x9875;&#x811A;</p>
+<p><img src="images/pos_receipt3.png" alt="receipt3"></p>
+<h3 id="&#x81EA;&#x52A8;&#x6253;&#x5370;">&#x81EA;&#x52A8;&#x6253;&#x5370;</h3>
+<p>Odoo&#x652F;&#x6301;&#x6536;&#x6B3E;&#x7684;&#x65F6;&#x5019;&#x81EA;&#x52A8;&#x6253;&#x5370;POS&#x5C0F;&#x7968;&#xFF0C;&#x65B9;&#x6CD5;&#x662F;&#x5728;&#x8BBE;&#x7F6E;&#x4E2D;&#x52FE;&#x9009;<strong>&#x81EA;&#x52A8;&#x6253;&#x5370;&#x5C0F;&#x7968;</strong>&#x52FE;&#x9009;&#x9879;&#x3002;</p>
+<p><img src="images/pos_receipt4.png" alt="receipt4"></p>
+<blockquote>
+<p>&#x53EF;&#x80FD;&#x9700;&#x8981;ePOS&#x652F;&#x6301;</p>
+</blockquote>
+<h3 id="&#x8865;&#x6253;&#x5C0F;&#x7968;">&#x8865;&#x6253;&#x5C0F;&#x7968;</h3>
+<p>&#x6B63;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x5C0F;&#x7968;&#x5728;&#x4ED8;&#x6B3E;&#x65F6;&#x5019;&#x8FDB;&#x884C;&#x6253;&#x5370;&#xFF0C;&#x5982;&#x679C;&#x5BA2;&#x6237;&#x4E22;&#x4E86;&#x5C0F;&#x7968;&#x9700;&#x8981;&#x8865;&#x6253;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x5148;&#x52A0;&#x8F7D;&#x5DF2;&#x7ECF;&#x652F;&#x4ED8;&#x7684;&#x5C0F;&#x7968;&#xFF0C;&#x7136;&#x540E;&#x9009;&#x62E9;<strong>&#x6253;&#x5370;&#x5C0F;&#x7968;</strong></p>
+<p><img src="images/pos_receipt5.png" alt="receipt5"></p>
+<h3 id="&#x5C0F;&#x7968;&#x9884;&#x89C8;">&#x5C0F;&#x7968;&#x9884;&#x89C8;</h3>
 <p>odoo&#x539F;&#x751F;&#x6761;&#x4EF6;&#x4E0B;&#xFF0C;&#x53EA;&#x6709;&#x5728;&#x5B8C;&#x6210;&#x652F;&#x4ED8;&#x4E4B;&#x540E;&#x624D;&#x80FD;&#x663E;&#x793A;&#x51FA;&#x5C0F;&#x7968;&#x3002;&#x4F46;&#x662F;&#x6709;&#x65F6;&#x5019;&#xFF0C;&#x7528;&#x6237;&#x5E0C;&#x671B;&#x5728;&#x652F;&#x4ED8;&#x524D;&#x5C31;&#x80FD;&#x9884;&#x89C8;&#x5C0F;&#x7968;&#x7684;&#x6837;&#x5B50;&#xFF0C;&#x4E3A;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x5728;POS&#x7684;&#x901A;&#x7528;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x4E2D;&#x52A0;&#x5165;&#x4E86;&#x5C0F;&#x7968;&#x9884;&#x89C8;&#x7684;&#x9009;&#x9879;&#x3002;&#x4E0B;&#x9762;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x3002;</p>
 <p>&#x9996;&#x5148;&#xFF0C;&#x6211;&#x4EEC;&#x5728;POS&#x7684;&#x95E8;&#x5E97;&#x8BBE;&#x7F6E;&#x4E2D;&#x5F00;&#x542F;&#xFF0C;&#x5C0F;&#x7968;&#x9884;&#x89C8;:</p>
 <p><img src="images/Receipt1.png" alt="Receipt"></p>
 <p>&#x9009;&#x4E2D;&#x6B64;&#x8BBE;&#x7F6E;&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x5728;POS&#x754C;&#x9762;&#x9009;&#x5B8C;&#x4EA7;&#x54C1;&#x8FDB;&#x5165;&#x652F;&#x4ED8;&#x754C;&#x9762;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5728;&#x6700;&#x53F3;&#x4FA7;&#x663E;&#x793A;&#x4E86;&#x5F53;&#x524D;&#x7684;&#x5C0F;&#x7968;&#x9884;&#x89C8;&#x3002;</p>
 <p><img src="images/Receipt2.png" alt="Receipt2"></p>
-<h2 id="&#x5C0F;&#x7968;&#x8BED;&#x8A00;&#x8BBE;&#x7F6E;">&#x5C0F;&#x7968;&#x8BED;&#x8A00;&#x8BBE;&#x7F6E;</h2>
+<h3 id="&#x5C0F;&#x7968;&#x8BED;&#x8A00;&#x8BBE;&#x7F6E;">&#x5C0F;&#x7968;&#x8BED;&#x8A00;&#x8BBE;&#x7F6E;</h3>
 <p>Odoo&#x539F;&#x751F;&#x6761;&#x4EF6;&#x4E0B;&#x5C0F;&#x7968;&#x8BED;&#x8A00;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x5F53;&#x524D;&#x7528;&#x6237;&#x9009;&#x62E9;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x60C5;&#x51B5;&#x4E0B;&#x662F;&#x597D;&#x7528;&#x7684;&#x3002;&#x4F46;&#x662F;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x7528;&#x6237;&#x5E0C;&#x671B;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x5C0F;&#x7968;&#x7684;&#x8BED;&#x8A00;&#xFF0C;&#x800C;&#x7ED9;&#x5BA2;&#x6237;&#x4EBA;&#x7684;&#x662F;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x8BED;&#x8A00;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x6536;&#x94F6;&#x4EBA;&#x5458;&#x4F7F;&#x7528;&#x4E2D;&#x6587;&#xFF0C;&#x800C;&#x5C0F;&#x7968;&#x6253;&#x51FA;&#x6765;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x897F;&#x8BED;&#x3002;</p>
 <p>&#x6211;&#x4EEC;&#x5728;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x4E2D;&#x52A0;&#x5165;&#x4E86;&#x5BF9;&#x6B64;&#x529F;&#x80FD;&#x7684;&#x652F;&#x6301;&#x3002;&#x5728;POS&#x7684;&#x95E8;&#x5E97;&#x8BBE;&#x7F6E;&#x4E2D;&#xFF0C;&#x9009;&#x62E9;&#x5C0F;&#x7968;&#x4F7F;&#x7528;&#x7684;&#x8BED;&#x8A00;&#xFF1A;</p>
 <p><img src="images/Receipt3.png" alt="Receipt3"></p>
 <p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x5728;&#x56DE;&#x5230;POS&#x9884;&#x89C8;&#x5C0F;&#x7968;&#xFF1A;</p>
 <p><img src="images/Receipt4.png" alt="Receipt4"></p>
+<h2 id="&#x53D1;&#x7968;">&#x53D1;&#x7968;</h2>
+<p>&#x5BF9;&#x4E8E;&#x5DF2;&#x7ECF;&#x6CE8;&#x518C;&#x7684;&#x5BA2;&#x6237;&#xFF0C;Odoo&#x652F;&#x6301;&#x5728;POS&#x7AEF;&#x8FDB;&#x884C;&#x5F00;&#x7968;&#x3002;</p>
+<h3 id="&#x914D;&#x7F6E;">&#x914D;&#x7F6E;</h3>
+<p>&#x9996;&#x5148;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7ED9;POS&#x524D;&#x53F0;&#x7684;&#x7968;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x9ED8;&#x8BA4;&#x65E5;&#x8BB0;&#x8D26;&#x3002;&#x65B9;&#x6CD5;&#x662F;&#x5728;&#x8BBE;&#x7F6E;&#x4E2D;&#xFF0C;&#x4E0B;&#x62C9;&#x5230;&#x8D22;&#x52A1;&#x8282;&#x70B9;&#xFF0C;&#x7136;&#x540E;&#x5B9A;&#x4E49;&#x9ED8;&#x8BA4;&#x65E5;&#x8BB0;&#x8D26;&#xFF1A;</p>
+<p><img src="images/pos_receipt6.png" alt="recept6"></p>
+<h3 id="&#x7ED9;&#x5BA2;&#x6237;&#x5F00;&#x7968;">&#x7ED9;&#x5BA2;&#x6237;&#x5F00;&#x7968;</h3>
+<p>&#x8BBE;&#x7F6E;&#x597D;&#x9ED8;&#x8BA4;&#x65E5;&#x8BB0;&#x8D26;&#x4E4B;&#x540E;&#x6211;&#x4EEC;&#x5C31;&#x53EF;&#x4EE5;&#x5728;POS&#x524D;&#x7AEF;&#x7ED9;&#x5BA2;&#x6237;&#x8FDB;&#x884C;&#x5F00;&#x7968;&#x64CD;&#x4F5C;&#x4E86;&#x3002;</p>
+<p><img src="images/pos_receipt7.png" alt="recept7"></p>
+<h3 id="&#x540E;&#x53F0;&#x5F00;&#x7968;">&#x540E;&#x53F0;&#x5F00;&#x7968;</h3>
+<p>&#x4E5F;&#x4F1A;&#x5230;Odoo&#x7684;POS&#x540E;&#x53F0;&#x8FDB;&#x884C;&#x5F00;&#x7968;&#xFF0C;&#x65B9;&#x6CD5;&#x662F;&#x5728;POS-&#x8BA2;&#x5355;-&#x8BA2;&#x5355;&#x5217;&#x8868;&#x4E2D;&#x627E;&#x5230;&#x8981;&#x5F00;&#x7968;&#x7684;&#x8BA2;&#x5355;&#xFF0C;&#x7136;&#x540E;&#x70B9;&#x51FB;&#x5F00;&#x7968;&#x6309;&#x94AE;&#x5B8C;&#x6210;&#x5F00;&#x7968;&#x3002;</p>
+<h3 id="&#x4E8C;&#x7EF4;&#x7801;&#x5F00;&#x7968;">&#x4E8C;&#x7EF4;&#x7801;&#x5F00;&#x7968;</h3>
+<p>&#x5BA2;&#x6237;&#x4E5F;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x5728;&#x5C0F;&#x7968;&#x4E2D;&#x7684;&#x4E8C;&#x7EF4;&#x7801;&#x4E0A;&#x626B;&#x7801;&#x8FDB;&#x884C;&#x5F00;&#x7968;&#xFF0C;&#x5BA2;&#x6237;&#x9700;&#x8981;&#x5728;&#x626B;&#x7801;&#x540E;&#x586B;&#x5199;&#x5FC5;&#x8981;&#x7684;&#x4FE1;&#x606F;&#x7136;&#x540E;&#x70B9;&#x51FB;&#x83B7;&#x53D6;&#x53D1;&#x7968;&#x6309;&#x94AE;&#xFF0C;&#x7136;&#x540E;&#x9009;&#x62E9;&#x4E0B;&#x8F7D;&#x53D1;&#x7968;&#x3002;</p>
 
                                 
                                 </section>
@@ -1553,12 +1610,12 @@
 
             
                 
-                <a href="POS_AUTO.html" class="navigation navigation-prev " aria-label="Previous page: 第三章 POS批次自动出库">
+                <a href="Kiosk.html" class="navigation navigation-prev " aria-label="Previous page: 第二章 自助终端">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../SECTIONS/SECTION9.html" class="navigation navigation-next " aria-label="Next page: 第九部分 设置">
+                <a href="PAYMENT_METHOD.html" class="navigation navigation-next " aria-label="Next page: 第四章 支付方式">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1569,7 +1626,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"第四章 小票","level":"1.10.6","depth":2,"next":{"title":"第九部分 设置","level":"1.11","depth":1,"path":"SECTIONS/SECTION9.md","ref":"SECTIONS/SECTION9.md","articles":[{"title":"第一章 通用设置","level":"1.11.1","depth":2,"path":"chapter9/README.md","ref":"chapter9/README.md","articles":[]},{"title":"第二章 语言设置","level":"1.11.2","depth":2,"path":"chapter9/LANG.md","ref":"chapter9/LANG.md","articles":[]},{"title":"第三章 附件共享","level":"1.11.3","depth":2,"path":"chapter9/SHARE.md","ref":"chapter9/SHARE.md","articles":[]},{"title":"第九章 技术设置","level":"1.11.4","depth":2,"path":"chapter9/README9.md","ref":"chapter9/README9.md","articles":[]},{"title":"STUDIO","level":"1.11.5","depth":2,"path":"chapter9/STUDIO.md","ref":"chapter9/STUDIO.md","articles":[]}]},"previous":{"title":"第三章 POS批次自动出库","level":"1.10.5","depth":2,"path":"pos/POS_AUTO.md","ref":"pos/POS_AUTO.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","author":"青岛欧姆网络科技 Kevin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施参考手册-青岛欧姆网络科技","language":"zh-hans","gitbook":"*","description":"青岛欧姆网络科技，您身边可靠的Odoo专家"},"file":{"path":"pos/RECEIPT.md","mtime":"2025-10-09T07:45:03.895Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-10-24T12:24:09.905Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"第三章 小票和发票","level":"1.10.3","depth":2,"next":{"title":"第四章 支付方式","level":"1.10.4","depth":2,"path":"pos/PAYMENT_METHOD.md","ref":"pos/PAYMENT_METHOD.md","articles":[]},"previous":{"title":"第二章 自助终端","level":"1.10.2","depth":2,"path":"pos/Kiosk.md","ref":"pos/Kiosk.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"青岛欧姆网络科技 Kevin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施参考手册-青岛欧姆网络科技","language":"zh-hans","gitbook":"*","description":"青岛欧姆网络科技，您身边可靠的Odoo专家"},"file":{"path":"pos/RECEIPT.md","mtime":"2025-10-28T16:02:26.358Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-10-29T16:18:14.375Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
