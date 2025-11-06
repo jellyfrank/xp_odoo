@@ -102,4 +102,7 @@
   * [第二十八章 京东快递](chapter10/JDL.md)
 * [第十一部分 案例分享](example/SECTION.md)
   * [外贸定制化服装](example/CLOTHES.md)
+* [第十二部分 行业解决方案](solutions/README.md)
+  * [外贸行业方案](solutions/Export.MD)
+    * [发货解决方案](solutions/Export_Carrier.md)
 * [FAQ](FAQ.md)
