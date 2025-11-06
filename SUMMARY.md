@@ -62,6 +62,7 @@
   * [第三章 小票和发票](pos/RECEIPT.md)
   * [第四章 支付方式](pos/PAYMENT_METHOD.md)
   * [第五章 设置价格表](pos/PRICELIST.md)
+  * [第六章 客户忠诚度](pos/LOYALTY.md)
   * [第一章 EPOS打印](pos/README10.md)
   * [第四章 POS销售](pos/POS_SALE.md)
   * [第五章 POS批次自动出库](pos/POS_AUTO.md)
