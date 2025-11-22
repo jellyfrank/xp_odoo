@@ -98,6 +98,7 @@
   * [第二十六章 Xero](chapter10/XERO.md)
   * [第二十七章 QuickBooks](chapter10/QUICKBOOK.md)
   * [第二十八章 京东快递](chapter10/JDL.md)
+  * [第二十九章 阿里云对象存储](chapter10/ALIYUNOSS.md)
 * [第十一部分 案例分享](example/SECTION.md)
   * [外贸定制化服装](example/CLOTHES.md)
 * [FAQ](FAQ.md)
