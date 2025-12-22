@@ -48,6 +48,7 @@
   * [第二章 开票](account/INV.md)
   * [第三章 支付](account/PAYMENT.md)
   * [第四章 对账](account/STATMENT.md)
+  * [第五章 日记账](account/JOURNAL.md)
 * [第七部分 多公司](SECTIONS/SECTION7.md)
   * [第一章 多公司间的采购](chapter7/README.md)
 * [第七部分 网站](SECTIONS/SECTION8.md)

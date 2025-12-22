@@ -13,7 +13,7 @@
 * App Key: 应用KEY
 * Admin Access Token: Admin API访问Token
 
-### 配置应用权限
+### 配置应用权限˚v
 
 我们需要给我们的应用赋于需要的接口调用权限，在配置-Admin API对接-API访问权限中设置：
 
@@ -74,3 +74,26 @@
 ### 客户同步
 
 同步完产品，我们就可以同步Shopify中的客户到Odoo，同样地，点击配置-同步客户菜单，即可开始同步过程：
+
+![shopify12](./images/SHOPIFY12.png)
+
+同步完成后，系统会提示同步了多少条数据：
+
+![shopify13](./images/SHOPIFY13.png)
+
+### 订单同步
+
+客户同步完成后，我们就可以同步Shopify中的订单到Odoo了。这里我们首先需要明确一个概念，在Shopify中草稿订单和订单是两个不同类型的数据，而在Odoo中，草稿订单和订单则是同一个模型的不同状态。因此，我们在设置中做了区分：
+
+![shopify16](./images/SHOPIFY16.png)
+
+* Draft Order: 当选择了此项时同步的订单是SHopify中的草稿订单。
+* Order: 当选择了此项时同步的订单则是Shopify中的有效订单。
+
+然后我们点击设置中的同步订单菜单，系统将会将数据同步到Odoo中：
+
+![shopify18](./images/SHOPIFY18.png)
+
+同步后的订单：
+
+![shopify17](./images/SHOPIFY17.png)
