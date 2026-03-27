@@ -71,6 +71,7 @@
   * [第一章 通用设置](chapter9/README.md)
   * [第二章 语言设置](chapter9/LANG.md)
   * [第三章 附件共享](chapter9/SHARE.md)
+  * [第四章 IP白名单](chapter9/IPWHITELIST.md)
   * [第九章 技术设置](chapter9/README9.md)
   * [STUDIO](chapter9/STUDIO.md)
 * [第十部分 通用解决方案](SECTIONS/SECTION10.md)
