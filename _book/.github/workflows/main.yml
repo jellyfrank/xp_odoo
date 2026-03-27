@@ -1,0 +1,64 @@
+name: Production Deploy
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: SSH Deloy
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: root
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /opt/books/xp-book
+            git pull origin master
+
+      # 生成短 commit
+      - name: 设置短 Commit ID
+        run: echo "SHORT_SHA=${GITHUB_SHA::7}" >> $GITHUB_ENV
+
+      - name: 企业微信通知（成功）
+        if: success()
+        run: |
+          curl -X POST ${{ secrets.WECHAT_WEBHOOK }} \
+          -H 'Content-Type: application/json' \
+          -d "{
+            \"msgtype\": \"markdown\",
+            \"markdown\": {
+              \"content\": \"## 🚀 XPBOOK 部署成功\n
+            > 🏷 **仓库：** ${{ github.repository }}\n
+            > 🌿 **分支：** ${{ github.ref_name }}\n
+            > 👤 **提交人：** ${{ github.event.head_commit.committer.name }}\n
+            ---\n
+            > 🔖 **Commit：** \`${{ env.SHORT_SHA }}\`\n
+            > 💬 ${{ github.event.head_commit.message }}\n
+            ---\n
+            👉 [查看日志](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"
+                        }
+                      }"
+
+      - name: 企业微信通知（失败）
+        if: failure()
+        run: |
+          curl -X POST ${{ secrets.WECHAT_WEBHOOK }} \
+          -H 'Content-Type: application/json' \
+          -d "{
+            \"msgtype\": \"markdown\",
+            \"markdown\": {
+              \"content\": \"## ❌ XPBOOK 部署失败\n
+            > 🏷 **仓库：** ${{ github.repository }}\n
+            > 🌿 **分支：** ${{ github.ref_name }}\n
+            > 👤 **提交人：** ${{ github.event.head_commit.committer.name }}\n
+            ---\n
+            > 🔖 **Commit：** \`${{ env.SHORT_SHA }}\`\n
+            > 💬 ${{ github.event.head_commit.message }}\n
+            ---\n
+            👉 [查看错误](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})\"
+                        }
+                      }"
