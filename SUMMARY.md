@@ -107,6 +107,7 @@
   * [第三十章 AWS S3](chapter10/AWSS3.md)
   * [第三十一章 Google Cloud Storage](chapter10/GCS.md)
   * [第三十二章 Shopify](chapter10/SHOPIFY.md)
+  * [第三十三章 Revolut支付](chapter10/REVOLUT.md)
 * [第十一部分 案例分享](example/SECTION.md)
   * [外贸定制化服装](example/CLOTHES.md)
 * [第十二部分 行业解决方案](solutions/README.md)
