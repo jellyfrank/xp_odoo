@@ -109,6 +109,7 @@
   * [第三十二章 Shopify](chapter10/SHOPIFY.md)
   * [第三十三章 Revolut支付](chapter10/REVOLUT.md)
   * [第三十四章 云打印](chapter10/CLOUD_PRINT.md)
+  * [第三十五章 prod-backup方案](chapter10/ODOO-PRO-BACKUP.md)  
 * [第十一部分 案例分享](example/SECTION.md)
   * [外贸定制化服装](example/CLOTHES.md)
 * [第十二部分 行业解决方案](solutions/README.md)
