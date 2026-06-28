@@ -111,6 +111,7 @@
   * [第三十四章 云打印](chapter10/CLOUD_PRINT.md)
   * [第三十五章 prod-backup方案](chapter10/ODOO-PRO-BACKUP.md)  
   * [第三十六章 小程序商城](chapter10/MINI-SHOP.md)
+  * [第三十七章 腾讯云COS](chapter10/COS.md)
   * [第十一部分 案例分享](example/SECTION.md)
   * [外贸定制化服装](example/CLOTHES.md)
 * [第十二部分 行业解决方案](solutions/README.md)
