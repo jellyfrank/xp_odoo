@@ -18,6 +18,7 @@
   * [第六章 折扣与价格表](sale/README6.md)
   * [第七章 租赁](sale/README7.md)
   * [第八章 消费税](sale/EXCISE_DUTY.md)
+  * [第九章 第二单位](sale/SECOND_UNIT.md)
 * [第三部分 采购管理](SECTIONS/SECTION3.md)
   * [第一章 采购管理](purchase/PO.md)
   * [第二章 成本计算](purchase/README2.md)
