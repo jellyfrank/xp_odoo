@@ -1,408 +1,618 @@
-# 第五章 邮箱配置
+# 第七章 邮箱配置
 
-* [原生原生系统的邮箱使用](#原生系统的邮箱使用)
-  * [发送](#发送)
-    * [什么是Bounce账号](#什么是bounce账号)
-  * [收件](#收件)
-    * [收件配置](#收件邮箱配置)
-    * [邮件发送测试](#邮件发送测试)
-* [国内免费邮箱的使用](#国内免费邮箱的使用)
-  * [删除Catchall设置](#删除catchall设置)
-  * [安装第三方模块](#安装第三方模块)
-* [欧姆网络邮箱解决方案](#欧姆网络邮箱解决方案)
-  * [发件箱配置](#发件箱配置)
-  * [用户多公司配置](#用户多公司邮件配置)
-* [其他](#其他)
-  * [OFFICE365](#office365配置步骤)
-  * [腾讯企业邮](#腾讯企业邮)
-  * [Gmail](#gmail)
+Odoo 的邮件功能很重要。报价单、销售订单、发票、密码重置、客户门户邀请、系统通知，都可能通过邮件发送。
 
+国内客户配置邮箱时，经常遇到“国外能用、国内不好用”的情况。本章先讲清楚 Odoo 原生邮件逻辑，再说明国内邮箱常见问题。
 
-odoo的邮箱配置从很早的版本时就是一个问题，可能在国外用的很丝滑的功能，在国内就水土不服。本文就试图将邮箱配置的问题一次说个清楚。
+## 邮件功能用在哪里
 
-## 原生系统的邮箱使用
+Odoo 中常见邮件场景：
 
-本着知其然又知其所以然的标准，我们应该先理一下原生的功能，知道它原本的样子之后，我们才能知道问题在哪，再想办法去解决这些问题。
+- 给客户发送报价单；
+- 给客户发送订单确认；
+- 给客户发送发票；
+- 给用户发送重置密码邮件；
+- 给客户发送门户邀请；
+- 员工在单据沟通区给客户发消息；
+- 系统发送活动提醒；
+- 客户回复邮件后，消息回到对应单据。
 
-### 发送
+如果邮件没有配置好，销售、财务、门户和协同都会受影响。
 
-我们先来看一下原生系统的发送方法，首先我们要在系统中开启发件箱服务，位置：设置-一般设置-自定义邮件服务器，勾选发件服务器。
+## 邮件设置入口
+
+在 **设置** 中搜索“邮件”，可以看到邮件相关配置。
+
+![邮件设置](images/basic-cn-email-settings-search.png)
+
+常见设置包括：
+
+- 使用自定义电子邮件服务器；
+- 邮件别名域；
+- 邮件模板；
+- 摘要邮件；
+- 双因素认证邮件；
+- 邮件插件或集成。
+
+不同 Odoo 版本和安装模块不同，界面上看到的选项会略有差异。
+
+## 发送邮件的基本逻辑
+
+Odoo 发送邮件一般需要 SMTP 服务器。
+
+SMTP 配置通常包括：
+
+| 字段 | 示例 |
+| --- | --- |
+| SMTP 服务器 | smtp.example.com |
+| 端口 | 465、587 |
+| 加密方式 | SSL/TLS 或 STARTTLS |
+| 用户名 | service@example.com |
+| 密码或授权码 | 邮箱密码、应用密码或授权码 |
+| 发件人规则 | 是否允许代发 |
+
+配置完成后，要发送测试邮件，确认邮件可以正常送达。
+
+## 收取客户回复
+
+Odoo 不只是发送邮件，也可以把客户回复收回到对应单据。
+
+例如销售发送报价邮件后，客户直接回复邮件。如果收件配置正确，客户回复可以回到对应报价单或销售订单的消息区。
+
+这依赖几个条件：
+
+- 系统知道回复地址；
+- 邮箱服务器能接收客户回复；
+- Odoo 能定时读取收件箱；
+- 邮件主题或 Message-ID 能匹配到原单据。
+
+如果只是想先发报价，不一定第一天就配置完整收件逻辑。但如果企业重视邮件沟通留痕，收件配置就很重要。
+
+## Catch-all 是什么
+
+Catch-all 可以简单理解为“统一收件箱”。客户回复各种系统生成的地址时，邮件服务器把这些邮件统一收进一个邮箱，再由 Odoo 分配回对应单据。
+
+原生 Odoo 在海外邮箱环境中比较常用这种方式。
+
+但是国内很多邮箱：
+
+- 免费版不支持 catch-all；
+- 要求发件人必须等于登录邮箱；
+- 不允许系统随意代发；
+- 需要授权码或应用密码；
+- 对海外服务器登录有限制；
+- 对批量邮件有风控。
+
+所以国内项目不要假设邮箱一定能按官方默认方式工作。
+
+## 国内邮箱常见问题
+
+| 问题 | 表现 | 处理方向 |
+| --- | --- | --- |
+| 发件人不一致 | SMTP 报错，提示发件人与认证用户不一致 | 使用固定发件邮箱或调整代发策略 |
+| 不支持 catch-all | 客户回复无法自动回到单据 | 使用专用收件箱或定制方案 |
+| 需要授权码 | 密码正确但无法登录 | 在邮箱后台生成授权码 |
+| SMTP 未开启 | 测试连接失败 | 在邮箱后台开启 SMTP/IMAP/POP |
+| 端口或加密错误 | 连接超时或认证失败 | 按邮箱官方参数配置 |
+| 风控拦截 | 偶尔能发，偶尔失败 | 联系邮箱服务商或降低发送频率 |
+| DNS 未配置 | 邮件进垃圾箱 | 配置 SPF、DKIM、DMARC |
+
+国内企业邮箱建议优先使用稳定的企业邮箱服务，不建议用个人免费邮箱承载正式业务邮件。
+
+## 推荐配置方式
+
+小公司第一期可以先采用简单方案：
+
+```text
+统一发件邮箱 -> 发送报价、发票和系统通知
+统一收件邮箱 -> 收客户回复或人工查看
+```
+
+例如：
+
+- service@company.com 用于系统发件；
+- reply@company.com 用于客户回复；
+- 财务单独使用 finance@company.com；
+- 销售个人邮箱先不直接接入 Odoo。
+
+等流程稳定后，再考虑每个销售使用自己的邮箱、多公司邮箱、catch-all 或更复杂的邮件路由。
+
+## 发送邮件测试
+
+配置完邮箱后，至少测试：
+
+1. 给内部邮箱发送测试邮件；
+2. 给外部邮箱发送测试邮件；
+3. 给 QQ、网易、企业微信、Outlook 等不同邮箱测试；
+4. 检查是否进入垃圾箱；
+5. 检查发件人显示是否正确；
+6. 客户回复后是否能收到；
+7. 报价单或发票邮件是否带附件；
+8. 重置密码邮件是否能收到。
+
+只测试“连接成功”不够。真正重要的是客户能不能收到，收到后能不能回复。
+
+## 邮件模板
+
+Odoo 中很多邮件都是通过模板生成的。例如报价邮件、发票邮件、密码重置邮件。
+
+邮件模板会影响：
+
+- 邮件标题；
+- 正文内容；
+- 按钮文字；
+- 附件；
+- 使用语言；
+- 公司签名。
+
+修改模板前要先复制或记录原始内容。不要随意删除模板变量，例如客户名称、单据链接、门户链接，否则邮件可能无法正常生成。
+
+## 邮箱配置验收标准
+
+| 检查项 | 通过标准 |
+| --- | --- |
+| SMTP | 可以正常发送邮件 |
+| 收件 | 客户回复可以被收到 |
+| 发件人 | 客户看到的发件人正确 |
+| 垃圾箱 | 主流邮箱不进入垃圾箱或概率可接受 |
+| 模板 | 报价、发票、重置密码模板内容正确 |
+| 附件 | PDF 附件可以正常打开 |
+| 门户链接 | 客户点击链接可以访问对应单据 |
+| 测试库 | 测试库不会误发给真实客户 |
+
+如果企业邮件非常关键，建议上线前用真实域名、真实客户邮箱做完整测试。
+
+## 什么时候需要定制
+
+以下情况原生配置可能不够：
+
+- 每个销售必须使用自己的邮箱发送；
+- 多公司使用不同邮箱域名；
+- 客户回复必须自动进入对应单据；
+- 要兼容不支持 catch-all 的国内邮箱；
+- 要和企业微信、飞书、CRM 邮件归档打通；
+- 要做复杂的发件人、回复人、抄送规则；
+- 要批量营销邮件并做退订和追踪。
+
+这时应先明确业务目标，再决定是原生配置、第三方模块还是定制开发。不要为了“看起来高级”一开始就做复杂邮件方案。
+
+## 国内邮箱落地方案
+
+理解了邮件发送、收件、catch-all 和模板之后，就可以进入真正的落地配置。国内项目的难点往往不在 Odoo 按钮，而在邮箱服务商规则、OAuth 认证、发件人匹配、多公司多邮箱和客户回复留痕。
+
+下面这些方案对应国内项目中最常见的问题：Outlook/Office365 新式认证、腾讯企业邮严格发件人匹配、Gmail OAuth、多公司多邮箱、catch-all 不可用等。
+
+## 原生系统的发件和收件
+
+原生 Odoo 的邮件通常分为两部分：
+
+- 发件服务器：负责把 Odoo 中的报价、发票、通知发出去；
+- 收件服务器：负责把客户回复收回来，并尽量匹配到对应单据。
+
+在标准海外邮箱环境中，Odoo 常使用 bounce、catch-all、邮件别名域等机制来处理发件和回信。但国内邮箱环境经常不完全支持这些机制，所以需要先理解原生逻辑，再决定是否使用本地化方案。
+
+### 发件服务器
+
+在设置中启用自定义邮件服务器后，可以配置 SMTP 发件服务。
 
 ![发件箱配置](images/email1.png)
 
-一个典型的发件箱配置如下图：
-
-> 这里我们使用的是Exchange的共享邮箱。
+一个典型的发件箱配置如下：
 
 ![发件服务器](images/email3.png)
 
-* 描述：邮箱的名称
-* SMTP Server： 发送邮件的SMTP的服务器地址
-* SMTP 端口： 发送邮件的服务器端口
-* 连接安全性：可以选TLS/SSL或TLS(STARTSSL)
-* 用户名： 邮箱的用户名
-* 密码： 邮箱密码
+典型字段包括：
 
-> 国内使用网易企业邮箱时，会碰到启用邮件授权码的情况，此时用户的密码失效，需要讲授权码填入密码处才能使用。
+- 描述：邮箱服务器名称；
+- SMTP Server：发送邮件的 SMTP 地址；
+- SMTP 端口：常见为 465 或 587；
+- 连接安全性：SSL/TLS 或 STARTTLS；
+- 用户名：邮箱账号；
+- 密码：邮箱密码、授权码或应用密码。
 
-配置完成以后，点击测试连接按钮，测试配置知否正确。
+国内使用网易、腾讯、阿里等企业邮箱时，经常不是填写登录密码，而是填写邮箱后台生成的授权码。
 
-如果邮箱配置正确，则会看到下面的提示：
+配置完成后，可以点击测试连接。如果邮箱配置正确，会看到类似下面的成功提示：
 
 ![成功提示](images/email2.png)
 
-也可以打开开发者模式，在设置-技术-邮件-邮件中新建一个邮件测试是否可以发送成功。
+也可以在开发者模式下，通过技术菜单中的邮件记录发送测试邮件。
 
 ![测试邮件](images/mail4.png)
 
-用户收到的邮件是这样的：
+用户收到的测试邮件示例：
 
-![收件](images/email5.png)
+![收件效果](images/email5.png)
 
-默认情况下的邮件是由bounce账号代发。
+### Bounce 账号
 
-#### 什么是Bounce账号
+Bounce 账号可以理解为系统代发和退信处理相关的邮箱别名。
 
-我们先来思考一个问题，如果系统中有10个用户，那么我们怎样才能让每个用户都能够正常发送邮件呢？
+例如系统用户 Kevin 的邮箱是 `kevin@example.com`，系统通过 `bounce@example.com` 代发邮件时，收件人可能会看到“由 bounce 代发”的效果。
 
-一个最简单的想法就是给每个用户配置一个发件箱。这么做的缺点很明显，每添加一个用户我们都要配置一遍发件箱，用户少还好，如果用户数量多了，那么企业的IT就会很头疼。
+这种方式的好处是多个用户可以共用一个系统发件服务，缺点是在国内邮箱中经常遇到“声明发件人和认证邮箱不一致”的限制。
 
-而Bounce账号就是用来解决这个问题的。Bounce账号通常是用户邮件系统中的一个共享邮箱，大家都可以使用这个邮箱发送自己的邮件。而由Bounce账号发出来的邮件，就会像我们上面的图示一样，写着由xxx代发字样。例如，我们系统中有一个用户叫Kevin，他的邮箱是<kevin@133m5k.onmicrosoft.com>，而我们在系统中发送的邮件使用Bounce账号代发，用户收到我们的邮件，就会显示：
+Bounce 相关参数可以在系统参数中查看或调整。
 
-```sh
-Kevin@133m5k.onmicrosoft.com<kevin@133m5k.onmicrosoft.com>(由 Bounce <bounce@133m5k.onmicrosoft.com> 代发)
+![Bounce参数](images/mail6.png)
+
+### Catch-all 账号
+
+Catch-all 又叫全收邮箱。它的作用是把发给某个域名下不存在账号的邮件统一收进一个邮箱，再交给 Odoo 根据邮件头信息分配到对应单据。
+
+收件服务器配置示例：
+
+![收件服务器配置](images/email7.png)
+
+例如客户回复报价邮件时，Odoo 可以尝试把回复自动放回对应销售订单的消息区。
+
+但国内常见问题是：
+
+- 免费企业邮箱不支持 catch-all；
+- 支持 catch-all 但需要额外付费；
+- 邮件服务商要求发件人必须等于认证用户；
+- 客户回复无法稳定回到 Odoo 单据。
+
+所以国内项目里，catch-all 要提前测试，不要默认认为一定可用。
+
+### 邮件发送与客户回复测试
+
+可以在销售订单中创建一张订单，然后向客户发送报价邮件。
+
+![销售订单发送邮件](images/sale1.png)
+
+发送后，消息区会记录已经发出的邮件。
+
+![消息区记录](images/sale2.png)
+
+客户收到邮件后的效果示例：
+
+![客户收到邮件](images/sale3.png)
+
+如果客户直接回复邮件，回复地址会进入系统声明的收件邮箱或 catch-all 邮箱。
+
+![客户回复地址](images/sale4.png)
+
+在技术菜单中的邮件记录里，可以进一步检查邮件和业务单据之间的关联。
+
+![邮件记录详情](images/sale5.png)
+
+## 国内免费邮箱的常见报错
+
+国内邮箱最常见的问题是发件人不匹配。
+
+典型报错类似：
+
+```text
+SMTPSenderRefused: 553 Mail from must equal authorized user
 ```
 
-这样做的好处就是，大家都使用同一个邮箱对外发送邮件，同时声明了该邮件是替谁发出的。
+或：
 
-很显然，用户不应该也不能直接回复代发邮箱，没有人会从代发邮箱中收到邮件。（如何处理这个问题？这是我们后面讲到收件时要讲到的）
-
-Odoo中没有默认的Bounce邮箱是bounce+邮箱别域名组成的，比如我们例子中的<bounce@133m5k.onmicrosoft.com>。如果用户在设置中没有设置邮箱别域名，那么默认的名称将是postmaster-odoo。
-
-Bounce的别名没有直接设置的地方，但是可以在开发者模式下的设置-技术-系统参数中的mail.bounce.alias进行修改。
-
-![bounce](images/mail6.png)
-
-### 收件
-
-讲完了发件，那么接下来我们就来看一下收是如何收取的。我们在前面卖了一个关子，多个用户可以使用一个共同的邮箱发送邮件，那么对于收件，也是一样的道理，我们可以设置一个邮箱，用来收取客户的回复邮件，然后根据一定的规则进行转发。
-
-#### Catch-All
-
-这里就要提到邮箱应用中的一个重要的概念，catch-all。**catch-all邮箱**：又叫全收邮件，就是把发给邮件服务器上不存在账户的邮件都重定向到某个邮箱，而不是直接退回。
-
-> 国内常见的邮箱虽然支持catch-all，但是大多都属于收费功能，免费版不能使用。
-
-### 收件邮箱配置
-
-与发件箱配置类似，我们配置一个收件箱服务器，这里我们命名为<catch-all@133m5k.onmicrosoft.com>。
-
-![17](images/email7.png)
-
-> 由于微软于2022.10月关闭了基本身份验证，目前仅保留了SMTP的基本身份验证，因此我们这里虽然用户和密码写对了，验证的结果依旧是登录失败。关于Office365登录的设置(新式身份认证)步骤，参考[odoo官方教程](https://www.odoo.com/documentation/16.0/administration/maintain/azure_oauth.html)或本章最后的附录。
-
-设置好用户名和密码，点击测试认证完成以后，就可以收取邮件了。
-
-### 邮件发送测试
-
-接下来，我们在销售订单中创建一个订单，然后向客户发送邮件报价。
-
-![sale1](images/sale1.png)
-
-点击发送，我们会在消息列表中看到我们发出去的邮件。
-
-![sale2](images/sale2.png)
-
-客户也会正常收到我们的邮件：
-
-![sale3](images/sale3.png)
-
-如果可会直接回复我们的邮件，我们可以看到客户将默认回复到catch-all这个邮箱。
-
-![sale4](images/sale4.png)
-
-> 如果想要修改默认的回复地址，则需要打开开发者模式修改设置-技术-系统参数中的mail.catchall.alias。
-
-下面我们来看一下我们发出去的邮件的具体参数，我们打开设置-技术-Email-消息，找到我们发出去的邮件：
-
-![sale5](images/sale5.png)
-
-这里边的一个需要关注的点就是我们可以从消息ID中看出来，该邮箱是由id为1的销售订单(sale.order)发出来的，这也是客户回复给我们邮件，能够显示在SO0001订单下的依据。
-
-## 国内免费邮箱的使用
-
-由于国内邮箱大多需要声明的邮箱发送者和实际的邮箱发送者保持一致，因此odoo默认设置就会导致邮件服务器虽然认证成功，但是发不出邮件的尴尬场面，其报错通常如下：
-
-```sh
-'Mail Delivery Failed', "Mail delivery failed via SMTP server 'None'.
-SMTPSenderRefused: 553
-Mail from must equal authorized user
-bounce+20-res.users-6@xxx.com"
+```text
+SMTPSenderRefused: 501 mail from address must be same as authorization user
 ```
 
-接下来我们使用免费版的腾讯企业邮箱来具体演示一遍。为了跟之前的设置区分开来，这次我们新建一个公司，使用多公司来完成这个任务。我们使用青岛欧姆信息技术作为第二家公司，它的域名为odoomommy.com。
+意思是：Odoo 声明的发件人和 SMTP 登录邮箱不是同一个邮箱，邮件服务器拒绝发送。
 
-![image8](images/email8.png)
+下面是一个多公司和国内邮箱环境下的示例配置。
 
-由于免费版的腾讯企业邮箱并没有catch-all功能，因此我们这里使用一个普通的邮箱账号作为整个公司发送邮箱的替代方案。
+![多公司邮箱示例](images/email8.png)
 
-这里我们新建一个用户韩菱纱(<lingsha.han@odoomommy.com>)作为发件人，给客户发送销售邮件。
+用户邮箱和声明发件人不一致时，国内邮箱服务商可能会拒绝发送。
 
-![image9](images/email9.png)
+![用户邮箱示例](images/email9.png)
 
-我们可以看到，由于邮箱不支持声明的邮箱与实际发件人不匹配的问题，我们的邮件没有发送成功。报错信息是:
+可选方案：
 
-```sh
-SMTPSenderRefused: 501 mail from address must be same as authorization user bounce@odoomommy.com
-```
+- 使用固定公司邮箱作为统一发件人；
+- 删除或调整 catch-all 相关系统参数；
+- 让每个用户邮箱都能通过对应 SMTP 认证；
+- 使用支持 OAuth 或代发策略的企业邮箱；
+- 使用专门处理国内邮箱限制的 Odoo 邮件模块。
 
-如果想要解决这个问题，可以使用的方案有：
-
-### 删除Catchall设置
-
-第一种方案就是在系统参数中将catchall相关的参数删除，然后在把当前公司的邮箱地址改为邮件服务器发送的地址。 这种方式可以解决管理员发送邮件的问题，但是解决不了其他普通账号发送邮件的问题。
-
-### 安装第三方模块
-
-为了解决这个问题，我们写了一个专门的模块来处理这个问题。
-
-![mommy mail](images/mommy_mail.png)
-
-安装以后在通用设置中会多出一个Catch All的选项：
-
-![Rex](images/13.jpg)
-
-如果你的邮箱不支持Catch All，那么将这个勾取消。如果你的邮箱要求声明的发送人和实际发送用户名要一致，那么勾上限制用户名这个选项。
-
-在这里，我们只勾选这个Restrict Username选项，然后保存。之后，我们再次尝试发送邮件：
-
-![](images/sale6.png)
-
-这一次我们收到了邮件：
-
-![](images/sale7.png)
-
-注意看，我们这里的发件人实际是<kevin@odoomommy.com>，虽然声明的发件人是韩菱纱(<lingsha.han@odoomommy.com>)。
-
-> 与原生odoo逻辑不同的地方在于我们的邮件不是通过代发出去的。
-
-需要注意的是，由于邮箱不支持catch-all功能，因此我们配置的收件箱参数其实与发件箱相同，只不过使用的协议不同。因此，我们这里不再赘述收件箱的配置。
+第一种方式最简单，但无法满足“每个销售用自己邮箱对外沟通”的场景。后几种方式更灵活，但配置和维护成本更高。
 
 ## 欧姆网络邮箱解决方案
 
-> 适用于18.0
+在外贸和多公司项目中，一个员工可能在不同公司下使用不同邮箱跟客户沟通。例如：
 
-在外贸行业里，一个员工可能同时拥有多个邮箱，不同公司使用不同的邮箱跟客户进行沟通，这是很常见的一个需求。但是目前Odoo的邮箱要用于登录，没有支持多公司关联。为了解决这个问题，我们在[欧姆邮箱配置解决方案](https://odoohub.com.cn/shop/11)中增加了对此功能的支持。
+- A 公司下使用 `sales@companya.com`；
+- B 公司下使用 `sales@companyb.com`；
+- 客户回复要进入对应公司或对应单据；
+- 发件箱需要按公司、域名、用户进行匹配。
 
-首先我们要安装欧姆网络科技的[邮箱模块](https://odoohub.com.cn/shop/11)，安装完成后，我们按以下步骤进行设置。
+原生 Odoo 对这种场景支持有限。为了解决国内邮箱、严格发件人匹配、多公司邮箱、catch-all 不可用等问题，可以使用欧姆网络的邮箱配置解决方案。
 
-### 发件箱配置
+模块入口：
 
-![email16](./images/email16.png)
+[欧姆邮箱配置解决方案](https://odoohub.com.cn/shop/11)
 
-针对发件箱箱，我们新增了一个公司字段的支持，用户可以指定该发件箱支持的公司列表，留空表示所有公司可用。
+模块示例：
 
-![email17](./images/email17.png)
+![欧姆邮箱模块](images/mommy_mail.png)
 
-同时我们在新增了一个Catch All的选项卡，在这里，用户可以选择该发件箱匹配的收件箱服务器，配置了此选项后，由此发件箱发出的邮件，其声明的回复地址会是该收件服务器的catchall地址。
+安装后，可以在通用设置中看到和 catch-all、严格发件人匹配相关的配置项。
 
-举例，我们公司有个发件箱service@odoomommy.com, 我们在这里设置的Catch All地址是catchall@odoohub.com.cn，那么我们给用户king@odoo.com发出的邮件，king给我回复的地址就是catchall@odoohub.com.cn。
+![Catch All设置](images/13.jpg)
 
-### 用户多公司邮件配置
+配置后再次发送邮件，可以解决部分国内邮箱严格发件人匹配导致的失败问题。
 
-现在来解决我们刚才提到的问题，假设员工A在A公司下的邮箱是a@companya.com, 在公司B下的邮箱是a@companyb.com，我们需要支持员工在A公司下与客户沟通使用a@companya.com, 在B公司下使用b@companyb.com。
+![修正后发送邮件](images/sale6.png)
 
-我们在用户设置中新增了一个多公司关联的优先邮箱的字段：
+客户收到邮件示例：
 
-![email18](./images/email18.png)
+![修正后客户收件](images/sale7.png)
 
-用户可以根据自己的需要将此字段填上相应的邮箱，系统在发送邮件的时候会优先使用此邮箱进行发件。
+典型能力：
 
-> 此处邮箱的后缀必须能够匹配上发件箱的邮箱后缀
+- 发件箱支持公司维度配置；
+- 发件箱可以匹配对应收件箱；
+- 支持限制发件人和认证邮箱一致；
+- 支持不使用 catch-all 的国内邮箱环境；
+- 支持用户在多公司下配置优先邮箱；
+- 适合外贸、多公司、多邮箱销售团队。
 
+### 发件箱公司匹配
 
-## 其他
+在多公司环境中，可以为发件箱指定适用公司。留空表示所有公司可用。
 
-### Office365配置步骤
+![发件箱公司配置](./images/email16.png)
 
-> 仅支持HTTPS或<http://localhost，> 因此，你的odoo要先配置好证书。
+这样可以避免 A 公司业务误用 B 公司邮箱发信。
 
-#### 注册应用
+### Catch-all 匹配
 
-首先打开[Azure Active Directory](https://portal.azure.com/#view/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/~/Overview)，在这里新建一个注册应用：
+发件箱可以关联对应收件箱。配置后，由该发件箱发出的邮件，可以声明对应的回复地址。
 
-![office365](images/office1.png)
+![发件箱Catch All配置](./images/email17.png)
 
-名称新建一个，这里我们叫做odoo，支持的类型选 Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)。跳转链接类型选Web，地址写你的https://\<odoo base url>/microsoft_outlook/confirm。
+例如：
 
-![office2](images/office2.png)
-
-#### 设置应用权限
-
-接下来我们给这个应用设置权限。
-
-选择API权限，点击添加一个权限：
-
-![office3](images/office3.png)
-
-![office4](images/office4.png)
-
-最终的权限界面如下：
-
-![office5](images/office5.png)
-
-#### 分配用户和用户组
-
-然后返回应用概览页面，选择Essentials下面的Managed Application in Local Directory
-
-![6](images/office6.png)
-
-然后选择用户和用户组菜单：
-
-![7](images/office7.png)
-
-然后选择想要使用这个应用的用户和组。
-
-![8](images/office8.png)
-
-最后点击分配按钮完成分配。
-
-#### 创建凭据
-
-接下来要创建odoo可以使用的凭据了，odoo使用的凭据包含一个**Client ID**和一个**Client Secret**。
-
-Client ID可以在应用的首页获取到:
-
-![9](images/office9.png)
-
-Client Secret需要生成，点击左侧菜单中的 Certificates & Secrets生成一个。
-
-![10](images/office10.png)
-
-这里可以设置密钥的名称和有效时间。
-
-#### 在odoo中设置
-
-获取到Client ID和Client Secret之后，我们就可以设置odoo的凭据了。
-
-![11](images/office11.png)
-
-设置好凭据以后，我们就可以继续设置邮箱服务器了。
-
-![13](images/office13.png)
-
-我们在服务器类型中选择Outlook OAuth认证，然后点击连接Outlook账号，按钮会打开一个页面，我们输入我们的账号和密码以后，完成认证。
-
-![14](images/office14.png)
-
-最后，服务器邮箱会显示一个令牌有效的标识，这个时候，我们再点击测试和确认就会发现成功了。
-
-#### FAQ
-
-1.**SmtpClientAuthentication is disabled for the tenant**
-
-  用户的STMPAuthen认证没有开启，需要到Office 365[账户中心](https://admin.microsoft.com/Adminportal/Home)开启:
-
-  ![12](./images/office12.png)
-
-  切换到看板视图
-
-  ![15](./images/office15.png)
-
-  点击编辑用户，找到目标用户，然后点击Mail选项卡，点击编辑Emai App
-
-  ![16](./images/office16.png)
-
-  在Email App中勾选 Authenticated SMTP选项。
-
-### 腾讯企业邮
-
-首先我们要创建要一个腾讯企业邮的公共邮箱： example@example.com
-
-然后按照[配置指引](https://open.work.weixin.qq.com/help2/pc/19886?person_id=1)完成配置。
-
-```sh
-POP3/SMTP协议
-接收邮件服务器：pop.exmail.qq.com ，使用SSL，端口号995
-发送邮件服务器：smtp.exmail.qq.com ，使用SSL，端口号465
-
-IMAP协议
-接收邮件服务器：imap.exmail.qq.com ，使用SSL，端口号993
-发送邮件服务器：smtp.exmail.qq.com ，使用SSL，端口号465
+```text
+发件箱：service@odoomommy.com
+回复邮箱：catchall@odoohub.com.cn
 ```
 
-![tx1](./images/tx1.png)
+客户回复时，会回复到指定的 catch-all 或收件邮箱，再由系统处理。
 
-#### FAQ
+### 用户多公司优先邮箱
 
-```sh
-Unknown error: Mail Delivery Failed Mail delivery failed via SMTP server 'None'. SMTPSenderRefused: 501 mail from address must be same as authorization user admin@example.com
+如果员工在不同公司下使用不同邮箱，可以在用户上配置多公司优先邮箱。
+
+![用户多公司邮箱配置](./images/email18.png)
+
+例如：
+
+| 公司 | 用户邮箱 |
+| --- | --- |
+| A 公司 | a@companya.com |
+| B 公司 | a@companyb.com |
+
+系统发送邮件时，可以根据当前公司优先使用对应邮箱。
+
+> 注意：邮箱后缀需要能匹配到对应发件箱域名，否则仍可能发送失败。
+
+## Office365 / Outlook OAuth 配置
+
+Office365 和 Outlook 逐步收紧了基本身份验证。很多情况下，不能再简单用邮箱密码配置 SMTP/IMAP，而需要使用 OAuth 新式认证。
+
+配置前提：
+
+- Odoo 需要能通过 HTTPS 访问；
+- 回调地址需要和 Odoo 的 base URL 一致；
+- Microsoft Entra ID 中需要创建应用；
+- 用户或组织需要允许对应权限；
+- SMTP Auth 可能需要单独开启。
+
+### 注册应用
+
+进入 Microsoft Azure / Entra 管理后台，创建应用注册。
+
+![Office365注册应用](images/office1.png)
+
+应用类型通常选择 Web，回调地址填写：
+
+```text
+https://你的Odoo域名/microsoft_outlook/confirm
 ```
 
-安装前文提到的[欧姆邮箱解决方案](https://odoohub.com.cn)，打开**严格发件人匹配**选项。
+如果使用本地测试环境，部分 OAuth 场景只允许 HTTPS 或 `http://localhost`，普通 HTTP 域名可能无法通过。
 
-### Gmail
+应用注册页面示例：
 
-下面我们来看一下如何使用Gmail来配置Odoo邮箱服务。
+![Office365应用注册详情](images/office2.png)
 
-![gmail](./images/gmail.png)
+### 设置 API 权限
 
-首先我们在设置中开启Gmail选项，可以看到系统要求我们输入**ID**和**密钥**。
+在应用的 API 权限中，按 Odoo Outlook 集成要求添加邮件相关权限。
 
-#### ID和密钥的获取
+![Office365 API权限入口](images/office3.png)
 
-我们打开[Google控制台](https://console.cloud.google.com/)，然后新建一个项目Odoo:
+![Office365 API权限选择](images/office4.png)
 
-![gmail2](./images/gmail2.png)
+最终权限界面示例：
 
-然后点击**API和服务**，在左侧的菜单那中点击OAuth权限请求页面：
+![Office365权限结果](images/office5.png)
 
-![gmail3](./images/gmail3.png)
+常见权限包括：
 
-> 测试时，将我们的用户添加到测试用户列表中。
+- 读取用户基本资料；
+- 发送邮件；
+- 读取邮件；
+- 离线访问令牌。
 
-然后点击菜单凭据，创建一个新的凭据:
+具体权限会随 Odoo 版本和 Microsoft 策略变化，配置时以当前 Odoo 界面提示和 Microsoft 后台为准。
 
-![gmail4](./images/gmai4.png)
+还需要确认用户或用户组可以使用该应用。
 
-* 应用类型选Web应用
-* 名称写Odooo或自定义
-* 已获授权的重定向 URI填写：
+![Office365企业应用](images/office6.png)
 
-  ```sh
-  https://demo.odoohub.com.cn/google_gmail/confirm
-  ```
+![Office365用户和组](images/office7.png)
 
-  将demo.odoohub.com.cn替换为你的URL
+![Office365分配用户](images/office8.png)
 
-![gmail5](./images/gmail5.png)
+### 创建凭据
 
-将生成的ID和密钥填写到前面Odoo的设置中。
+Odoo 需要两个关键参数：
 
-#### 创建Gmail发件箱
+- Client ID；
+- Client Secret。
 
-接下来我们创建Gmail的发件服务，在设置-技术-邮箱-发件箱中新建一个发件箱：
+Client ID 可以在应用概览页面获取。Client Secret 需要在证书和密码中生成。生成后要立即保存，后续可能无法再次查看明文。
 
-![gmail6](./images/gmail6.png)
+Client ID 位置示例：
 
-* 验证方式选择Gmail OAuth验证
-* 加密方式选择TLS
-* 用户名填写邮箱登陆名
+![Office365 Client ID](images/office9.png)
 
-点击连接您的Gmail账户链接进行OAuth认证。
+Client Secret 生成入口：
 
-![gmail7](./images/gmail7.png)
+![Office365 Client Secret](images/office10.png)
 
-认证成功之后，邮箱下面会有绿色标志显示：
+### 在 Odoo 中连接 Outlook 账号
 
-![gmail8](./images/gmail8.png)
+回到 Odoo，填写 Client ID 和 Client Secret，然后创建或编辑邮箱服务器。
 
-#### 问题
+![Odoo Outlook凭据](images/office11.png)
 
-1.Redirect Uri Dismatch
+服务器类型选择 Outlook OAuth 认证，点击连接 Outlook 账号，跳转到 Microsoft 登录页面完成授权。
 
-  跳转URL跟后台设置的不一致， 检查跳转URL和Google后台是否一致，检查odoo后台参数中的base Url跟跳转URL是否一致。
+![Odoo Outlook邮箱服务器](images/office13.png)
 
-2.认证后500错误
+完成授权后，邮箱服务器会显示令牌有效状态。
 
-  由于不可公开的原因导致的账户访问受阻，请替换网络。
+![Outlook授权成功](images/office14.png)
+
+授权成功后，回到 Odoo 测试连接。
+
+### Office365 常见问题
+
+**SmtpClientAuthentication is disabled for the tenant**
+
+这通常表示租户或用户没有启用 Authenticated SMTP。
+
+![Office365 SMTP Auth提示](./images/office12.png)
+
+处理方向：
+
+- 进入 Microsoft 365 管理中心；
+- 找到目标用户；
+- 编辑邮件应用设置；
+- 勾选 Authenticated SMTP；
+- 等待策略生效后重新测试。
+
+Microsoft 365 管理中心示例：
+
+![Office365用户管理](./images/office15.png)
+
+Email App 中开启 Authenticated SMTP：
+
+![Office365开启SMTP](./images/office16.png)
+
+**Redirect URI 不匹配**
+
+检查：
+
+- Odoo 的 Web Base URL；
+- Microsoft 应用中的重定向 URI；
+- 是否使用 HTTPS；
+- 域名后是否多了斜杠或路径不一致。
+
+## 腾讯企业邮配置
+
+腾讯企业邮在国内项目中很常见，但经常遇到“发件人必须等于认证用户”的限制。
+
+常用服务器参数：
+
+```text
+POP3/SMTP 协议
+接收邮件服务器：pop.exmail.qq.com，SSL，端口 995
+发送邮件服务器：smtp.exmail.qq.com，SSL，端口 465
+
+IMAP 协议
+接收邮件服务器：imap.exmail.qq.com，SSL，端口 993
+发送邮件服务器：smtp.exmail.qq.com，SSL，端口 465
+```
+
+配置前要确认：
+
+- 邮箱账号已启用 POP/IMAP/SMTP；
+- 使用的是授权码或正确密码；
+- 企业微信/腾讯企业邮后台没有限制第三方客户端；
+- Odoo 发件人和 SMTP 认证用户是否一致。
+
+腾讯企业邮后台配置示例：
+
+![腾讯企业邮配置](./images/tx1.png)
+
+常见报错：
+
+```text
+SMTPSenderRefused: 501 mail from address must be same as authorization user
+```
+
+如果企业要求多个用户通过同一个腾讯企业邮发信，就需要调整发件策略，或使用支持严格发件人匹配处理的模块。
+
+## Gmail OAuth 配置
+
+Gmail 也常使用 OAuth 认证，不建议直接使用普通密码。
+
+在 Odoo 设置中启用 Gmail 后，系统会要求填写 ID 和密钥。
+
+![Gmail设置](./images/gmail.png)
+
+配置大致步骤：
+
+1. 打开 Google Cloud Console；
+2. 创建项目；
+3. 配置 OAuth 同意屏幕；
+4. 创建 Web 应用 OAuth 凭据；
+5. 设置授权重定向 URI；
+6. 将 Client ID 和 Client Secret 填入 Odoo；
+7. 创建 Gmail 发件服务器；
+8. 点击连接 Gmail 账号完成授权。
+
+重定向 URI 通常类似：
+
+```text
+https://你的Odoo域名/google_gmail/confirm
+```
+
+Google Cloud Console 中新建项目示例：
+
+![Google项目](./images/gmail2.png)
+
+OAuth 同意屏幕示例：
+
+![Google OAuth同意屏幕](./images/gmail3.png)
+
+创建 OAuth 凭据：
+
+![Google OAuth凭据](./images/gmai4.png)
+
+填写授权重定向 URI：
+
+![Google重定向URI](./images/gmail5.png)
+
+在 Odoo 中创建 Gmail 发件箱：
+
+![Gmail发件箱](./images/gmail6.png)
+
+点击连接 Gmail 账号完成认证：
+
+![连接Gmail账号](./images/gmail7.png)
+
+认证成功后的状态示例：
+
+![Gmail认证成功](./images/gmail8.png)
+
+常见问题：
+
+| 问题 | 处理方向 |
+| --- | --- |
+| Redirect URI mismatch | 检查 Google 后台回调地址和 Odoo base URL |
+| 认证后 500 错误 | 检查网络、域名、证书和 OAuth 配置 |
+| 测试用户无法授权 | 检查 OAuth 同意屏幕测试用户列表 |
+| 发信失败 | 检查 Gmail API、授权范围和邮箱服务器配置 |
+
+Gmail 在国内网络环境中可能不稳定，国内客户使用前要充分测试。

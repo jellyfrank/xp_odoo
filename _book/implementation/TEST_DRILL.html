@@ -1,0 +1,2412 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>第四章 测试库演练方法 · odoo实施参考手册-青岛欧姆网络科技</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="青岛欧姆网络科技 Kevin">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../sections/SECTION1.html" />
+    
+    
+    <link rel="prev" href="DATA_PREPARATION.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../sections/SECTION0.html">
+            
+                <a href="../sections/SECTION0.html">
+            
+                    
+                    第零部分 自主实施路线图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="PREPARATION.html">
+            
+                <a href="PREPARATION.html">
+            
+                    
+                    第一章 实施前准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="ROADMAP.html">
+            
+                <a href="ROADMAP.html">
+            
+                    
+                    第二章 Odoo上线顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="DATA_PREPARATION.html">
+            
+                <a href="DATA_PREPARATION.html">
+            
+                    
+                    第三章 基础数据准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.4" data-path="TEST_DRILL.html">
+            
+                <a href="TEST_DRILL.html">
+            
+                    
+                    第四章 测试库演练方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../sections/SECTION1.html">
+            
+                <a href="../sections/SECTION1.html">
+            
+                    
+                    第一部分 基础数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../basic/Odoo.html">
+            
+                <a href="../basic/Odoo.html">
+            
+                    
+                    第一章 Odoo简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../basic/DATABASE.html">
+            
+                <a href="../basic/DATABASE.html">
+            
+                    
+                    第二章 数据库管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../basic/README5.html">
+            
+                <a href="../basic/README5.html">
+            
+                    
+                    第三章 公司和用户管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../basic/README4.html">
+            
+                <a href="../basic/README4.html">
+            
+                    
+                    第四章 联系人与合作伙伴
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../basic/PRODUCT.html">
+            
+                <a href="../basic/PRODUCT.html">
+            
+                    
+                    第五章 产品基础数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../basic/IMPORT_EXPORT.html">
+            
+                <a href="../basic/IMPORT_EXPORT.html">
+            
+                    
+                    第六章 导入与导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../basic/README6.html">
+            
+                <a href="../basic/README6.html">
+            
+                    
+                    第七章 邮箱配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../basic/MAIL.html">
+            
+                <a href="../basic/MAIL.html">
+            
+                    
+                    第八章 消息与讨论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../basic/REPORT.html">
+            
+                <a href="../basic/REPORT.html">
+            
+                    
+                    第九章 报表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../sections/SECTION2.html">
+            
+                <a href="../sections/SECTION2.html">
+            
+                    
+                    第二部分 销售管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../sale/">
+            
+                <a href="../sale/">
+            
+                    
+                    第一章 基础概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../sale/README2.html">
+            
+                <a href="../sale/README2.html">
+            
+                    
+                    第二章 产品管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../sale/README3.html">
+            
+                <a href="../sale/README3.html">
+            
+                    
+                    第三章 销售流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../sale/README4.html">
+            
+                <a href="../sale/README4.html">
+            
+                    
+                    第四章 税率
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../sale/README5.html">
+            
+                <a href="../sale/README5.html">
+            
+                    
+                    第五章 销售库存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../sale/README6.html">
+            
+                <a href="../sale/README6.html">
+            
+                    
+                    第六章 折扣与价格表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../sale/README7.html">
+            
+                <a href="../sale/README7.html">
+            
+                    
+                    第七章 租赁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../sale/EXCISE_DUTY.html">
+            
+                <a href="../sale/EXCISE_DUTY.html">
+            
+                    
+                    第八章 消费税
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../sale/SECOND_UNIT.html">
+            
+                <a href="../sale/SECOND_UNIT.html">
+            
+                    
+                    第九章 第二单位
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../sections/SECTION3.html">
+            
+                <a href="../sections/SECTION3.html">
+            
+                    
+                    第三部分 采购管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../purchase/PO.html">
+            
+                <a href="../purchase/PO.html">
+            
+                    
+                    第一章 采购管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../purchase/README2.html">
+            
+                <a href="../purchase/README2.html">
+            
+                    
+                    第二章 成本计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../sections/SECTION4.html">
+            
+                <a href="../sections/SECTION4.html">
+            
+                    
+                    第四部分 仓库管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../stock/BASIC.html">
+            
+                <a href="../stock/BASIC.html">
+            
+                    
+                    第一章 基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../stock/LOCATION.html">
+            
+                <a href="../stock/LOCATION.html">
+            
+                    
+                    第二章 库位管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../stock/README3.html">
+            
+                <a href="../stock/README3.html">
+            
+                    
+                    第三章 调拨类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../stock/README.md">
+            
+                <span>
+            
+                    
+                    第四章 批次管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../stock/README.md">
+            
+                <span>
+            
+                    
+                    第五章 库存盘点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../stock/README6.html">
+            
+                <a href="../stock/README6.html">
+            
+                    
+                    第六章 订货规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../stock/README.md">
+            
+                <span>
+            
+                    
+                    第七章 路线规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../stock/Barcode.html">
+            
+                <a href="../stock/Barcode.html">
+            
+                    
+                    第八章 条码规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../stock/PUTAWAY.html">
+            
+                <a href="../stock/PUTAWAY.html">
+            
+                    
+                    第九章 上架规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../stock/STORAEGE.html">
+            
+                <a href="../stock/STORAEGE.html">
+            
+                    
+                    第十章 存储类别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../stock/DELIVERY_METHOD.html">
+            
+                <a href="../stock/DELIVERY_METHOD.html">
+            
+                    
+                    第十一章 物流方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../stock/README8.html">
+            
+                <a href="../stock/README8.html">
+            
+                    
+                    第十二章 成本核算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../stock/README10.md">
+            
+                <span>
+            
+                    
+                    第十三章 顺丰速递
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../sections/SECTION5.html">
+            
+                <a href="../sections/SECTION5.html">
+            
+                    
+                    第五部分 生产管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../chapter5/README.md">
+            
+                <span>
+            
+                    
+                    第一章 BOM管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../chapter5/README2.md">
+            
+                <span>
+            
+                    
+                    第二章 计划生产
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../chapter5/README3.html">
+            
+                <a href="../chapter5/README3.html">
+            
+                    
+                    第三章 管理工单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../chapter5/README4.md">
+            
+                <span>
+            
+                    
+                    第四章 外协加工
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../chapter5/README5.html">
+            
+                <a href="../chapter5/README5.html">
+            
+                    
+                    第五章 工作中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../chapter5/README6.md">
+            
+                <span>
+            
+                    
+                    第六章 质量检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../chapter5/KIT.html">
+            
+                <a href="../chapter5/KIT.html">
+            
+                    
+                    第七章 套件生产
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../sections/SECTION6.html">
+            
+                <a href="../sections/SECTION6.html">
+            
+                    
+                    第六部分 财务管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../account/BASIC.html">
+            
+                <a href="../account/BASIC.html">
+            
+                    
+                    第一章 基础概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../account/INV.html">
+            
+                <a href="../account/INV.html">
+            
+                    
+                    第二章 开票
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../account/PAYMENT.html">
+            
+                <a href="../account/PAYMENT.html">
+            
+                    
+                    第三章 支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../account/STATMENT.html">
+            
+                <a href="../account/STATMENT.html">
+            
+                    
+                    第四章 对账
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../account/JOURNAL.html">
+            
+                <a href="../account/JOURNAL.html">
+            
+                    
+                    第五章 日记账
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../sections/SECTION7.html">
+            
+                <a href="../sections/SECTION7.html">
+            
+                    
+                    第七部分 多公司
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../chapter7/">
+            
+                <a href="../chapter7/">
+            
+                    
+                    第一章 多公司间的采购
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../sections/SECTION8.html">
+            
+                <a href="../sections/SECTION8.html">
+            
+                    
+                    第七部分 网站
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../web/portal.html">
+            
+                <a href="../web/portal.html">
+            
+                    
+                    第一章 门户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../web/README2.html">
+            
+                <a href="../web/README2.html">
+            
+                    
+                    第二章 商城
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../web/TOKEN.html">
+            
+                <a href="../web/TOKEN.html">
+            
+                    
+                    第三章 访问令牌
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../web/MAILLIST.html">
+            
+                <a href="../web/MAILLIST.html">
+            
+                    
+                    第四章 邮件营销
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../web/PORTAL_SALE.html">
+            
+                <a href="../web/PORTAL_SALE.html">
+            
+                    
+                    第五章 销售门户
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../SECTION11.html">
+            
+                <a href="../SECTION11.html">
+            
+                    
+                    第八部分 销售点(POS)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../pos/Product.html">
+            
+                <a href="../pos/Product.html">
+            
+                    
+                    第一章 POS产品管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../pos/Kiosk.html">
+            
+                <a href="../pos/Kiosk.html">
+            
+                    
+                    第二章 自助终端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../pos/RECEIPT.html">
+            
+                <a href="../pos/RECEIPT.html">
+            
+                    
+                    第三章 小票和发票
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../pos/PAYMENT_METHOD.html">
+            
+                <a href="../pos/PAYMENT_METHOD.html">
+            
+                    
+                    第四章 支付方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../pos/PRICELIST.html">
+            
+                <a href="../pos/PRICELIST.html">
+            
+                    
+                    第五章 设置价格表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../pos/LOYALTY.html">
+            
+                <a href="../pos/LOYALTY.html">
+            
+                    
+                    第六章 客户忠诚度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../pos/README10.html">
+            
+                <a href="../pos/README10.html">
+            
+                    
+                    第一章 EPOS打印
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../pos/POS_SALE.html">
+            
+                <a href="../pos/POS_SALE.html">
+            
+                    
+                    第四章 POS销售
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.9" data-path="../pos/POS_AUTO.html">
+            
+                <a href="../pos/POS_AUTO.html">
+            
+                    
+                    第五章 POS批次自动出库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../sections/SECTION9.html">
+            
+                <a href="../sections/SECTION9.html">
+            
+                    
+                    第九部分 设置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../chapter9/">
+            
+                <a href="../chapter9/">
+            
+                    
+                    第一章 通用设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../chapter9/LANG.html">
+            
+                <a href="../chapter9/LANG.html">
+            
+                    
+                    第二章 语言设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../chapter9/SHARE.html">
+            
+                <a href="../chapter9/SHARE.html">
+            
+                    
+                    第三章 附件共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../chapter9/IPWHITELIST.html">
+            
+                <a href="../chapter9/IPWHITELIST.html">
+            
+                    
+                    第四章 IP白名单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../chapter9/README9.html">
+            
+                <a href="../chapter9/README9.html">
+            
+                    
+                    第九章 技术设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../chapter9/STUDIO.html">
+            
+                <a href="../chapter9/STUDIO.html">
+            
+                    
+                    STUDIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../sections/SECTION10.html">
+            
+                <a href="../sections/SECTION10.html">
+            
+                    
+                    第十部分 通用解决方案
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../chapter10/WeChatOpen.html">
+            
+                <a href="../chapter10/WeChatOpen.html">
+            
+                    
+                    第一章 微信扫码登陆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../chapter10/WeChat.html">
+            
+                <a href="../chapter10/WeChat.html">
+            
+                    
+                    第二章 微信公众号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../chapter10/WeChatPay.html">
+            
+                <a href="../chapter10/WeChatPay.html">
+            
+                    
+                    第三章 微信支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../chapter10/WXPOS.html">
+            
+                <a href="../chapter10/WXPOS.html">
+            
+                    
+                    第四章 微信POS支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../chapter10/ALIPAY.html">
+            
+                <a href="../chapter10/ALIPAY.html">
+            
+                    
+                    第五章 支付宝支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../chapter10/ALIPOS.html">
+            
+                <a href="../chapter10/ALIPOS.html">
+            
+                    
+                    第六章 支付宝POS支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../chapter10/LINE.html">
+            
+                <a href="../chapter10/LINE.html">
+            
+                    
+                    第七章 Pos LinePay
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.8" data-path="../chapter10/WeWork.html">
+            
+                <a href="../chapter10/WeWork.html">
+            
+                    
+                    第八章 企业微信基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.9" data-path="../chapter10/WeWorkPlus.html">
+            
+                <a href="../chapter10/WeWorkPlus.html">
+            
+                    
+                    第九章 企业微信高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.10" data-path="../chapter10/WeWorkApproval.html">
+            
+                <a href="../chapter10/WeWorkApproval.html">
+            
+                    
+                    第十章 企业微信审批
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.11" data-path="../chapter10/SF.html">
+            
+                <a href="../chapter10/SF.html">
+            
+                    
+                    第十一章 顺丰速递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.12" data-path="../chapter10/SFI.html">
+            
+                <a href="../chapter10/SFI.html">
+            
+                    
+                    第十二章 顺丰国际
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.13" data-path="../chapter10/YTO.html">
+            
+                <a href="../chapter10/YTO.html">
+            
+                    
+                    第十三章 圆通速递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.14" data-path="../chapter10/DHL.html">
+            
+                <a href="../chapter10/DHL.html">
+            
+                    
+                    第十四章 DHL中国
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.15" data-path="../chapter10/KDN.html">
+            
+                <a href="../chapter10/KDN.html">
+            
+                    
+                    第十五章 快递鸟模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.16" data-path="../chapter10/YUN.html">
+            
+                <a href="../chapter10/YUN.html">
+            
+                    
+                    第十六章 云途物流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.17" data-path="../chapter10/17Track.html">
+            
+                <a href="../chapter10/17Track.html">
+            
+                    
+                    第十七章 17Track
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.18" data-path="../chapter10/XHS.html">
+            
+                <a href="../chapter10/XHS.html">
+            
+                    
+                    第十八章 小红书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.19" data-path="../chapter10/lark.html">
+            
+                <a href="../chapter10/lark.html">
+            
+                    
+                    第十九章 飞书/Lark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.20" data-path="../chapter10/ALIYUNSMS.html">
+            
+                <a href="../chapter10/ALIYUNSMS.html">
+            
+                    
+                    第二十章 阿里云短信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.21" data-path="../chapter10/NMI.html">
+            
+                <a href="../chapter10/NMI.html">
+            
+                    
+                    第二十一章 NMI支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.22" data-path="../chapter10/WINDCAVE.html">
+            
+                <a href="../chapter10/WINDCAVE.html">
+            
+                    
+                    第二十二章 WindCave
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.23" data-path="../chapter10/YUNDA.html">
+            
+                <a href="../chapter10/YUNDA.html">
+            
+                    
+                    第二十三章 韵达速递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.24" data-path="../chapter10/PAYMENTS.html">
+            
+                <a href="../chapter10/PAYMENTS.html">
+            
+                    
+                    第二十四章 指定支付方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.25" data-path="../chapter10/SHOPLINE.html">
+            
+                <a href="../chapter10/SHOPLINE.html">
+            
+                    
+                    第二十五章 Shopline对接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.26" data-path="../chapter10/XERO.html">
+            
+                <a href="../chapter10/XERO.html">
+            
+                    
+                    第二十六章 Xero
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.27" data-path="../chapter10/QUICKBOOK.html">
+            
+                <a href="../chapter10/QUICKBOOK.html">
+            
+                    
+                    第二十七章 QuickBooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.28" data-path="../chapter10/JDL.html">
+            
+                <a href="../chapter10/JDL.html">
+            
+                    
+                    第二十八章 京东快递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.29" data-path="../chapter10/ALIYUNOSS.html">
+            
+                <a href="../chapter10/ALIYUNOSS.html">
+            
+                    
+                    第二十九章 阿里云对象存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.30" data-path="../chapter10/AWSS3.html">
+            
+                <a href="../chapter10/AWSS3.html">
+            
+                    
+                    第三十章 AWS S3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.31" data-path="../chapter10/GCS.html">
+            
+                <a href="../chapter10/GCS.html">
+            
+                    
+                    第三十一章 Google Cloud Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.32" data-path="../chapter10/SHOPIFY.html">
+            
+                <a href="../chapter10/SHOPIFY.html">
+            
+                    
+                    第三十二章 Shopify
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.33" data-path="../chapter10/REVOLUT.html">
+            
+                <a href="../chapter10/REVOLUT.html">
+            
+                    
+                    第三十三章 Revolut支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.34" data-path="../chapter10/CLOUD_PRINT.html">
+            
+                <a href="../chapter10/CLOUD_PRINT.html">
+            
+                    
+                    第三十四章 云打印
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.35" data-path="../chapter10/ODOO-PRO-BACKUP.html">
+            
+                <a href="../chapter10/ODOO-PRO-BACKUP.html">
+            
+                    
+                    第三十五章 prod-backup方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.36" data-path="../chapter10/MINI-SHOP.html">
+            
+                <a href="../chapter10/MINI-SHOP.html">
+            
+                    
+                    第三十六章 小程序商城
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.37" data-path="../chapter10/MINI-SHOP-PRO.html">
+            
+                <a href="../chapter10/MINI-SHOP-PRO.html">
+            
+                    
+                    第三十七章 小程序商城专业版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.38" data-path="../chapter10/COS.html">
+            
+                <a href="../chapter10/COS.html">
+            
+                    
+                    第三十八章 腾讯云COS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.39" data-path="../example/SECTION.md">
+            
+                <span>
+            
+                    
+                    第十一部分 案例分享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.40" data-path="../example/CLOTHES.html">
+            
+                <a href="../example/CLOTHES.html">
+            
+                    
+                    外贸定制化服装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../solutions/">
+            
+                <a href="../solutions/">
+            
+                    
+                    第十二部分 行业解决方案
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../solutions/Export.html">
+            
+                <a href="../solutions/Export.html">
+            
+                    
+                    外贸行业方案
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1.1" data-path="../solutions/Export_Carrier.html">
+            
+                <a href="../solutions/Export_Carrier.html">
+            
+                    
+                    发货解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../FAQ.html">
+            
+                <a href="../FAQ.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >第四章 测试库演练方法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7B2C;&#x56DB;&#x7AE0;-&#x6D4B;&#x8BD5;&#x5E93;&#x6F14;&#x7EC3;&#x65B9;&#x6CD5;">&#x7B2C;&#x56DB;&#x7AE0; &#x6D4B;&#x8BD5;&#x5E93;&#x6F14;&#x7EC3;&#x65B9;&#x6CD5;</h1>
+<p>&#x6D4B;&#x8BD5;&#x5E93;&#x4E0D;&#x662F;&#x7528;&#x6765;&#x201C;&#x770B;&#x770B;&#x754C;&#x9762;&#x201D;&#x7684;&#xFF0C;&#x800C;&#x662F;&#x7528;&#x6765;&#x6A21;&#x62DF;&#x771F;&#x5B9E;&#x4E1A;&#x52A1;&#x3002;&#x53EA;&#x6709;&#x771F;&#x5B9E;&#x5C97;&#x4F4D;&#x3001;&#x771F;&#x5B9E;&#x6570;&#x636E;&#x3001;&#x771F;&#x5B9E;&#x5F02;&#x5E38;&#x90FD;&#x8DD1;&#x8FC7;&#xFF0C;&#x624D;&#x80FD;&#x5224;&#x65AD; Odoo &#x662F;&#x5426;&#x53EF;&#x4EE5;&#x4E0A;&#x7EBF;&#x3002;</p>
+<p>&#x8FD9;&#x4E00;&#x7AE0;&#x7ED9;&#x51FA;&#x4E00;&#x5957;&#x9002;&#x5408;&#x5C0F;&#x767D;&#x5BA2;&#x6237;&#x7684;&#x6D4B;&#x8BD5;&#x65B9;&#x6CD5;&#x3002;&#x7167;&#x7740;&#x505A;&#xFF0C;&#x53EF;&#x4EE5;&#x628A;&#x201C;&#x6211;&#x611F;&#x89C9;&#x5DEE;&#x4E0D;&#x591A;&#x4E86;&#x201D;&#x53D8;&#x6210;&#x201C;&#x8FD9;&#x4E9B;&#x6D41;&#x7A0B;&#x5DF2;&#x7ECF;&#x786E;&#x8BA4;&#x901A;&#x8FC7;&#x201D;&#x3002;</p>
+<h2 id="&#x4EC0;&#x4E48;&#x662F;&#x6709;&#x6548;&#x6D4B;&#x8BD5;">&#x4EC0;&#x4E48;&#x662F;&#x6709;&#x6548;&#x6D4B;&#x8BD5;</h2>
+<p>&#x6709;&#x6548;&#x6D4B;&#x8BD5;&#x4E0D;&#x662F;&#x7BA1;&#x7406;&#x5458;&#x968F;&#x4FBF;&#x70B9;&#x51E0;&#x4E0B;&#x3002;&#x6709;&#x6548;&#x6D4B;&#x8BD5;&#x81F3;&#x5C11;&#x8981;&#x6EE1;&#x8DB3;&#x56DB;&#x4E2A;&#x6761;&#x4EF6;&#xFF1A;</p>
+<ul>
+<li>&#x4F7F;&#x7528;&#x63A5;&#x8FD1;&#x771F;&#x5B9E;&#x4E1A;&#x52A1;&#x7684;&#x6570;&#x636E;&#xFF1B;</li>
+<li>&#x4F7F;&#x7528;&#x771F;&#x5B9E;&#x5C97;&#x4F4D;&#x8D26;&#x53F7;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x53EA;&#x7528;&#x7BA1;&#x7406;&#x5458;&#xFF1B;</li>
+<li>&#x8DD1;&#x5B8C;&#x6574;&#x6D41;&#x7A0B;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x53EA;&#x521B;&#x5EFA;&#x4E00;&#x5F20;&#x5355;&#xFF1B;</li>
+<li>&#x8BB0;&#x5F55;&#x95EE;&#x9898;&#x3001;&#x8D1F;&#x8D23;&#x4EBA;&#x548C;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x3002;</li>
+</ul>
+<p>&#x5982;&#x679C;&#x53EA;&#x7531;&#x5B9E;&#x65BD;&#x4EBA;&#x5458;&#x6216;&#x8001;&#x677F;&#x7528;&#x7BA1;&#x7406;&#x5458;&#x8D26;&#x53F7;&#x6D4B;&#x8BD5;&#xFF0C;&#x5F88;&#x591A;&#x6743;&#x9650;&#x95EE;&#x9898;&#x3001;&#x4EA4;&#x63A5;&#x95EE;&#x9898;&#x548C;&#x5F02;&#x5E38;&#x6D41;&#x7A0B;&#x90FD;&#x4E0D;&#x4F1A;&#x66B4;&#x9732;&#x3002;</p>
+<h2 id="&#x6D4B;&#x8BD5;&#x524D;&#x51C6;&#x5907;">&#x6D4B;&#x8BD5;&#x524D;&#x51C6;&#x5907;</h2>
+<p>&#x6D4B;&#x8BD5;&#x524D;&#x5148;&#x51C6;&#x5907;&#x4E00;&#x7EC4;&#x6700;&#x5C0F;&#x6570;&#x636E;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x6570;&#x636E;</th>
+<th>&#x5EFA;&#x8BAE;&#x6570;&#x91CF;</th>
+<th>&#x7528;&#x9014;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x5BA2;&#x6237;</td>
+<td>2 &#x5230; 3 &#x4E2A;</td>
+<td>&#x6D4B;&#x8BD5;&#x62A5;&#x4EF7;&#x3001;&#x9500;&#x552E;&#x8BA2;&#x5355;&#x3001;&#x6536;&#x6B3E;&#x3001;&#x5BF9;&#x8D26;</td>
+</tr>
+<tr>
+<td>&#x4F9B;&#x5E94;&#x5546;</td>
+<td>2 &#x5230; 3 &#x4E2A;</td>
+<td>&#x6D4B;&#x8BD5;&#x91C7;&#x8D2D;&#x8BA2;&#x5355;&#x3001;&#x6536;&#x8D27;&#x3001;&#x4F9B;&#x5E94;&#x5546;&#x8D26;&#x5355;</td>
+</tr>
+<tr>
+<td>&#x4EA7;&#x54C1;</td>
+<td>5 &#x5230; 10 &#x4E2A;</td>
+<td>&#x8986;&#x76D6;&#x5546;&#x54C1;&#x3001;&#x670D;&#x52A1;&#x3001;&#x4E0D;&#x540C;&#x7A0E;&#x7387;&#x6216;&#x4E0D;&#x540C;&#x5355;&#x4F4D;</td>
+</tr>
+<tr>
+<td>&#x4ED3;&#x5E93;</td>
+<td>1 &#x5230; 2 &#x4E2A;</td>
+<td>&#x6D4B;&#x8BD5;&#x6536;&#x8D27;&#x3001;&#x53D1;&#x8D27;&#x3001;&#x8C03;&#x62E8;&#x3001;&#x76D8;&#x70B9;</td>
+</tr>
+<tr>
+<td>&#x7528;&#x6237;</td>
+<td>&#x6BCF;&#x4E2A;&#x5C97;&#x4F4D; 1 &#x4E2A;</td>
+<td>&#x6D4B;&#x8BD5;&#x6743;&#x9650;&#x548C;&#x5C97;&#x4F4D;&#x6D41;&#x7A0B;</td>
+</tr>
+<tr>
+<td>&#x94F6;&#x884C;&#x6D41;&#x6C34;</td>
+<td>3 &#x5230; 5 &#x6761;</td>
+<td>&#x6D4B;&#x8BD5;&#x6536;&#x6B3E;&#x3001;&#x4ED8;&#x6B3E;&#x548C;&#x94F6;&#x884C;&#x5BF9;&#x8D26;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4EA7;&#x54C1;&#x53EF;&#x4EE5;&#x5148;&#x4ECE; Sales &#x7684; Products &#x83DC;&#x5355;&#x521B;&#x5EFA;&#x3002;&#x4E0D;&#x8981;&#x4E00;&#x5F00;&#x59CB;&#x5C31;&#x5BFC;&#x5165;&#x51E0;&#x5343;&#x4E2A;&#x4EA7;&#x54C1;&#x6765;&#x6D4B;&#x8BD5;&#xFF0C;&#x90A3;&#x6837;&#x95EE;&#x9898;&#x4F1A;&#x88AB;&#x6570;&#x636E;&#x91CF;&#x6DF9;&#x6CA1;&#x3002;</p>
+<p><img src="images/implementation-product-form.png" alt="&#x4EA7;&#x54C1;&#x8868;&#x5355;"></p>
+<h2 id="&#x6D4B;&#x8BD5;&#x89D2;&#x8272;">&#x6D4B;&#x8BD5;&#x89D2;&#x8272;</h2>
+<p>&#x5EFA;&#x8BAE;&#x81F3;&#x5C11;&#x51C6;&#x5907;&#x8FD9;&#x4E9B;&#x6D4B;&#x8BD5;&#x89D2;&#x8272;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x89D2;&#x8272;</th>
+<th>&#x8D1F;&#x8D23;&#x6D4B;&#x8BD5;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x9500;&#x552E;</td>
+<td>&#x5BA2;&#x6237;&#x3001;&#x62A5;&#x4EF7;&#x3001;&#x9500;&#x552E;&#x8BA2;&#x5355;&#x3001;&#x9500;&#x552E;&#x53D1;&#x7968;&#x7533;&#x8BF7;</td>
+</tr>
+<tr>
+<td>&#x91C7;&#x8D2D;</td>
+<td>&#x4F9B;&#x5E94;&#x5546;&#x3001;&#x8BE2;&#x4EF7;&#x5355;&#x3001;&#x91C7;&#x8D2D;&#x8BA2;&#x5355;</td>
+</tr>
+<tr>
+<td>&#x4ED3;&#x5E93;</td>
+<td>&#x6536;&#x8D27;&#x3001;&#x53D1;&#x8D27;&#x3001;&#x8C03;&#x62E8;&#x3001;&#x76D8;&#x70B9;</td>
+</tr>
+<tr>
+<td>&#x8D22;&#x52A1;</td>
+<td>&#x5BA2;&#x6237;&#x53D1;&#x7968;&#x3001;&#x4F9B;&#x5E94;&#x5546;&#x8D26;&#x5355;&#x3001;&#x4ED8;&#x6B3E;&#x3001;&#x94F6;&#x884C;&#x5BF9;&#x8D26;</td>
+</tr>
+<tr>
+<td>&#x8001;&#x677F;</td>
+<td>&#x62A5;&#x8868;&#x3001;&#x5BA1;&#x6279;&#x3001;&#x5173;&#x952E;&#x4E1A;&#x52A1;&#x67E5;&#x770B;</td>
+</tr>
+<tr>
+<td>&#x7BA1;&#x7406;&#x5458;</td>
+<td>&#x7CFB;&#x7EDF;&#x8BBE;&#x7F6E;&#x3001;&#x6743;&#x9650;&#x8C03;&#x6574;&#x3001;&#x95EE;&#x9898;&#x6392;&#x67E5;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x6BCF;&#x4E2A;&#x89D2;&#x8272;&#x90FD;&#x5E94;&#x8BE5;&#x7528;&#x81EA;&#x5DF1;&#x7684;&#x8D26;&#x53F7;&#x767B;&#x5F55;&#x6D4B;&#x8BD5;&#x3002;&#x8FD9;&#x6837;&#x624D;&#x80FD;&#x77E5;&#x9053;&#x6743;&#x9650;&#x662F;&#x5426;&#x591F;&#x7528;&#x3002;</p>
+<h2 id="&#x6D41;&#x7A0B;&#x4E00;&#xFF1A;&#x9500;&#x552E;&#x5230;&#x6536;&#x6B3E;">&#x6D41;&#x7A0B;&#x4E00;&#xFF1A;&#x9500;&#x552E;&#x5230;&#x6536;&#x6B3E;</h2>
+<p>&#x8FD9;&#x662F;&#x5927;&#x591A;&#x6570;&#x4F01;&#x4E1A;&#x6700;&#x5148;&#x8981;&#x8DD1;&#x901A;&#x7684;&#x6D41;&#x7A0B;&#x3002;</p>
+<pre><code class="lang-text">&#x5BA2;&#x6237; -&gt; &#x62A5;&#x4EF7;&#x5355; -&gt; &#x9500;&#x552E;&#x8BA2;&#x5355; -&gt; &#x53D1;&#x8D27; -&gt; &#x5BA2;&#x6237;&#x53D1;&#x7968; -&gt; &#x6536;&#x6B3E; -&gt; &#x5BF9;&#x8D26;
+</code></pre>
+<p>&#x5728; Sales &#x4E2D;&#x65B0;&#x5EFA;&#x62A5;&#x4EF7;&#x5355;&#x65F6;&#xFF0C;&#x81F3;&#x5C11;&#x8981;&#x6D4B;&#x8BD5;&#x5BA2;&#x6237;&#x3001;&#x4EA7;&#x54C1;&#x3001;&#x6570;&#x91CF;&#x3001;&#x4EF7;&#x683C;&#x3001;&#x7A0E;&#x7387;&#x548C;&#x4ED8;&#x6B3E;&#x6761;&#x4EF6;&#x3002;</p>
+<p><img src="images/implementation-quotation-form.png" alt="&#x65B0;&#x5EFA;&#x62A5;&#x4EF7;&#x5355;"></p>
+<p>&#x6D4B;&#x8BD5;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li>&#x9500;&#x552E;&#x521B;&#x5EFA;&#x5BA2;&#x6237;&#xFF1B;</li>
+<li>&#x9500;&#x552E;&#x521B;&#x5EFA;&#x62A5;&#x4EF7;&#x5355;&#xFF1B;</li>
+<li>&#x9500;&#x552E;&#x6DFB;&#x52A0;&#x4EA7;&#x54C1;&#x3001;&#x6570;&#x91CF;&#x3001;&#x5355;&#x4EF7;&#x548C;&#x7A0E;&#x7387;&#xFF1B;</li>
+<li>&#x9500;&#x552E;&#x53D1;&#x9001;&#x6216;&#x6253;&#x5370;&#x62A5;&#x4EF7;&#x5355;&#xFF1B;</li>
+<li>&#x5BA2;&#x6237;&#x786E;&#x8BA4;&#x540E;&#xFF0C;&#x5C06;&#x62A5;&#x4EF7;&#x5355;&#x786E;&#x8BA4;&#x6210;&#x9500;&#x552E;&#x8BA2;&#x5355;&#xFF1B;</li>
+<li>&#x4ED3;&#x5E93;&#x5904;&#x7406;&#x53D1;&#x8D27;&#xFF1B;</li>
+<li>&#x8D22;&#x52A1;&#x521B;&#x5EFA;&#x5BA2;&#x6237;&#x53D1;&#x7968;&#xFF1B;</li>
+<li>&#x8D22;&#x52A1;&#x767B;&#x8BB0;&#x5BA2;&#x6237;&#x4ED8;&#x6B3E;&#xFF1B;</li>
+<li>&#x8D22;&#x52A1;&#x68C0;&#x67E5;&#x5E94;&#x6536;&#x8D26;&#x6B3E;&#x548C;&#x5BF9;&#x8D26;&#x72B6;&#x6001;&#x3002;</li>
+</ol>
+<p>&#x9A8C;&#x6536;&#x6807;&#x51C6;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x68C0;&#x67E5;&#x9879;</th>
+<th>&#x901A;&#x8FC7;&#x6807;&#x51C6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x62A5;&#x4EF7;</td>
+<td>&#x5BA2;&#x6237;&#x3001;&#x4EA7;&#x54C1;&#x3001;&#x4EF7;&#x683C;&#x3001;&#x7A0E;&#x7387;&#x6B63;&#x786E;</td>
+</tr>
+<tr>
+<td>&#x8BA2;&#x5355;</td>
+<td>&#x62A5;&#x4EF7;&#x786E;&#x8BA4;&#x540E;&#x72B6;&#x6001;&#x53D8;&#x5316;&#x6B63;&#x786E;</td>
+</tr>
+<tr>
+<td>&#x53D1;&#x8D27;</td>
+<td>&#x5E93;&#x5B58;&#x6570;&#x91CF;&#x6309;&#x53D1;&#x8D27;&#x51CF;&#x5C11;</td>
+</tr>
+<tr>
+<td>&#x5F00;&#x7968;</td>
+<td>&#x53D1;&#x7968;&#x91D1;&#x989D;&#x548C;&#x8BA2;&#x5355;&#x91D1;&#x989D;&#x4E00;&#x81F4;</td>
+</tr>
+<tr>
+<td>&#x6536;&#x6B3E;</td>
+<td>&#x5BA2;&#x6237;&#x5E94;&#x6536;&#x51CF;&#x5C11;</td>
+</tr>
+<tr>
+<td>&#x62A5;&#x8868;</td>
+<td>&#x9500;&#x552E;&#x989D;&#x548C;&#x5E94;&#x6536;&#x8D26;&#x6B3E;&#x80FD;&#x67E5;&#x5230;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x6D41;&#x7A0B;&#x4E8C;&#xFF1A;&#x91C7;&#x8D2D;&#x5230;&#x4ED8;&#x6B3E;">&#x6D41;&#x7A0B;&#x4E8C;&#xFF1A;&#x91C7;&#x8D2D;&#x5230;&#x4ED8;&#x6B3E;</h2>
+<p>&#x91C7;&#x8D2D;&#x6D41;&#x7A0B;&#x7528;&#x4E8E;&#x9A8C;&#x8BC1;&#x4F9B;&#x5E94;&#x5546;&#x3001;&#x91C7;&#x8D2D;&#x4EF7;&#x683C;&#x3001;&#x6536;&#x8D27;&#x548C;&#x4F9B;&#x5E94;&#x5546;&#x8D26;&#x5355;&#x3002;</p>
+<pre><code class="lang-text">&#x4F9B;&#x5E94;&#x5546; -&gt; &#x8BE2;&#x4EF7;&#x5355; -&gt; &#x91C7;&#x8D2D;&#x8BA2;&#x5355; -&gt; &#x6536;&#x8D27; -&gt; &#x4F9B;&#x5E94;&#x5546;&#x8D26;&#x5355; -&gt; &#x4ED8;&#x6B3E; -&gt; &#x5BF9;&#x8D26;
+</code></pre>
+<p>&#x6D4B;&#x8BD5;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li>&#x91C7;&#x8D2D;&#x521B;&#x5EFA;&#x4F9B;&#x5E94;&#x5546;&#xFF1B;</li>
+<li>&#x91C7;&#x8D2D;&#x521B;&#x5EFA;&#x8BE2;&#x4EF7;&#x5355;&#xFF1B;</li>
+<li>&#x91C7;&#x8D2D;&#x6DFB;&#x52A0;&#x4EA7;&#x54C1;&#x3001;&#x6570;&#x91CF;&#x548C;&#x91C7;&#x8D2D;&#x4EF7;&#x683C;&#xFF1B;</li>
+<li>&#x786E;&#x8BA4;&#x91C7;&#x8D2D;&#x8BA2;&#x5355;&#xFF1B;</li>
+<li>&#x4ED3;&#x5E93;&#x6536;&#x8D27;&#xFF1B;</li>
+<li>&#x8D22;&#x52A1;&#x521B;&#x5EFA;&#x4F9B;&#x5E94;&#x5546;&#x8D26;&#x5355;&#xFF1B;</li>
+<li>&#x8D22;&#x52A1;&#x767B;&#x8BB0;&#x4F9B;&#x5E94;&#x5546;&#x4ED8;&#x6B3E;&#xFF1B;</li>
+<li>&#x8D22;&#x52A1;&#x68C0;&#x67E5;&#x5E94;&#x4ED8;&#x8D26;&#x6B3E;&#x3002;</li>
+</ol>
+<p>&#x9A8C;&#x6536;&#x6807;&#x51C6;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x68C0;&#x67E5;&#x9879;</th>
+<th>&#x901A;&#x8FC7;&#x6807;&#x51C6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x91C7;&#x8D2D;&#x5355;</td>
+<td>&#x4F9B;&#x5E94;&#x5546;&#x3001;&#x4EA7;&#x54C1;&#x3001;&#x6570;&#x91CF;&#x3001;&#x4EF7;&#x683C;&#x6B63;&#x786E;</td>
+</tr>
+<tr>
+<td>&#x6536;&#x8D27;</td>
+<td>&#x5E93;&#x5B58;&#x6570;&#x91CF;&#x6309;&#x6536;&#x8D27;&#x589E;&#x52A0;</td>
+</tr>
+<tr>
+<td>&#x8D26;&#x5355;</td>
+<td>&#x8D26;&#x5355;&#x91D1;&#x989D;&#x80FD;&#x548C;&#x91C7;&#x8D2D;&#x8BA2;&#x5355;&#x5339;&#x914D;</td>
+</tr>
+<tr>
+<td>&#x4ED8;&#x6B3E;</td>
+<td>&#x4F9B;&#x5E94;&#x5546;&#x5E94;&#x4ED8;&#x51CF;&#x5C11;</td>
+</tr>
+<tr>
+<td>&#x62A5;&#x8868;</td>
+<td>&#x5E94;&#x4ED8;&#x8D26;&#x6B3E;&#x548C;&#x91C7;&#x8D2D;&#x7EDF;&#x8BA1;&#x80FD;&#x67E5;&#x5230;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x6D41;&#x7A0B;&#x4E09;&#xFF1A;&#x5E93;&#x5B58;&#x76D8;&#x70B9;&#x548C;&#x8C03;&#x62E8;">&#x6D41;&#x7A0B;&#x4E09;&#xFF1A;&#x5E93;&#x5B58;&#x76D8;&#x70B9;&#x548C;&#x8C03;&#x62E8;</h2>
+<p>&#x53EA;&#x8981;&#x4F01;&#x4E1A;&#x7BA1;&#x7406;&#x5B9E;&#x7269;&#x5E93;&#x5B58;&#xFF0C;&#x5C31;&#x5FC5;&#x987B;&#x6D4B;&#x8BD5;&#x5E93;&#x5B58;&#x6D41;&#x7A0B;&#x3002;</p>
+<p>&#x6D4B;&#x8BD5;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li>&#x67E5;&#x8BE2;&#x67D0;&#x4E2A;&#x4EA7;&#x54C1;&#x5F53;&#x524D;&#x5E93;&#x5B58;&#xFF1B;</li>
+<li>&#x505A;&#x4E00;&#x6B21;&#x5E93;&#x5B58;&#x8C03;&#x6574;&#xFF1B;</li>
+<li>&#x505A;&#x4E00;&#x6B21;&#x5185;&#x90E8;&#x8C03;&#x62E8;&#xFF1B;</li>
+<li>&#x505A;&#x4E00;&#x6B21;&#x9500;&#x552E;&#x53D1;&#x8D27;&#xFF1B;</li>
+<li>&#x505A;&#x4E00;&#x6B21;&#x91C7;&#x8D2D;&#x6536;&#x8D27;&#xFF1B;</li>
+<li>&#x68C0;&#x67E5;&#x5E93;&#x5B58;&#x6570;&#x91CF;&#x53D8;&#x5316;&#x662F;&#x5426;&#x7B26;&#x5408;&#x9884;&#x671F;&#x3002;</li>
+</ol>
+<p>&#x9A8C;&#x6536;&#x6807;&#x51C6;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x68C0;&#x67E5;&#x9879;</th>
+<th>&#x901A;&#x8FC7;&#x6807;&#x51C6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x73B0;&#x6709;&#x5E93;&#x5B58;</td>
+<td>&#x7CFB;&#x7EDF;&#x6570;&#x91CF;&#x80FD;&#x89E3;&#x91CA;&#x6765;&#x6E90;</td>
+</tr>
+<tr>
+<td>&#x76D8;&#x70B9;</td>
+<td>&#x8C03;&#x6574;&#x540E;&#x6570;&#x91CF;&#x6B63;&#x786E;</td>
+</tr>
+<tr>
+<td>&#x8C03;&#x62E8;</td>
+<td>&#x6E90;&#x5E93;&#x4F4D;&#x51CF;&#x5C11;&#xFF0C;&#x76EE;&#x6807;&#x5E93;&#x4F4D;&#x589E;&#x52A0;</td>
+</tr>
+<tr>
+<td>&#x6536;&#x8D27;</td>
+<td>&#x91C7;&#x8D2D;&#x6536;&#x8D27;&#x540E;&#x5E93;&#x5B58;&#x589E;&#x52A0;</td>
+</tr>
+<tr>
+<td>&#x53D1;&#x8D27;</td>
+<td>&#x9500;&#x552E;&#x53D1;&#x8D27;&#x540E;&#x5E93;&#x5B58;&#x51CF;&#x5C11;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5982;&#x679C;&#x4F01;&#x4E1A;&#x6709;&#x6279;&#x6B21;&#x6216;&#x5E8F;&#x5217;&#x53F7;&#x7BA1;&#x7406;&#xFF0C;&#x5FC5;&#x987B;&#x989D;&#x5916;&#x6D4B;&#x8BD5;&#x6279;&#x6B21;&#x8FFD;&#x8E2A;&#x548C;&#x5E8F;&#x5217;&#x53F7;&#x552F;&#x4E00;&#x6027;&#x3002;</p>
+<h2 id="&#x6D41;&#x7A0B;&#x56DB;&#xFF1A;&#x8D22;&#x52A1;&#x5BF9;&#x8D26;">&#x6D41;&#x7A0B;&#x56DB;&#xFF1A;&#x8D22;&#x52A1;&#x5BF9;&#x8D26;</h2>
+<p>&#x8D22;&#x52A1;&#x6D4B;&#x8BD5;&#x4E0D;&#x80FD;&#x53EA;&#x770B;&#x53D1;&#x7968;&#x662F;&#x5426;&#x80FD;&#x521B;&#x5EFA;&#xFF0C;&#x8FD8;&#x8981;&#x6D4B;&#x8BD5;&#x4ED8;&#x6B3E;&#x548C;&#x94F6;&#x884C;&#x5BF9;&#x8D26;&#x3002;</p>
+<p>&#x6D4B;&#x8BD5;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<ol>
+<li>&#x521B;&#x5EFA;&#x4E00;&#x5F20;&#x5BA2;&#x6237;&#x53D1;&#x7968;&#xFF1B;</li>
+<li>&#x767B;&#x8BB0;&#x4E00;&#x7B14;&#x5BA2;&#x6237;&#x4ED8;&#x6B3E;&#xFF1B;</li>
+<li>&#x5BFC;&#x5165;&#x6216;&#x624B;&#x5DE5;&#x521B;&#x5EFA;&#x4E00;&#x6761;&#x94F6;&#x884C;&#x6D41;&#x6C34;&#xFF1B;</li>
+<li>&#x5C06;&#x94F6;&#x884C;&#x6D41;&#x6C34;&#x548C;&#x4ED8;&#x6B3E;&#x6216;&#x53D1;&#x7968;&#x5339;&#x914D;&#xFF1B;</li>
+<li>&#x68C0;&#x67E5;&#x5E94;&#x6536;&#x8D26;&#x6B3E;&#x662F;&#x5426;&#x5173;&#x95ED;&#xFF1B;</li>
+<li>&#x67E5;&#x770B;&#x8D26;&#x9F84;&#x62A5;&#x8868;&#x3002;</li>
+</ol>
+<p>&#x9A8C;&#x6536;&#x6807;&#x51C6;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x68C0;&#x67E5;&#x9879;</th>
+<th>&#x901A;&#x8FC7;&#x6807;&#x51C6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x53D1;&#x7968;</td>
+<td>&#x91D1;&#x989D;&#x3001;&#x7A0E;&#x7387;&#x3001;&#x5BA2;&#x6237;&#x6B63;&#x786E;</td>
+</tr>
+<tr>
+<td>&#x4ED8;&#x6B3E;</td>
+<td>&#x4ED8;&#x6B3E;&#x91D1;&#x989D;&#x548C;&#x65E5;&#x671F;&#x6B63;&#x786E;</td>
+</tr>
+<tr>
+<td>&#x94F6;&#x884C;&#x6D41;&#x6C34;</td>
+<td>&#x6D41;&#x6C34;&#x80FD;&#x8FDB;&#x5165;&#x94F6;&#x884C;&#x65E5;&#x8BB0;&#x8D26;</td>
+</tr>
+<tr>
+<td>&#x5BF9;&#x8D26;</td>
+<td>&#x94F6;&#x884C;&#x6D41;&#x6C34;&#x80FD;&#x5339;&#x914D;&#x5230;&#x53D1;&#x7968;&#x6216;&#x4ED8;&#x6B3E;</td>
+</tr>
+<tr>
+<td>&#x8D26;&#x9F84;</td>
+<td>&#x5DF2;&#x6536;&#x6B3E;&#x53D1;&#x7968;&#x4E0D;&#x518D;&#x663E;&#x793A;&#x4E3A;&#x672A;&#x6536;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x56FD;&#x5185;&#x5BA2;&#x6237;&#x8981;&#x7279;&#x522B;&#x6CE8;&#x610F;&#xFF1A;Odoo &#x7684;&#x5BA2;&#x6237;&#x53D1;&#x7968;&#x662F;&#x4F1A;&#x8BA1;&#x5E94;&#x6536;&#x5355;&#x636E;&#xFF0C;&#x4E0D;&#x7B49;&#x4E8E;&#x4E2D;&#x56FD;&#x7A0E;&#x63A7;&#x53D1;&#x7968;&#x3002;&#x6D4B;&#x8BD5;&#x65F6;&#x8981;&#x5148;&#x786E;&#x8BA4;&#x4F01;&#x4E1A;&#x662F;&#x5426;&#x9700;&#x8981;&#x5355;&#x72EC;&#x5BF9;&#x63A5;&#x5F00;&#x7968;&#x5E73;&#x53F0;&#x3002;</p>
+<h2 id="&#x5F02;&#x5E38;&#x6D41;&#x7A0B;&#x6D4B;&#x8BD5;">&#x5F02;&#x5E38;&#x6D41;&#x7A0B;&#x6D4B;&#x8BD5;</h2>
+<p>&#x53EA;&#x6D4B;&#x8BD5;&#x987A;&#x5229;&#x6D41;&#x7A0B;&#x662F;&#x4E0D;&#x591F;&#x7684;&#x3002;&#x771F;&#x5B9E;&#x4E1A;&#x52A1;&#x4E00;&#x5B9A;&#x4F1A;&#x51FA;&#x9519;&#x3002;</p>
+<p>&#x5EFA;&#x8BAE;&#x81F3;&#x5C11;&#x6D4B;&#x8BD5;&#x8FD9;&#x4E9B;&#x5F02;&#x5E38;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5F02;&#x5E38;&#x573A;&#x666F;</th>
+<th>&#x8981;&#x9A8C;&#x8BC1;&#x4EC0;&#x4E48;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x62A5;&#x4EF7;&#x5355;&#x53D6;&#x6D88;</td>
+<td>&#x53D6;&#x6D88;&#x540E;&#x662F;&#x5426;&#x8FD8;&#x80FD;&#x8BEF;&#x53D1;&#x8D27;&#x6216;&#x8BEF;&#x5F00;&#x7968;</td>
+</tr>
+<tr>
+<td>&#x9500;&#x552E;&#x90E8;&#x5206;&#x53D1;&#x8D27;</td>
+<td>&#x672A;&#x53D1;&#x6570;&#x91CF;&#x662F;&#x5426;&#x4FDD;&#x7559;</td>
+</tr>
+<tr>
+<td>&#x5BA2;&#x6237;&#x9000;&#x8D27;</td>
+<td>&#x5E93;&#x5B58;&#x662F;&#x5426;&#x589E;&#x52A0;&#xFF0C;&#x5E94;&#x6536;&#x662F;&#x5426;&#x6B63;&#x786E;&#x5904;&#x7406;</td>
+</tr>
+<tr>
+<td>&#x5BA2;&#x6237;&#x90E8;&#x5206;&#x4ED8;&#x6B3E;</td>
+<td>&#x5E94;&#x6536;&#x4F59;&#x989D;&#x662F;&#x5426;&#x6B63;&#x786E;</td>
+</tr>
+<tr>
+<td>&#x91C7;&#x8D2D;&#x90E8;&#x5206;&#x6536;&#x8D27;</td>
+<td>&#x672A;&#x6536;&#x6570;&#x91CF;&#x662F;&#x5426;&#x4FDD;&#x7559;</td>
+</tr>
+<tr>
+<td>&#x4F9B;&#x5E94;&#x5546;&#x8D26;&#x5355;&#x91D1;&#x989D;&#x4E0D;&#x4E00;&#x81F4;</td>
+<td>&#x8D22;&#x52A1;&#x662F;&#x5426;&#x80FD;&#x53D1;&#x73B0;&#x5DEE;&#x5F02;</td>
+</tr>
+<tr>
+<td>&#x5458;&#x5DE5;&#x6743;&#x9650;&#x4E0D;&#x8DB3;</td>
+<td>&#x7CFB;&#x7EDF;&#x662F;&#x5426;&#x963B;&#x6B62;&#x8D8A;&#x6743;&#x64CD;&#x4F5C;</td>
+</tr>
+<tr>
+<td>&#x4EA7;&#x54C1;&#x4EF7;&#x683C;&#x9519;&#x8BEF;</td>
+<td>&#x4FEE;&#x6539;&#x540E;&#x65B0;&#x65E7;&#x8BA2;&#x5355;&#x662F;&#x5426;&#x6309;&#x9884;&#x671F;&#x5904;&#x7406;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5F02;&#x5E38;&#x6D4B;&#x8BD5;&#x662F;&#x6700;&#x80FD;&#x53D1;&#x73B0;&#x95EE;&#x9898;&#x7684;&#x5730;&#x65B9;&#x3002;&#x4E0D;&#x8981;&#x6015;&#x6D4B;&#x8BD5;&#x5E93;&#x5F04;&#x4E71;&#xFF0C;&#x6D4B;&#x8BD5;&#x5E93;&#x5C31;&#x662F;&#x7528;&#x6765;&#x72AF;&#x9519;&#x7684;&#x3002;</p>
+<h2 id="&#x6D4B;&#x8BD5;&#x95EE;&#x9898;&#x8BB0;&#x5F55;&#x8868;">&#x6D4B;&#x8BD5;&#x95EE;&#x9898;&#x8BB0;&#x5F55;&#x8868;</h2>
+<p>&#x6BCF;&#x6B21;&#x6D4B;&#x8BD5;&#x90FD;&#x8981;&#x8BB0;&#x5F55;&#x95EE;&#x9898;&#x3002;&#x4E0D;&#x8981;&#x53EA;&#x5728;&#x5FAE;&#x4FE1;&#x7FA4;&#x91CC;&#x8BF4;&#x4E00;&#x53E5;&#x201C;&#x8FD9;&#x91CC;&#x4E0D;&#x5BF9;&#x201D;&#xFF0C;&#x5F88;&#x5FEB;&#x5C31;&#x4F1A;&#x5FD8;&#x3002;</p>
+<p>&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x4E0B;&#x9762;&#x683C;&#x5F0F;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x7F16;&#x53F7;</th>
+<th>&#x6A21;&#x5757;</th>
+<th>&#x89D2;&#x8272;</th>
+<th>&#x95EE;&#x9898;&#x63CF;&#x8FF0;</th>
+<th>&#x671F;&#x671B;&#x7ED3;&#x679C;</th>
+<th>&#x5B9E;&#x9645;&#x7ED3;&#x679C;</th>
+<th>&#x5904;&#x7406;&#x65B9;&#x6848;</th>
+<th>&#x8D1F;&#x8D23;&#x4EBA;</th>
+<th>&#x72B6;&#x6001;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T001</td>
+<td>&#x9500;&#x552E;</td>
+<td>&#x9500;&#x552E;</td>
+<td>&#x62A5;&#x4EF7;&#x5355;&#x7A0E;&#x7387;&#x4E0D;&#x5BF9;</td>
+<td>&#x9ED8;&#x8BA4; 13%</td>
+<td>&#x663E;&#x793A; 15%</td>
+<td>&#x8C03;&#x6574;&#x4EA7;&#x54C1;&#x7A0E;&#x7387;</td>
+<td>&#x8D22;&#x52A1;</td>
+<td>&#x5F85;&#x5904;&#x7406;</td>
+</tr>
+<tr>
+<td>T002</td>
+<td>&#x5E93;&#x5B58;</td>
+<td>&#x4ED3;&#x5E93;</td>
+<td>&#x53D1;&#x8D27;&#x540E;&#x5E93;&#x5B58;&#x6CA1;&#x51CF;&#x5C11;</td>
+<td>&#x5E93;&#x5B58;&#x51CF;&#x5C11;</td>
+<td>&#x672A;&#x53D8;&#x5316;</td>
+<td>&#x68C0;&#x67E5;&#x4EA7;&#x54C1;&#x7C7B;&#x578B;</td>
+<td>&#x5B9E;&#x65BD;&#x987E;&#x95EE;</td>
+<td>&#x5DF2;&#x89E3;&#x51B3;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x72B6;&#x6001;&#x5EFA;&#x8BAE;&#x53EA;&#x7528;&#x56DB;&#x79CD;&#xFF1A;</p>
+<ul>
+<li>&#x5F85;&#x786E;&#x8BA4;&#xFF1B;</li>
+<li>&#x5F85;&#x5904;&#x7406;&#xFF1B;</li>
+<li>&#x5DF2;&#x89E3;&#x51B3;&#xFF1B;</li>
+<li>&#x6682;&#x4E0D;&#x5904;&#x7406;&#x3002;</li>
+</ul>
+<p>&#x201C;&#x6682;&#x4E0D;&#x5904;&#x7406;&#x201D;&#x4E5F;&#x8981;&#x5199;&#x539F;&#x56E0;&#x3002;&#x6BD4;&#x5982;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x5C5E;&#x4E8E;&#x4E8C;&#x671F;&#x4F18;&#x5316;&#xFF0C;&#x6216;&#x539F;&#x751F; Odoo &#x6682;&#x4E0D;&#x652F;&#x6301;&#xFF0C;&#x9700;&#x8981;&#x540E;&#x7EED;&#x5B9A;&#x5236;&#x3002;</p>
+<h2 id="&#x6D4B;&#x8BD5;&#x901A;&#x8FC7;&#x6807;&#x51C6;">&#x6D4B;&#x8BD5;&#x901A;&#x8FC7;&#x6807;&#x51C6;</h2>
+<p>&#x6D4B;&#x8BD5;&#x901A;&#x8FC7;&#x4E0D;&#x662F;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x95EE;&#x9898;&#xFF0C;&#x800C;&#x662F;&#x5173;&#x952E;&#x6D41;&#x7A0B;&#x53EF;&#x7528;&#xFF0C;&#x5269;&#x4F59;&#x95EE;&#x9898;&#x6709;&#x660E;&#x786E;&#x5904;&#x7406;&#x65B9;&#x6848;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x7528;&#x4E0B;&#x9762;&#x6807;&#x51C6;&#x5224;&#x65AD;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x9879;&#x76EE;</th>
+<th>&#x901A;&#x8FC7;&#x6807;&#x51C6;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x4E3B;&#x6D41;&#x7A0B;</td>
+<td>&#x9500;&#x552E;&#x3001;&#x91C7;&#x8D2D;&#x3001;&#x5E93;&#x5B58;&#x3001;&#x8D22;&#x52A1;&#x81F3;&#x5C11;&#x4E00;&#x6761;&#x5B8C;&#x6574;&#x94FE;&#x8DEF;&#x8DD1;&#x901A;</td>
+</tr>
+<tr>
+<td>&#x5F02;&#x5E38;&#x6D41;&#x7A0B;</td>
+<td>&#x53D6;&#x6D88;&#x3001;&#x9000;&#x8D27;&#x3001;&#x90E8;&#x5206;&#x6536;&#x8D27;&#x3001;&#x90E8;&#x5206;&#x4ED8;&#x6B3E;&#x5DF2;&#x6D4B;&#x8BD5;</td>
+</tr>
+<tr>
+<td>&#x6743;&#x9650;</td>
+<td>&#x6BCF;&#x4E2A;&#x5C97;&#x4F4D;&#x80FD;&#x5B8C;&#x6210;&#x81EA;&#x5DF1;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x4E0D;&#x80FD;&#x505A;&#x4E0D;&#x8BE5;&#x505A;&#x7684;&#x4E8B;</td>
+</tr>
+<tr>
+<td>&#x6570;&#x636E;</td>
+<td>&#x5BA2;&#x6237;&#x3001;&#x4EA7;&#x54C1;&#x3001;&#x5E93;&#x5B58;&#x548C;&#x8D22;&#x52A1;&#x6570;&#x636E;&#x62BD;&#x67E5;&#x6B63;&#x786E;</td>
+</tr>
+<tr>
+<td>&#x62A5;&#x8868;</td>
+<td>&#x8001;&#x677F;&#x548C;&#x8D22;&#x52A1;&#x80FD;&#x770B;&#x61C2;&#x5173;&#x952E;&#x62A5;&#x8868;</td>
+</tr>
+<tr>
+<td>&#x95EE;&#x9898;</td>
+<td>&#x6240;&#x6709;&#x4E0A;&#x7EBF;&#x524D;&#x5FC5;&#x987B;&#x89E3;&#x51B3;&#x7684;&#x95EE;&#x9898;&#x5DF2;&#x7ECF;&#x5173;&#x95ED;</td>
+</tr>
+<tr>
+<td>&#x5207;&#x6362;</td>
+<td>&#x5DF2;&#x786E;&#x5B9A;&#x6B63;&#x5F0F;&#x4E0A;&#x7EBF;&#x65E5;&#x671F;&#x548C;&#x65E7;&#x7CFB;&#x7EDF;&#x505C;&#x6B62;&#x5F55;&#x5165;&#x89C4;&#x5219;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5982;&#x679C;&#x8FD9;&#x4E9B;&#x6807;&#x51C6;&#x6CA1;&#x6709;&#x8FBE;&#x5230;&#xFF0C;&#x4E0D;&#x5EFA;&#x8BAE;&#x76F4;&#x63A5;&#x4E0A;&#x7EBF;&#x3002;</p>
+<h2 id="&#x8BD5;&#x8FD0;&#x884C;&#x548C;&#x6B63;&#x5F0F;&#x4E0A;&#x7EBF;&#x7684;&#x533A;&#x522B;">&#x8BD5;&#x8FD0;&#x884C;&#x548C;&#x6B63;&#x5F0F;&#x4E0A;&#x7EBF;&#x7684;&#x533A;&#x522B;</h2>
+<p>&#x6D4B;&#x8BD5;&#x901A;&#x8FC7;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x8FDB;&#x5165;&#x8BD5;&#x8FD0;&#x884C;&#x3002;&#x8BD5;&#x8FD0;&#x884C;&#x548C;&#x6B63;&#x5F0F;&#x4E0A;&#x7EBF;&#x4E0D;&#x662F;&#x4E00;&#x56DE;&#x4E8B;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>&#x9636;&#x6BB5;</th>
+<th>&#x76EE;&#x7684;</th>
+<th>&#x6570;&#x636E;&#x8981;&#x6C42;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x6D4B;&#x8BD5;&#x5E93;&#x6F14;&#x7EC3;</td>
+<td>&#x627E;&#x95EE;&#x9898;&#x3001;&#x7EC3;&#x6D41;&#x7A0B;</td>
+<td>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x6D4B;&#x8BD5;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td>&#x8BD5;&#x8FD0;&#x884C;</td>
+<td>&#x7528;&#x771F;&#x5B9E;&#x4E1A;&#x52A1;&#x9A8C;&#x8BC1;&#x7CFB;&#x7EDF;</td>
+<td>&#x4F7F;&#x7528;&#x63A5;&#x8FD1;&#x771F;&#x5B9E;&#x7684;&#x4E1A;&#x52A1;&#x6570;&#x636E;</td>
+</tr>
+<tr>
+<td>&#x6B63;&#x5F0F;&#x4E0A;&#x7EBF;</td>
+<td>&#x7CFB;&#x7EDF;&#x6210;&#x4E3A;&#x552F;&#x4E00;&#x4E1A;&#x52A1;&#x6765;&#x6E90;</td>
+<td>&#x4F7F;&#x7528;&#x6B63;&#x5F0F;&#x6570;&#x636E;&#xFF0C;&#x65E7;&#x7CFB;&#x7EDF;&#x505C;&#x6B62;&#x65B0;&#x589E;</td>
+</tr>
+</tbody>
+</table>
+<p>&#x8BD5;&#x8FD0;&#x884C;&#x671F;&#x95F4;&#x53EF;&#x4EE5;&#x4FDD;&#x7559;&#x65E7;&#x7CFB;&#x7EDF;&#x67E5;&#x8BE2;&#xFF0C;&#x4F46;&#x4E0D;&#x8981;&#x957F;&#x671F;&#x53CC;&#x7CFB;&#x7EDF;&#x5F55;&#x5165;&#x3002;&#x540C;&#x4E00;&#x7B14;&#x4E1A;&#x52A1;&#x540C;&#x65F6;&#x5F55;&#x5165;&#x4E24;&#x4E2A;&#x7CFB;&#x7EDF;&#xFF0C;&#x540E;&#x9762;&#x4E00;&#x5B9A;&#x4F1A;&#x5BF9;&#x4E0D;&#x4E0A;&#x3002;</p>
+<h2 id="&#x5C0F;&#x767D;&#x5BA2;&#x6237;&#x5E38;&#x89C1;&#x5751;">&#x5C0F;&#x767D;&#x5BA2;&#x6237;&#x5E38;&#x89C1;&#x5751;</h2>
+<ul>
+<li>&#x53EA;&#x6D4B;&#x8BD5;&#x521B;&#x5EFA;&#x5355;&#x636E;&#xFF0C;&#x4E0D;&#x6D4B;&#x8BD5;&#x540E;&#x7EED;&#x53D1;&#x8D27;&#x3001;&#x5F00;&#x7968;&#x3001;&#x4ED8;&#x6B3E;&#xFF1B;</li>
+<li>&#x53EA;&#x6D4B;&#x8BD5;&#x6B63;&#x5E38;&#x6D41;&#x7A0B;&#xFF0C;&#x4E0D;&#x6D4B;&#x8BD5;&#x53D6;&#x6D88;&#x3001;&#x9000;&#x8D27;&#x3001;&#x90E8;&#x5206;&#x4ED8;&#x6B3E;&#xFF1B;</li>
+<li>&#x53EA;&#x7528;&#x7BA1;&#x7406;&#x5458;&#x8D26;&#x53F7;&#x6D4B;&#x8BD5;&#xFF0C;&#x6CA1;&#x6709;&#x7528;&#x771F;&#x5B9E;&#x5C97;&#x4F4D;&#x8D26;&#x53F7;&#xFF1B;</li>
+<li>&#x95EE;&#x9898;&#x53EA;&#x5728;&#x804A;&#x5929;&#x8F6F;&#x4EF6;&#x91CC;&#x8BF4;&#xFF0C;&#x6CA1;&#x6709;&#x5F62;&#x6210;&#x95EE;&#x9898;&#x6E05;&#x5355;&#xFF1B;</li>
+<li>&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x592A;&#x968F;&#x610F;&#xFF0C;&#x548C;&#x771F;&#x5B9E;&#x4E1A;&#x52A1;&#x5DEE;&#x5F02;&#x592A;&#x5927;&#xFF1B;</li>
+<li>&#x4E00;&#x8FB9;&#x6D4B;&#x8BD5;&#x4E00;&#x8FB9;&#x9891;&#x7E41;&#x6539;&#x9700;&#x6C42;&#xFF0C;&#x5BFC;&#x81F4;&#x6C38;&#x8FDC;&#x65E0;&#x6CD5;&#x9A8C;&#x6536;&#xFF1B;</li>
+<li>&#x8001;&#x677F;&#x6CA1;&#x6709;&#x53C2;&#x4E0E;&#x62A5;&#x8868;&#x9A8C;&#x6536;&#xFF0C;&#x4E0A;&#x7EBF;&#x540E;&#x624D;&#x53D1;&#x73B0;&#x53E3;&#x5F84;&#x4E0D;&#x5BF9;&#x3002;</li>
+</ul>
+<p>&#x6D4B;&#x8BD5;&#x7684;&#x76EE;&#x6807;&#x4E0D;&#x662F;&#x8BC1;&#x660E;&#x7CFB;&#x7EDF;&#x5B8C;&#x7F8E;&#xFF0C;&#x800C;&#x662F;&#x63D0;&#x524D;&#x53D1;&#x73B0;&#x54EA;&#x4E9B;&#x5730;&#x65B9;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x3001;&#x57F9;&#x8BAD;&#x6216;&#x4E8C;&#x671F;&#x4F18;&#x5316;&#x3002;&#x53EA;&#x8981;&#x95EE;&#x9898;&#x88AB;&#x770B;&#x89C1;&#xFF0C;&#x9879;&#x76EE;&#x5C31;&#x5DF2;&#x7ECF;&#x5411;&#x524D;&#x8D70;&#x4E86;&#x4E00;&#x5927;&#x6B65;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="DATA_PREPARATION.html" class="navigation navigation-prev " aria-label="Previous page: 第三章 基础数据准备">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../sections/SECTION1.html" class="navigation navigation-next " aria-label="Next page: 第一部分 基础数据">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"第四章 测试库演练方法","level":"1.2.4","depth":2,"next":{"title":"第一部分 基础数据","level":"1.3","depth":1,"path":"sections/SECTION1.md","ref":"sections/SECTION1.md","articles":[{"title":"第一章 Odoo简介","level":"1.3.1","depth":2,"path":"basic/Odoo.md","ref":"basic/Odoo.md","articles":[]},{"title":"第二章 数据库管理","level":"1.3.2","depth":2,"path":"basic/DATABASE.md","ref":"basic/DATABASE.md","articles":[]},{"title":"第三章 公司和用户管理","level":"1.3.3","depth":2,"path":"basic/README5.md","ref":"basic/README5.md","articles":[]},{"title":"第四章 联系人与合作伙伴","level":"1.3.4","depth":2,"path":"basic/README4.md","ref":"basic/README4.md","articles":[]},{"title":"第五章 产品基础数据","level":"1.3.5","depth":2,"path":"basic/PRODUCT.md","ref":"basic/PRODUCT.md","articles":[]},{"title":"第六章 导入与导出","level":"1.3.6","depth":2,"path":"basic/IMPORT_EXPORT.md","ref":"basic/IMPORT_EXPORT.md","articles":[]},{"title":"第七章 邮箱配置","level":"1.3.7","depth":2,"path":"basic/README6.md","ref":"basic/README6.md","articles":[]},{"title":"第八章 消息与讨论","level":"1.3.8","depth":2,"path":"basic/MAIL.md","ref":"basic/MAIL.md","articles":[]},{"title":"第九章 报表","level":"1.3.9","depth":2,"path":"basic/REPORT.md","ref":"basic/REPORT.md","articles":[]}]},"previous":{"title":"第三章 基础数据准备","level":"1.2.3","depth":2,"path":"implementation/DATA_PREPARATION.md","ref":"implementation/DATA_PREPARATION.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"青岛欧姆网络科技 Kevin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施参考手册-青岛欧姆网络科技","language":"zh-hans","gitbook":"*","description":"青岛欧姆网络科技，您身边可靠的Odoo专家"},"file":{"path":"implementation/TEST_DRILL.md","mtime":"2026-07-04T04:32:17.263Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-04T13:08:47.911Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
