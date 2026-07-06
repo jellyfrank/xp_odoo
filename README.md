@@ -4,6 +4,8 @@
 
 作者：[青岛欧姆网络科技](https://odoohub.com.cn) Kevin
 
+> English version: [Odoo Implementation Manual](en/README.md)
+
 ## 前言
 
 ### 为什么要写这本书

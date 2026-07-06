@@ -1,0 +1,2226 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>YunExpress Integration · odoo实施参考手册-青岛欧姆网络科技</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="青岛欧姆网络科技 Kevin">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../sections/SECTION0.html" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    English Version
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="YUN.html">
+            
+                <a href="YUN.html">
+            
+                    
+                    YunExpress Integration
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../sections/SECTION0.html">
+            
+                <a href="../../sections/SECTION0.html">
+            
+                    
+                    第一部分 自主实施路线图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../implementation/PREPARATION.html">
+            
+                <a href="../../implementation/PREPARATION.html">
+            
+                    
+                    第一章 实施前准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../implementation/ROADMAP.html">
+            
+                <a href="../../implementation/ROADMAP.html">
+            
+                    
+                    第二章 Odoo上线顺序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../implementation/DATA_PREPARATION.html">
+            
+                <a href="../../implementation/DATA_PREPARATION.html">
+            
+                    
+                    第三章 基础数据准备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../implementation/TEST_DRILL.html">
+            
+                <a href="../../implementation/TEST_DRILL.html">
+            
+                    
+                    第四章 测试库演练方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../sections/SECTION1.html">
+            
+                <a href="../../sections/SECTION1.html">
+            
+                    
+                    第二部分 基础数据
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../basic/Odoo.html">
+            
+                <a href="../../basic/Odoo.html">
+            
+                    
+                    第一章 Odoo简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../basic/DATABASE.html">
+            
+                <a href="../../basic/DATABASE.html">
+            
+                    
+                    第二章 数据库管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../basic/README5.html">
+            
+                <a href="../../basic/README5.html">
+            
+                    
+                    第三章 公司和用户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../../basic/Contact.html">
+            
+                <a href="../../basic/Contact.html">
+            
+                    
+                    第四章 联系人与合作伙伴
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../../basic/PRODUCT.html">
+            
+                <a href="../../basic/PRODUCT.html">
+            
+                    
+                    第五章 产品基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../../basic/IMPORT_EXPORT.html">
+            
+                <a href="../../basic/IMPORT_EXPORT.html">
+            
+                    
+                    第六章 导入与导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../../basic/Email.html">
+            
+                <a href="../../basic/Email.html">
+            
+                    
+                    第七章 邮箱配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../../basic/MAIL.html">
+            
+                <a href="../../basic/MAIL.html">
+            
+                    
+                    第八章 消息与讨论
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../../basic/REPORT.html">
+            
+                <a href="../../basic/REPORT.html">
+            
+                    
+                    第九章 报表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../sections/SECTION2.html">
+            
+                <a href="../../sections/SECTION2.html">
+            
+                    
+                    第三部分 销售管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../sale/">
+            
+                <a href="../../sale/">
+            
+                    
+                    第一章 销售管理总览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../../sale/README2.html">
+            
+                <a href="../../sale/README2.html">
+            
+                    
+                    第二章 销售产品与变体
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../sale/QUOTATION.html">
+            
+                <a href="../../sale/QUOTATION.html">
+            
+                    
+                    第三章 报价单与客户确认
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../../sale/README3.html">
+            
+                <a href="../../sale/README3.html">
+            
+                    
+                    第四章 销售订单流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../../sale/INVOICING.html">
+            
+                <a href="../../sale/INVOICING.html">
+            
+                    
+                    第五章 开票策略与预付款
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../../sale/README6.html">
+            
+                <a href="../../sale/README6.html">
+            
+                    
+                    第六章 价格表、折扣与多币种
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../../sale/README4.html">
+            
+                <a href="../../sale/README4.html">
+            
+                    
+                    第七章 税率与财政结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../../sale/README5.html">
+            
+                <a href="../../sale/README5.html">
+            
+                    
+                    第八章 销售与库存交付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../../sale/RETURNS.html">
+            
+                <a href="../../sale/RETURNS.html">
+            
+                    
+                    第九章 退货、退款与售后处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../../sale/README7.html">
+            
+                <a href="../../sale/README7.html">
+            
+                    
+                    第十章 租赁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../../sale/EXCISE_DUTY.html">
+            
+                <a href="../../sale/EXCISE_DUTY.html">
+            
+                    
+                    第十一章 消费税
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../../sale/SECOND_UNIT.html">
+            
+                <a href="../../sale/SECOND_UNIT.html">
+            
+                    
+                    第十二章 第二单位
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../sections/SECTION3.html">
+            
+                <a href="../../sections/SECTION3.html">
+            
+                    
+                    第四部分 采购管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../purchase/PO.html">
+            
+                <a href="../../purchase/PO.html">
+            
+                    
+                    第一章 采购管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../purchase/README2.html">
+            
+                <a href="../../purchase/README2.html">
+            
+                    
+                    第二章 成本计算
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../sections/SECTION4.html">
+            
+                <a href="../../sections/SECTION4.html">
+            
+                    
+                    第五部分 仓库管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../../stock/BASIC.html">
+            
+                <a href="../../stock/BASIC.html">
+            
+                    
+                    第一章 基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../stock/LOCATION.html">
+            
+                <a href="../../stock/LOCATION.html">
+            
+                    
+                    第二章 库位管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../../stock/README3.html">
+            
+                <a href="../../stock/README3.html">
+            
+                    
+                    第三章 调拨类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../stock/README.md">
+            
+                <span>
+            
+                    
+                    第四章 批次管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../stock/README.md">
+            
+                <span>
+            
+                    
+                    第五章 库存盘点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../stock/README6.html">
+            
+                <a href="../../stock/README6.html">
+            
+                    
+                    第六章 订货规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../../stock/README.md">
+            
+                <span>
+            
+                    
+                    第七章 路线规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../../stock/Barcode.html">
+            
+                <a href="../../stock/Barcode.html">
+            
+                    
+                    第八章 条码规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../../stock/PUTAWAY.html">
+            
+                <a href="../../stock/PUTAWAY.html">
+            
+                    
+                    第九章 上架规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="../../stock/STORAEGE.html">
+            
+                <a href="../../stock/STORAEGE.html">
+            
+                    
+                    第十章 存储类别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="../../stock/DELIVERY_METHOD.html">
+            
+                <a href="../../stock/DELIVERY_METHOD.html">
+            
+                    
+                    第十一章 物流方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="../../stock/README8.html">
+            
+                <a href="../../stock/README8.html">
+            
+                    
+                    第十二章 成本核算
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.13" data-path="../../stock/README10.md">
+            
+                <span>
+            
+                    
+                    第十三章 顺丰速递
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../sections/SECTION5.html">
+            
+                <a href="../../sections/SECTION5.html">
+            
+                    
+                    第六部分 生产管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../chapter5/README.md">
+            
+                <span>
+            
+                    
+                    第一章 BOM管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../../chapter5/README2.md">
+            
+                <span>
+            
+                    
+                    第二章 计划生产
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../chapter5/README3.html">
+            
+                <a href="../../chapter5/README3.html">
+            
+                    
+                    第三章 管理工单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../../chapter5/README4.md">
+            
+                <span>
+            
+                    
+                    第四章 外协加工
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../../chapter5/README5.html">
+            
+                <a href="../../chapter5/README5.html">
+            
+                    
+                    第五章 工作中心
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../../chapter5/README6.md">
+            
+                <span>
+            
+                    
+                    第六章 质量检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../../chapter5/KIT.html">
+            
+                <a href="../../chapter5/KIT.html">
+            
+                    
+                    第七章 套件生产
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../sections/SECTION6.html">
+            
+                <a href="../../sections/SECTION6.html">
+            
+                    
+                    第七部分 财务管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../account/BASIC.html">
+            
+                <a href="../../account/BASIC.html">
+            
+                    
+                    第一章 基础概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../account/INV.html">
+            
+                <a href="../../account/INV.html">
+            
+                    
+                    第二章 开票
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../account/PAYMENT.html">
+            
+                <a href="../../account/PAYMENT.html">
+            
+                    
+                    第三章 支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../../account/STATMENT.html">
+            
+                <a href="../../account/STATMENT.html">
+            
+                    
+                    第四章 对账
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../../account/JOURNAL.html">
+            
+                <a href="../../account/JOURNAL.html">
+            
+                    
+                    第五章 日记账
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../../sections/SECTION7.html">
+            
+                <a href="../../sections/SECTION7.html">
+            
+                    
+                    第八部分 多公司
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../../chapter7/">
+            
+                <a href="../../chapter7/">
+            
+                    
+                    第一章 多公司间的采购
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../../sections/SECTION8.html">
+            
+                <a href="../../sections/SECTION8.html">
+            
+                    
+                    第九部分 网站
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../../web/portal.html">
+            
+                <a href="../../web/portal.html">
+            
+                    
+                    第一章 门户
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../../web/README2.html">
+            
+                <a href="../../web/README2.html">
+            
+                    
+                    第二章 商城
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../../web/TOKEN.html">
+            
+                <a href="../../web/TOKEN.html">
+            
+                    
+                    第三章 访问令牌
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../../web/MAILLIST.html">
+            
+                <a href="../../web/MAILLIST.html">
+            
+                    
+                    第四章 邮件营销
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../../web/PORTAL_SALE.html">
+            
+                <a href="../../web/PORTAL_SALE.html">
+            
+                    
+                    第五章 销售门户
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../../SECTION11.html">
+            
+                <a href="../../SECTION11.html">
+            
+                    
+                    第十部分 销售点(POS)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../../pos/Product.html">
+            
+                <a href="../../pos/Product.html">
+            
+                    
+                    第一章 POS产品管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../../pos/Kiosk.html">
+            
+                <a href="../../pos/Kiosk.html">
+            
+                    
+                    第二章 自助终端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../../pos/RECEIPT.html">
+            
+                <a href="../../pos/RECEIPT.html">
+            
+                    
+                    第三章 小票和发票
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../../pos/PAYMENT_METHOD.html">
+            
+                <a href="../../pos/PAYMENT_METHOD.html">
+            
+                    
+                    第四章 支付方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../../pos/PRICELIST.html">
+            
+                <a href="../../pos/PRICELIST.html">
+            
+                    
+                    第五章 设置价格表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../../pos/LOYALTY.html">
+            
+                <a href="../../pos/LOYALTY.html">
+            
+                    
+                    第六章 客户忠诚度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../../pos/README10.html">
+            
+                <a href="../../pos/README10.html">
+            
+                    
+                    第一章 EPOS打印
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.8" data-path="../../pos/POS_SALE.html">
+            
+                <a href="../../pos/POS_SALE.html">
+            
+                    
+                    第四章 POS销售
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.9" data-path="../../pos/POS_AUTO.html">
+            
+                <a href="../../pos/POS_AUTO.html">
+            
+                    
+                    第五章 POS批次自动出库
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../../sections/SECTION9.html">
+            
+                <a href="../../sections/SECTION9.html">
+            
+                    
+                    第十一部分 设置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../../chapter9/">
+            
+                <a href="../../chapter9/">
+            
+                    
+                    第一章 通用设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../../chapter9/LANG.html">
+            
+                <a href="../../chapter9/LANG.html">
+            
+                    
+                    第二章 语言设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../../chapter9/SHARE.html">
+            
+                <a href="../../chapter9/SHARE.html">
+            
+                    
+                    第三章 附件共享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../../chapter9/IPWHITELIST.html">
+            
+                <a href="../../chapter9/IPWHITELIST.html">
+            
+                    
+                    第四章 IP白名单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../../chapter9/README9.html">
+            
+                <a href="../../chapter9/README9.html">
+            
+                    
+                    第九章 技术设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../../chapter9/STUDIO.html">
+            
+                <a href="../../chapter9/STUDIO.html">
+            
+                    
+                    STUDIO
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../../sections/SECTION10.html">
+            
+                <a href="../../sections/SECTION10.html">
+            
+                    
+                    第十二部分 通用解决方案
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../../chapter10/WeChatOpen.html">
+            
+                <a href="../../chapter10/WeChatOpen.html">
+            
+                    
+                    第一章 微信扫码登陆
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../../chapter10/WeChat.html">
+            
+                <a href="../../chapter10/WeChat.html">
+            
+                    
+                    第二章 微信公众号
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../../chapter10/WeChatPay.html">
+            
+                <a href="../../chapter10/WeChatPay.html">
+            
+                    
+                    第三章 微信支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../../chapter10/WXPOS.html">
+            
+                <a href="../../chapter10/WXPOS.html">
+            
+                    
+                    第四章 微信POS支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../../chapter10/ALIPAY.html">
+            
+                <a href="../../chapter10/ALIPAY.html">
+            
+                    
+                    第五章 支付宝支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../../chapter10/ALIPOS.html">
+            
+                <a href="../../chapter10/ALIPOS.html">
+            
+                    
+                    第六章 支付宝POS支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="../../chapter10/LINE.html">
+            
+                <a href="../../chapter10/LINE.html">
+            
+                    
+                    第七章 Pos LinePay
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" data-path="../../chapter10/WeWork.html">
+            
+                <a href="../../chapter10/WeWork.html">
+            
+                    
+                    第八章 企业微信基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" data-path="../../chapter10/WeWorkPlus.html">
+            
+                <a href="../../chapter10/WeWorkPlus.html">
+            
+                    
+                    第九章 企业微信高级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.10" data-path="../../chapter10/WeWorkApproval.html">
+            
+                <a href="../../chapter10/WeWorkApproval.html">
+            
+                    
+                    第十章 企业微信审批
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.11" data-path="../../chapter10/SF.html">
+            
+                <a href="../../chapter10/SF.html">
+            
+                    
+                    第十一章 顺丰速递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.12" data-path="../../chapter10/SFI.html">
+            
+                <a href="../../chapter10/SFI.html">
+            
+                    
+                    第十二章 顺丰国际
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.13" data-path="../../chapter10/YTO.html">
+            
+                <a href="../../chapter10/YTO.html">
+            
+                    
+                    第十三章 圆通速递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.14" data-path="../../chapter10/DHL.html">
+            
+                <a href="../../chapter10/DHL.html">
+            
+                    
+                    第十四章 DHL中国
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.15" data-path="../../chapter10/KDN.html">
+            
+                <a href="../../chapter10/KDN.html">
+            
+                    
+                    第十五章 快递鸟模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.16" data-path="../../chapter10/YUN.html">
+            
+                <a href="../../chapter10/YUN.html">
+            
+                    
+                    第十六章 云途物流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.17" data-path="../../chapter10/17Track.html">
+            
+                <a href="../../chapter10/17Track.html">
+            
+                    
+                    第十七章 17Track
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.18" data-path="../../chapter10/XHS.html">
+            
+                <a href="../../chapter10/XHS.html">
+            
+                    
+                    第十八章 小红书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.19" data-path="../../chapter10/lark.html">
+            
+                <a href="../../chapter10/lark.html">
+            
+                    
+                    第十九章 飞书/Lark
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.20" data-path="../../chapter10/ALIYUNSMS.html">
+            
+                <a href="../../chapter10/ALIYUNSMS.html">
+            
+                    
+                    第二十章 阿里云短信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.21" data-path="../../chapter10/NMI.html">
+            
+                <a href="../../chapter10/NMI.html">
+            
+                    
+                    第二十一章 NMI支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.22" data-path="../../chapter10/WINDCAVE.html">
+            
+                <a href="../../chapter10/WINDCAVE.html">
+            
+                    
+                    第二十二章 WindCave
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.23" data-path="../../chapter10/YUNDA.html">
+            
+                <a href="../../chapter10/YUNDA.html">
+            
+                    
+                    第二十三章 韵达速递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.24" data-path="../../chapter10/PAYMENTS.html">
+            
+                <a href="../../chapter10/PAYMENTS.html">
+            
+                    
+                    第二十四章 指定支付方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.25" data-path="../../chapter10/SHOPLINE.html">
+            
+                <a href="../../chapter10/SHOPLINE.html">
+            
+                    
+                    第二十五章 Shopline对接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.26" data-path="../../chapter10/XERO.html">
+            
+                <a href="../../chapter10/XERO.html">
+            
+                    
+                    第二十六章 Xero
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.27" data-path="../../chapter10/QUICKBOOK.html">
+            
+                <a href="../../chapter10/QUICKBOOK.html">
+            
+                    
+                    第二十七章 QuickBooks
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.28" data-path="../../chapter10/JDL.html">
+            
+                <a href="../../chapter10/JDL.html">
+            
+                    
+                    第二十八章 京东快递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.29" data-path="../../chapter10/ALIYUNOSS.html">
+            
+                <a href="../../chapter10/ALIYUNOSS.html">
+            
+                    
+                    第二十九章 阿里云对象存储
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.30" data-path="../../chapter10/AWSS3.html">
+            
+                <a href="../../chapter10/AWSS3.html">
+            
+                    
+                    第三十章 AWS S3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.31" data-path="../../chapter10/GCS.html">
+            
+                <a href="../../chapter10/GCS.html">
+            
+                    
+                    第三十一章 Google Cloud Storage
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.32" data-path="../../chapter10/SHOPIFY.html">
+            
+                <a href="../../chapter10/SHOPIFY.html">
+            
+                    
+                    第三十二章 Shopify
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.33" data-path="../../chapter10/REVOLUT.html">
+            
+                <a href="../../chapter10/REVOLUT.html">
+            
+                    
+                    第三十三章 Revolut支付
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.34" data-path="../../chapter10/CLOUD_PRINT.html">
+            
+                <a href="../../chapter10/CLOUD_PRINT.html">
+            
+                    
+                    第三十四章 云打印
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.35" data-path="../../chapter10/ODOO-PRO-BACKUP.html">
+            
+                <a href="../../chapter10/ODOO-PRO-BACKUP.html">
+            
+                    
+                    第三十五章 prod-backup方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.36" data-path="../../chapter10/MINI-SHOP.html">
+            
+                <a href="../../chapter10/MINI-SHOP.html">
+            
+                    
+                    第三十六章 小程序商城
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.37" data-path="../../chapter10/MINI-SHOP-PRO.html">
+            
+                <a href="../../chapter10/MINI-SHOP-PRO.html">
+            
+                    
+                    第三十七章 小程序商城专业版
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.38" data-path="../../chapter10/COS.html">
+            
+                <a href="../../chapter10/COS.html">
+            
+                    
+                    第三十八章 腾讯云COS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.39" data-path="../../example/SECTION.md">
+            
+                <span>
+            
+                    
+                    第十一部分 案例分享
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.40" data-path="../../example/CLOTHES.html">
+            
+                <a href="../../example/CLOTHES.html">
+            
+                    
+                    外贸定制化服装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../../solutions/">
+            
+                <a href="../../solutions/">
+            
+                    
+                    第十二部分 行业解决方案
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../../solutions/Export.html">
+            
+                <a href="../../solutions/Export.html">
+            
+                    
+                    外贸行业方案
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1.1" data-path="../../solutions/Export_Carrier.html">
+            
+                <a href="../../solutions/Export_Carrier.html">
+            
+                    
+                    发货解决方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../../FAQ.html">
+            
+                <a href="../../FAQ.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >YunExpress Integration</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="yunexpress-integration">YunExpress Integration</h1>
+<blockquote>
+<p>Supported versions: 15.3+ / 17.0.1.2+ / 19.0.1.3+</p>
+</blockquote>
+<p>YunExpress is a logistics provider widely used by cross-border eCommerce sellers for small international parcels. For companies selling through marketplaces, independent websites, or Odoo Sales, a YunExpress integration can reduce manual shipping work: users can estimate shipping fees, create shipping orders from Odoo delivery orders, obtain tracking numbers, download shipping labels, and open the official tracking page from Odoo.</p>
+<p>This chapter explains how to use the YunExpress integration in Odoo 19.0. We will start from the YunExpress developer account, then configure the delivery method in Odoo, sync YunExpress shipping products, prepare declaration and IOSS data, and finally walk through shipping fee estimation, waybill creation, label download, and tracking.</p>
+<ul>
+<li><a href="#register-a-yunexpress-developer-account">Register A YunExpress Developer Account</a></li>
+<li><a href="#install-and-configure-the-yunexpress-module">Install And Configure The YunExpress Module</a><ul>
+<li><a href="#order-type">Order Type</a></li>
+<li><a href="#yunexpress-products">YunExpress Products</a></li>
+<li><a href="#declaration-policy">Declaration Policy</a></li>
+<li><a href="#additional-services-and-ioss">Additional Services And IOSS</a></li>
+</ul>
+</li>
+<li><a href="#estimate-shipping-fees-on-a-sales-order">Estimate Shipping Fees On A Sales Order</a></li>
+<li><a href="#create-a-waybill-from-a-delivery-order">Create A Waybill From A Delivery Order</a></li>
+<li><a href="#track-the-shipment">Track The Shipment</a></li>
+<li><a href="#common-error">Common Error</a></li>
+<li><a href="#implementation-notes">Implementation Notes</a></li>
+</ul>
+<h2 id="register-a-yunexpress-developer-account">Register A YunExpress Developer Account</h2>
+<p>Before configuring Odoo, register a developer account on the <a href="https://open.yunexpress.cn/" target="_blank">YunExpress Open Platform</a> and create an application. After the application is created, YunExpress provides the API credentials required by Odoo.</p>
+<p>You will normally need three values:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+<th>Where It Is Used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>APPID</code></td>
+<td>Application ID</td>
+<td>Identifies the YunExpress application.</td>
+</tr>
+<tr>
+<td><code>APPSECRET</code></td>
+<td>Application secret</td>
+<td>Used to request API access tokens and sign requests.</td>
+</tr>
+<tr>
+<td><code>SOURCEKEY</code></td>
+<td>Source verification key</td>
+<td>Confirms the request source in the YunExpress OpenAPI.</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../../chapter10/images/yun8.png" alt="YunExpress developer credentials"></p>
+<blockquote>
+<p><code>SourceKey</code> can be found in the user information settings on the YunExpress Open Platform.</p>
+</blockquote>
+<p>Keep these credentials in the Odoo carrier configuration only. Do not write them into documentation, screenshots, code comments, or shared chat messages.</p>
+<h2 id="install-and-configure-the-yunexpress-module">Install And Configure The YunExpress Module</h2>
+<p>After the YunExpress credentials are ready, install the YunExpress delivery module in Odoo. The module extends Odoo&apos;s native delivery carrier flow, so users can still work from Sales Orders and Inventory Delivery Orders instead of opening a separate shipping system.</p>
+<p>Go to <code>Settings &gt; Sales</code> and enable the YunExpress shipping option.</p>
+<p><img src="../../chapter10/images/yun1.png" alt="Enable YunExpress delivery"></p>
+<p>After saving the setting, go to <code>Inventory &gt; Configuration &gt; Delivery Methods</code>, create or open the YunExpress delivery method, and enter the credentials obtained from the YunExpress Open Platform.</p>
+<p><img src="../../chapter10/images/yun2.png" alt="Configure the YunExpress delivery method"></p>
+<p>The basic configuration usually includes API credentials, environment, order type, package type, default YunExpress product, declaration policy, and optional additional services. In a real project, do not rush to test shipping immediately after entering the credentials. First make sure products, customer addresses, company sender information, weights, and declaration names are ready; otherwise most API errors will appear at the shipping order stage.</p>
+<h3 id="order-type">Order Type</h3>
+<p>YunExpress shipping orders can be created in two major scenarios:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Usage Scenario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Package</td>
+<td>Used for normal single-parcel shipping orders. This is the most common scenario for cross-border eCommerce parcels.</td>
+</tr>
+<tr>
+<td>FBA</td>
+<td>Used when shipping goods to Amazon FBA warehouses.</td>
+</tr>
+</tbody>
+</table>
+<p>Choose the order type according to the actual business process. If the company handles both direct-to-consumer parcels and FBA replenishment, it is usually clearer to create separate delivery methods or at least document which configuration is used for each scenario.</p>
+<h3 id="yunexpress-products">YunExpress Products</h3>
+<p>YunExpress provides multiple logistics products and routes. In Odoo, these products are stored locally so the delivery method can select a default YunExpress product for quotation and waybill creation.</p>
+<p>Click the sync button to update the available YunExpress product list from the OpenAPI.</p>
+<p><img src="../../chapter10/images/yun10.png" alt="Sync YunExpress products"></p>
+<p>After syncing, select the default product on the delivery method. This default product is important because the sales shipping fee estimation uses it to find the matching YunExpress price result.</p>
+<h3 id="declaration-policy">Declaration Policy</h3>
+<p>Cross-border parcels usually require customs declaration information. The YunExpress module adds a declaration name field on products so the implementation team can maintain names used for shipping declaration separately from the normal product display name.</p>
+<p><img src="../../chapter10/images/yun11.png" alt="Product declaration name"></p>
+<p>The declaration policy controls how Odoo maps product names into YunExpress declaration fields:</p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use declaration name as English name</td>
+<td>The declaration name is sent as the English declaration name.</td>
+</tr>
+<tr>
+<td>Use declaration name as Chinese name</td>
+<td>The declaration name is sent as the Chinese or local declaration name.</td>
+</tr>
+</tbody>
+</table>
+<p>For cross-border sellers, this field should be treated as master data, not as a temporary shipping note. Product weight, product value, HS-related information if required by the business, and declaration names should be checked before go-live.</p>
+<h3 id="additional-services-and-ioss">Additional Services And IOSS</h3>
+<p>For shipments to Europe, IOSS information may be required depending on the tax and shipping scenario. The YunExpress module adds an <code>IOSS</code> field on contacts, so the company can maintain the IOSS number on the relevant sender or company contact.</p>
+<p><img src="../../chapter10/images/yun12.png" alt="IOSS field on contact"></p>
+<p>When the sender has an IOSS number, use that number in the contact record. If the sender does not have an IOSS number and the business chooses to use YunExpress VAT collection service, add the <code>V1</code> additional service in the delivery method configuration.</p>
+<p>Common additional services may include remote area handling, duty prepaid services, VAT collection, or export tax refund related services. The available services should be confirmed with the YunExpress account manager or the official Open Platform configuration for the customer&apos;s contract.</p>
+<h2 id="estimate-shipping-fees-on-a-sales-order">Estimate Shipping Fees On A Sales Order</h2>
+<p>Once the delivery method is configured, users can estimate YunExpress shipping fees directly on the Odoo Sales Order.</p>
+<p><img src="../../chapter10/images/yun3.png" alt="Estimate YunExpress shipping fee on sales order"></p>
+<p>The estimation is based on the YunExpress product configured on the delivery method. In practice, the calculation also depends on the shipping country, postal code, package type, origin, and product weight. If the quotation result is unexpected, check these data first before assuming the API is wrong.</p>
+<p>This step is useful before order confirmation because sales users can compare shipping methods and understand the estimated delivery cost without leaving Odoo.</p>
+<h2 id="create-a-waybill-from-a-delivery-order">Create A Waybill From A Delivery Order</h2>
+<p>After the sales order is confirmed and the delivery order is ready, process the Odoo delivery order as usual. When the delivery is validated with the YunExpress delivery method, Odoo creates a YunExpress shipping order and receives a waybill number.</p>
+<p><img src="../../chapter10/images/yun4.png" alt="Create YunExpress waybill from delivery order"></p>
+<p>After the waybill is created successfully, Odoo downloads the electronic shipping label and attaches it to the delivery order chatter. Warehouse users can open or print the label from the delivery order.</p>
+<p><img src="../../chapter10/images/yun5.png" alt="YunExpress label attached to the delivery order"></p>
+<p>Before using this flow in production, the warehouse team should test at least three scenarios: a normal parcel, a parcel with incomplete address data, and a parcel using the expected IOSS or additional service setup. These tests help confirm that the API credentials, sender data, product declaration data, and printing process all work together.</p>
+<h2 id="track-the-shipment">Track The Shipment</h2>
+<p>Like other Odoo delivery methods, the YunExpress delivery method provides a tracking action. Users can click the tracking button on the delivery order to open the official YunExpress tracking page.</p>
+<p><img src="../../chapter10/images/yun7.png" alt="Open YunExpress tracking page"></p>
+<p>This standard tracking link is suitable for basic customer service work. If the company needs structured tracking events inside Odoo, such as automatic status updates, delayed shipment alerts, or customer notification rules, the implementation can be extended by connecting YunExpress tracking events to Odoo&apos;s delivery tracking model.</p>
+<h2 id="common-error">Common Error</h2>
+<h3 id="receiveraddresslines-single-string-length-1-200"><code>receiver.address_lines</code> single string length: 1-200</h3>
+<p>This error usually means the recipient address line is longer than 200 characters, or one of the address fields is empty in a way that YunExpress does not accept.</p>
+<p>Recommended checks:</p>
+<table>
+<thead>
+<tr>
+<th>Check Item</th>
+<th>What To Do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Street address</td>
+<td>Split an overly long address into <code>Street</code> and <code>Street 2</code>.</td>
+</tr>
+<tr>
+<td>Country and state</td>
+<td>Make sure the country is selected correctly and the state/province format is accepted.</td>
+</tr>
+<tr>
+<td>Postal code</td>
+<td>Confirm the postal code is not empty for countries that require it.</td>
+</tr>
+<tr>
+<td>Phone or mobile</td>
+<td>Make sure the recipient has a phone number or mobile number.</td>
+</tr>
+<tr>
+<td>Hidden spaces</td>
+<td>Remove line breaks, repeated spaces, or pasted special characters.</td>
+</tr>
+</tbody>
+</table>
+<p>In cross-border logistics projects, address quality is often the first operational bottleneck. A small amount of master data cleanup before go-live usually saves much more time than repeatedly handling failed waybill creation later.</p>
+<h2 id="implementation-notes">Implementation Notes</h2>
+<p>The YunExpress integration is built on top of Odoo&apos;s native delivery carrier mechanism. From a user perspective, the flow stays familiar: configure a delivery method, estimate shipping on the sales order, validate the delivery order, receive a tracking number, and print the label.</p>
+<p>From an implementation perspective, YunExpress has a few extra requirements that should be planned early:</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Practical Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Credentials</td>
+<td>Keep sandbox and production credentials separated. Test in sandbox first if the YunExpress account supports it.</td>
+</tr>
+<tr>
+<td>Product data</td>
+<td>Maintain product weight and declaration names before enabling warehouse users to create labels.</td>
+</tr>
+<tr>
+<td>Address data</td>
+<td>Recipient country, postal code, city, street, phone, and email should be complete enough for YunExpress validation.</td>
+</tr>
+<tr>
+<td>IOSS and services</td>
+<td>Confirm whether the company uses its own IOSS number or YunExpress VAT collection service.</td>
+</tr>
+<tr>
+<td>Batch operations</td>
+<td>If the warehouse prints labels in batches, test duplicate-click prevention and label merge behavior before production use.</td>
+</tr>
+<tr>
+<td>Tracking</td>
+<td>A simple tracking link is enough for basic use; structured tracking events require an additional implementation layer.</td>
+</tr>
+</tbody>
+</table>
+<p>In this chapter, we completed the main YunExpress flow in Odoo: account preparation, delivery method configuration, product sync, declaration setup, IOSS and additional services, shipping fee estimation, waybill creation, label download, and tracking. In later chapters of the English manual, we can continue translating other logistics and general solution chapters so overseas readers can understand the same Odoo implementation patterns with consistent terminology.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: English Version">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../sections/SECTION0.html" class="navigation navigation-next " aria-label="Next page: 第一部分 自主实施路线图">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"YunExpress Integration","level":"1.2.1","depth":2,"next":{"title":"第一部分 自主实施路线图","level":"1.3","depth":1,"path":"sections/SECTION0.md","ref":"sections/SECTION0.md","articles":[{"title":"第一章 实施前准备","level":"1.3.1","depth":2,"path":"implementation/PREPARATION.md","ref":"implementation/PREPARATION.md","articles":[]},{"title":"第二章 Odoo上线顺序","level":"1.3.2","depth":2,"path":"implementation/ROADMAP.md","ref":"implementation/ROADMAP.md","articles":[]},{"title":"第三章 基础数据准备","level":"1.3.3","depth":2,"path":"implementation/DATA_PREPARATION.md","ref":"implementation/DATA_PREPARATION.md","articles":[]},{"title":"第四章 测试库演练方法","level":"1.3.4","depth":2,"path":"implementation/TEST_DRILL.md","ref":"implementation/TEST_DRILL.md","articles":[]}]},"previous":{"title":"English Version","level":"1.2","depth":1,"path":"en/README.md","ref":"en/README.md","articles":[{"title":"YunExpress Integration","level":"1.2.1","depth":2,"path":"en/chapter10/YUN.md","ref":"en/chapter10/YUN.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"青岛欧姆网络科技 Kevin","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"odoo实施参考手册-青岛欧姆网络科技","language":"zh-hans","gitbook":"*","description":"青岛欧姆网络科技，您身边可靠的Odoo专家"},"file":{"path":"en/chapter10/YUN.md","mtime":"2026-07-06T12:11:10.822Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2026-07-06T15:49:21.613Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
